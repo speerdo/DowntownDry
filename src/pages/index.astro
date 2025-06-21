@@ -1,0 +1,445 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Downtown Dry - Discover Alcohol-Free Nightlife Across US Cities" description="Find the best kava bars, CBD lounges, cannabis cafes, and alcohol-free venues in your city. Your comprehensive guide to mindful nightlife and alternative social experiences.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Split Background Design -->
+    <div class="absolute inset-0 flex">
+      <!-- Left side - Brand colors -->
+      <div class="w-1/2 bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-500"></div>
+      <!-- Right side - City night image -->
+      <div class="w-1/2 relative">
+        <img 
+          src="https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=1200" 
+          alt="Downtown city at night" 
+          class="w-full h-full object-cover"
+        >
+        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary-700/30 to-primary-700/80"></div>
+      </div>
+    </div>
+    
+    <!-- Geometric Background Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-32 h-32 bg-secondary-500/20 rounded-full"></div>
+      <div class="absolute top-40 right-32 w-24 h-24 bg-accent-500/30 rounded-full"></div>
+      <div class="absolute bottom-32 left-1/3 w-40 h-40 bg-neutral-50/10 rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-28 h-28 bg-secondary-500/15 rounded-full"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-10">
+      <!-- Main Logo/Brand -->
+      <div class="mb-12">
+        <div class="inline-flex items-center justify-center w-32 h-32 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-full mb-8 shadow-2xl">
+          <svg class="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+          </svg>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight">
+          DOWNTOWN<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">DRY</span>
+        </h1>
+      </div>
+      
+      <div class="max-w-4xl mx-auto mb-16">
+        <p class="text-2xl md:text-3xl font-light mb-8 text-neutral-100 leading-relaxed">
+          Zero Proof. Full Flavor.
+        </p>
+        <p class="text-lg md:text-xl text-neutral-200 leading-relaxed">
+          Discover kava bars, CBD lounges, cannabis cafes, and alcohol-free venues across US cities. 
+          Your guide to mindful nightlife where connection matters more than consumption.
+        </p>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <a href="/cities" class="group bg-secondary-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+          EXPLORE CITIES
+          <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+        <a href="/about" class="group border-3 border-white/40 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 hover:border-white/60 transition-all duration-300 backdrop-blur-sm">
+          LEARN MORE
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Stats Section -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <div class="w-16 h-16 bg-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-white">500+</span>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">VENUES</h3>
+          <p class="text-neutral-600">Curated locations</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <div class="w-16 h-16 bg-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-white">50+</span>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">CITIES</h3>
+          <p class="text-neutral-600">Across America</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <div class="w-16 h-16 bg-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-white">6</span>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">CATEGORIES</h3>
+          <p class="text-neutral-600">Venue types</p>
+        </div>
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <div class="w-16 h-16 bg-neutral-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl font-bold text-white">0%</span>
+          </div>
+          <h3 class="text-lg font-bold text-neutral-900 mb-2">ALCOHOL</h3>
+          <p class="text-neutral-600">Pure experiences</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Why This Matters Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+          THE FUTURE OF<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">NIGHTLIFE</span>
+        </h2>
+        <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          More people are choosing mindful experiences over mindless consumption. 
+          We're here to guide you to the best alcohol-free venues in your city.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="text-center">
+          <div class="w-24 h-24 bg-primary-700 rounded-3xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">GROWING COMMUNITY</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Over 30% of adults are reducing alcohol consumption, creating demand for alternative social spaces that prioritize genuine connection.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-24 h-24 bg-secondary-500 rounded-3xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">WELLNESS FOCUSED</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Natural alternatives like kava, CBD, and cannabis offer relaxation and therapeutic benefits in safe, regulated environments.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-24 h-24 bg-accent-500 rounded-3xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">INCLUSIVE SPACES</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Whether you're in recovery, pregnant, or choosing mindful living, these venues welcome everyone without judgment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Categories -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+          EXPLORE<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">VENUES</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Kava Bars -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/6896379/pexels-photo-6896379.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kava Bar Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 to-primary-700/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">KAVA BARS</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Traditional Pacific Island relaxation with kava root beverages in communal spaces that promote conversation and stress relief.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              FIND KAVA BARS
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- CBD Lounges -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/7267637/pexels-photo-7267637.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CBD Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 to-secondary-500/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">CBD LOUNGES</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Wellness-focused venues offering CBD-infused beverages and products for unwinding and socializing with health-conscious friends.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              EXPLORE CBD SPOTS
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Mocktail Bars -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/1446327/pexels-photo-1446327.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mocktail Bar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 to-accent-500/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">MOCKTAIL BARS</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Sophisticated alcohol-free cocktail lounges with creative beverages. All the ambiance without the alcohol.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              BROWSE MOCKTAILS
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Cannabis Cafes -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/6896382/pexels-photo-6896382.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cannabis Cafe" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 to-green-600/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">CANNABIS CAFES</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Legal cannabis consumption lounges in permitted states. Safe, regulated environments for therapeutic and recreational use.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              FIND CANNABIS CAFES
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Coffee Lounges -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Coffee Lounge" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-orange-600/90 to-orange-600/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">COFFEE LOUNGES</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Late-night coffee shops and specialty tea houses for evening socializing. Perfect for dates and casual hangouts.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              FIND COFFEE SPOTS
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Social Clubs -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-64">
+            <img src="https://images.pexels.com/photos/3184193/pexels-photo-3184193.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Social Club" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-blue-600/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold">SOCIAL CLUBS</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Community spaces focused on connection and activities. Board games, live music, and conversation without substances as the centerpiece.
+            </p>
+            <a href="#" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+              EXPLORE SOCIAL CLUBS
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Popular Cities Preview -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+          TRENDING<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">CITIES</span>
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
+          <img src="https://images.pexels.com/photos/374870/pexels-photo-374870.jpeg?auto=compress&cs=tinysrgb&w=800" alt="New York City skyline" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/40 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h3 class="text-4xl font-bold mb-2">NEW YORK</h3>
+            <p class="text-neutral-200 mb-4 text-lg">127 venues and growing</p>
+            <div class="flex space-x-2">
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Kava Bars</span>
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">CBD Lounges</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
+          <img src="https://images.pexels.com/photos/1680247/pexels-photo-1680247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Los Angeles sunset" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/40 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h3 class="text-4xl font-bold mb-2">LOS ANGELES</h3>
+            <p class="text-neutral-200 mb-4 text-lg">94 venues and growing</p>
+            <div class="flex space-x-2">
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Cannabis Cafes</span>
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Wellness</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
+          <img src="https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Austin Texas downtown" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 via-accent-500/40 to-transparent"></div>
+          <div class="absolute bottom-8 left-8 text-white">
+            <h3 class="text-4xl font-bold mb-2">AUSTIN</h3>
+            <p class="text-neutral-200 mb-4 text-lg">73 venues and growing</p>
+            <div class="flex space-x-2">
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Live Music</span>
+              <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Coffee</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12">
+        <a href="/cities" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+          VIEW ALL CITIES
+          <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Signup -->
+  <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-32 h-32 bg-secondary-500/10 rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 bg-accent-500/10 rounded-full"></div>
+    </div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
+        STAY<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">CONNECTED</span>
+      </h2>
+      <p class="text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Get notified when new alcohol-free venues open in your city and discover the latest in alternative nightlife culture.
+      </p>
+      <form class="max-w-lg mx-auto">
+        <div class="flex gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-1 px-8 py-5 rounded-2xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-secondary-500/50 transition-all text-lg"
+          >
+          <button 
+            type="submit" 
+            class="bg-accent-500 text-white px-10 py-5 rounded-2xl font-bold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </form>
+      <p class="text-sm text-neutral-400 mt-8">
+        Join 10,000+ people discovering alcohol-free nightlife. Unsubscribe anytime.
+      </p>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>

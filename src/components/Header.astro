@@ -1,0 +1,70 @@
+---
+import { Astro } from 'astro';
+const { pathname } = Astro.url;
+---
+
+<header class="bg-gradient-to-r from-white via-neutral-50 to-secondary-50/30 backdrop-blur-md shadow-sm border-b border-neutral-200 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
+            <span class="text-white font-bold text-lg">DD</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-xl font-bold text-neutral-900 leading-tight">Downtown Dry</span>
+            <span class="text-xs text-accent-600 font-medium">Alcohol-Free Nightlife</span>
+          </div>
+        </a>
+      </div>
+      
+      <!-- Navigation -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="/" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Home</a>
+        <a href="/about" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/about' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>About</a>
+        <a href="/cities" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/cities' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Cities</a>
+        <a href="/shop" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/shop' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Shop</a>
+        <a href="/blog" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/blog' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Blog</a>
+        <a href="/contact" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/contact' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Contact</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden p-2 rounded-lg text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 transition-colors" id="mobile-menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-neutral-100 bg-white">
+        <a href="/" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Home</a>
+        <a href="/about" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">About</a>
+        <a href="/cities" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Cities</a>
+        <a href="/shop" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Shop</a>
+        <a href="/blog" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Blog</a>
+        <a href="/contact" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Contact</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    
+    button?.addEventListener('click', () => {
+      menu?.classList.toggle('hidden');
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!button?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
+        menu?.classList.add('hidden');
+      }
+    });
+  });
+</script>

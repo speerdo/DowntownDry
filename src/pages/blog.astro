@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Blog - Downtown Dry" description="Read the latest articles about alcohol-free nightlife, kava culture, CBD wellness, and mindful living from the Downtown Dry community.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="py-24 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 text-white relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+    </div>
+    
+    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">DOWNTOWN DRY BLOG</h1>
+      <p class="text-xl md:text-2xl text-neutral-100 leading-relaxed max-w-4xl mx-auto">
+        Insights, stories, and guides for the alcohol-free lifestyle and alternative nightlife community.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Featured Article -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+        <div>
+          <div class="text-sm text-primary-700 font-semibold mb-4 uppercase tracking-wide">FEATURED ARTICLE</div>
+          <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 leading-tight tracking-tight">
+            THE RISE OF KAVA CULTURE IN AMERICAN CITIES
+          </h2>
+          <p class="text-lg text-neutral-700 mb-8 leading-relaxed">
+            Explore how traditional Pacific Island kava is finding new life in urban America, providing a relaxing alternative to alcohol in social settings. From Seattle to Miami, kava bars are creating community spaces focused on conversation and connection rather than intoxication.
+          </p>
+          <div class="flex items-center text-sm text-neutral-500 mb-8">
+            <span class="font-medium">By Sarah Johnson</span>
+            <span class="mx-3">•</span>
+            <span>March 15, 2025</span>
+            <span class="mx-3">•</span>
+            <span>8 min read</span>
+          </div>
+          <a href="#" class="group inline-flex items-center text-primary-700 font-semibold text-lg hover:text-primary-800 transition-colors">
+            READ FULL ARTICLE
+            <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+        </div>
+        <div>
+          <img src="https://images.pexels.com/photos/6896379/pexels-photo-6896379.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Kava preparation ceremony" class="rounded-2xl shadow-2xl">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Recent Articles -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">RECENT ARTICLES</h2>
+        <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          Stay informed about the latest trends, venues, and stories in alcohol-free nightlife
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Article 1 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/7267637/pexels-photo-7267637.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CBD lounge interior" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-accent-500 font-semibold mb-3 uppercase tracking-wide">WELLNESS</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                CBD LOUNGES: THE NEW WELLNESS SOCIAL SCENE
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              How CBD-focused venues are creating relaxing social environments that prioritize wellness and mindful consumption over traditional nightlife.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 12, 2025</span>
+              <span class="mx-2">•</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 2 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/1446327/pexels-photo-1446327.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mocktail being prepared" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-secondary-500 font-semibold mb-3 uppercase tracking-wide">RECIPES</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                10 MOCKTAILS THAT WILL CHANGE YOUR MIND ABOUT NON-ALCOHOLIC DRINKS
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              Sophisticated recipes from top bartenders proving that alcohol-free cocktails can be just as complex and delicious as their alcoholic counterparts.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 10, 2025</span>
+              <span class="mx-2">•</span>
+              <span>12 min read</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 3 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Late night coffee shop atmosphere" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-orange-500 font-semibold mb-3 uppercase tracking-wide">CITY GUIDE</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                AUSTIN'S BEST LATE-NIGHT COFFEE SPOTS FOR ALTERNATIVE SOCIALIZING
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              A comprehensive guide to Austin's thriving late-night coffee scene and the community spaces they create for alcohol-free socializing.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 8, 2025</span>
+              <span class="mx-2">•</span>
+              <span>7 min read</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 4 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/3184193/pexels-photo-3184193.jpeg?auto=compress&cs=tinysrgb&w=800" alt="People socializing in community space" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-blue-600 font-semibold mb-3 uppercase tracking-wide">COMMUNITY</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                BUILDING ALTERNATIVE COMMUNITY: EVENTS THAT BRING PEOPLE TOGETHER
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              How venues across the country are creating inclusive events that foster connection without alcohol as the social lubricant.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 5, 2025</span>
+              <span class="mx-2">•</span>
+              <span>9 min read</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 5 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/6896382/pexels-photo-6896382.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cannabis cafe interior" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-green-600 font-semibold mb-3 uppercase tracking-wide">CANNABIS CULTURE</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                CANNABIS CAFES: THE FUTURE OF LEGAL CONSUMPTION LOUNGES
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              Exploring how legal cannabis consumption lounges are creating safe, regulated environments for therapeutic and recreational use.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 3, 2025</span>
+              <span class="mx-2">•</span>
+              <span>10 min read</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Article 6 -->
+        <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+          <img src="https://images.pexels.com/photos/1303069/pexels-photo-1303069.jpeg?auto=compress&cs=tinysrgb&w=800" alt="City nightlife scene" class="w-full h-56 object-cover">
+          <div class="p-8">
+            <div class="text-sm text-indigo-600 font-semibold mb-3 uppercase tracking-wide">LIFESTYLE</div>
+            <h3 class="text-xl font-semibold mb-4 leading-tight">
+              <a href="#" class="hover:text-primary-700 transition-colors">
+                NAVIGATING NIGHTLIFE ALCOHOL-FREE: A FIRST-TIMER'S GUIDE
+              </a>
+            </h3>
+            <p class="text-neutral-700 mb-6 leading-relaxed">
+              Practical tips and strategies for enjoying nightlife without alcohol, from someone who's successfully made the transition.
+            </p>
+            <div class="flex items-center text-sm text-neutral-500">
+              <span>March 1, 2025</span>
+              <span class="mx-2">•</span>
+              <span>8 min read</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Categories -->
+  <section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-neutral-900 mb-6 tracking-tight">BROWSE BY CATEGORY</h2>
+        <p class="text-xl text-neutral-700 max-w-2xl mx-auto">Find articles that match your interests in alcohol-free living</p>
+      </div>
+      
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" class="bg-primary-700 text-white px-6 py-3 rounded-full font-medium hover:bg-primary-800 transition-colors">
+          City Guides
+        </a>
+        <a href="#" class="bg-accent-500 text-white px-6 py-3 rounded-full font-medium hover:bg-accent-600 transition-colors">
+          Wellness
+        </a>
+        <a href="#" class="bg-secondary-500 text-white px-6 py-3 rounded-full font-medium hover:bg-secondary-600 transition-colors">
+          Recipes
+        </a>
+        <a href="#" class="bg-orange-500 text-white px-6 py-3 rounded-full font-medium hover:bg-orange-600 transition-colors">
+          Health
+        </a>
+        <a href="#" class="bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">
+          Community
+        </a>
+        <a href="#" class="bg-indigo-600 text-white px-6 py-3 rounded-full font-medium hover:bg-indigo-700 transition-colors">
+          Lifestyle
+        </a>
+        <a href="#" class="bg-green-600 text-white px-6 py-3 rounded-full font-medium hover:bg-green-700 transition-colors">
+          Cannabis Culture
+        </a>
+        <a href="#" class="bg-red-600 text-white px-6 py-3 rounded-full font-medium hover:bg-red-700 transition-colors">
+          Venue Reviews
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Signup -->
+  <section class="py-20 bg-gradient-to-br from-neutral-900 via-primary-800 to-secondary-700 text-white relative overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl font-bold mb-6 tracking-tight">NEVER MISS AN ARTICLE</h2>
+      <p class="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        Subscribe to get the latest insights on alcohol-free nightlife delivered to your inbox.
+      </p>
+      <form class="max-w-md mx-auto">
+        <div class="flex gap-4">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-1 px-6 py-4 rounded-xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-white/30 transition-all"
+          >
+          <button 
+            type="submit" 
+            class="bg-accent-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            SUBSCRIBE
+          </button>
+        </div>
+      </form>
+      <p class="text-sm text-neutral-400 mt-6">
+        Join our community of mindful nightlife enthusiasts. Unsubscribe anytime.
+      </p>
+    </div>
+  </section>
+  
+  <Footer />
+</Layout>
