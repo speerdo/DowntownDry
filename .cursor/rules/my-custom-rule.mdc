@@ -1,0 +1,6 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+Do not use any hard-coded values for any data. Only use data from our database once it's available. 

@@ -7,11 +7,18 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "upload-data": "node scripts/upload-data.js",
+    "add-missing-cities": "node scripts/add-missing-cities.js",
+    "upload-all-venues": "node scripts/upload-all-venues.js",
+    "scrape-missing-cities": "node scripts/scrape-missing-cities.js",
+    "manual-venue-fixes": "node scripts/manual-venue-fixes.js"
   },
   "dependencies": {
-    "astro": "^5.9.2",
     "@astrojs/tailwind": "^5.1.5",
+    "@supabase/supabase-js": "^2.50.0",
+    "astro": "^5.9.2",
+    "dotenv": "^16.5.0",
     "tailwindcss": "^3.4.17"
   }
 }
