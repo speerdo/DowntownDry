@@ -1,0 +1,153 @@
+---
+export interface Props {
+  venues: Array<{
+    id: string;
+    name: string;
+    address?: string;
+    latitude?: number;
+    longitude?: number;
+    venue_type?: string;
+    category?: string;
+    serves_mocktails?: boolean;
+    serves_kava?: boolean;
+    is_alcohol_free?: boolean;
+  }>;
+  center?: {
+    lat: number;
+    lng: number;
+  };
+  zoom?: number;
+  height?: string;
+}
+
+const { venues, center, zoom = 12, height = "400px" } = Astro.props;
+
+// Calculate center from venues if not provided
+const mapCenter = center || (venues.length > 0 ? {
+  lat: venues.reduce((sum, venue) => sum + (venue.latitude || 0), 0) / venues.length,
+  lng: venues.reduce((sum, venue) => sum + (venue.longitude || 0), 0) / venues.length
+} : { lat: 39.8283, lng: -98.5795 }); // Center of US as fallback
+
+const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
+const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
+---
+
+{!apiKey && (
+  <div class="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded mb-4">
+    <strong>Warning:</strong> Google Maps API key not found. Please set PUBLIC_GOOGLE_MAPS_API_KEY in your environment variables.
+  </div>
+)}
+
+<div id={mapId} style={`height: ${height}; width: 100%;`} class="rounded-lg shadow-lg bg-gray-100 flex items-center justify-center">
+  <div class="text-gray-500">Loading map...</div>
+</div>
+
+<script define:vars={{ venues, mapCenter, zoom, mapId, apiKey }}>
+  console.log('GoogleMap script loaded', { mapId, apiKey: apiKey ? 'present' : 'missing', venuesCount: venues.length });
+  
+  // Make initMap globally accessible
+  window[`initMap_${mapId.replace('-', '_')}`] = function() {
+    console.log('Initializing map', mapId);
+    
+    const mapElement = document.getElementById(mapId);
+    if (!mapElement) {
+      console.error('Map element not found:', mapId);
+      return;
+    }
+
+    const map = new google.maps.Map(mapElement, {
+      zoom: zoom,
+      center: mapCenter,
+      styles: [
+        {
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [{ visibility: "off" }]
+        }
+      ]
+    });
+
+    const infoWindow = new google.maps.InfoWindow();
+
+    // Create markers for each venue
+    venues.forEach(venue => {
+      if (venue.latitude && venue.longitude) {
+        // Choose marker color based on venue type
+        let pinColor = '#4F46E5'; // Default indigo
+        if (venue.is_alcohol_free) {
+          pinColor = '#059669'; // Green for fully alcohol-free
+        } else if (venue.serves_mocktails) {
+          pinColor = '#DC2626'; // Red for mocktails
+        } else if (venue.serves_kava) {
+          pinColor = '#7C3AED'; // Purple for kava
+        }
+
+        const marker = new google.maps.Marker({
+          position: { lat: venue.latitude, lng: venue.longitude },
+          map: map,
+          title: venue.name,
+          icon: {
+            path: google.maps.SymbolPath.CIRCLE,
+            scale: 8,
+            fillColor: pinColor,
+            fillOpacity: 0.8,
+            strokeColor: '#FFFFFF',
+            strokeWeight: 2
+          }
+        });
+
+        // Create info window content
+        const contentString = `
+          <div class="p-3 max-w-xs">
+            <h3 class="font-bold text-lg mb-2">${venue.name}</h3>
+            ${venue.address ? `<p class="text-sm text-gray-600 mb-2">${venue.address}</p>` : ''}
+            <div class="flex flex-wrap gap-1 mb-2">
+              ${venue.venue_type ? `<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">${venue.venue_type}</span>` : ''}
+              ${venue.is_alcohol_free ? `<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Alcohol-Free</span>` : ''}
+              ${venue.serves_mocktails ? `<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Mocktails</span>` : ''}
+              ${venue.serves_kava ? `<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Kava</span>` : ''}
+            </div>
+          </div>
+        `;
+
+        marker.addListener('click', () => {
+          infoWindow.setContent(contentString);
+          infoWindow.open(map, marker);
+        });
+      }
+    });
+
+    // Fit map to show all markers if multiple venues
+    if (venues.length > 1) {
+      const bounds = new google.maps.LatLngBounds();
+      venues.forEach(venue => {
+        if (venue.latitude && venue.longitude) {
+          bounds.extend(new google.maps.LatLng(venue.latitude, venue.longitude));
+        }
+      });
+      map.fitBounds(bounds);
+    }
+  };
+
+  // Load Google Maps API if not already loaded
+  if (!apiKey) {
+    console.error('Google Maps API key not provided');
+    return;
+  }
+
+  if (typeof google === 'undefined') {
+    console.log('Loading Google Maps API');
+    const script = document.createElement('script');
+    const callbackName = `initMap_${mapId.replace('-', '_')}`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=${callbackName}`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = function() {
+      console.error('Failed to load Google Maps API');
+    };
+    document.head.appendChild(script);
+  } else {
+    console.log('Google Maps API already loaded, initializing map');
+    window[`initMap_${mapId.replace('-', '_')}`]();
+  }
+</script> 

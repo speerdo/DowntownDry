@@ -12,7 +12,13 @@
     "add-missing-cities": "node scripts/add-missing-cities.js",
     "upload-all-venues": "node scripts/upload-all-venues.js",
     "scrape-missing-cities": "node scripts/scrape-missing-cities.js",
-    "manual-venue-fixes": "node scripts/manual-venue-fixes.js"
+    "manual-venue-fixes": "node scripts/manual-venue-fixes.js",
+    "add-remaining-venues": "node scripts/add-remaining-venues.js",
+    "normalize-states": "node scripts/normalize-states.js",
+    "add-alaska-venues": "node scripts/add-alaska-venues.js",
+    "add-delaware-venues": "node scripts/add-delaware-venues.js",
+    "add-vermont-venues": "node scripts/add-vermont-venues.js",
+    "add-westvirginia-venues": "node scripts/add-westvirginia-venues.js"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",
