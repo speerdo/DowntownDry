@@ -2,6 +2,26 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
+/**
+ * Layout Component Usage:
+ * 
+ * This layout automatically includes the Header and Footer components.
+ * DO NOT import or use <Header /> or <Footer /> in your pages when using this layout.
+ * 
+ * Example usage in a new page:
+ * 
+ * ---
+ * import Layout from '../layouts/Layout.astro';
+ * ---
+ * 
+ * <Layout title="Your Page Title" description="Your page description">
+ *   <!-- Your page content goes here -->
+ *   <main>
+ *     <h1>Welcome to your page!</h1>
+ *   </main>
+ * </Layout>
+ */
+
 export interface Props {
   title: string;
   description?: string;
@@ -40,8 +60,13 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
   <body class="bg-white text-gray-900 font-sans antialiased">
+    <!-- Header is automatically included for all pages -->
     <Header />
+    
+    <!-- Page content is inserted here -->
     <slot />
+    
+    <!-- Footer is automatically included for all pages -->
     <Footer />
   </body>
 </html>
