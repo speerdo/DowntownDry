@@ -1,223 +1,316 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import laguIpnaImage from '../assets/LagunitasIPNA.webp';
+import peroniNaImage from '../assets/Peroni0.0.webp';
+import beerBoxImage from '../assets/beer-box.webp';
 ---
 
-<Layout title="Shop - Downtown Dry" description="Discover alcohol-free products, kava supplements, CBD items, and merchandise from Downtown Dry and our partner venues.">
+<Layout title="Shop Alcohol-Free Drinks - Downtown Dry" description="Shop the best NA beers, mocktails, delta THC drinks, and kava products. Curated alcohol-free beverages delivered to your door.">
   <!-- Hero Section -->
-  <section class="py-24 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 text-white relative overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+  <section class="relative py-20 bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-500 text-white overflow-hidden">
+    <!-- Geometric Background Elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-32 h-32 bg-secondary-500/20 rounded-full"></div>
+      <div class="absolute top-40 right-32 w-24 h-24 bg-accent-500/30 rounded-full"></div>
+      <div class="absolute bottom-32 left-1/3 w-40 h-40 bg-neutral-50/10 rounded-full"></div>
     </div>
     
-    <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">SHOP MINDFULLY</h1>
-      <p class="text-xl md:text-2xl text-neutral-100 leading-relaxed max-w-4xl mx-auto">
-        Discover curated products for your alcohol-free lifestyle. From premium kava to CBD beverages and mocktail ingredients.
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">
+        SHOP<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">BETTER DRINKS</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-neutral-200 max-w-3xl mx-auto leading-relaxed">
+        Discover premium alcohol-free beverages that actually taste amazing. From craft NA beers to kava tonics, we've curated the best drinks for your mindful lifestyle.
       </p>
     </div>
   </section>
-  
-  <!-- Featured Categories -->
-  <section class="py-20">
+
+  <!-- Shopping Categories -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- NA Beers & Mocktails -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-80">
+            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Non-alcoholic beers and cocktails" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">NA BEERS &<br/>MOCKTAILS</h2>
+                <p class="text-lg text-neutral-200 mb-2">Available Now</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Craft non-alcoholic beers, premium spirits, and ready-to-drink cocktails from top brands. Voted #1 NA retailer by AFTER Magazine.
+            </p>
+            <div class="mb-6">
+              <div class="flex items-center text-sm text-neutral-600 mb-2">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Free shipping on orders $125+
+              </div>
+              <div class="flex items-center text-sm text-neutral-600 mb-2">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Monthly subscription boxes
+              </div>
+              <div class="flex items-center text-sm text-neutral-600">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                Curated collections
+              </div>
+            </div>
+            <a href="https://www.betterrhodes.com/downtowndry" target="_blank" rel="noopener" class="block w-full bg-primary-700 text-white text-center px-8 py-4 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              SHOP NOW
+              <svg class="inline-block ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Delta THC Cocktails -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden relative">
+          <div class="absolute top-4 right-4 z-10">
+            <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">COMING SOON</span>
+          </div>
+          <div class="relative overflow-hidden h-80 opacity-75">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delta THC cocktails" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 via-green-600/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">DELTA THC<br/>COCKTAILS</h2>
+                <p class="text-lg text-neutral-200 mb-2">Coming Soon</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Premium THC-infused beverages and cocktails from licensed producers. Legal markets only, with dosage control and quality testing.
+            </p>
+            <div class="mb-6">
+              <div class="flex items-center text-sm text-neutral-500 mb-2">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Legal state verification required
+              </div>
+              <div class="flex items-center text-sm text-neutral-500 mb-2">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Lab-tested for potency
+              </div>
+              <div class="flex items-center text-sm text-neutral-500">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Precise dosing options
+              </div>
+            </div>
+            <button disabled class="block w-full bg-neutral-300 text-neutral-500 text-center px-8 py-4 rounded-2xl font-bold text-lg cursor-not-allowed">
+              NOTIFY ME WHEN AVAILABLE
+            </button>
+          </div>
+        </div>
+
+        <!-- Kava Products -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden relative">
+          <div class="absolute top-4 right-4 z-10">
+            <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">COMING SOON</span>
+          </div>
+          <div class="relative overflow-hidden h-80 opacity-75">
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kava products" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/50 to-transparent"></div>
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-20 h-20 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">KAVA<br/>PRODUCTS</h2>
+                <p class="text-lg text-neutral-200 mb-2">Coming Soon</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-8">
+            <p class="text-neutral-700 leading-relaxed mb-6">
+              Traditional Pacific Island kava root products, social tonics, and ready-to-drink kava beverages for natural relaxation and stress relief.
+            </p>
+            <div class="mb-6">
+              <div class="flex items-center text-sm text-neutral-500 mb-2">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Traditional preparation methods
+              </div>
+              <div class="flex items-center text-sm text-neutral-500 mb-2">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Ready-to-drink tonics
+              </div>
+              <div class="flex items-center text-sm text-neutral-500">
+                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+                </svg>
+                Natural stress relief
+              </div>
+            </div>
+            <button disabled class="block w-full bg-neutral-300 text-neutral-500 text-center px-8 py-4 rounded-2xl font-bold text-lg cursor-not-allowed">
+              NOTIFY ME WHEN AVAILABLE
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section (for Better Rhodes) -->
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 tracking-tight">SHOP BY CATEGORY</h2>
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+          FEATURED<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">PRODUCTS</span>
+        </h2>
         <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
-          Everything you need to create amazing alcohol-free experiences at home
+          Handpicked selections from <a href="https://www.betterrhodes.com/downtowndry" target="_blank" rel="noopener" class="text-primary-700 hover:text-primary-800 font-semibold">Better Rhodes</a>, voted #1 favorite alcohol-free retailer by AFTER Magazine.
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Kava Products -->
-        <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="relative overflow-hidden">
-            <img src="https://images.pexels.com/photos/6896379/pexels-photo-6896379.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Premium Kava Products" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-4">PREMIUM KAVA</h3>
-            <p class="text-neutral-700 mb-6 leading-relaxed">High-quality kava root and instant kava mixes from trusted Pacific Island sources for authentic relaxation experiences.</p>
-            <a href="#kava" class="inline-flex items-center text-primary-700 font-semibold hover:text-primary-800 transition-colors">
-              SHOP KAVA PRODUCTS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        
-        <!-- CBD Products -->
-        <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="relative overflow-hidden">
-            <img src="https://images.pexels.com/photos/7267637/pexels-photo-7267637.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CBD Wellness Products" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-4">CBD BEVERAGES</h3>
-            <p class="text-neutral-700 mb-6 leading-relaxed">Relaxing CBD-infused drinks, oils, and wellness products for stress relief and mindful consumption.</p>
-            <a href="#cbd" class="inline-flex items-center text-primary-700 font-semibold hover:text-primary-800 transition-colors">
-              SHOP CBD PRODUCTS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Mocktail Ingredients -->
-        <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="relative overflow-hidden">
-            <img src="https://images.pexels.com/photos/1304543/pexels-photo-1304543.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Mocktail Ingredients and Mixers" class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-4">MOCKTAIL MIXERS</h3>
-            <p class="text-neutral-700 mb-6 leading-relaxed">Professional-grade syrups, bitters, and ingredients for crafting perfect alcohol-free cocktails at home.</p>
-            <a href="#mocktails" class="inline-flex items-center text-primary-700 font-semibold hover:text-primary-800 transition-colors">
-              SHOP MIXERS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Featured Products -->
-  <section class="py-20 bg-neutral-50" id="kava">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-neutral-900 mb-12 text-center tracking-tight">FEATURED KAVA PRODUCTS</h2>
-      
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/6896378/pexels-photo-6896378.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Premium Kava Root from Vanuatu" class="w-full h-56 object-cover">
-          <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">Noble Kava Root - Vanuatu</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Premium ground kava root from Vanuatu. Perfect for traditional preparation and authentic Pacific Island experience.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$29.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
+        <!-- Lagunitas IPNA -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src={laguIpnaImage.src} alt="Lagunitas IPNA Non-Alcoholic IPA 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-primary-700 text-white px-3 py-1 rounded-full text-sm font-medium">&lt;0.5% ABV</span>
             </div>
           </div>
-        </div>
-        
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/6896380/pexels-photo-6896380.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Instant Kava Mix for Easy Preparation" class="w-full h-56 object-cover">
           <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">Instant Kava Mix</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Convenient instant kava powder. Just add water for quick preparation without traditional straining methods.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$24.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">Lagunitas IPNA</h3>
+            <p class="text-neutral-600 text-sm mb-4">Non-Alcoholic IPA | 6-pack</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Pure NA satisfaction. Massively dry-hopped and delicious — like a clean, zesty bunch of hops smackin' you in the face! Yes, in a good way.
+            </p>
+                        <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">$18.99</span>
+                <p class="text-sm text-neutral-500">+ taxes and shipping</p>
+              </div>
             </div>
+            <a href="https://www.betterrhodes.com/products/lagunitas-ipna-non-alcoholic-ipa-6pk/downtowndry" target="_blank" rel="noopener" class="block w-full bg-primary-700 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 transform hover:scale-105">
+              SHOP NOW
+            </a>
           </div>
         </div>
-        
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/6896381/pexels-photo-6896381.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Traditional Kava Strainer Bag" class="w-full h-56 object-cover">
-          <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">Traditional Strainer Bag</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Authentic coconut fiber strainer bag for traditional kava preparation. Essential for proper kava brewing.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$12.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
+
+        <!-- Peroni Non-Alcoholic -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src={peroniNaImage.src} alt="Peroni Non-Alcoholic 0.0 Brew 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">0.0% ABV</span>
             </div>
+
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">Peroni Non-Alcoholic</h3>
+            <p class="text-neutral-600 text-sm mb-4">0.0 Brew | 6-pack</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Brewed with Italian passion. Delivers the crisp, smooth and refreshing taste with distinctive fresh hoppy flavor — with zero alcohol.
+            </p>
+                        <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">$13.99</span>
+                <p class="text-sm text-neutral-500">+ taxes and shipping</p>
+              </div>
+            </div>
+            <a href="https://www.betterrhodes.com/products/peroni-non-alcoholic-0-0-brew-6-pack/downtowndry" target="_blank" rel="noopener" class="block w-full bg-primary-700 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 transform hover:scale-105">
+              SHOP NOW
+            </a>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- CBD Products Section -->
-  <section class="py-20" id="cbd">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-4xl font-bold text-neutral-900 mb-12 text-center tracking-tight">CBD WELLNESS PRODUCTS</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/7267640/pexels-photo-7267640.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CBD Sparkling Water" class="w-full h-56 object-cover">
-          <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">CBD Sparkling Water</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Refreshing sparkling water infused with 10mg premium CBD. Perfect for social occasions. 12-pack.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$39.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
+
+        <!-- Better Rhodes Beer Box -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src={beerBoxImage.src} alt="Better Rhodes Insider Beer Box Monthly Subscription" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">Monthly Club</span>
             </div>
           </div>
-        </div>
-        
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/7267639/pexels-photo-7267639.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Premium CBD Tincture" class="w-full h-56 object-cover">
           <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">Premium CBD Tincture</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Full spectrum CBD oil tincture. 1000mg in organic MCT oil base for maximum bioavailability.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$54.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">Beer & Cider Box</h3>
+            <p class="text-neutral-600 text-sm mb-4">Monthly Subscription</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Curated selection of craft non-alcoholic beers and ciders delivered monthly. Discover new favorites from top breweries.
+            </p>
+                        <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">From $29</span>
+                <p class="text-sm text-neutral-500">per month</p>
+              </div>
             </div>
-          </div>
-        </div>
-        
-        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-          <img src="https://images.pexels.com/photos/7267638/pexels-photo-7267638.jpeg?auto=compress&cs=tinysrgb&w=800" alt="CBD Gummies for Relaxation" class="w-full h-56 object-cover">
-          <div class="p-8">
-            <h3 class="text-xl font-semibold mb-3">CBD Gummies</h3>
-            <p class="text-neutral-700 mb-4 leading-relaxed">Delicious fruit-flavored gummies with 25mg CBD each. Perfect for on-the-go relaxation. 30-count bottle.</p>
-            <div class="flex justify-between items-center">
-              <span class="text-2xl font-bold text-neutral-900">$49.99</span>
-              <button class="bg-primary-700 text-white px-6 py-3 rounded-lg hover:bg-primary-800 transition-colors font-semibold">
-                VIEW PRODUCT
-              </button>
-            </div>
+            <a href="https://www.betterrhodes.com/products/beer-cider-box/downtowndry" target="_blank" rel="noopener" class="block w-full bg-primary-700 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 transform hover:scale-105">
+              SUBSCRIBE NOW
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  
-  <!-- Newsletter/Affiliate Disclosure -->
-  <section class="py-20 bg-gradient-to-br from-neutral-900 via-primary-800 to-secondary-700 text-white relative overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+
+  <!-- Newsletter Signup -->
+  <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-32 h-32 bg-secondary-500/10 rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-40 h-40 bg-accent-500/10 rounded-full"></div>
     </div>
     
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl font-bold mb-6 tracking-tight">STAY UPDATED ON NEW PRODUCTS</h2>
-      <p class="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-        Be the first to know about new mindful lifestyle products and exclusive deals.
+      <h2 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
+        DRINK<br />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">BETTER</span>
+      </h2>
+      <p class="text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+        Get exclusive access to new products, special offers, and the latest in alcohol-free lifestyle trends.
       </p>
-      <form class="max-w-md mx-auto mb-10">
+      <form class="max-w-lg mx-auto">
         <div class="flex gap-4">
           <input 
             type="email" 
             placeholder="Enter your email" 
-            class="flex-1 px-6 py-4 rounded-xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-white/30 transition-all"
+            class="flex-1 px-8 py-5 rounded-2xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-secondary-500/50 transition-all text-lg"
           >
           <button 
             type="submit" 
-            class="bg-accent-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+            class="bg-accent-500 text-white px-10 py-5 rounded-2xl font-bold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
           >
             SUBSCRIBE
           </button>
         </div>
       </form>
-      <p class="text-sm text-neutral-400 leading-relaxed">
-        <strong>Affiliate Disclosure:</strong> Downtown Dry may earn a commission from purchases made through our affiliate links. This helps support our mission to promote alcohol-free nightlife at no extra cost to you.
-      </p>
     </div>
   </section>
 </Layout>
