@@ -14,7 +14,7 @@ export default {
           600: '#6f7f56',
           700: '#505A28', // Main brand color
           800: '#434c22',
-          900: '#38401e'
+          900: '#38401e',
         },
         secondary: {
           50: '#fefcf8',
@@ -26,7 +26,7 @@ export default {
           600: '#c4941f',
           700: '#a47c1a',
           800: '#86651a',
-          900: '#6e531a'
+          900: '#6e531a',
         },
         accent: {
           50: '#fef9f6',
@@ -38,7 +38,7 @@ export default {
           600: '#c66a3a',
           700: '#a5552f',
           800: '#85462a',
-          900: '#6d3c26'
+          900: '#6d3c26',
         },
         neutral: {
           50: '#F2EADF', // Light cream background
@@ -50,17 +50,20 @@ export default {
           600: '#7d6651',
           700: '#665344',
           800: '#54453a',
-          900: '#1D200F' // Dark forest green
-        }
+          900: '#1D200F', // Dark forest green
+        },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        heading: ['Figtree', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      }
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],
-}
+};

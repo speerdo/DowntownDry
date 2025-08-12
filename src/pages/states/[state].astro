@@ -60,13 +60,13 @@ function getStateSlug(stateName: string) {
 }
 ---
 
-<Layout title={`${stateName} Cities - Downtown Dry`}>
+<Layout title={`${stateName} - Downtown Dry`}>
   <main class="container mx-auto px-4 py-8">
     <div class="max-w-4xl mx-auto">
       <!-- Breadcrumb -->
       <nav class="mb-6">
         <ol class="flex items-center space-x-2 text-sm text-gray-500">
-          <li><a href="/cities/" class="hover:text-indigo-600">Cities</a></li>
+          <li><a href="/states/" class="hover:text-indigo-600">States</a></li>
           <li>→</li>
           <li class="text-gray-900 font-medium">{stateName}</li>
         </ol>
@@ -86,7 +86,7 @@ function getStateSlug(stateName: string) {
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           {citiesWithVenues.map((city) => (
             <a 
-              href={`/cities/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
+              href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
               class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-200"
             >
               <h3 class="text-xl font-semibold text-gray-900 mb-2">{city.city_name}</h3>

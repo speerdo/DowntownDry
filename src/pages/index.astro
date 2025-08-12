@@ -2,7 +2,32 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Downtown Dry - Discover Alcohol-Free Nightlife Across US Cities" description="Find the best venues serving NA beers, mocktails, delta THC drinks, and kava across US cities. Your comprehensive guide to alcohol-free nightlife and social experiences.">
+<!-- Structured Data for SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Downtown Dry",
+  "description": "Comprehensive directory of alcohol-free venues including kava bars, mocktail lounges, and THC beverage venues across US cities",
+  "url": "https://downtowndry.com",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://downtowndry.com/states?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Downtown Dry",
+    "description": "Directory of 500+ alcohol-free venues across 50+ US cities",
+    "sameAs": [
+      "https://instagram.com/downtowndry",
+      "https://twitter.com/downtowndry"
+    ]
+  }
+}
+</script>
+
+<Layout title="Downtown Dry - Find Alcohol-Free Bars, Kava Lounges & THC Venues Near You" description="Discover 500+ venues serving non-alcoholic beer, mocktails, kava, and legal delta THC drinks in 50+ US cities. Safe spaces for mindful socializing, recovery support, and inclusive nightlife experiences. Complete guide to alcohol-free bars, kava lounges, and hemp beverage venues nationwide.">
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- Split Background Design -->
@@ -36,9 +61,9 @@ import Layout from '../layouts/Layout.astro';
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
           </svg>
         </div>
-        <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight tracking-tight">
+        <h1 class="text-6xl md:text-8xl font-semibold mb-6 leading-tight tracking-tight font-heading">
           DOWNTOWN<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">DRY</span>
+          <span style="color: #D9AA55;">DRY</span>
         </h1>
       </div>
       
@@ -52,51 +77,119 @@ import Layout from '../layouts/Layout.astro';
         </p>
       </div>
       
-      <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-        <a href="/cities" class="group bg-secondary-500 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-2xl">
-          EXPLORE CITIES
-          <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-          </svg>
-        </a>
-        <a href="/shop" class="group border-3 border-white/40 text-white px-10 py-5 rounded-2xl font-bold text-lg hover:bg-white/10 hover:border-white/60 transition-all duration-300 backdrop-blur-sm">
-          SHOP DRINKS
-        </a>
+      <div class="flex flex-col sm:flex-row items-center justify-center">
+        <div class="flex flex-col sm:flex-row gap-6 sm:gap-16 items-center">
+          <a href="/states" class="group bg-secondary-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-2xl w-72 text-center">
+            EXPLORE CITIES
+            <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </a>
+          <a href="/shop" class="group relative bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/70 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-72 text-center">
+            <span class="relative z-10">SHOP DRINKS</span>
+            <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            <!-- Subtle gradient overlay for depth -->
+            <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-white/5 to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </a>
+        </div>
       </div>
     </div>
   </section>
   
   <!-- Stats Section -->
-  <section class="py-20 bg-neutral-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-        <div class="bg-white p-8 rounded-3xl shadow-lg">
-          <div class="w-16 h-16 bg-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-white">500+</span>
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #1D200F 0%, #505A28 50%, #1D200F 100%);">
+    <!-- Animated background elements -->
+    <div class="absolute inset-0">
+      <div class="absolute top-10 left-10 w-20 h-20 rounded-full animate-pulse" style="background-color: rgba(217, 170, 85, 0.1);"></div>
+      <div class="absolute top-40 right-20 w-32 h-32 rounded-full animate-pulse delay-1000" style="background-color: rgba(217, 133, 85, 0.1);"></div>
+      <div class="absolute bottom-20 left-1/4 w-24 h-24 rounded-full animate-pulse delay-500" style="background-color: rgba(217, 170, 85, 0.15);"></div>
+      <div class="absolute bottom-40 right-1/3 w-16 h-16 rounded-full animate-pulse delay-1500" style="background-color: rgba(80, 90, 40, 0.2);"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+          By The Numbers
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Real data from the largest directory of alcohol-free venues in America
+        </p>
+      </div>
+
+      <!-- Main Stats Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <!-- Total Venues -->
+        <div class="group relative">
+          <div class="backdrop-blur-md border p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, rgba(242, 234, 223, 0.2) 0%, rgba(242, 234, 223, 0.05) 100%); border-color: rgba(217, 170, 85, 0.3);">
+            <div class="text-6xl font-bold mb-4" style="color: #D9AA55;">
+              1,879
+            </div>
+            <h3 class="text-xl font-bold mb-2 font-heading" style="color: #F2EADF;">VENUES</h3>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Curated nationwide</p>
           </div>
-          <h3 class="text-lg font-bold text-neutral-900 mb-2">VENUES</h3>
-          <p class="text-neutral-600">Curated locations</p>
+          <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style="background: linear-gradient(135deg, rgba(217, 170, 85, 0.2) 0%, rgba(217, 133, 85, 0.2) 100%);"></div>
         </div>
-        <div class="bg-white p-8 rounded-3xl shadow-lg">
-          <div class="w-16 h-16 bg-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-white">50+</span>
+
+        <!-- Cities -->
+        <div class="group relative">
+          <div class="backdrop-blur-md border p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, rgba(242, 234, 223, 0.2) 0%, rgba(242, 234, 223, 0.05) 100%); border-color: rgba(217, 170, 85, 0.3);">
+            <div class="text-6xl font-bold mb-4" style="color: #D98555;">
+              264
+            </div>
+            <h3 class="text-xl font-bold mb-2 font-heading" style="color: #F2EADF;">CITIES</h3>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Coast to coast</p>
           </div>
-          <h3 class="text-lg font-bold text-neutral-900 mb-2">CITIES</h3>
-          <p class="text-neutral-600">Across America</p>
+          <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style="background: linear-gradient(135deg, rgba(217, 133, 85, 0.2) 0%, rgba(217, 170, 85, 0.2) 100%);"></div>
         </div>
-        <div class="bg-white p-8 rounded-3xl shadow-lg">
-          <div class="w-16 h-16 bg-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-white">4</span>
+
+        <!-- States -->
+        <div class="group relative">
+          <div class="backdrop-blur-md border p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, rgba(242, 234, 223, 0.2) 0%, rgba(242, 234, 223, 0.05) 100%); border-color: rgba(217, 170, 85, 0.3);">
+            <div class="text-6xl font-bold mb-4" style="color: #D9AA55;">
+              50+DC
+            </div>
+            <h3 class="text-xl font-bold mb-2 font-heading" style="color: #F2EADF;">STATES</h3>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Complete coverage</p>
           </div>
-          <h3 class="text-lg font-bold text-neutral-900 mb-2">DRINK TYPES</h3>
-          <p class="text-neutral-600">NA beer to kava</p>
+          <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style="background: linear-gradient(135deg, rgba(217, 170, 85, 0.2) 0%, rgba(80, 90, 40, 0.2) 100%);"></div>
         </div>
-        <div class="bg-white p-8 rounded-3xl shadow-lg">
-          <div class="w-16 h-16 bg-neutral-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
-            <span class="text-2xl font-bold text-white">0%</span>
+
+        <!-- Alcohol-Free -->
+        <div class="group relative">
+          <div class="backdrop-blur-md border p-8 rounded-3xl text-center hover:shadow-2xl transition-all duration-300 transform hover:scale-105" style="background: linear-gradient(135deg, rgba(242, 234, 223, 0.2) 0%, rgba(242, 234, 223, 0.05) 100%); border-color: rgba(217, 170, 85, 0.3);">
+            <div class="text-6xl font-bold mb-4" style="color: #D98555;">
+              0%
+            </div>
+            <h3 class="text-xl font-bold mb-2 font-heading" style="color: #F2EADF;">ALCOHOL</h3>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Pure experiences</p>
           </div>
-          <h3 class="text-lg font-bold text-neutral-900 mb-2">ALCOHOL</h3>
-          <p class="text-neutral-600">Pure experiences</p>
+          <div class="absolute inset-0 rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10" style="background: linear-gradient(135deg, rgba(80, 90, 40, 0.2) 0%, rgba(217, 170, 85, 0.2) 100%);"></div>
+        </div>
+      </div>
+
+      <!-- Venue Type Breakdown -->
+      <div class="backdrop-blur-md border rounded-3xl p-8" style="background: linear-gradient(135deg, rgba(242, 234, 223, 0.15) 0%, rgba(242, 234, 223, 0.05) 100%); border-color: rgba(217, 170, 85, 0.3);">
+        <h3 class="text-2xl font-bold text-center mb-8 font-heading" style="color: #F2EADF;">Venue Breakdown</h3>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2" style="color: #D9AA55;">991</div>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Fully Alcohol-Free</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2" style="color: #F2EADF;">159</div>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Mocktail Venues</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2" style="color: #D98555;">68</div>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">Kava Bars</p>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2" style="color: #F2EADF;">1+</div>
+            <p class="text-sm" style="color: rgba(242, 234, 223, 0.8);">THC Venues</p>
+          </div>
         </div>
       </div>
     </div>
@@ -106,9 +199,9 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight font-heading">
           THE FUTURE OF<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">NIGHTLIFE</span>
+          <span style="color: #505A28;">NIGHTLIFE</span>
         </h2>
         <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
           More people are choosing mindful experiences over mindless consumption. 
@@ -123,7 +216,7 @@ import Layout from '../layouts/Layout.astro';
               <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-neutral-900 mb-4">GROWING MOVEMENT</h3>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4 font-heading">GROWING MOVEMENT</h3>
           <p class="text-neutral-700 leading-relaxed">
             Over 30% of adults are reducing alcohol consumption, creating demand for venues serving innovative alcohol-free alternatives that actually taste great.
           </p>
@@ -135,7 +228,7 @@ import Layout from '../layouts/Layout.astro';
               <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-neutral-900 mb-4">QUALITY DRINKS</h3>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4 font-heading">QUALITY DRINKS</h3>
           <p class="text-neutral-700 leading-relaxed">
             From craft NA beers to artisanal kava preparations, these venues focus on premium ingredients and expert preparation for exceptional taste experiences.
           </p>
@@ -147,7 +240,7 @@ import Layout from '../layouts/Layout.astro';
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <h3 class="text-2xl font-bold text-neutral-900 mb-4">INCLUSIVE VIBES</h3>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4 font-heading">INCLUSIVE VIBES</h3>
           <p class="text-neutral-700 leading-relaxed">
             Whether you're in recovery, pregnant, driving, or just choosing to drink mindfully, these venues welcome everyone without judgment or pressure.
           </p>
@@ -160,9 +253,9 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-20 bg-neutral-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight font-heading">
           WHAT YOU'LL<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">DISCOVER</span>
+          <span style="color: #D98555;">DISCOVER</span>
         </h2>
       </div>
       
@@ -178,7 +271,7 @@ import Layout from '../layouts/Layout.astro';
                     <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold">NA BEER VENUES</h3>
+                <h3 class="text-2xl font-bold font-heading">NA BEER VENUES</h3>
               </div>
             </div>
           </div>
@@ -186,7 +279,7 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-neutral-700 leading-relaxed mb-6">
               Bars and taprooms featuring the best non-alcoholic beers on tap and in bottles. From hoppy IPAs to rich stouts, all the flavor without the buzz.
             </p>
-            <a href="/cities" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
               FIND NA BEER SPOTS
               <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -206,7 +299,7 @@ import Layout from '../layouts/Layout.astro';
                     <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold">MOCKTAIL LOUNGES</h3>
+                <h3 class="text-2xl font-bold font-heading">MOCKTAIL LOUNGES</h3>
               </div>
             </div>
           </div>
@@ -214,7 +307,7 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-neutral-700 leading-relaxed mb-6">
               Sophisticated cocktail lounges serving creative alcohol-free beverages. All the craftsmanship and ambiance of a premium cocktail bar, zero proof.
             </p>
-            <a href="/cities" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
               BROWSE MOCKTAIL BARS
               <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -234,7 +327,7 @@ import Layout from '../layouts/Layout.astro';
                     <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold">DELTA THC VENUES</h3>
+                <h3 class="text-2xl font-bold font-heading">DELTA THC VENUES</h3>
               </div>
             </div>
           </div>
@@ -242,7 +335,7 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-neutral-700 leading-relaxed mb-6">
               Venues serving delta THC-infused beverages and edibles in legal markets. Safe, regulated environments for cannabis consumption without smoking.
             </p>
-            <a href="/cities" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
               FIND THC VENUES
               <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -263,7 +356,7 @@ import Layout from '../layouts/Layout.astro';
                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold">KAVA BARS</h3>
+                <h3 class="text-2xl font-bold font-heading">KAVA BARS</h3>
               </div>
             </div>
           </div>
@@ -271,7 +364,7 @@ import Layout from '../layouts/Layout.astro';
             <p class="text-neutral-700 leading-relaxed mb-6">
               Traditional Pacific Island relaxation with kava root beverages in communal spaces. Natural stress relief that promotes conversation and connection.
             </p>
-            <a href="/cities" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
+            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
               DISCOVER KAVA BARS
               <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -283,13 +376,374 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
   
-  <!-- Popular Cities Preview -->
+  <!-- Statistics: The Case for Alcohol-Free Living -->
+  <section class="py-20 bg-gradient-to-br from-slate-900 to-gray-900 text-white relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-20 w-40 h-40 bg-blue-500/10 rounded-full"></div>
+      <div class="absolute bottom-20 right-20 w-32 h-32 bg-green-500/10 rounded-full"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/5 rounded-full"></div>
+    </div>
+    
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center bg-blue-500/20 text-blue-300 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+          </svg>
+          Evidence-Based Benefits
+        </div>
+        <h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight font-heading">
+          The Data Speaks: 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-green-400">Life Without Alcohol</span>
+        </h2>
+        <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          Research consistently shows that reducing or eliminating alcohol consumption leads to measurably better outcomes across health, safety, and quality of life metrics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/20">
+          <div class="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-red-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-red-400 mb-2">95%</div>
+          <h3 class="text-lg font-bold mb-2">Fewer DUI Arrests</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            People who don't drink alcohol are 95% less likely to be arrested for driving under the influence
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/20">
+          <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-green-400 mb-2">40%</div>
+          <h3 class="text-lg font-bold mb-2">Lower Cancer Risk</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Avoiding alcohol reduces risk of liver, breast, and colorectal cancers by up to 40%
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/20">
+          <div class="w-20 h-20 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-blue-400 mb-2">7-15</div>
+          <h3 class="text-lg font-bold mb-2">Years Longer Life</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Non-drinkers live 7-15 years longer on average than heavy drinkers
+          </p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center border border-white/20">
+          <div class="w-20 h-20 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"/>
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-purple-400 mb-2">$1,300</div>
+          <h3 class="text-lg font-bold mb-2">Annual Savings</h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Average person saves $1,300+ per year by not purchasing alcohol
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="space-y-8">
+          <h3 class="text-3xl font-bold mb-6">Health & Wellness Benefits</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Better Sleep Quality</h4>
+                <p class="text-gray-300 text-sm">Non-drinkers report 23% better sleep quality and fall asleep 37% faster</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Improved Mental Health</h4>
+                <p class="text-gray-300 text-sm">50% lower rates of depression and anxiety among non-drinkers</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Weight Management</h4>
+                <p class="text-gray-300 text-sm">Avoiding alcohol eliminates 150-300 empty calories per drink</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Enhanced Immune System</h4>
+                <p class="text-gray-300 text-sm">Non-drinkers have 40% stronger immune response to infections</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <h3 class="text-3xl font-bold mb-6">Safety & Legal Benefits</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Zero DUI Risk</h4>
+                <p class="text-gray-300 text-sm">Complete elimination of drunk driving charges, license suspension, and legal fees</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Reduced Accident Risk</h4>
+                <p class="text-gray-300 text-sm">Alcohol-related accidents account for 28% of traffic fatalities - completely avoidable</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Lower Criminal Justice Involvement</h4>
+                <p class="text-gray-300 text-sm">40% of violent crimes involve alcohol - non-drinkers avoid alcohol-related arrests</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-bold text-white mb-2">Professional Reputation</h4>
+                <p class="text-gray-300 text-sm">Avoid career-damaging incidents, maintain security clearances, and professional licenses</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+          <h3 class="text-2xl font-bold mb-4">The Bottom Line</h3>
+          <p class="text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+            Choosing alcohol-free venues isn't just about avoiding hangovers - it's about optimizing your health, safety, finances, and life outcomes. 
+            The data is clear: <strong class="text-white">life is measurably better without alcohol.</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Content: Understanding Kava -->
+  <section class="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="inline-flex items-center bg-purple-100 text-purple-800 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            Understanding Kava
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 leading-tight">
+            The Pacific Island Tradition of 
+            <span style="color: #505A28;">Natural Relaxation</span>
+          </h2>
+          <div class="space-y-6 text-lg text-neutral-700 leading-relaxed">
+            <p>
+              Kava, derived from the root of Piper methysticum, has been used ceremonially in Pacific Island cultures for over 3,000 years. This traditional beverage promotes relaxation and social connection without the negative effects of alcohol.
+            </p>
+            <p>
+              Modern kava bars offer a communal space where people gather to unwind, socialize, and experience the mild calming effects that kava provides. The drink has an earthy, slightly bitter taste and creates a sense of mental clarity while reducing anxiety.
+            </p>
+            <div class="bg-amber-50 border-l-4 border-amber-400 p-6 rounded-r-lg">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-amber-800 mb-2">Important Safety Information</h3>
+                  <p class="text-amber-700">
+                    <strong>Kava is not for everyone.</strong> It may interact with certain medications and can affect liver function in some individuals. Those with liver conditions, pregnant or nursing women, and people taking prescription medications should consult healthcare providers before consuming kava. <strong>Do not drive after consuming kava</strong> as it can impair motor skills and reaction time.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>
+              When consumed responsibly in appropriate settings, kava can be a therapeutic choice for stress relief and social connection, offering an alternative to alcohol-based socializing.
+            </p>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="absolute -top-4 -left-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div class="absolute -bottom-8 -right-4 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Traditional kava preparation in wooden bowl with coconut shells" 
+            class="relative rounded-3xl shadow-2xl w-full h-96 object-cover"
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational Content: Delta THC Drinks -->
+  <section class="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="order-2 lg:order-1 relative">
+          <div class="absolute -top-4 -right-4 w-72 h-72 bg-green-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <div class="absolute -bottom-8 -left-4 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="Delta THC beverages in modern packaging with cannabis leaf designs" 
+            class="relative rounded-3xl shadow-2xl w-full h-96 object-cover"
+          >
+        </div>
+        <div class="order-1 lg:order-2">
+          <div class="inline-flex items-center bg-green-100 text-green-800 px-6 py-3 rounded-full text-sm font-semibold mb-6">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+            </svg>
+            Delta THC Beverages
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 leading-tight">
+            Hemp-Derived THC Drinks: 
+            <span style="color: #D9AA55;">Legal Nationwide</span>
+          </h2>
+          <div class="space-y-6 text-lg text-neutral-700 leading-relaxed">
+            <p>
+              Delta-8 and Delta-9 THC beverages derived from hemp are federally legal across all 50 states, thanks to the 2018 Farm Bill. These drinks contain less than 0.3% Delta-9 THC by dry weight, making them a legal alternative to traditional cannabis products.
+            </p>
+            <p>
+              Unlike smoking or vaping, THC beverages offer precise dosing, longer-lasting effects, and a social drinking experience similar to alcohol but without the hangover. Popular formats include seltzers, sodas, teas, and craft cocktail mixers.
+            </p>
+            <div class="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
+              <div class="flex items-start">
+                <svg class="w-6 h-6 text-red-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="font-bold text-red-800 mb-2">Responsible Consumption Required</h3>
+                  <p class="text-red-700">
+                    <strong>Do not drive or operate machinery after consuming THC beverages.</strong> Effects can last 2-8 hours and may impair judgment, coordination, and reaction time. Start with low doses (2.5-5mg) and wait at least 2 hours before consuming more. Keep away from children and pets. Consult healthcare providers if pregnant, nursing, or taking medications.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>
+              THC beverages represent the fastest-growing segment of the cannabis industry, offering adults a controlled, social way to experience cannabis effects in venues designed for safe, responsible consumption.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO-Rich Content: Benefits of Alcohol-Free Socializing -->
   <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
+          Why Choose 
+          <span style="color: #D98555;">Alcohol-Free Venues?</span>
+        </h2>
+        <p class="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+          The benefits of alcohol-free socializing extend far beyond just avoiding hangovers. Discover why millions are choosing mindful alternatives.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl">
+          <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">Better Health Outcomes</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Reduced calorie intake, better sleep quality, improved liver function, and enhanced mental clarity. Alcohol-free venues support your wellness goals while maintaining social connections.
+          </p>
+        </article>
+        
+        <article class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl">
+          <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">Inclusive Social Spaces</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Welcome people in recovery, pregnant individuals, designated drivers, and anyone choosing mindful consumption. No pressure, no judgment, just genuine connection and community.
+          </p>
+        </article>
+        
+        <article class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl">
+          <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold text-neutral-900 mb-4">Premium Craft Experiences</h3>
+          <p class="text-neutral-700 leading-relaxed">
+            Artisanal NA beers, complex mocktails, traditional kava preparations, and innovative THC beverages. These venues prioritize quality ingredients and expert craftsmanship.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Cities Preview -->
+  <section class="py-20 bg-neutral-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
           TRENDING<br />
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-accent-500">CITIES</span>
+          <span style="color: #505A28;">CITIES</span>
         </h2>
       </div>
       
@@ -335,7 +789,7 @@ import Layout from '../layouts/Layout.astro';
       </div>
       
       <div class="text-center mt-12">
-        <a href="/cities" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+        <a href="/states" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl">
           VIEW ALL CITIES
           <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -353,10 +807,10 @@ import Layout from '../layouts/Layout.astro';
     </div>
     
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
-        STAY<br />
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">CONNECTED</span>
-      </h2>
+              <h2 class="text-5xl md:text-6xl font-bold mb-8 tracking-tight">
+          STAY<br />
+          <span style="color: #D9AA55;">CONNECTED</span>
+        </h2>
       <p class="text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
         Get notified when new alcohol-free venues open in your city and discover the latest in NA beers, mocktails, and alternative drinks.
       </p>

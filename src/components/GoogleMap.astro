@@ -73,11 +73,11 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     venues.forEach(venue => {
       if (venue.latitude && venue.longitude) {
         // Choose marker color based on venue type
-        let pinColor = '#4F46E5'; // Default indigo
+        let pinColor = '#059669'; // Default green for THC cocktails (other venues)
         if (venue.is_alcohol_free) {
-          pinColor = '#059669'; // Green for fully alcohol-free
+          pinColor = '#EA580C'; // Orange for fully alcohol-free
         } else if (venue.serves_mocktails) {
-          pinColor = '#DC2626'; // Red for mocktails
+          pinColor = '#2563EB'; // Blue for mocktails
         } else if (venue.serves_kava) {
           pinColor = '#7C3AED'; // Purple for kava
         }

@@ -41,10 +41,10 @@ function getStateSlug(stateName: string) {
 }
 ---
 
-<Layout title="Cities - Downtown Dry">
+<Layout title="States - Downtown Dry">
   <main class="container mx-auto px-4 py-8">
     <div class="max-w-4xl mx-auto">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">Browse Cities by State</h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4 font-heading">Browse States</h1>
       <p class="text-lg text-gray-600 mb-8">
         Discover alcohol-free venues across the United States. Click on any state to explore cities and venues.
       </p>
@@ -52,10 +52,10 @@ function getStateSlug(stateName: string) {
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sortedStates.map((state) => (
           <a 
-            href={`/cities/${getStateSlug(state.name)}/`}
+            href={`/states/${getStateSlug(state.name)}/`}
             class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-200"
           >
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">{state.name}</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2 font-heading">{state.name}</h3>
             <div class="text-sm text-gray-600 space-y-1">
               <p>{state.cityCount} {state.cityCount === 1 ? 'city' : 'cities'}</p>
               <p>{state.venueCount} {state.venueCount === 1 ? 'venue' : 'venues'}</p>
