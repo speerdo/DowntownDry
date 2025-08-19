@@ -39,7 +39,7 @@ const { data: cities, error } = await supabase
     city_name,
     full_name,
     population,
-    venues(id, name, venue_type, category)
+    venues(id, name, venue_type, category, rating, serves_mocktails, serves_kava, serves_thc, is_alcohol_free)
   `)
   .eq('state', stateName)
   .order('city_name');
@@ -50,6 +50,32 @@ if (error) {
 
 const citiesWithVenues = cities?.filter(city => city.venues && city.venues.length > 0) || [];
 const totalVenues = citiesWithVenues.reduce((sum, city) => sum + city.venues.length, 0);
+
+// Calculate state-wide stats
+const totalMocktailVenues = citiesWithVenues.reduce((sum, city) => 
+  sum + city.venues.filter(v => v.serves_mocktails).length, 0);
+const totalKavaVenues = citiesWithVenues.reduce((sum, city) => 
+  sum + city.venues.filter(v => v.serves_kava).length, 0);
+const totalThcVenues = citiesWithVenues.reduce((sum, city) => 
+  sum + city.venues.filter(v => v.serves_thc).length, 0);
+const avgRating = citiesWithVenues.reduce((sum, city) => {
+  const cityRatings = city.venues.filter(v => v.rating).map(v => v.rating);
+  return sum + (cityRatings.length > 0 ? cityRatings.reduce((a, b) => a + b, 0) / cityRatings.length : 0);
+}, 0) / citiesWithVenues.filter(city => city.venues.some(v => v.rating)).length;
+
+function getCityImage(cityName: string, venues: any[]) {
+  // Generate city-specific images based on venue characteristics
+  const hasKava = venues.some(v => v.serves_kava);
+  const hasMocktails = venues.some(v => v.serves_mocktails);
+  const hasThc = venues.some(v => v.serves_thc);
+  
+  if (hasKava) return 'https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&w=400&h=200&q=80';
+  if (hasThc) return 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=400&h=200&q=80';
+  if (hasMocktails) return 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=400&h=200&q=80';
+  
+  // Default city nightlife image
+  return 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=400&h=200&q=80';
+}
 
 function getCitySlug(cityName: string) {
   return cityName.toLowerCase().replace(/\s+/g, '-');
@@ -72,56 +98,172 @@ function getStateSlug(stateName: string) {
         </ol>
       </nav>
 
+      <!-- State Overview -->
       <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4">
-          Alcohol-Free Venues in {stateName}
+        <h1 class="text-4xl font-bold text-gray-900 mb-4 font-heading">
+          🍹 Alcohol-Free Venues in {stateName}
         </h1>
-        <p class="text-lg text-gray-600">
-          {citiesWithVenues.length} {citiesWithVenues.length === 1 ? 'city' : 'cities'} • 
-          {totalVenues} {totalVenues === 1 ? 'venue' : 'venues'}
+        <p class="text-lg text-gray-600 mb-6">
+          Discover {totalVenues} amazing venues across {citiesWithVenues.length} {citiesWithVenues.length === 1 ? 'city' : 'cities'} for your next alcohol-free adventure.
         </p>
+
+        <!-- State Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200">
+            <div class="text-2xl font-bold text-blue-600">{totalVenues}</div>
+            <div class="text-sm text-blue-700">Total Venues</div>
+          </div>
+          <div class="bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-lg border border-red-200">
+            <div class="text-2xl font-bold text-red-600">{totalMocktailVenues}</div>
+            <div class="text-sm text-red-700">Mocktail Spots</div>
+          </div>
+          <div class="bg-gradient-to-r from-purple-50 to-violet-50 p-4 rounded-lg border border-purple-200">
+            <div class="text-2xl font-bold text-purple-600">{totalKavaVenues}</div>
+            <div class="text-sm text-purple-700">Kava Bars</div>
+          </div>
+          <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-4 rounded-lg border border-green-200">
+            <div class="text-2xl font-bold text-green-600">{totalThcVenues}</div>
+            <div class="text-sm text-green-700">THC Venues</div>
+          </div>
+        </div>
       </div>
 
       {citiesWithVenues.length > 0 ? (
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {citiesWithVenues.map((city) => (
-            <a 
-              href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
-              class="block p-6 bg-white rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-200"
-            >
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">{city.city_name}</h3>
-              
-              {city.population && (
-                <p class="text-sm text-gray-500 mb-3">
-                  Population: {city.population.toLocaleString()}
-                </p>
-              )}
+        <div>
+          <!-- Top Cities Section -->
+          {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).length > 0 && (
+            <div class="mb-12">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-6">🌟 Featured Cities</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).map((city) => (
+                  <a 
+                    href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
+                    class="block bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300"
+                  >
+                    <div class="relative h-32 bg-gradient-to-br from-indigo-100 to-purple-100">
+                      <img 
+                        src={getCityImage(city.city_name, city.venues)} 
+                        alt={`${city.city_name} nightlife scene`}
+                        class="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div class="absolute top-3 left-3">
+                        <span class="bg-white/90 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
+                          {city.venues.length} venues
+                        </span>
+                      </div>
+                    </div>
+                    <div class="p-4">
+                      <h3 class="text-lg font-bold text-gray-900 mb-1">{city.city_name}</h3>
+                      {city.population && (
+                        <p class="text-sm text-gray-500 mb-2">
+                          Pop. {city.population.toLocaleString()}
+                        </p>
+                      )}
+                      <div class="flex flex-wrap gap-1 mb-3">
+                        {city.venues.filter(v => v.serves_mocktails).length > 0 && (
+                          <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded-full">🍹 Mocktails</span>
+                        )}
+                        {city.venues.filter(v => v.serves_kava).length > 0 && (
+                          <span class="bg-purple-100 text-purple-700 text-xs px-2 py-1 rounded-full">🌿 Kava</span>
+                        )}
+                        {city.venues.filter(v => v.serves_thc).length > 0 && (
+                          <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full">🌱 THC</span>
+                        )}
+                      </div>
+                      <p class="text-indigo-600 font-medium text-sm">
+                        Explore {city.city_name} →
+                      </p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
 
-              <div class="mb-4">
-                <p class="text-sm text-gray-600 mb-2">
-                  {city.venues.length} {city.venues.length === 1 ? 'venue' : 'venues'}
-                </p>
-                
-                {/* Show venue types */}
-                <div class="flex flex-wrap gap-1">
-                  {[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].slice(0, 3).map((type) => (
-                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                      {type}
-                    </span>
-                  ))}
-                  {[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].length > 3 && (
-                    <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                      +{[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].length - 3} more
-                    </span>
-                  )}
+          <!-- All Cities -->
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6">🏙️ All Cities</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {citiesWithVenues.map((city) => (
+              <a 
+                href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
+                class="block bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300"
+              >
+                <div class="relative h-24 bg-gradient-to-r from-gray-100 to-indigo-100">
+                  <img 
+                    src={getCityImage(city.city_name, city.venues)} 
+                    alt={`${city.city_name} venues`}
+                    class="w-full h-full object-cover opacity-80"
+                    loading="lazy"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
+                  <div class="absolute bottom-2 left-3">
+                    <h3 class="text-lg font-bold text-white drop-shadow-lg">{city.city_name}</h3>
+                  </div>
                 </div>
-              </div>
+                
+                <div class="p-4">
+                  {city.population && (
+                    <p class="text-sm text-gray-500 mb-3">
+                      Population: {city.population.toLocaleString()}
+                    </p>
+                  )}
 
-              <div class="text-indigo-600 font-medium">
-                Explore {city.city_name} →
-              </div>
-            </a>
-          ))}
+                  <div class="mb-4">
+                    <p class="text-sm text-gray-700 font-medium mb-2">
+                      {city.venues.length} {city.venues.length === 1 ? 'venue' : 'venues'} • 
+                      {city.venues.filter(v => v.rating).length > 0 && (
+                        <span class="text-yellow-600 ml-1">
+                          ⭐ {(city.venues.filter(v => v.rating).reduce((sum, v) => sum + (v.rating || 0), 0) / city.venues.filter(v => v.rating).length).toFixed(1)} avg
+                        </span>
+                      )}
+                    </p>
+                    
+                    {/* Show venue types and specialties */}
+                    <div class="flex flex-wrap gap-1 mb-2">
+                      {[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].slice(0, 3).map((type) => (
+                        <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                          {type}
+                        </span>
+                      ))}
+                      {[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].length > 3 && (
+                        <span class="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                          +{[...new Set(city.venues.map(v => v.venue_type).filter(Boolean))].length - 3} more
+                        </span>
+                      )}
+                    </div>
+
+                    <div class="flex flex-wrap gap-1">
+                      {city.venues.filter(v => v.serves_mocktails).length > 0 && (
+                        <span class="bg-red-50 text-red-700 text-xs px-2 py-1 rounded-full">
+                          🍹 {city.venues.filter(v => v.serves_mocktails).length} mocktail
+                        </span>
+                      )}
+                      {city.venues.filter(v => v.serves_kava).length > 0 && (
+                        <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded-full">
+                          🌿 {city.venues.filter(v => v.serves_kava).length} kava
+                        </span>
+                      )}
+                      {city.venues.filter(v => v.serves_thc).length > 0 && (
+                        <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded-full">
+                          🌱 {city.venues.filter(v => v.serves_thc).length} THC
+                        </span>
+                      )}
+                      {city.venues.filter(v => v.is_alcohol_free).length > 0 && (
+                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-full">
+                          🚫🍺 {city.venues.filter(v => v.is_alcohol_free).length} alcohol-free
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div class="text-indigo-600 font-medium">
+                    Explore {city.city_name} →
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       ) : (
         <div class="text-center py-12 bg-gray-50 rounded-lg">
