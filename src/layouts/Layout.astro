@@ -43,13 +43,20 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="keywords" content="alcohol-free venues, non-alcoholic bars, mocktail lounges, kava bars, THC venues, NA beer, sober nightlife, mindful drinking, recovery-friendly, alcohol-free restaurants" />
+    <meta name="author" content="Downtown Dry" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Downtown Dry" />
+    <meta property="og:locale" content="en_US" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:site" content="@downtowndry" />
+    <meta name="twitter:creator" content="@downtowndry" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

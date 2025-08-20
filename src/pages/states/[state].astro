@@ -7,9 +7,9 @@ export async function getStaticPaths() {
   const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  // Get all states
+  // Get all unique states from venues table
   const { data: states } = await supabase
-    .from('cities')
+    .from('venues')
     .select('state')
     .not('state', 'is', null);
 
@@ -32,23 +32,37 @@ const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Get all cities in this state with venue counts
-const { data: cities, error } = await supabase
-  .from('cities')
-  .select(`
-    city_name,
-    full_name,
-    population,
-    venues(id, name, venue_type, category, rating, serves_mocktails, serves_kava, serves_thc, is_alcohol_free)
-  `)
-  .eq('state', stateName)
-  .order('city_name');
+// Get all venues in this state
+const { data: stateVenues, error: venuesError } = await supabase
+  .from('venues')
+  .select('*')
+  .eq('state', stateName);
 
-if (error) {
-  console.error('Error fetching cities:', error);
+if (venuesError) {
+  console.error('Error fetching venues:', venuesError);
 }
 
-const citiesWithVenues = cities?.filter(city => city.venues && city.venues.length > 0) || [];
+// Group venues by city and get city info from cities table
+const cityNames = [...new Set(stateVenues?.map(v => v.city).filter(Boolean) || [])];
+const { data: cityData } = await supabase
+  .from('cities')
+  .select('*')
+  .eq('state', stateName)
+  .in('city_name', cityNames);
+
+// Combine venue and city data
+const citiesWithVenues = cityNames.map(cityName => {
+  const cityInfo = cityData?.find(c => c.city_name === cityName);
+  const cityVenues = stateVenues?.filter(v => v.city === cityName) || [];
+  
+  return {
+    city_name: cityName,
+    full_name: cityInfo?.full_name || `${cityName}, ${stateName}`,
+    population: cityInfo?.population || null,
+    venues: cityVenues
+  };
+}).filter(city => city.venues.length > 0)
+  .sort((a, b) => a.city_name.localeCompare(b.city_name));
 const totalVenues = citiesWithVenues.reduce((sum, city) => sum + city.venues.length, 0);
 
 // Calculate state-wide stats

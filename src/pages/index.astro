@@ -19,6 +19,25 @@ import Layout from '../layouts/Layout.astro';
     "@type": "Organization",
     "name": "Downtown Dry",
     "description": "Directory of 1,800+ alcohol-free venues across 600+ US cities",
+    "foundingDate": "2024",
+    "serviceArea": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Alcohol-Free Venue Directory",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Venue Directory Search",
+            "description": "Find alcohol-free bars, kava lounges, and THC venues"
+          }
+        }
+      ]
+    },
     "sameAs": [
       "https://instagram.com/downtowndry",
       "https://twitter.com/downtowndry"
@@ -27,9 +46,9 @@ import Layout from '../layouts/Layout.astro';
 }
 </script>
 
-<Layout title="Downtown Dry - Find Alcohol-Free Bars, Kava Lounges & THC Venues Near You" description="Discover 1,800+ venues serving non-alcoholic beer, mocktails, kava, and legal delta THC drinks in 600+ US cities. Safe spaces for mindful socializing, recovery support, and inclusive nightlife experiences. Complete guide to alcohol-free bars, kava lounges, and hemp beverage venues nationwide.">
+<Layout title="Downtown Dry - Find 1,800+ Alcohol-Free Bars, Kava Lounges & THC Venues in 600+ US Cities" description="America's largest directory of alcohol-free venues: non-alcoholic beer bars, mocktail lounges, kava bars, and legal delta THC venues. Find mindful nightlife, recovery-friendly spaces, and premium NA drinks near you. Expert guides, city recommendations, and curated shopping for the alcohol-free lifestyle.">
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner" aria-label="Downtown Dry homepage hero section">
     <!-- Split Background Design -->
     <div class="absolute inset-0 flex">
       <!-- Left side - Brand colors -->
@@ -38,8 +57,9 @@ import Layout from '../layouts/Layout.astro';
       <div class="w-1/2 relative">
         <img 
           src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-          alt="Downtown city at night" 
+          alt="Downtown city nightlife scene with modern buildings and lights representing alcohol-free venues and nightlife" 
           class="w-full h-full object-cover"
+          loading="eager"
         >
         <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary-700/30 to-primary-700/80"></div>
       </div>
@@ -79,13 +99,13 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="flex flex-col sm:flex-row items-center justify-center">
         <div class="flex flex-col sm:flex-row gap-6 sm:gap-16 items-center">
-          <a href="/states" class="group bg-secondary-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-2xl w-72 text-center">
+          <a href="/states" class="group bg-secondary-500 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-2xl w-72 text-center" aria-label="Explore alcohol-free venues by city and state">
           EXPLORE CITIES
           <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
           </svg>
         </a>
-          <a href="/shop" class="group relative bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/70 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-72 text-center">
+          <a href="/shop" class="group relative bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-white/20 hover:border-white/70 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 w-72 text-center" aria-label="Shop premium non-alcoholic drinks and NA beer">
             <span class="relative z-10">SHOP DRINKS</span>
             <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform relative z-10" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -99,7 +119,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- Stats Section -->
-  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #1D200F 0%, #505A28 50%, #1D200F 100%);">
+  <section class="py-20 relative overflow-hidden" style="background: linear-gradient(135deg, #1D200F 0%, #505A28 50%, #1D200F 100%);" role="region" aria-labelledby="stats-heading">
     <!-- Animated background elements -->
     <div class="absolute inset-0">
       <div class="absolute top-10 left-10 w-20 h-20 rounded-full animate-pulse" style="background-color: rgba(217, 170, 85, 0.1);"></div>
@@ -111,7 +131,7 @@ import Layout from '../layouts/Layout.astro';
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
+        <h2 id="stats-heading" class="text-4xl md:text-5xl font-bold text-white mb-6 font-heading">
           By The Numbers
         </h2>
         <p class="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -250,123 +270,153 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- Featured Categories -->
-  <section class="py-20 bg-neutral-50">
+  <section class="py-20 bg-neutral-50" role="region" aria-labelledby="discover-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight font-heading">
+        <h2 id="discover-heading" class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight font-heading">
           WHAT YOU'LL<br />
           <span style="color: #D98555;">DISCOVER</span>
         </h2>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- NA Beer Venues -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Venue Directory -->
         <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="relative overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Non-alcoholic beer tap" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Non-alcoholic beer taps and craft NA beer selection at alcohol-free venue" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 to-primary-700/40 flex items-center justify-center">
               <div class="text-center text-white">
                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold font-heading">NA BEER VENUES</h3>
+                <h3 class="text-2xl font-bold font-heading">VENUE DIRECTORY</h3>
               </div>
             </div>
           </div>
           <div class="p-8">
             <p class="text-neutral-700 leading-relaxed mb-6">
-              Bars and taprooms featuring the best non-alcoholic beers on tap and in bottles. From hoppy IPAs to rich stouts, all the flavor without the buzz.
+              Explore 1,800+ curated venues across 600+ cities. Find NA beer bars, mocktail lounges, kava bars, and THC venues near you.
             </p>
-            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
-              FIND NA BEER SPOTS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors" title="Search alcohol-free venues by state and city - find NA beer bars, mocktail lounges, kava bars near you">
+              EXPLORE BY LOCATION
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </a>
           </div>
         </div>
         
-        <!-- Mocktail Bars -->
+        <!-- Shop Premium Drinks -->
         <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="relative overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mocktail Bar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium non-alcoholic cocktails and mocktails with garnishes at upscale alcohol-free bar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 to-accent-500/40 flex items-center justify-center">
               <div class="text-center text-white">
                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold font-heading">MOCKTAIL LOUNGES</h3>
+                <h3 class="text-2xl font-bold font-heading">PREMIUM DRINKS</h3>
               </div>
             </div>
           </div>
           <div class="p-8">
             <p class="text-neutral-700 leading-relaxed mb-6">
-              Sophisticated cocktail lounges serving creative alcohol-free beverages. All the craftsmanship and ambiance of a premium cocktail bar, zero proof.
+              Shop curated craft NA beers, premium spirits, and subscription boxes. Voted #1 NA retailer by AFTER Magazine.
             </p>
-            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
-              BROWSE MOCKTAIL BARS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <a href="/shop" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors" title="Shop premium non-alcoholic beers, craft NA spirits, and alcohol-free beverages online">
+              SHOP NOW
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </a>
           </div>
         </div>
         
-        <!-- Delta THC Venues -->
+        <!-- Expert Guides & Tips -->
         <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="relative overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cannabis drinks" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-            <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 to-green-600/40 flex items-center justify-center">
-              <div class="text-center text-white">
-                <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
-                  </svg>
-                </div>
-                <h3 class="text-2xl font-bold font-heading">DELTA THC VENUES</h3>
-              </div>
-            </div>
-          </div>
-          <div class="p-8">
-            <p class="text-neutral-700 leading-relaxed mb-6">
-              Venues serving delta THC-infused beverages and edibles in legal markets. Safe, regulated environments for cannabis consumption without smoking.
-            </p>
-            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
-              FIND THC VENUES
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-        
-        <!-- Kava Bars -->
-        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-          <div class="relative overflow-hidden h-64">
-            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kava Bar Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traditional kava root preparation and ceremonial bowl for Pacific Island relaxation beverage" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
             <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 to-secondary-500/40 flex items-center justify-center">
               <div class="text-center text-white">
                 <div class="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
-                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2h8a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 1a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
                   </svg>
                 </div>
-                <h3 class="text-2xl font-bold font-heading">KAVA BARS</h3>
+                <h3 class="text-2xl font-bold font-heading">EXPERT GUIDES</h3>
               </div>
             </div>
           </div>
           <div class="p-8">
             <p class="text-neutral-700 leading-relaxed mb-6">
-              Traditional Pacific Island relaxation with kava root beverages in communal spaces. Natural stress relief that promotes conversation and connection.
+              In-depth guides on kava culture, delta THC, mocktail recipes, and building alcohol-free communities. Expert insights for mindful living.
             </p>
-            <a href="/states" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors">
-              DISCOVER KAVA BARS
-              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <a href="/blog" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors" title="Read expert guides on kava culture, delta THC, mocktail recipes, and alcohol-free living">
+              READ GUIDES
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Quick Access Cards -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- City Guides -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban city skyline representing alcohol-free venue locations across major metropolitan areas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-blue-600/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold font-heading">CITY GUIDES</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-neutral-700 leading-relaxed mb-4">
+              Detailed guides to alcohol-free scenes in major cities. Local recommendations, hidden gems, and insider tips.
+            </p>
+            <a href="/blog" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors" title="Read detailed city guides for alcohol-free venues and local recommendations">
+              EXPLORE CITY GUIDES
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Mocktail Recipes -->
+        <div class="group bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-48">
+            <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fresh mocktail ingredients including citrus fruits, herbs, and garnishes for alcohol-free cocktail recipes" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 to-green-600/40 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h3 class="text-xl font-bold font-heading">MOCKTAIL RECIPES</h3>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-neutral-700 leading-relaxed mb-4">
+              Learn to craft amazing alcohol-free cocktails at home. Professional recipes and techniques from top bartenders.
+            </p>
+            <a href="/blog" class="inline-flex items-center text-primary-700 font-bold hover:text-primary-800 transition-colors" title="Learn professional mocktail recipes and alcohol-free cocktail techniques">
+              GET RECIPES
+              <svg class="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
                 <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
               </svg>
             </a>
@@ -623,7 +673,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="absolute -bottom-8 -right-4 w-72 h-72 bg-indigo-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
           <img 
             src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Traditional kava preparation in wooden bowl with coconut shells" 
+            alt="Traditional Pacific Island kava root preparation in wooden bowl with coconut shells for natural stress relief and social relaxation" 
+            loading="lazy"
             class="relative rounded-3xl shadow-2xl w-full h-96 object-cover"
           >
         </div>
@@ -640,7 +691,8 @@ import Layout from '../layouts/Layout.astro';
           <div class="absolute -bottom-8 -left-4 w-72 h-72 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
           <img 
             src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Delta THC beverages in modern packaging with cannabis leaf designs" 
+            alt="Legal delta THC hemp-derived beverages in modern packaging for cannabis wellness and social consumption" 
+            loading="lazy"
             class="relative rounded-3xl shadow-2xl w-full h-96 object-cover"
           >
         </div>
@@ -749,7 +801,7 @@ import Layout from '../layouts/Layout.astro';
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New York City skyline" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New York City skyline showcasing 127+ alcohol-free venues including mocktail bars and NA beer spots" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2">NEW YORK</h3>
@@ -762,7 +814,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Los Angeles sunset" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Los Angeles sunset over city with 94+ delta THC venues and kava bars for cannabis wellness" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2">LOS ANGELES</h3>
@@ -775,7 +827,7 @@ import Layout from '../layouts/Layout.astro';
         </div>
         
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Austin Texas downtown" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Austin Texas downtown featuring 73+ alcohol-free venues including craft mocktail lounges and NA beer bars" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 via-accent-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2">AUSTIN</h3>
@@ -789,9 +841,9 @@ import Layout from '../layouts/Layout.astro';
       </div>
       
       <div class="text-center mt-12">
-        <a href="/states" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+        <a href="/states" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl" title="Browse all 50 states and 600+ cities with alcohol-free venues" aria-label="View complete directory of alcohol-free venues by state and city">
           VIEW ALL CITIES
-          <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+          <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
           </svg>
         </a>
@@ -799,6 +851,82 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
   
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white" role="region" aria-labelledby="faq-heading">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 id="faq-heading" class="text-4xl md:text-5xl font-bold text-neutral-900 mb-6 tracking-tight font-heading">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          Everything you need to know about alcohol-free venues, kava bars, and alternative nightlife
+        </p>
+      </div>
+      
+      <div class="space-y-8">
+        <details class="group bg-neutral-50 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-neutral-100 transition-colors">
+            <h3 class="text-xl font-bold text-neutral-900">What types of venues are listed on Downtown Dry?</h3>
+            <svg class="w-6 h-6 text-neutral-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
+            <p>We feature over 1,800 venues across four main categories: <strong>fully alcohol-free bars and restaurants</strong> (460+ venues), <strong>sober-friendly establishments</strong> with excellent NA options (1,300+ venues), <strong>traditional kava bars</strong> serving Pacific Island relaxation beverages (319 venues), and <strong>legal delta THC venues</strong> offering hemp-derived cannabis drinks (120+ venues). Each venue is verified and categorized to help you find exactly what you're looking for.</p>
+          </div>
+        </details>
+
+        <details class="group bg-neutral-50 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-neutral-100 transition-colors">
+            <h3 class="text-xl font-bold text-neutral-900">Are kava and delta THC drinks safe and legal?</h3>
+            <svg class="w-6 h-6 text-neutral-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
+            <p><strong>Kava</strong> is a traditional Pacific Island beverage that's legal nationwide but may interact with medications and affect liver function. <strong>Delta THC drinks</strong> made from hemp are federally legal under the 2018 Farm Bill when containing less than 0.3% Delta-9 THC by dry weight. However, both substances can impair motor skills - <strong>never drive after consumption</strong>. Always consult healthcare providers if you have medical conditions, take medications, or are pregnant/nursing.</p>
+          </div>
+        </details>
+
+        <details class="group bg-neutral-50 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-neutral-100 transition-colors">
+            <h3 class="text-xl font-bold text-neutral-900">How do I find alcohol-free venues in my city?</h3>
+            <svg class="w-6 h-6 text-neutral-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
+            <p>Use our <a href="/states" class="text-primary-700 hover:text-primary-800 font-semibold">venue directory</a> to browse by state and city. We cover all 50 states with detailed listings including venue types, specialties (NA beer, mocktails, kava, THC), ratings, and contact information. Each venue page includes photos, hours, and what makes them special for alcohol-free socializing.</p>
+          </div>
+        </details>
+
+        <details class="group bg-neutral-50 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-neutral-100 transition-colors">
+            <h3 class="text-xl font-bold text-neutral-900">Can I buy alcohol-free drinks online?</h3>
+            <svg class="w-6 h-6 text-neutral-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
+            <p>Yes! Our <a href="/shop" class="text-primary-700 hover:text-primary-800 font-semibold">online shop</a> features curated selections from Better Rhodes, voted #1 favorite alcohol-free retailer by AFTER Magazine. Shop craft NA beers, premium non-alcoholic spirits, ready-to-drink mocktails, and monthly subscription boxes with free shipping on orders over $125.</p>
+          </div>
+        </details>
+
+        <details class="group bg-neutral-50 rounded-2xl overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer hover:bg-neutral-100 transition-colors">
+            <h3 class="text-xl font-bold text-neutral-900">Do you have guides for alcohol-free living?</h3>
+            <svg class="w-6 h-6 text-neutral-600 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </summary>
+          <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
+            <p>Our <a href="/blog" class="text-primary-700 hover:text-primary-800 font-semibold">expert blog</a> covers everything from mocktail recipes and kava culture to delta THC education and building alcohol-free communities. We provide city-specific guides, wellness tips, venue reviews, and practical advice for navigating social situations without alcohol.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Newsletter Signup -->
   <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
     <div class="absolute inset-0">
@@ -814,16 +942,19 @@ import Layout from '../layouts/Layout.astro';
       <p class="text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
         Get notified when new alcohol-free venues open in your city and discover the latest in NA beers, mocktails, and alternative drinks.
       </p>
-      <form class="max-w-lg mx-auto">
+      <form class="max-w-lg mx-auto" aria-label="Newsletter subscription form">
         <div class="flex gap-4">
           <input 
             type="email" 
             placeholder="Enter your email" 
             class="flex-1 px-8 py-5 rounded-2xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-secondary-500/50 transition-all text-lg"
+            aria-label="Email address for newsletter subscription"
+            required
           >
           <button 
             type="submit" 
             class="bg-accent-500 text-white px-10 py-5 rounded-2xl font-bold hover:bg-accent-600 transition-all duration-300 transform hover:scale-105 shadow-2xl text-lg"
+            aria-label="Subscribe to Downtown Dry newsletter"
           >
             SUBSCRIBE
           </button>

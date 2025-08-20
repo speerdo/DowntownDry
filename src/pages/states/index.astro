@@ -6,64 +6,81 @@ const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Get all states with venue counts and details
-const { data: states, error } = await supabase
-  .from('cities')
-  .select(`
-    state,
-    venues!inner(id, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, rating)
-  `)
+// Get all venues grouped by state
+const { data: venues, error } = await supabase
+  .from('venues')
+  .select('id, city, state, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, rating')
   .not('state', 'is', null);
 
 if (error) {
-  console.error('Error fetching states:', error);
+  console.error('Error fetching venues:', error);
 }
 
 // Group by state and count venues with details
-const stateData = states?.reduce((acc, city) => {
-  const state = city.state;
+const stateData = venues?.reduce((acc, venue) => {
+  const state = venue.state;
   if (!acc[state]) {
     acc[state] = {
       name: state,
       venueCount: 0,
-      cityCount: 0,
+      cityCount: new Set(),
       mocktailVenues: 0,
       kavaVenues: 0,
       thcVenues: 0,
       alcoholFreeVenues: 0,
-      avgRating: 0,
-      totalRatings: 0
+      totalRatings: 0,
+      ratingCount: 0
     };
   }
-  acc[state].venueCount += city.venues.length;
-  acc[state].cityCount += 1;
+  
+  acc[state].venueCount++;
+  if (venue.city) {
+    acc[state].cityCount.add(venue.city);
+  }
   
   // Count specialty venues
-  city.venues.forEach(venue => {
-    if (venue.serves_mocktails) acc[state].mocktailVenues++;
-    if (venue.serves_kava) acc[state].kavaVenues++;
-    if (venue.serves_thc) acc[state].thcVenues++;
-    if (venue.is_alcohol_free) acc[state].alcoholFreeVenues++;
-    if (venue.rating) {
-      acc[state].totalRatings += venue.rating;
-      acc[state].avgRating = acc[state].totalRatings / city.venues.filter(v => v.rating).length;
-    }
-  });
+  if (venue.serves_mocktails) acc[state].mocktailVenues++;
+  if (venue.serves_kava) acc[state].kavaVenues++;
+  if (venue.serves_thc) acc[state].thcVenues++;
+  if (venue.is_alcohol_free) acc[state].alcoholFreeVenues++;
+  if (venue.rating) {
+    acc[state].totalRatings += venue.rating;
+    acc[state].ratingCount++;
+  }
   
   return acc;
 }, {} as Record<string, { 
   name: string; 
   venueCount: number; 
-  cityCount: number;
+  cityCount: Set<string>;
   mocktailVenues: number;
   kavaVenues: number;
   thcVenues: number;
   alcoholFreeVenues: number;
-  avgRating: number;
   totalRatings: number;
+  ratingCount: number;
 }>) || {};
 
-const sortedStates = Object.values(stateData).sort((a, b) => a.name.localeCompare(b.name));
+// Convert cityCount from Set to number and calculate avgRating
+const processedStateData = Object.fromEntries(
+  Object.entries(stateData).map(([state, data]) => [
+    state,
+    {
+      name: data.name,
+      venueCount: data.venueCount,
+      cityCount: data.cityCount.size,
+      mocktailVenues: data.mocktailVenues,
+      kavaVenues: data.kavaVenues,
+      thcVenues: data.thcVenues,
+      alcoholFreeVenues: data.alcoholFreeVenues,
+      avgRating: data.ratingCount > 0 ? data.totalRatings / data.ratingCount : 0,
+      totalRatings: data.totalRatings,
+      ratingCount: data.ratingCount
+    }
+  ])
+);
+
+const sortedStates = Object.values(processedStateData).sort((a, b) => a.name.localeCompare(b.name));
 const topStatesByVenues = [...sortedStates].sort((a, b) => b.venueCount - a.venueCount);
 
 function getStateDescription(state: any) {

@@ -8,26 +8,31 @@ export async function getStaticPaths() {
   const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  // Get all cities with venues
-  const { data: cities } = await supabase
-    .from('cities')
-    .select(`
-      city_name,
-      state,
-      venues!inner(id)
-    `)
-    .not('state', 'is', null);
+  // Get all unique city-state combinations from venues table
+  const { data: venues } = await supabase
+    .from('venues')
+    .select('city, state')
+    .not('state', 'is', null)
+    .not('city', 'is', null);
 
-  return cities?.map(city => ({
+  const uniqueCityStates = venues?.reduce((acc, venue) => {
+    const key = `${venue.city}-${venue.state}`;
+    if (!acc.has(key)) {
+      acc.set(key, { city: venue.city, state: venue.state });
+    }
+    return acc;
+  }, new Map()) || new Map();
+
+  return Array.from(uniqueCityStates.values()).map(({ city, state }) => ({
     params: { 
-      state: city.state.toLowerCase().replace(/\s+/g, '-'),
-      city: city.city_name.toLowerCase().replace(/\s+/g, '-')
+      state: state.toLowerCase().replace(/\s+/g, '-'),
+      city: city.toLowerCase().replace(/\s+/g, '-')
     },
     props: { 
-      stateName: city.state,
-      cityName: city.city_name
+      stateName: state,
+      cityName: city
     }
-  })) || [];
+  }));
 }
 
 const { state, city } = Astro.params;
@@ -37,44 +42,18 @@ const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Get city info and all venues
+// Get city info from cities table
 const { data: cityData, error: cityError } = await supabase
   .from('cities')
-  .select(`
-    city_name,
-    full_name,
-    state,
-    population
-  `)
+  .select('*')
   .eq('city_name', cityName)
   .eq('state', stateName)
   .single();
 
+// Get all venues for this city
 const { data: venues, error: venuesError } = await supabase
   .from('venues')
-  .select(`
-    id,
-    name,
-    address,
-    phone,
-    website,
-    latitude,
-    longitude,
-    venue_type,
-    category,
-    is_alcohol_free,
-    serves_mocktails,
-    serves_kava,
-    serves_thc,
-    serves_hemp_drinks,
-    rating,
-    zip_code,
-    hemp_brand,
-    is_dispensary,
-    enrichment_source,
-    city,
-    state
-  `)
+  .select('*')
   .eq('city', cityName)
   .eq('state', stateName)
   .order('rating', { ascending: false })
@@ -424,11 +403,11 @@ const categoryNames: Record<string, string> = {
                       {categoryNames[category] || category}
                     </h3>
                     <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full">
-                      {categoryVenues.length}
+                      {(categoryVenues as any[]).length}
                     </span>
                   </div>
                   <div class="space-y-6">
-                    {categoryVenues.map((venue) => (
+                    {(categoryVenues as any[]).map((venue) => (
                       <div class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-indigo-300 hover:shadow-xl transition-all duration-300">
                         <!-- Venue Image -->
                         <div class="relative h-48 bg-gradient-to-br from-indigo-100 to-purple-100">
