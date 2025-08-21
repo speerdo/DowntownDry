@@ -1,0 +1,1196 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Get all venues for admin review - handle pagination to avoid 1000 row limit
+let allVenues = [];
+let page = 0;
+const pageSize = 1000;
+
+while (true) {
+  const { data: batch, error } = await supabase
+    .from('venues')
+    .select('*')
+    .order('name', { ascending: true })
+    .range(page * pageSize, (page + 1) * pageSize - 1);
+
+  if (error) {
+    console.error('Error fetching venues:', error);
+    break;
+  }
+
+  if (!batch || batch.length === 0) {
+    break; // No more data
+  }
+
+  allVenues = allVenues.concat(batch);
+  
+  if (batch.length < pageSize) {
+    break; // Last page
+  }
+  
+  page++;
+}
+
+const venues = allVenues;
+console.log(`Loaded ${venues.length} total venues for admin`);
+
+// Get unique states and cities for filters
+const states = [...new Set(venues?.map(v => v.state).filter(Boolean))].sort();
+const cities = [...new Set(venues?.map(v => v.city).filter(Boolean))].sort();
+
+// Create state-to-cities mapping for dynamic filtering
+const stateToCities = venues?.reduce((acc, venue) => {
+  if (venue.state && venue.city) {
+    if (!acc[venue.state]) {
+      acc[venue.state] = new Set();
+    }
+    acc[venue.state].add(venue.city);
+  }
+  return acc;
+}, {} as Record<string, Set<string>>) || {};
+
+// Convert sets to sorted arrays
+const stateToCitiesArray = Object.entries(stateToCities).reduce((acc, [state, citySet]) => {
+  acc[state] = [...(citySet as Set<string>)].sort();
+  return acc;
+}, {} as Record<string, string[]>);
+---
+
+<Layout title="Venue Admin - Downtown Dry">
+  <!-- Supabase configuration for client-side use -->
+  <meta name="supabase-url" content={supabaseUrl} />
+  <meta name="supabase-key" content={supabaseKey} />
+  
+  <!-- Load Supabase client -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <div class="min-h-screen bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <!-- Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Venue Administration</h1>
+        <p class="text-gray-600">Manage venues, add descriptions, update images, and review data quality.</p>
+      </div>
+
+      <!-- Stats Overview -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-lg shadow-sm border">
+          <div class="text-2xl font-bold text-gray-900">{venues?.length || 0}</div>
+          <div class="text-sm text-gray-600">Total Venues</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm border">
+          <div class="text-2xl font-bold text-amber-600">
+            {venues?.filter(v => !v.description).length || 0}
+          </div>
+          <div class="text-sm text-gray-600">Missing Description</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm border">
+          <div class="text-2xl font-bold text-purple-600">
+            {venues?.filter(v => !v.image_url).length || 0}
+          </div>
+          <div class="text-sm text-gray-600">Missing Image</div>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow-sm border">
+          <div class="text-2xl font-bold text-green-600">
+            {venues?.filter(v => v.description && v.image_url).length || 0}
+          </div>
+          <div class="text-sm text-gray-600">Complete Venues</div>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="bg-white rounded-lg shadow-sm border p-4 mb-6">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <div class="flex flex-wrap items-center gap-4">
+            <!-- Search -->
+            <div class="relative">
+              <input
+                type="text"
+                id="search"
+                placeholder="Search venues..."
+                class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <svg class="absolute left-3 top-2.5 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </div>
+
+            <!-- Filters -->
+            <select id="stateFilter" class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+              <option value="">All States</option>
+              {states.map(state => (
+                <option value={state}>{state}</option>
+              ))}
+            </select>
+
+            <select id="cityFilter" class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+              <option value="">All Cities</option>
+              {cities.map(city => (
+                <option value={city}>{city}</option>
+              ))}
+            </select>
+
+            <select id="reviewFilter" class="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500">
+              <option value="">All Venues</option>
+              <option value="needs-description">Missing Description</option>
+              <option value="needs-image">Missing Image</option>
+              <option value="incomplete">Incomplete Data</option>
+            </select>
+          </div>
+
+          <button
+            id="addVenueBtn"
+            class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Add New Venue
+          </button>
+          
+          <button
+            id="exportBtn"
+            class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors ml-2"
+          >
+            Export All Data
+          </button>
+        </div>
+      </div>
+
+      <!-- Pagination Info -->
+      <div class="bg-white rounded-lg shadow-sm border p-4 mb-4">
+        <div class="flex items-center justify-between">
+          <div class="text-sm text-gray-700">
+            Showing <span id="currentStart">1</span> to <span id="currentEnd">50</span> of <span id="totalCount">{venues?.length || 0}</span> venues
+          </div>
+          <div class="flex items-center space-x-2">
+            <button id="prevPage" class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50 disabled:opacity-50" disabled>
+              Previous
+            </button>
+            <span id="pageInfo" class="text-sm text-gray-600">Page 1</span>
+            <button id="nextPage" class="px-3 py-1 border border-gray-300 rounded text-sm hover:bg-gray-50">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venues Table -->
+      <div class="bg-white rounded-lg shadow-sm border overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+              <tr>
+                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-48">Venue</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
+                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="venuesTableBody" class="bg-white divide-y divide-gray-200">
+              {venues?.map((venue) => (
+                <tr class="venue-row hover:bg-gray-50" data-venue-id={venue.id}>
+                  <td class="px-4 py-4 whitespace-nowrap w-48">
+                    <div class="font-medium text-gray-900 truncate">{venue.name}</div>
+                    <div class="text-sm text-gray-500">{venue.venue_type}</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <div class="text-sm text-gray-900">{venue.city}</div>
+                    <div class="text-sm text-gray-500">{venue.state}</div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      {venue.category || 'Uncategorized'}
+                    </span>
+                  </td>
+                  <td class="px-6 py-4">
+                    <div class="max-w-xs">
+                      {venue.description ? (
+                        <div class="text-sm text-gray-900 truncate" title={venue.description}>
+                          {venue.description}
+                        </div>
+                      ) : (
+                        <span class="text-sm text-red-500 italic">No description</span>
+                      )}
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    {venue.image_url ? (
+                      <img src={venue.image_url} alt={venue.name} class="w-12 h-12 rounded-lg object-cover" />
+                    ) : (
+                      <div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    )}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    {venue.rating ? (
+                      <div class="text-sm text-gray-900">{venue.rating}/5</div>
+                    ) : (
+                      <span class="text-sm text-gray-400">No rating</span>
+                    )}
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                    <div class="flex space-x-2">
+                      <button
+                        class="edit-btn text-blue-600 hover:text-blue-900"
+                        data-venue-id={venue.id}
+                      >
+                        Edit
+                      </button>
+                      <button
+                        class="delete-btn text-red-600 hover:text-red-900"
+                        data-venue-id={venue.id}
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Edit/Add Venue Modal -->
+  <div id="venueModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="px-6 py-4 border-b border-gray-200">
+          <h3 id="modalTitle" class="text-lg font-medium text-gray-900">Edit Venue</h3>
+        </div>
+        
+        <form id="venueForm" class="px-6 py-4 space-y-4" onsubmit="return false;">
+          <input type="hidden" id="venueId" />
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="venueName" class="block text-sm font-medium text-gray-700">Name *</label>
+              <input type="text" id="venueName" required class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            
+            <div>
+              <label for="venueType" class="block text-sm font-medium text-gray-700">Venue Type</label>
+              <select id="venueType" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select type...</option>
+                <option value="Bar">Bar</option>
+                <option value="Restaurant">Restaurant</option>
+                <option value="Cafe">Cafe</option>
+                <option value="Brewery">Brewery</option>
+                <option value="Dispensary">Dispensary</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="venueAddress" class="block text-sm font-medium text-gray-700">Address</label>
+            <input type="text" id="venueAddress" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label for="venueCity" class="block text-sm font-medium text-gray-700">City</label>
+              <input type="text" id="venueCity" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            
+            <div>
+              <label for="venueState" class="block text-sm font-medium text-gray-700">State</label>
+              <input type="text" id="venueState" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            
+            <div>
+              <label for="venueZip" class="block text-sm font-medium text-gray-700">ZIP Code</label>
+              <input type="text" id="venueZip" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="venuePhone" class="block text-sm font-medium text-gray-700">Phone</label>
+              <input type="tel" id="venuePhone" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+            
+            <div>
+              <label for="venueWebsite" class="block text-sm font-medium text-gray-700">Website</label>
+              <input type="url" id="venueWebsite" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+          </div>
+
+          <div>
+            <label for="venueDescription" class="block text-sm font-medium text-gray-700">Description</label>
+            <textarea id="venueDescription" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Describe the venue, atmosphere, and what makes it special..."></textarea>
+          </div>
+
+          <div>
+            <label for="venueImageUrl" class="block text-sm font-medium text-gray-700">Image URL</label>
+            <input type="url" id="venueImageUrl" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" placeholder="https://example.com/image.jpg" />
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="venueCategory" class="block text-sm font-medium text-gray-700">Category</label>
+              <select id="venueCategory" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select category...</option>
+                <option value="kava">Kava</option>
+                <option value="mocktail">Mocktail</option>
+                <option value="restaurant">Restaurant</option>
+                <option value="cafe">Cafe</option>
+                <option value="brewery">Brewery</option>
+                <option value="bar">Bar</option>
+                <option value="thc-cocktails">THC Cocktails</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="venueRating" class="block text-sm font-medium text-gray-700">Rating (1-5)</label>
+              <input type="number" id="venueRating" min="1" max="5" step="0.1" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+            </div>
+          </div>
+
+          <!-- Boolean Fields -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <label class="flex items-center">
+              <input type="checkbox" id="isAlcoholFree" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Alcohol Free</span>
+            </label>
+            
+            <label class="flex items-center">
+              <input type="checkbox" id="servesMocktails" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Serves Mocktails</span>
+            </label>
+            
+            <label class="flex items-center">
+              <input type="checkbox" id="servesKava" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Serves Kava</span>
+            </label>
+            
+            <label class="flex items-center">
+              <input type="checkbox" id="servesThc" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Serves THC</span>
+            </label>
+            
+            <label class="flex items-center">
+              <input type="checkbox" id="servesHempDrinks" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Hemp Drinks</span>
+            </label>
+            
+            <label class="flex items-center">
+              <input type="checkbox" id="isSoberFriendly" class="rounded border-gray-300 text-blue-600 focus:ring-blue-500" />
+              <span class="ml-2 text-sm text-gray-700">Sober Friendly</span>
+            </label>
+          </div>
+        </form>
+
+        <div class="px-6 py-4 border-t border-gray-200 flex justify-end space-x-3">
+          <button id="cancelBtn" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+            Cancel
+          </button>
+          <button id="saveBtn" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+            Save Venue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirmation Modal -->
+  <div id="deleteModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
+    <div class="flex items-center justify-center min-h-screen p-4">
+      <div class="bg-white rounded-lg shadow-xl max-w-md w-full">
+        <div class="px-6 py-4">
+          <h3 class="text-lg font-medium text-gray-900 mb-4">Delete Venue</h3>
+          <p class="text-gray-600 mb-6">Are you sure you want to delete <span id="deleteVenueName" class="font-medium"></span>? This action cannot be undone.</p>
+          <div class="flex justify-end space-x-3">
+            <button id="cancelDeleteBtn" class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-50">
+              Cancel
+            </button>
+            <button id="confirmDeleteBtn" class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script define:vars={{ venues, stateToCitiesArray }}>
+    // Global variables - using window to avoid TS issues
+    window.allVenues = venues || [];
+    window.stateToCities = stateToCitiesArray || {};
+    window.currentVenueId = null;
+    window.deleteVenueId = null;
+    window.currentPage = 1;
+    window.itemsPerPage = 50;
+    window.filteredVenues = [];
+
+    // Initialize when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('Admin page loaded with:', window.allVenues.length, 'venues');
+      console.log('State to cities mapping:', window.stateToCities);
+      
+      // Debug Indianapolis venues specifically
+      const indianapolisVenues = window.allVenues.filter(v => 
+        v.city && v.city.toLowerCase().includes('indianapolis') && 
+        v.state && v.state.toLowerCase().includes('indiana')
+      );
+      console.log('Indianapolis venues found:', indianapolisVenues.length, indianapolisVenues.map(v => v.name));
+      
+      window.filteredVenues = [...window.allVenues];
+      setupEventListeners();
+      updatePagination();
+      renderVenues();
+    });
+
+    function setupEventListeners() {
+      // Search and filters
+      const searchInput = document.getElementById('search');
+      const stateFilter = document.getElementById('stateFilter');
+      const cityFilter = document.getElementById('cityFilter');
+      const reviewFilter = document.getElementById('reviewFilter');
+      
+      if (searchInput) searchInput.addEventListener('input', filterVenues);
+      if (stateFilter) stateFilter.addEventListener('change', handleStateChange);
+      if (cityFilter) cityFilter.addEventListener('change', filterVenues);
+      if (reviewFilter) reviewFilter.addEventListener('change', filterVenues);
+
+      // Pagination
+      const prevBtn = document.getElementById('prevPage');
+      const nextBtn = document.getElementById('nextPage');
+      
+      if (prevBtn) prevBtn.addEventListener('click', () => changePage(-1));
+      if (nextBtn) nextBtn.addEventListener('click', () => changePage(1));
+      
+      // Export button
+      const exportBtn = document.getElementById('exportBtn');
+      if (exportBtn) exportBtn.addEventListener('click', exportVenueData);
+
+      // Modal controls
+      const addBtn = document.getElementById('addVenueBtn');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const saveBtn = document.getElementById('saveBtn');
+      
+      if (addBtn) addBtn.addEventListener('click', () => openModal());
+      if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+      if (saveBtn) saveBtn.addEventListener('click', (e) => saveVenue(e));
+      
+      // Prevent form submission
+      const venueForm = document.getElementById('venueForm');
+      if (venueForm) {
+        venueForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          saveVenue(e);
+        });
+      }
+      
+      // Delete modal
+      const cancelDeleteBtn = document.getElementById('cancelDeleteBtn');
+      const confirmDeleteBtn = document.getElementById('confirmDeleteBtn');
+      
+      if (cancelDeleteBtn) cancelDeleteBtn.addEventListener('click', closeDeleteModal);
+      if (confirmDeleteBtn) confirmDeleteBtn.addEventListener('click', confirmDelete);
+
+      // Table actions - using event delegation
+      document.addEventListener('click', function(e) {
+        const target = e.target;
+        if (target && target.classList.contains('edit-btn')) {
+          const venueId = target.getAttribute('data-venue-id');
+          openModal(venueId);
+        } else if (target && target.classList.contains('delete-btn')) {
+          const venueId = target.getAttribute('data-venue-id');
+          openDeleteModal(venueId);
+        }
+      });
+
+      // Close modals on backdrop click
+      const venueModal = document.getElementById('venueModal');
+      const deleteModal = document.getElementById('deleteModal');
+      
+      if (venueModal) {
+        venueModal.addEventListener('click', function(e) {
+          if (e.target === this) closeModal();
+        });
+      }
+      
+      if (deleteModal) {
+        deleteModal.addEventListener('click', function(e) {
+          if (e.target === this) closeDeleteModal();
+        });
+      }
+    }
+
+    function handleStateChange() {
+      const stateFilter = document.getElementById('stateFilter');
+      const cityFilter = document.getElementById('cityFilter');
+      
+      if (!stateFilter || !cityFilter) return;
+      
+      const selectedState = stateFilter.value;
+      console.log('State changed to:', selectedState);
+      console.log('Available cities for state:', window.stateToCities[selectedState]);
+      
+      // Clear current city selection
+      cityFilter.value = '';
+      
+      // Clear and update city options based on selected state
+      cityFilter.innerHTML = '<option value="">All Cities</option>';
+      
+      if (selectedState && window.stateToCities[selectedState]) {
+        // Add cities for the selected state
+        window.stateToCities[selectedState].forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          cityFilter.appendChild(option);
+        });
+      } else {
+        // If no state selected, show all cities
+        const allCities = [...new Set(window.allVenues.map(v => v.city).filter(Boolean))].sort();
+        allCities.forEach(city => {
+          const option = document.createElement('option');
+          option.value = city;
+          option.textContent = city;
+          cityFilter.appendChild(option);
+        });
+      }
+      
+      // Reset to first page and filter venues
+      window.currentPage = 1;
+      filterVenues();
+    }
+
+    function filterVenues() {
+      const searchInput = document.getElementById('search');
+      const stateFilter = document.getElementById('stateFilter');
+      const cityFilter = document.getElementById('cityFilter');
+      const reviewFilter = document.getElementById('reviewFilter');
+      
+      const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+      const stateValue = stateFilter ? stateFilter.value : '';
+      const cityValue = cityFilter ? cityFilter.value : '';
+      const reviewValue = reviewFilter ? reviewFilter.value : '';
+
+      // Filter venues based on criteria
+      window.filteredVenues = window.allVenues.filter(venue => {
+        let show = true;
+
+        // Search filter
+        if (searchTerm) {
+          const searchableText = `${venue.name} ${venue.city} ${venue.state} ${venue.address || ''} ${venue.description || ''}`.toLowerCase();
+          if (!searchableText.includes(searchTerm)) {
+            show = false;
+          }
+        }
+
+        // State filter
+        if (stateValue && venue.state !== stateValue) {
+          show = false;
+        }
+
+        // City filter
+        if (cityValue && venue.city !== cityValue) {
+          show = false;
+        }
+
+        // Review filter
+        if (reviewValue) {
+          switch (reviewValue) {
+            case 'needs-description':
+              if (venue.description) show = false;
+              break;
+            case 'needs-image':
+              if (venue.image_url) show = false;
+              break;
+            case 'incomplete':
+              if (venue.description && venue.image_url) show = false;
+              break;
+          }
+        }
+
+        return show;
+      });
+
+      console.log(`Filtered from ${window.allVenues.length} to ${window.filteredVenues.length} venues`);
+      
+      // Debug Indianapolis filtering specifically
+      if (stateValue === 'Indiana' || cityValue === 'Indianapolis') {
+        const indianapolisFiltered = window.filteredVenues.filter(v => 
+          v.city && v.city.toLowerCase().includes('indianapolis')
+        );
+        console.log('Indianapolis venues after filtering:', indianapolisFiltered.length, indianapolisFiltered.map(v => v.name));
+      }
+
+      // Reset to first page
+      window.currentPage = 1;
+      updatePagination();
+      renderVenues();
+    }
+
+    function changePage(direction) {
+      const totalPages = Math.ceil(window.filteredVenues.length / window.itemsPerPage);
+      const newPage = window.currentPage + direction;
+      
+      if (newPage >= 1 && newPage <= totalPages) {
+        window.currentPage = newPage;
+        updatePagination();
+        renderVenues();
+      }
+    }
+
+    function updatePagination() {
+      const totalPages = Math.ceil(window.filteredVenues.length / window.itemsPerPage);
+      const start = (window.currentPage - 1) * window.itemsPerPage + 1;
+      const end = Math.min(window.currentPage * window.itemsPerPage, window.filteredVenues.length);
+      
+      const currentStartEl = document.getElementById('currentStart');
+      const currentEndEl = document.getElementById('currentEnd');
+      const totalCountEl = document.getElementById('totalCount');
+      const pageInfoEl = document.getElementById('pageInfo');
+      const prevBtn = document.getElementById('prevPage');
+      const nextBtn = document.getElementById('nextPage');
+      
+      if (currentStartEl) currentStartEl.textContent = start.toString();
+      if (currentEndEl) currentEndEl.textContent = end.toString();
+      if (totalCountEl) totalCountEl.textContent = window.filteredVenues.length.toString();
+      if (pageInfoEl) pageInfoEl.textContent = `Page ${window.currentPage} of ${totalPages}`;
+      
+      if (prevBtn) prevBtn.disabled = window.currentPage === 1;
+      if (nextBtn) nextBtn.disabled = window.currentPage === totalPages || totalPages === 0;
+    }
+
+    function renderVenues() {
+      const tbody = document.getElementById('venuesTableBody');
+      if (!tbody) return;
+      
+      const start = (window.currentPage - 1) * window.itemsPerPage;
+      const end = start + window.itemsPerPage;
+      const pageVenues = window.filteredVenues.slice(start, end);
+      
+      // Hide all rows first
+      const allRows = tbody.querySelectorAll('.venue-row');
+      allRows.forEach(row => row.style.display = 'none');
+      
+      // Show only the venues for current page
+      pageVenues.forEach(venue => {
+        let row = tbody.querySelector(`[data-venue-id="${venue.id}"]`);
+        
+        // If row doesn't exist (new venue), create it
+        if (!row) {
+          row = createVenueRow(venue);
+          tbody.appendChild(row);
+        } else {
+          // Update existing row data
+          updateVenueRow(row, venue);
+        }
+        
+        row.style.display = '';
+      });
+    }
+
+    function createVenueRow(venue) {
+      const row = document.createElement('tr');
+      row.className = 'venue-row hover:bg-gray-50';
+      row.setAttribute('data-venue-id', venue.id);
+      
+      row.innerHTML = `
+        <td class="px-4 py-4 whitespace-nowrap w-48">
+          <div class="font-medium text-gray-900 truncate">${venue.name}</div>
+          <div class="text-sm text-gray-500">${venue.venue_type || ''}</div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          <div class="text-sm text-gray-900">${venue.city || ''}</div>
+          <div class="text-sm text-gray-500">${venue.state || ''}</div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            ${venue.category || 'Uncategorized'}
+          </span>
+        </td>
+        <td class="px-6 py-4">
+          <div class="max-w-xs">
+            ${venue.description ? 
+              `<div class="text-sm text-gray-900 truncate" title="${venue.description}">${venue.description}</div>` :
+              '<span class="text-sm text-red-500 italic">No description</span>'
+            }
+          </div>
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          ${venue.image_url ? 
+            `<img src="${venue.image_url}" alt="${venue.name}" class="w-12 h-12 rounded-lg object-cover" />` :
+            `<div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 002 2z" />
+              </svg>
+            </div>`
+          }
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap">
+          ${venue.rating ? 
+            `<div class="text-sm text-gray-900">${venue.rating}/5</div>` :
+            '<span class="text-sm text-gray-400">No rating</span>'
+          }
+        </td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+          <div class="flex space-x-2">
+            <button class="edit-btn text-blue-600 hover:text-blue-900" data-venue-id="${venue.id}">
+              Edit
+            </button>
+            <button class="delete-btn text-red-600 hover:text-red-900" data-venue-id="${venue.id}">
+              Delete
+            </button>
+          </div>
+        </td>
+      `;
+      
+      return row;
+    }
+
+    function updateVenueRow(row, venue) {
+      // Update the existing row with new venue data
+      const cells = row.querySelectorAll('td');
+      if (cells.length >= 7) {
+        // Update venue name and type
+        cells[0].innerHTML = `
+          <div class="font-medium text-gray-900 truncate">${venue.name}</div>
+          <div class="text-sm text-gray-500">${venue.venue_type || ''}</div>
+        `;
+        
+        // Update location
+        cells[1].innerHTML = `
+          <div class="text-sm text-gray-900">${venue.city || ''}</div>
+          <div class="text-sm text-gray-500">${venue.state || ''}</div>
+        `;
+        
+        // Update category
+        cells[2].innerHTML = `
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+            ${venue.category || 'Uncategorized'}
+          </span>
+        `;
+        
+        // Update description
+        cells[3].innerHTML = `
+          <div class="max-w-xs">
+            ${venue.description ? 
+              `<div class="text-sm text-gray-900 truncate" title="${venue.description}">${venue.description}</div>` :
+              '<span class="text-sm text-red-500 italic">No description</span>'
+            }
+          </div>
+        `;
+        
+        // Update image
+        cells[4].innerHTML = venue.image_url ? 
+          `<img src="${venue.image_url}" alt="${venue.name}" class="w-12 h-12 rounded-lg object-cover" />` :
+          `<div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 002 2z" />
+            </svg>
+          </div>`;
+        
+        // Update rating
+        cells[5].innerHTML = venue.rating ? 
+          `<div class="text-sm text-gray-900">${venue.rating}/5</div>` :
+          '<span class="text-sm text-gray-400">No rating</span>';
+      }
+    }
+
+    async function refreshVenueData() {
+      try {
+        // Save current filter state
+        const searchInput = document.getElementById('search');
+        const stateFilter = document.getElementById('stateFilter');
+        const cityFilter = document.getElementById('cityFilter');
+        const reviewFilter = document.getElementById('reviewFilter');
+        
+        const currentFilters = {
+          search: searchInput ? searchInput.value : '',
+          state: stateFilter ? stateFilter.value : '',
+          city: cityFilter ? cityFilter.value : '',
+          review: reviewFilter ? reviewFilter.value : ''
+        };
+
+        console.log('Refreshing venue data, preserving filters:', currentFilters);
+
+        // Get Supabase client
+        const supabaseUrl = document.querySelector('meta[name="supabase-url"]')?.getAttribute('content');
+        const supabaseKey = document.querySelector('meta[name="supabase-key"]')?.getAttribute('content');
+        
+        if (!supabaseUrl || !supabaseKey) {
+          showNotification('Supabase configuration missing', 'error');
+          return;
+        }
+
+        const { createClient } = window.supabase;
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        // Fetch all venues with pagination
+        let allVenues = [];
+        let page = 0;
+        const pageSize = 1000;
+
+        while (true) {
+          const { data: batch, error } = await supabase
+            .from('venues')
+            .select('*')
+            .order('name', { ascending: true })
+            .range(page * pageSize, (page + 1) * pageSize - 1);
+
+          if (error) {
+            console.error('Error fetching venues:', error);
+            break;
+          }
+
+          if (!batch || batch.length === 0) {
+            break; // No more data
+          }
+
+          allVenues = allVenues.concat(batch);
+          
+          if (batch.length < pageSize) {
+            break; // Last page
+          }
+          
+          page++;
+        }
+
+        // Update global data
+        window.allVenues = allVenues;
+        console.log(`Refreshed ${allVenues.length} venues from database`);
+
+        // Rebuild state-to-cities mapping
+        updateStateToCitiesMapping();
+
+        // Restore filter state
+        if (searchInput) searchInput.value = currentFilters.search;
+        if (stateFilter) stateFilter.value = currentFilters.state;
+        if (cityFilter) cityFilter.value = currentFilters.city;
+        if (reviewFilter) reviewFilter.value = currentFilters.review;
+
+        // If state was selected, update city dropdown
+        if (currentFilters.state && stateFilter) {
+          handleStateChange();
+          // Restore city selection after state change
+          setTimeout(() => {
+            if (cityFilter) cityFilter.value = currentFilters.city;
+          }, 100);
+        }
+
+        // Apply filters to show updated data
+        filterVenues();
+
+      } catch (error) {
+        console.error('Error refreshing venue data:', error);
+        showNotification('Error refreshing data', 'error');
+      }
+    }
+
+    function updateStateToCitiesMapping() {
+      // Rebuild the state-to-cities mapping from current venue data
+      const stateToCities = window.allVenues.reduce((acc, venue) => {
+        if (venue.state && venue.city) {
+          if (!acc[venue.state]) {
+            acc[venue.state] = new Set();
+          }
+          acc[venue.state].add(venue.city);
+        }
+        return acc;
+      }, {});
+
+      // Convert sets to sorted arrays
+      window.stateToCities = Object.entries(stateToCities).reduce((acc, [state, citySet]) => {
+        acc[state] = [...citySet].sort();
+        return acc;
+      }, {});
+
+      // Update the city dropdown if a state is currently selected
+      const stateFilter = document.getElementById('stateFilter');
+      if (stateFilter && stateFilter.value) {
+        handleStateChange();
+      }
+    }
+
+    function openModal(venueId = null) {
+      window.currentVenueId = venueId;
+      const modal = document.getElementById('venueModal');
+      const title = document.getElementById('modalTitle');
+      
+      if (venueId && title) {
+        title.textContent = 'Edit Venue';
+        populateForm(venueId);
+      } else if (title) {
+        title.textContent = 'Add New Venue';
+        clearForm();
+      }
+      
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('venueModal');
+      if (modal) modal.classList.add('hidden');
+      window.currentVenueId = null;
+    }
+
+    function populateForm(venueId) {
+      const venue = window.allVenues.find(v => v.id === venueId);
+      if (!venue) return;
+
+      const setValue = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) element.value = value || '';
+      };
+
+      const setChecked = (id, value) => {
+        const element = document.getElementById(id);
+        if (element) element.checked = value || false;
+      };
+
+      setValue('venueId', venue.id);
+      setValue('venueName', venue.name);
+      setValue('venueType', venue.venue_type);
+      setValue('venueAddress', venue.address);
+      setValue('venueCity', venue.city);
+      setValue('venueState', venue.state);
+      setValue('venueZip', venue.zip_code);
+      setValue('venuePhone', venue.phone);
+      setValue('venueWebsite', venue.website);
+      setValue('venueDescription', venue.description);
+      setValue('venueImageUrl', venue.image_url);
+      setValue('venueCategory', venue.category);
+      setValue('venueRating', venue.rating);
+      
+      setChecked('isAlcoholFree', venue.is_alcohol_free);
+      setChecked('servesMocktails', venue.serves_mocktails);
+      setChecked('servesKava', venue.serves_kava);
+      setChecked('servesThc', venue.serves_thc);
+      setChecked('servesHempDrinks', venue.serves_hemp_drinks);
+      setChecked('isSoberFriendly', venue.is_sober_friendly);
+    }
+
+    function clearForm() {
+      const form = document.getElementById('venueForm');
+      if (form) form.reset();
+      
+      const venueIdInput = document.getElementById('venueId');
+      if (venueIdInput) venueIdInput.value = '';
+    }
+
+    async function saveVenue(event) {
+      if (event) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+
+      console.log('saveVenue called');
+
+      const getValue = (id) => {
+        const element = document.getElementById(id);
+        return element ? element.value.trim() : '';
+      };
+
+      const getChecked = (id) => {
+        const element = document.getElementById(id);
+        return element ? element.checked : false;
+      };
+
+      // Validate required fields
+      const venueName = getValue('venueName');
+      if (!venueName) {
+        showNotification('Venue name is required', 'error');
+        return;
+      }
+
+      const ratingValue = getValue('venueRating');
+      const formData = {
+        name: venueName,
+        venue_type: getValue('venueType'),
+        address: getValue('venueAddress'),
+        city: getValue('venueCity'),
+        state: getValue('venueState'),
+        zip_code: getValue('venueZip'),
+        phone: getValue('venuePhone'),
+        website: getValue('venueWebsite'),
+        description: getValue('venueDescription'),
+        image_url: getValue('venueImageUrl'),
+        category: getValue('venueCategory'),
+        rating: ratingValue ? parseFloat(ratingValue) : null,
+        is_alcohol_free: getChecked('isAlcoholFree'),
+        serves_mocktails: getChecked('servesMocktails'),
+        serves_kava: getChecked('servesKava'),
+        serves_thc: getChecked('servesThc'),
+        serves_hemp_drinks: getChecked('servesHempDrinks'),
+        is_sober_friendly: getChecked('isSoberFriendly'),
+        updated_at: new Date().toISOString()
+      };
+
+      const requestBody = {
+        id: window.currentVenueId,
+        ...formData
+      };
+
+      console.log('Sending request:', requestBody);
+
+      try {
+        // Use Supabase client directly instead of API
+        const supabaseUrl = document.querySelector('meta[name="supabase-url"]')?.getAttribute('content');
+        const supabaseKey = document.querySelector('meta[name="supabase-key"]')?.getAttribute('content');
+        
+        if (!supabaseUrl || !supabaseKey) {
+          showNotification('Supabase configuration missing', 'error');
+          return;
+        }
+
+        const { createClient } = window.supabase;
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        let result;
+        if (window.currentVenueId) {
+          // Update existing venue
+          result = await supabase
+            .from('venues')
+            .update(formData)
+            .eq('id', window.currentVenueId)
+            .select()
+            .single();
+        } else {
+          // Create new venue
+          const venueId = `venue_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+          result = await supabase
+            .from('venues')
+            .insert({
+              id: venueId,
+              ...formData,
+              created_at: new Date().toISOString()
+            })
+            .select()
+            .single();
+        }
+
+        if (result.error) {
+          console.error('Supabase error:', result.error);
+          showNotification(result.error.message || 'Error saving venue', 'error');
+        } else {
+          showNotification(window.currentVenueId ? 'Venue updated successfully!' : 'Venue added successfully!', 'success');
+          closeModal();
+          
+          // Refresh data from database while preserving filters
+          await refreshVenueData();
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showNotification('Error saving venue', 'error');
+      }
+    }
+
+    function openDeleteModal(venueId) {
+      window.deleteVenueId = venueId;
+      const venue = window.allVenues.find(v => v.id === venueId);
+      const nameElement = document.getElementById('deleteVenueName');
+      const modal = document.getElementById('deleteModal');
+      
+      if (nameElement) nameElement.textContent = venue?.name || 'this venue';
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeDeleteModal() {
+      const modal = document.getElementById('deleteModal');
+      if (modal) modal.classList.add('hidden');
+      window.deleteVenueId = null;
+    }
+
+    async function confirmDelete() {
+      if (!window.deleteVenueId) return;
+
+      try {
+        const supabaseUrl = document.querySelector('meta[name="supabase-url"]')?.getAttribute('content');
+        const supabaseKey = document.querySelector('meta[name="supabase-key"]')?.getAttribute('content');
+        
+        if (!supabaseUrl || !supabaseKey) {
+          showNotification('Supabase configuration missing', 'error');
+          return;
+        }
+
+        const { createClient } = window.supabase;
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        const { error } = await supabase
+          .from('venues')
+          .delete()
+          .eq('id', window.deleteVenueId);
+
+        if (error) {
+          console.error('Supabase error:', error);
+          showNotification(error.message || 'Error deleting venue', 'error');
+        } else {
+          showNotification('Venue deleted successfully!', 'success');
+          closeDeleteModal();
+          
+          // Refresh data from database while preserving filters
+          await refreshVenueData();
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        showNotification('Error deleting venue', 'error');
+      }
+    }
+
+    function exportVenueData() {
+      try {
+        // Create a formatted export with metadata
+        const exportData = {
+          export_date: new Date().toISOString(),
+          total_venues: window.allVenues.length,
+          venues: window.allVenues
+        };
+        
+        // Convert to JSON string with pretty formatting
+        const jsonString = JSON.stringify(exportData, null, 2);
+        
+        // Create blob and download
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        
+        // Create download link
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `venues_backup_${new Date().toISOString().split('T')[0]}.json`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        
+        // Clean up
+        URL.revokeObjectURL(url);
+        
+        showNotification(`Exported ${window.allVenues.length} venues successfully`, 'success');
+      } catch (error) {
+        console.error('Export error:', error);
+        showNotification('Error exporting venue data', 'error');
+      }
+    }
+
+    function showNotification(message, type = 'info') {
+      const notification = document.createElement('div');
+      notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 ${
+        type === 'success' ? 'bg-green-500 text-white' :
+        type === 'error' ? 'bg-red-500 text-white' :
+        'bg-blue-500 text-white'
+      }`;
+      notification.textContent = message;
+      
+      document.body.appendChild(notification);
+      
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+    }
+  </script>
+</Layout>
