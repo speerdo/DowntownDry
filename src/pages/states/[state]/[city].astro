@@ -55,13 +55,15 @@ const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Get city info from cities table
-const { data: cityData, error: cityError } = await supabase
+// Get city info from cities table - handle missing city data gracefully
+const { data: cityDataArray, error: cityError } = await supabase
   .from('cities')
   .select('*')
   .eq('city_name', cityName)
-  .eq('state', stateName)
-  .single();
+  .eq('state', stateName);
+
+// Extract first city data if available, or null if none found
+const cityData = cityDataArray && cityDataArray.length > 0 ? cityDataArray[0] : null;
 
 // Get all venues for this city
 const { data: venues, error: venuesError } = await supabase
@@ -72,9 +74,18 @@ const { data: venues, error: venuesError } = await supabase
   .order('rating', { ascending: false })
   .order('name');
 
-if (cityError || venuesError) {
-  console.error('Error fetching data:', { cityError, venuesError });
+// Handle errors gracefully - log for debugging but don't fail the build
+if (cityError) {
+  console.warn('City data fetch warning:', cityError, 'for city:', cityName, 'state:', stateName);
 }
+
+if (venuesError) {
+  console.error('Error fetching venues:', venuesError);
+  // If venues error is critical, we should handle it appropriately
+}
+
+// Ensure venues is always an array to prevent runtime errors
+const safeVenues = venues || [];
 
 function getStateSlug(stateName: string) {
   return stateName.toLowerCase().replace(/\s+/g, '-');
@@ -254,20 +265,20 @@ function getCityImage(cityName: string, stateName: string) {
 }
 
 // Calculate city center (average of all venue coordinates)
-const cityCenter = venues?.length ? {
-  lat: venues.reduce((sum, v) => sum + (v.latitude || 0), 0) / venues.length,
-  lng: venues.reduce((sum, v) => sum + (v.longitude || 0), 0) / venues.length
+const cityCenter = safeVenues.length ? {
+  lat: safeVenues.reduce((sum, v) => sum + (v.latitude || 0), 0) / safeVenues.length,
+  lng: safeVenues.reduce((sum, v) => sum + (v.longitude || 0), 0) / safeVenues.length
 } : null;
 
 // Group venues by venue type
-const venuesByType = venues?.reduce((acc, venue) => {
+const venuesByType = safeVenues.reduce((acc, venue) => {
   const venueType = venue.venue_type || 'Bar';
   if (!acc[venueType]) {
     acc[venueType] = [];
   }
   acc[venueType].push(venue);
   return acc;
-}, {} as Record<string, typeof venues>) || {};
+}, {} as Record<string, typeof safeVenues>);
 
 const venueTypeNames: Record<string, string> = {
   'Bar': 'Bars',
@@ -321,23 +332,23 @@ const venueTypeNames: Record<string, string> = {
                 <!-- Stats Cards -->
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
-                    <div class="text-2xl font-bold text-white">{venues?.length || 0}</div>
-                    <div class="text-sm text-neutral-50">{venues?.length === 1 ? 'Venue' : 'Venues'}</div>
+                    <div class="text-2xl font-bold text-white">{safeVenues.length}</div>
+                    <div class="text-sm text-neutral-50">{safeVenues.length === 1 ? 'Venue' : 'Venues'}</div>
                   </div>
                   
-                  {venues?.length && (venues?.filter(v => v.rating).length || 0) > 0 && (
+                  {safeVenues.length > 0 && safeVenues.filter(v => v.rating).length > 0 && (
                     <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
                       <div class="text-2xl font-bold text-secondary-500">
-                        {((venues?.filter(v => v.rating).reduce((sum, v) => sum + (v.rating || 0), 0) || 0) / (venues?.filter(v => v.rating).length || 1)).toFixed(1)}
+                        {(safeVenues.filter(v => v.rating).reduce((sum, v) => sum + (v.rating || 0), 0) / safeVenues.filter(v => v.rating).length).toFixed(1)}
                       </div>
                       <div class="text-sm text-neutral-50">Avg Rating</div>
                     </div>
                   )}
                   
-                  {venues?.length && (
+                  {safeVenues.length > 0 && (
                     <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
                       <div class="text-2xl font-bold text-accent-500">
-                        {venues?.filter(v => v.is_alcohol_free).length || 0}
+                        {safeVenues.filter(v => v.is_alcohol_free).length}
                       </div>
                       <div class="text-sm text-neutral-50">Alcohol-Free</div>
                     </div>
@@ -372,23 +383,23 @@ const venueTypeNames: Record<string, string> = {
               <!-- Stats Cards -->
               <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
-                  <div class="text-2xl font-bold text-white">{venues?.length || 0}</div>
-                  <div class="text-sm text-neutral-50">{venues?.length === 1 ? 'Venue' : 'Venues'}</div>
+                  <div class="text-2xl font-bold text-white">{safeVenues.length}</div>
+                  <div class="text-sm text-neutral-50">{safeVenues.length === 1 ? 'Venue' : 'Venues'}</div>
                 </div>
                 
-                {venues?.length && venues?.some(v => v.rating) && (
+                {safeVenues.length > 0 && safeVenues.some(v => v.rating) && (
                   <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
                     <div class="text-2xl font-bold text-secondary-500">
-                      {((venues?.filter(v => v.rating).reduce((sum, v) => sum + (v.rating || 0), 0) || 0) / (venues?.filter(v => v.rating).length || 1)).toFixed(1)}
+                      {(safeVenues.filter(v => v.rating).reduce((sum, v) => sum + (v.rating || 0), 0) / safeVenues.filter(v => v.rating).length).toFixed(1)}
                     </div>
                     <div class="text-sm text-neutral-50">Avg Rating</div>
                   </div>
                 )}
                 
-                {venues?.length && (
+                {safeVenues.length > 0 && (
                   <div class="bg-white/15 backdrop-blur-sm p-4 rounded-xl border border-white/30">
                     <div class="text-2xl font-bold text-accent-500">
-                      {venues?.filter(v => v.is_alcohol_free).length || 0}
+                      {safeVenues.filter(v => v.is_alcohol_free).length}
                     </div>
                     <div class="text-sm text-neutral-50">Alcohol-Free</div>
                   </div>
@@ -408,7 +419,7 @@ const venueTypeNames: Record<string, string> = {
         )}
       </div>
 
-      {venues && venues.length > 0 ? (
+      {safeVenues.length > 0 ? (
         <div>
           <!-- City Description Section -->
           {cityData?.description && (
@@ -444,7 +455,7 @@ const venueTypeNames: Record<string, string> = {
               <div class="mb-6">
                 <h2 class="text-2xl font-semibold text-gray-900 mb-4">Map View</h2>
                 <GoogleMap 
-                  venues={venues} 
+                  venues={safeVenues} 
                   height="500px"
                   zoom={13}
                 />
@@ -481,7 +492,7 @@ const venueTypeNames: Record<string, string> = {
               <div class="flex items-center justify-between mb-6">
                 <h2 class="text-2xl font-semibold text-gray-900">All Venues</h2>
                 <div class="text-sm text-gray-500">
-                  <span id="venueCount">{venues.length}</span> <span id="venueCountText">{venues.length === 1 ? 'venue' : 'venues'}</span> found
+                  <span id="venueCount">{safeVenues.length}</span> <span id="venueCountText">{safeVenues.length === 1 ? 'venue' : 'venues'}</span> found
                 </div>
               </div>
 
@@ -593,13 +604,13 @@ const venueTypeNames: Record<string, string> = {
               <div class="grid grid-cols-2 gap-3 mb-6">
                 <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-3 rounded-lg border border-blue-200">
                   <div class="text-lg font-bold text-blue-600">
-                    {venues.filter(v => v.serves_mocktails).length}
+                    {safeVenues.filter(v => v.serves_mocktails).length}
                   </div>
                   <div class="text-xs text-blue-700">Serve Mocktails</div>
                 </div>
                 <div class="bg-gradient-to-r from-green-50 to-emerald-50 p-3 rounded-lg border border-green-200">
                   <div class="text-lg font-bold text-green-600">
-                    {venues.filter(v => v.is_alcohol_free).length}
+                    {safeVenues.filter(v => v.is_alcohol_free).length}
                   </div>
                   <div class="text-xs text-green-700">100% Alcohol-Free</div>
                 </div>
@@ -884,7 +895,7 @@ const venueTypeNames: Record<string, string> = {
 
   <script>
     // Store original venues data for filtering
-    const venuesData = JSON.parse(`{venues ? JSON.stringify(venues) : '[]'}`);
+    const venuesData = JSON.parse(`{JSON.stringify(safeVenues)}`);
     let filteredVenues = [...venuesData];
 
     // Initialize filtering functionality
