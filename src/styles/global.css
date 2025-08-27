@@ -1,0 +1,196 @@
+/* Base Styles */
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
+}
+
+/* Blog Typography and Layout */
+.prose {
+  @apply max-w-4xl mx-auto;
+}
+
+.prose h1 {
+  @apply text-5xl md:text-6xl font-bold mb-12 text-neutral-900 leading-tight tracking-tight;
+  margin-top: 0;
+}
+
+.prose h2 {
+  @apply text-3xl md:text-4xl font-bold mt-16 mb-8 text-neutral-900 leading-tight tracking-tight;
+}
+
+.prose h3 {
+  @apply text-2xl md:text-3xl font-bold mt-12 mb-6 text-neutral-900 leading-tight;
+}
+
+.prose p {
+  @apply text-xl leading-relaxed mb-8 text-neutral-700;
+}
+
+.prose strong {
+  @apply font-bold text-neutral-900;
+}
+
+.prose ul,
+.prose ol {
+  @apply my-8 ml-8 text-xl text-neutral-700 leading-relaxed;
+}
+
+.prose li {
+  @apply mb-4;
+}
+
+.prose ul > li {
+  @apply list-disc;
+}
+
+.prose ol > li {
+  @apply list-decimal;
+}
+
+/* Blog spacing and rhythm */
+.prose > * + * {
+  @apply mt-8;
+}
+
+.prose blockquote {
+  @apply pl-8 border-l-4 border-neutral-900 my-12 text-neutral-700;
+}
+
+.prose blockquote p {
+  @apply text-2xl font-medium italic;
+}
+
+.prose a {
+  @apply text-primary-600 hover:text-primary-700 underline decoration-2 
+         hover:decoration-primary-500 transition-all duration-200;
+}
+
+/* Safety warnings in blog posts */
+.prose .safety-warning {
+  @apply bg-accent-50 border-l-4 border-accent-500 p-8 rounded-r-lg my-12 text-xl;
+}
+
+.prose .safety-warning strong {
+  @apply text-accent-500 font-bold;
+}
+
+/* Blog images */
+.prose img {
+  @apply rounded-xl shadow-xl my-12 max-w-full h-auto mx-auto;
+}
+
+/* Code blocks in blog posts */
+.prose pre {
+  @apply bg-neutral-50 p-6 rounded-xl overflow-x-auto my-12 text-lg;
+}
+
+.prose code {
+  @apply bg-neutral-50 px-2 py-1 rounded text-base font-mono text-primary-600;
+}
+
+/* Article Layout */
+article {
+  @apply py-20;
+}
+
+article > div {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Lists within content */
+.prose ul:not(:last-child),
+.prose ol:not(:last-child) {
+  @apply mb-8;
+}
+
+/* Nested lists */
+.prose li > ul,
+.prose li > ol {
+  @apply mt-4 mb-4;
+}
+
+/* Special sections */
+.prose hr {
+  @apply my-12 border-t-2 border-neutral-200;
+}
+
+.prose figure {
+  @apply my-12;
+}
+
+.prose figcaption {
+  @apply text-center text-neutral-600 mt-4 text-lg;
+}
+
+/* Color Tokens */
+:root {
+  /* Primary Colors */
+  --color-primary-700: #1d200f;
+  --color-primary-600: #2a2e17;
+  --color-primary-500: #505a28;
+
+  /* Secondary Colors */
+  --color-secondary-500: #d9aa55;
+  --color-secondary-200: #f2eadf;
+  --color-secondary-50: #faf7f2;
+
+  /* Accent Colors */
+  --color-accent-500: #d98555;
+  --color-accent-200: #f2d4c4;
+  --color-accent-50: #faf0ea;
+
+  /* Neutral Colors */
+  --color-neutral-900: #1a1a1a;
+  --color-neutral-700: #404040;
+  --color-neutral-500: #737373;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-50: #fafafa;
+}
+
+/* Utility Classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Components */
+.btn-primary {
+  @apply bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg 
+         hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl;
+}
+
+.btn-secondary {
+  @apply bg-white/10 backdrop-blur-md border-2 border-white/50 text-white px-12 py-5 rounded-2xl font-bold text-lg 
+         hover:bg-white/20 hover:border-white/70 hover:shadow-2xl transition-all duration-300 transform hover:scale-105;
+}
+
+.card {
+  @apply bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2;
+}
+
+.gradient-overlay {
+  @apply absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/40 to-transparent;
+}
+
+/* Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
