@@ -56,7 +56,7 @@ const stateToCitiesArray: Record<string, string[]> = {};
       <!-- Stats Overview -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
         <div class="bg-white p-4 rounded-lg shadow-sm border">
-          <div class="text-2xl font-bold text-gray-900">{venues?.length || 0}</div>
+          <div id="totalVenueCount" class="text-2xl font-bold text-gray-900">0</div>
           <div class="text-sm text-gray-600">Total Venues</div>
         </div>
         <div class="bg-white p-4 rounded-lg shadow-sm border">
@@ -884,12 +884,41 @@ const stateToCitiesArray: Record<string, string[]> = {};
         window.allVenues = allVenues;
         console.log(`Refreshed ${allVenues.length} venues from database`);
 
+        // Update stats in the overview section
+        const totalVenueCount = document.getElementById('totalVenueCount');
+        if (totalVenueCount) totalVenueCount.textContent = allVenues.length.toString();
+        
+        const totalCountElements = document.querySelectorAll('[id="totalCount"]');
+        totalCountElements.forEach(el => el.textContent = allVenues.length.toString());
+        
+        const missingDescCount = document.querySelector('.text-amber-600');
+        if (missingDescCount) missingDescCount.textContent = allVenues.filter(v => !v.description).length.toString();
+        
+        const missingImageCount = document.querySelector('.text-purple-600');
+        if (missingImageCount) missingImageCount.textContent = allVenues.filter(v => !v.image_url).length.toString();
+        
+        const completeCount = document.querySelector('.text-green-600');
+        if (completeCount) completeCount.textContent = allVenues.filter(v => v.description && v.image_url).length.toString();
+
+        // Rebuild state dropdown
+        const states = [...new Set(allVenues.map(v => v.state).filter(Boolean))].sort();
+        if (stateFilter) {
+            const currentState = stateFilter.value;
+            stateFilter.innerHTML = '<option value="">All States</option>';
+            states.forEach(state => {
+                const option = document.createElement('option');
+                option.value = state;
+                option.textContent = state;
+                stateFilter.appendChild(option);
+            });
+            stateFilter.value = currentState; // Restore selection
+        }
+
         // Rebuild state-to-cities mapping
         updateStateToCitiesMapping();
 
         // Restore filter state
         if (searchInput) searchInput.value = currentFilters.search;
-        if (stateFilter) stateFilter.value = currentFilters.state;
         if (cityFilter) cityFilter.value = currentFilters.city;
         if (reviewFilter) reviewFilter.value = currentFilters.review;
 
