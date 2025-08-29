@@ -2,63 +2,39 @@
 import Layout from '../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
 
+interface Venue {
+  id: string;
+  name: string;
+  venue_type?: string;
+  address?: string;
+  city?: string;
+  state?: string;
+  zip_code?: string;
+  phone?: string;
+  website?: string;
+  description?: string;
+  image_url?: string;
+  category?: string;
+  rating?: number;
+  serves_mocktails?: boolean;
+  serves_kava?: boolean;
+  serves_thc?: boolean;
+  serves_hemp_drinks?: boolean;
+  is_alcohol_free?: boolean;
+  is_sober_friendly?: boolean;
+  created_at?: string;
+  updated_at?: string;
+}
+
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Get all venues for admin review - handle pagination to avoid 1000 row limit
-let allVenues = [];
-let page = 0;
-const pageSize = 1000;
-
-while (true) {
-  const { data: batch, error } = await supabase
-    .from('venues')
-    .select('*')
-    .order('name', { ascending: true })
-    .range(page * pageSize, (page + 1) * pageSize - 1);
-
-  if (error) {
-    console.error('Error fetching venues:', error);
-    break;
-  }
-
-  if (!batch || batch.length === 0) {
-    break; // No more data
-  }
-
-  allVenues = allVenues.concat(batch);
-  
-  if (batch.length < pageSize) {
-    break; // Last page
-  }
-  
-  page++;
-}
-
-const venues = allVenues;
-console.log(`Loaded ${venues.length} total venues for admin`);
-
-// Get unique states and cities for filters
-const states = [...new Set(venues?.map(v => v.state).filter(Boolean))].sort();
-const cities = [...new Set(venues?.map(v => v.city).filter(Boolean))].sort();
-
-// Create state-to-cities mapping for dynamic filtering
-const stateToCities = venues?.reduce((acc, venue) => {
-  if (venue.state && venue.city) {
-    if (!acc[venue.state]) {
-      acc[venue.state] = new Set();
-    }
-    acc[venue.state].add(venue.city);
-  }
-  return acc;
-}, {} as Record<string, Set<string>>) || {};
-
-// Convert sets to sorted arrays
-const stateToCitiesArray = Object.entries(stateToCities).reduce((acc, [state, citySet]) => {
-  acc[state] = [...(citySet as Set<string>)].sort();
-  return acc;
-}, {} as Record<string, string[]>);
+// Initialize empty arrays - data will be fetched client-side
+const venues: Venue[] = [];
+const states: string[] = [];
+const cities: string[] = [];
+const stateToCitiesArray: Record<string, string[]> = {};
 ---
 
 <Layout title="Venue Admin - Downtown Dry">
@@ -305,7 +281,60 @@ const stateToCitiesArray = Object.entries(stateToCities).reduce((acc, [state, ci
             
             <div>
               <label for="venueState" class="block text-sm font-medium text-gray-700">State</label>
-              <input type="text" id="venueState" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500" />
+              <select id="venueState" class="mt-1 block w-full border border-gray-300 rounded-md px-3 py-2 focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Select state...</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <option value="Arizona">Arizona</option>
+                <option value="Arkansas">Arkansas</option>
+                <option value="California">California</option>
+                <option value="Colorado">Colorado</option>
+                <option value="Connecticut">Connecticut</option>
+                <option value="Delaware">Delaware</option>
+                <option value="Florida">Florida</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Hawaii">Hawaii</option>
+                <option value="Idaho">Idaho</option>
+                <option value="Illinois">Illinois</option>
+                <option value="Indiana">Indiana</option>
+                <option value="Iowa">Iowa</option>
+                <option value="Kansas">Kansas</option>
+                <option value="Kentucky">Kentucky</option>
+                <option value="Louisiana">Louisiana</option>
+                <option value="Maine">Maine</option>
+                <option value="Maryland">Maryland</option>
+                <option value="Massachusetts">Massachusetts</option>
+                <option value="Michigan">Michigan</option>
+                <option value="Minnesota">Minnesota</option>
+                <option value="Mississippi">Mississippi</option>
+                <option value="Missouri">Missouri</option>
+                <option value="Montana">Montana</option>
+                <option value="Nebraska">Nebraska</option>
+                <option value="Nevada">Nevada</option>
+                <option value="New Hampshire">New Hampshire</option>
+                <option value="New Jersey">New Jersey</option>
+                <option value="New Mexico">New Mexico</option>
+                <option value="New York">New York</option>
+                <option value="North Carolina">North Carolina</option>
+                <option value="North Dakota">North Dakota</option>
+                <option value="Ohio">Ohio</option>
+                <option value="Oklahoma">Oklahoma</option>
+                <option value="Oregon">Oregon</option>
+                <option value="Pennsylvania">Pennsylvania</option>
+                <option value="Rhode Island">Rhode Island</option>
+                <option value="South Carolina">South Carolina</option>
+                <option value="South Dakota">South Dakota</option>
+                <option value="Tennessee">Tennessee</option>
+                <option value="Texas">Texas</option>
+                <option value="Utah">Utah</option>
+                <option value="Vermont">Vermont</option>
+                <option value="Virginia">Virginia</option>
+                <option value="Washington">Washington</option>
+                <option value="West Virginia">West Virginia</option>
+                <option value="Wisconsin">Wisconsin</option>
+                <option value="Wyoming">Wyoming</option>
+                <option value="District of Columbia">District of Columbia</option>
+              </select>
             </div>
             
             <div>
@@ -434,21 +463,10 @@ const stateToCitiesArray = Object.entries(stateToCities).reduce((acc, [state, ci
     window.filteredVenues = [];
 
     // Initialize when page loads
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('Admin page loaded with:', window.allVenues.length, 'venues');
-      console.log('State to cities mapping:', window.stateToCities);
-      
-      // Debug Indianapolis venues specifically
-      const indianapolisVenues = window.allVenues.filter(v => 
-        v.city && v.city.toLowerCase().includes('indianapolis') && 
-        v.state && v.state.toLowerCase().includes('indiana')
-      );
-      console.log('Indianapolis venues found:', indianapolisVenues.length, indianapolisVenues.map(v => v.name));
-      
-      window.filteredVenues = [...window.allVenues];
+    document.addEventListener('DOMContentLoaded', async function() {
+      console.log('Admin page loaded, fetching fresh data...');
       setupEventListeners();
-      updatePagination();
-      renderVenues();
+      await refreshVenueData();  // This will also handle pagination and rendering
     });
 
     function setupEventListeners() {
