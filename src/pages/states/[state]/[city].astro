@@ -271,16 +271,32 @@ const cityCenter = safeVenues.length ? {
 } : null;
 
 // Group venues by venue type
-const venuesByType = safeVenues.reduce((acc, venue) => {
+interface Venue {
+  id: string;
+  name: string;
+  venue_type?: string;
+  serves_mocktails?: boolean;
+  serves_kava?: boolean;
+  serves_thc?: boolean;
+  is_alcohol_free?: boolean;
+  rating?: number;
+  [key: string]: any;
+}
+
+interface VenuesByType {
+  [key: string]: Venue[];
+}
+
+const venuesByType = safeVenues.reduce<VenuesByType>((acc, venue) => {
   const venueType = venue.venue_type || 'Bar';
   if (!acc[venueType]) {
     acc[venueType] = [];
   }
   acc[venueType].push(venue);
   return acc;
-}, {} as Record<string, typeof safeVenues>);
+}, {});
 
-const venueTypeNames: Record<string, string> = {
+const venueTypeNames: { [key: string]: string } = {
   'Bar': 'Bars',
   'Restaurant': 'Restaurants',
   'Cafe': 'Cafes',
@@ -625,28 +641,28 @@ const venueTypeNames: Record<string, string> = {
                         {venueTypeNames[venueType] || venueType}
                       </h3>
                       <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full type-count">
-                        {(typeVenues as any[]).length}
+                        {typeVenues.length}
                       </span>
                     </div>
                     
                     <!-- Show what services this venue type offers -->
                     <div class="flex gap-1 text-xs">
-                      {(typeVenues as any[]).some(v => v.serves_mocktails) && (
+                      {typeVenues.some(v => v.serves_mocktails) && (
                         <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-full">🍹</span>
                       )}
-                      {(typeVenues as any[]).some(v => v.serves_kava) && (
+                      {typeVenues.some(v => v.serves_kava) && (
                         <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded-full">🌿</span>
                       )}
-                      {(typeVenues as any[]).some(v => v.serves_thc) && (
+                      {typeVenues.some(v => v.serves_thc) && (
                         <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full">🌱</span>
                       )}
-                      {(typeVenues as any[]).some(v => v.is_alcohol_free) && (
+                      {typeVenues.some(v => v.is_alcohol_free) && (
                         <span class="bg-orange-100 text-orange-700 px-2 py-1 rounded-full">🚫</span>
                       )}
                     </div>
                   </div>
                   <div class="space-y-6 venues-list">
-                    {(typeVenues as any[]).map((venue) => (
+                    {typeVenues.map((venue) => (
                       <div 
                         class="venue-card bg-white border border-gray-200 rounded-xl overflow-hidden hover:border-indigo-300 hover:shadow-xl transition-all duration-300"
                         data-venue-id={venue.id}
@@ -680,7 +696,7 @@ const venueTypeNames: Record<string, string> = {
                           <div class="absolute top-4 right-4 flex flex-col gap-2">
                             {venue.serves_thc && (
                               <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-md shadow-lg border-l-4 border-green-700">
-                                🌱 Serves Delta
+                                🌱 Serves THC
                               </span>
                             )}
                             {venue.serves_kava && (
@@ -845,7 +861,7 @@ const venueTypeNames: Record<string, string> = {
                             )}
                             {venue.serves_thc && (
                               <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full border-l-4 border-green-500">
-                                🌱 Serves Delta
+                                🌱 Serves THC
                               </span>
                             )}
                             {venue.serves_kava && (
@@ -893,9 +909,9 @@ const venueTypeNames: Record<string, string> = {
     </div>
   </main>
 
-  <script>
+  <script define:vars={{ safeVenues }}>
     // Store original venues data for filtering
-    const venuesData = JSON.parse(`{JSON.stringify(safeVenues)}`);
+    const venuesData = safeVenues;
     let filteredVenues = [...venuesData];
 
     // Initialize filtering functionality
@@ -930,9 +946,9 @@ const venueTypeNames: Record<string, string> = {
     }
 
     function setupSearch() {
-      const searchInput = document.getElementById('searchVenues') as HTMLInputElement;
+      const searchInput = document.getElementById('searchVenues');
       if (searchInput) {
-        let debounceTimer: any;
+        let debounceTimer;
         searchInput.addEventListener('input', function() {
           clearTimeout(debounceTimer);
           debounceTimer = setTimeout(applyFiltersAndSort, 300);
@@ -952,14 +968,14 @@ const venueTypeNames: Record<string, string> = {
       if (clearButton) {
         clearButton.addEventListener('click', function() {
           // Clear all filters
-          (document.getElementById('typeFilter') as HTMLSelectElement).value = '';
-          (document.getElementById('minRating') as HTMLSelectElement).value = '';
-          (document.getElementById('searchVenues') as HTMLInputElement).value = '';
-          (document.getElementById('sortBy') as HTMLSelectElement).value = 'rating-desc';
+          document.getElementById('typeFilter').value = '';
+          document.getElementById('minRating').value = '';
+          document.getElementById('searchVenues').value = '';
+          document.getElementById('sortBy').value = 'rating-desc';
           
           // Uncheck all service filters
           ['filterMocktails', 'filterKava', 'filterTHC', 'filterHempDrinks', 'filterAlcoholFree'].forEach(id => {
-            const checkbox = document.getElementById(id) as HTMLInputElement;
+            const checkbox = document.getElementById(id);
             if (checkbox) checkbox.checked = false;
           });
           
@@ -990,18 +1006,18 @@ const venueTypeNames: Record<string, string> = {
       // Hide all venue cards first
       const allVenueCards = document.querySelectorAll('.venue-card');
       allVenueCards.forEach(card => {
-        (card as HTMLElement).style.display = 'none';
+        card.style.display = 'none';
       });
 
       // Hide all venue type sections
       const typeSections = document.querySelectorAll('.venue-type-section');
       typeSections.forEach(section => {
-        (section as HTMLElement).style.display = 'none';
+        section.style.display = 'none';
       });
 
       // Group filtered venues by venue type
-      const filteredByType: Record<string, any[]> = {};
-      filteredVenues.forEach((venue: any) => {
+      const filteredByType = {};
+      filteredVenues.forEach((venue) => {
         const venueType = venue.venue_type || 'Bar';
         if (!filteredByType[venueType]) {
           filteredByType[venueType] = [];
@@ -1013,7 +1029,7 @@ const venueTypeNames: Record<string, string> = {
       Object.entries(filteredByType).forEach(([venueType, venues]) => {
         const typeSection = document.querySelector(`[data-venue-type="${venueType}"]`);
         if (typeSection) {
-          (typeSection as HTMLElement).style.display = 'block';
+          typeSection.style.display = 'block';
           
           // Update type count
           const countSpan = typeSection.querySelector('.type-count');
@@ -1022,10 +1038,10 @@ const venueTypeNames: Record<string, string> = {
           }
           
           // Show venues in this type
-          venues.forEach((venue: any) => {
+          venues.forEach((venue) => {
             const venueCard = document.querySelector(`[data-venue-id="${venue.id}"]`);
             if (venueCard) {
-              (venueCard as HTMLElement).style.display = 'block';
+              venueCard.style.display = 'block';
             }
           });
         }
@@ -1090,10 +1106,10 @@ const venueTypeNames: Record<string, string> = {
     function updateURLWithFilters() {
       const params = new URLSearchParams();
       
-      const typeFilter = (document.getElementById('typeFilter') as HTMLSelectElement)?.value;
-      const minRating = (document.getElementById('minRating') as HTMLSelectElement)?.value;
-      const searchTerm = (document.getElementById('searchVenues') as HTMLInputElement)?.value;
-      const sortBy = (document.getElementById('sortBy') as HTMLSelectElement)?.value;
+      const typeFilter = document.getElementById('typeFilter')?.value;
+      const minRating = document.getElementById('minRating')?.value;
+      const searchTerm = document.getElementById('searchVenues')?.value;
+      const sortBy = document.getElementById('sortBy')?.value;
       
       if (typeFilter) params.set('type', typeFilter);
       if (minRating) params.set('rating', minRating);
@@ -1101,12 +1117,12 @@ const venueTypeNames: Record<string, string> = {
       if (sortBy && sortBy !== 'rating-desc') params.set('sort', sortBy);
       
       // Service filters
-      const services: string[] = [];
-      if ((document.getElementById('filterMocktails') as HTMLInputElement)?.checked) services.push('mocktails');
-      if ((document.getElementById('filterKava') as HTMLInputElement)?.checked) services.push('kava');
-      if ((document.getElementById('filterTHC') as HTMLInputElement)?.checked) services.push('thc');
-      if ((document.getElementById('filterHempDrinks') as HTMLInputElement)?.checked) services.push('hemp');
-      if ((document.getElementById('filterAlcoholFree') as HTMLInputElement)?.checked) services.push('alcohol-free');
+      const services = [];
+      if (document.getElementById('filterMocktails')?.checked) services.push('mocktails');
+      if (document.getElementById('filterKava')?.checked) services.push('kava');
+      if (document.getElementById('filterTHC')?.checked) services.push('thc');
+      if (document.getElementById('filterHempDrinks')?.checked) services.push('hemp');
+      if (document.getElementById('filterAlcoholFree')?.checked) services.push('alcohol-free');
       
       if (services.length > 0) params.set('services', services.join(','));
       
@@ -1123,40 +1139,40 @@ const venueTypeNames: Record<string, string> = {
       const searchParam = params.get('search');
       const sortParam = params.get('sort');
       
-      if (typeParam) (document.getElementById('typeFilter') as HTMLSelectElement).value = typeParam;
-      if (ratingParam) (document.getElementById('minRating') as HTMLSelectElement).value = ratingParam;
-      if (searchParam) (document.getElementById('searchVenues') as HTMLInputElement).value = searchParam;
-      if (sortParam) (document.getElementById('sortBy') as HTMLSelectElement).value = sortParam;
+      if (typeParam) document.getElementById('typeFilter').value = typeParam;
+      if (ratingParam) document.getElementById('minRating').value = ratingParam;
+      if (searchParam) document.getElementById('searchVenues').value = searchParam;
+      if (sortParam) document.getElementById('sortBy').value = sortParam;
       
       // Set service checkboxes
       const services = params.get('services')?.split(',') || [];
-      (document.getElementById('filterMocktails') as HTMLInputElement).checked = services.includes('mocktails');
-      (document.getElementById('filterKava') as HTMLInputElement).checked = services.includes('kava');
-      (document.getElementById('filterTHC') as HTMLInputElement).checked = services.includes('thc');
-      (document.getElementById('filterHempDrinks') as HTMLInputElement).checked = services.includes('hemp');
-      (document.getElementById('filterAlcoholFree') as HTMLInputElement).checked = services.includes('alcohol-free');
+      document.getElementById('filterMocktails').checked = services.includes('mocktails');
+      document.getElementById('filterKava').checked = services.includes('kava');
+      document.getElementById('filterTHC').checked = services.includes('thc');
+      document.getElementById('filterHempDrinks').checked = services.includes('hemp');
+      document.getElementById('filterAlcoholFree').checked = services.includes('alcohol-free');
     }
 
 
 
     function applyFiltersAndSort() {
       // Get filter values
-      const typeFilter = (document.getElementById('typeFilter') as HTMLSelectElement)?.value || '';
-      const minRating = parseFloat((document.getElementById('minRating') as HTMLSelectElement)?.value || '0');
-      const searchTerm = (document.getElementById('searchVenues') as HTMLInputElement)?.value?.toLowerCase() || '';
+      const typeFilter = document.getElementById('typeFilter')?.value || '';
+      const minRating = parseFloat(document.getElementById('minRating')?.value || '0');
+      const searchTerm = document.getElementById('searchVenues')?.value?.toLowerCase() || '';
       
       // Get service filters
-      const filterMocktails = (document.getElementById('filterMocktails') as HTMLInputElement)?.checked || false;
-      const filterKava = (document.getElementById('filterKava') as HTMLInputElement)?.checked || false;
-      const filterTHC = (document.getElementById('filterTHC') as HTMLInputElement)?.checked || false;
-      const filterHempDrinks = (document.getElementById('filterHempDrinks') as HTMLInputElement)?.checked || false;
-      const filterAlcoholFree = (document.getElementById('filterAlcoholFree') as HTMLInputElement)?.checked || false;
+      const filterMocktails = document.getElementById('filterMocktails')?.checked || false;
+      const filterKava = document.getElementById('filterKava')?.checked || false;
+      const filterTHC = document.getElementById('filterTHC')?.checked || false;
+      const filterHempDrinks = document.getElementById('filterHempDrinks')?.checked || false;
+      const filterAlcoholFree = document.getElementById('filterAlcoholFree')?.checked || false;
       
       // Get sort option
-      const sortBy = (document.getElementById('sortBy') as HTMLSelectElement)?.value || 'rating-desc';
+      const sortBy = document.getElementById('sortBy')?.value || 'rating-desc';
 
       // Filter venues
-      filteredVenues = venuesData.filter((venue: any) => {
+      filteredVenues = venuesData.filter((venue) => {
         // Type filter
         if (typeFilter && venue.venue_type !== typeFilter) return false;
         
@@ -1188,7 +1204,7 @@ const venueTypeNames: Record<string, string> = {
       });
 
       // Sort venues
-      filteredVenues.sort((a: any, b: any) => {
+      filteredVenues.sort((a, b) => {
         switch (sortBy) {
           case 'rating-desc':
             return (b.rating || 0) - (a.rating || 0);
