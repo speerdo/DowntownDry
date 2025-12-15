@@ -1,30 +1,42 @@
 {
-  "name": "downtown-dry",
-  "type": "module",
-  "version": "0.0.1",
-  "private": true,
+  "name": "downtowndry-data-enrichment",
+  "version": "1.0.0",
+  "description": "Automated venue verification and data enrichment for DowntownDry",
+  "main": "scripts/01_extract_venues.js",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "upload-data": "node scripts/upload-data.js",
-    "add-missing-cities": "node scripts/add-missing-cities.js",
-    "upload-all-venues": "node scripts/upload-all-venues.js",
-    "scrape-missing-cities": "node scripts/scrape-missing-cities.js",
-    "manual-venue-fixes": "node scripts/manual-venue-fixes.js",
-    "add-remaining-venues": "node scripts/add-remaining-venues.js",
-    "normalize-states": "node scripts/normalize-states.js",
-    "add-alaska-venues": "node scripts/add-alaska-venues.js",
-    "add-delaware-venues": "node scripts/add-delaware-venues.js",
-    "add-vermont-venues": "node scripts/add-vermont-venues.js",
-    "add-westvirginia-venues": "node scripts/add-westvirginia-venues.js"
+    "extract": "node scripts/01_extract_venues.js",
+    "verify": "node scripts/02_primary_verification.js",
+    "secondary": "node scripts/03_secondary_verification.js",
+    "enrich": "node scripts/04_data_enrichment.js",
+    "review": "node scripts/05_final_verification.js",
+    "deploy": "node scripts/06_database_update.js",
+    "test": "node scripts/01_extract_venues.js"
   },
+  "keywords": [
+    "venue",
+    "verification",
+    "data-enrichment",
+    "automation"
+  ],
+  "author": "Adam - DowntownDry",
+  "license": "ISC",
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.5",
-    "@supabase/supabase-js": "^2.50.0",
     "astro": "^5.9.2",
-    "dotenv": "^16.5.0",
-    "tailwindcss": "^3.4.17"
+    "@astrojs/tailwind": "^5.1.5",
+    "@google/generative-ai": "^0.21.0",
+    "@supabase/supabase-js": "^2.45.7",
+    "axios": "^1.7.9",
+    "csv-writer": "^1.6.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

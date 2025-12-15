@@ -903,7 +903,6 @@ const stateToCitiesArray: Record<string, string[]> = {};
         // Rebuild state dropdown
         const states = [...new Set(allVenues.map(v => v.state).filter(Boolean))].sort();
         if (stateFilter) {
-            const currentState = stateFilter.value;
             stateFilter.innerHTML = '<option value="">All States</option>';
             states.forEach(state => {
                 const option = document.createElement('option');
@@ -911,25 +910,67 @@ const stateToCitiesArray: Record<string, string[]> = {};
                 option.textContent = state;
                 stateFilter.appendChild(option);
             });
-            stateFilter.value = currentState; // Restore selection
         }
 
         // Rebuild state-to-cities mapping
         updateStateToCitiesMapping();
 
-        // Restore filter state
-        if (searchInput) searchInput.value = currentFilters.search;
-        if (cityFilter) cityFilter.value = currentFilters.city;
-        if (reviewFilter) reviewFilter.value = currentFilters.review;
-
-        // If state was selected, update city dropdown
-        if (currentFilters.state && stateFilter) {
-          handleStateChange();
-          // Restore city selection after state change
-          setTimeout(() => {
-            if (cityFilter) cityFilter.value = currentFilters.city;
-          }, 100);
+        // Restore state filter first (always restore, even if empty)
+        if (stateFilter) {
+          stateFilter.value = currentFilters.state || '';
         }
+
+        // Update city dropdown based on selected state (if any)
+        const selectedState = stateFilter ? stateFilter.value : '';
+        if (cityFilter) {
+          cityFilter.innerHTML = '<option value="">All Cities</option>';
+          
+          if (selectedState && window.stateToCities[selectedState]) {
+            // Add cities for the selected state
+            window.stateToCities[selectedState].forEach(city => {
+              const option = document.createElement('option');
+              option.value = city;
+              option.textContent = city;
+              cityFilter.appendChild(option);
+            });
+          } else {
+            // If no state selected, show all cities
+            const allCities = [...new Set(allVenues.map(v => v.city).filter(Boolean))].sort();
+            allCities.forEach(city => {
+              const option = document.createElement('option');
+              option.value = city;
+              option.textContent = city;
+              cityFilter.appendChild(option);
+            });
+          }
+        }
+
+        // Restore all filter values
+        if (searchInput) searchInput.value = currentFilters.search || '';
+        if (cityFilter) {
+          // Restore city filter if it was set and still exists in dropdown
+          if (currentFilters.city) {
+            const cityOption = Array.from(cityFilter.options).find(opt => opt.value === currentFilters.city);
+            if (cityOption) {
+              cityFilter.value = currentFilters.city;
+            } else {
+              // City might not exist anymore (e.g., if venue was deleted), so clear it
+              console.log(`City "${currentFilters.city}" no longer exists in dropdown, clearing filter`);
+              cityFilter.value = '';
+            }
+          } else {
+            // No city was selected, ensure it's empty
+            cityFilter.value = '';
+          }
+        }
+        if (reviewFilter) reviewFilter.value = currentFilters.review || '';
+        
+        console.log('Filters restored:', {
+          state: stateFilter ? stateFilter.value : 'N/A',
+          city: cityFilter ? cityFilter.value : 'N/A',
+          search: searchInput ? searchInput.value : 'N/A',
+          review: reviewFilter ? reviewFilter.value : 'N/A'
+        });
 
         // Apply filters to show updated data
         filterVenues();
