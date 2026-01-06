@@ -6,8 +6,20 @@ const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+// Get active states from database (soft launch control via is_active flag)
+const { data: activeStatesData, error: statesError } = await supabase
+  .from('states')
+  .select('state_name, state_abbr, image_url')
+  .eq('is_active', true);
+
+if (statesError) {
+  console.error('Error fetching active states:', statesError);
+}
+
+const ACTIVE_STATE_NAMES = activeStatesData?.map(s => s.state_name) || [];
+
 // Get all venues grouped by state - handle pagination properly
-let allVenues = [];
+let allVenues: any[] = [];
 let from = 0;
 const batchSize = 1000;
 
@@ -16,6 +28,7 @@ while (true) {
     .from('venues')
     .select('id, city, state, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, rating')
     .not('state', 'is', null)
+    .in('state', ACTIVE_STATE_NAMES)
     .range(from, from + batchSize - 1);
   
   if (batchError) {
@@ -122,7 +135,7 @@ function getStateSlug(stateName: string) {
 }
 ---
 
-<Layout title="States - Downtown Dry">
+<Layout title="Alcohol-Free Bars by State - CA, NY, IN, NE | Downtown Dry" description="Find alcohol-free bars, kava lounges, and sober venues in California, New York, Indiana, and Nebraska. Browse by state and city.">
   <!-- Hero Section -->
   <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
         <!-- Geometric Background Elements -->
@@ -139,7 +152,7 @@ function getStateSlug(stateName: string) {
             <span style="color: #D9AA55;">BY STATE</span>
           </h1>
           <p class="text-xl md:text-2xl text-neutral-100 leading-relaxed max-w-3xl mx-auto mb-8">
-            Discover mocktail bars, kava lounges, and alcohol-free venues across all 50 states
+            Discover mocktail bars, kava lounges, and alcohol-free venues in California, New York, Indiana, and Nebraska
           </p>
           
           <!-- Quick Stats -->
@@ -153,7 +166,7 @@ function getStateSlug(stateName: string) {
               <div class="text-sm opacity-80">Cities</div>
             </div>
             <div class="backdrop-blur-sm bg-black/30 rounded-2xl p-4 border border-white/30 text-center">
-              <div class="text-2xl font-bold text-white">50</div>
+              <div class="text-2xl font-bold text-white">{sortedStates.length}</div>
               <div class="text-sm opacity-80">States</div>
             </div>
             <div class="backdrop-blur-sm bg-black/30 rounded-2xl p-4 border border-white/30 text-center">

@@ -2,13 +2,33 @@
 import Layout from '../../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
 
+// Default fallback values (used when database doesn't have data)
+const DEFAULT_STATE_IMAGE = 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&h=600&q=80';
+const DEFAULT_STATE_DESC = {
+  intro: `Discover the growing alcohol-free scene in this state. From craft mocktail bars to kava lounges and THC venues, find the perfect spot for mindful drinking and sober socializing.`,
+  metaDesc: 'Find alcohol-free bars, kava lounges & mocktail venues in this state. Your guide to sober nightlife.'
+};
+
 export async function getStaticPaths() {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  // Get all unique states from venues table - handle pagination properly
-  let allStates = [];
+  // Fetch active states from the states table (soft launch control via is_active flag)
+  const { data: activeStates, error: statesError } = await supabase
+    .from('states')
+    .select('*')
+    .eq('is_active', true);
+
+  if (statesError) {
+    console.error('Error fetching states:', statesError);
+    return [];
+  }
+
+  // Get all unique states from venues table that are also in our active states list
+  const activeStateNames = activeStates?.map(s => s.state_name) || [];
+  
+  let allVenueStates: string[] = [];
   let from = 0;
   const batchSize = 1000;
   
@@ -17,33 +37,45 @@ export async function getStaticPaths() {
       .from('venues')
       .select('state')
       .not('state', 'is', null)
+      .in('state', activeStateNames)
       .range(from, from + batchSize - 1);
     
     if (!batch || batch.length === 0) break;
-    allStates.push(...batch);
+    allVenueStates.push(...batch.map(b => b.state));
     
-    if (batch.length < batchSize) break; // Last batch
+    if (batch.length < batchSize) break;
     from += batchSize;
   }
 
-  const uniqueStates = [...new Set(allStates.map(s => s.state))];
+  const uniqueStatesWithVenues = [...new Set(allVenueStates)];
 
-  return uniqueStates.map(state => ({
-    params: { 
-      state: state.toLowerCase().replace(/\s+/g, '-') 
-    },
-    props: { 
-      stateName: state 
-    }
-  }));
+  return uniqueStatesWithVenues.map(stateName => {
+    const stateData = activeStates?.find(s => s.state_name === stateName);
+    return {
+      params: { 
+        state: stateName.toLowerCase().replace(/\s+/g, '-') 
+      },
+      props: { 
+        stateName: stateName,
+        stateData: stateData || null
+      }
+    };
+  });
 }
 
 const { state } = Astro.params;
-const { stateName } = Astro.props;
+const { stateName, stateData } = Astro.props;
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Get state image and descriptions from database, with fallbacks
+const stateImage = stateData?.image_url || DEFAULT_STATE_IMAGE;
+const stateDesc = {
+  intro: stateData?.description || DEFAULT_STATE_DESC.intro,
+  metaDesc: stateData?.meta_description || DEFAULT_STATE_DESC.metaDesc
+};
 
 // Get all venues in this state - handle pagination to avoid limits
 let allStateVenues: any[] = [];
@@ -90,7 +122,7 @@ const { data: cityData } = await supabase
   .eq('state', stateName)
   .in('city_name', cityNames);
 
-// Combine venue and city data
+// Combine venue and city data, including image_url from cities table
 const citiesWithVenues = cityNames.map(cityName => {
   const cityInfo = cityData?.find(c => c.city_name === cityName);
   const cityVenues = stateVenues?.filter(v => v.city === cityName) || [];
@@ -99,10 +131,17 @@ const citiesWithVenues = cityNames.map(cityName => {
     city_name: cityName,
     full_name: cityInfo?.full_name || `${cityName}, ${stateName}`,
     population: cityInfo?.population || null,
+    image_url: cityInfo?.image_url || null, // City image from database
     venues: cityVenues
   };
 }).filter(city => city.venues.length > 0)
   .sort((a, b) => a.city_name.localeCompare(b.city_name));
+
+// Helper function to get city image (from database or null)
+function getFeaturedCityImage(cityName: string): string | null {
+  const city = citiesWithVenues.find(c => c.city_name === cityName);
+  return city?.image_url || null;
+}
 const totalVenues = citiesWithVenues.reduce((sum, city) => sum + city.venues.length, 0);
 
 // Calculate state-wide stats
@@ -138,31 +177,50 @@ function getCitySlug(cityName: string) {
 function getStateSlug(stateName: string) {
   return stateName.toLowerCase().replace(/\s+/g, '-');
 }
+
 ---
 
-<Layout title={`${stateName} - Downtown Dry`}>
-  <main class="container mx-auto px-4 py-8">
-    <div class="max-w-4xl mx-auto">
+<Layout title={`Alcohol-Free Bars in ${stateName} | Downtown Dry`} description={stateDesc.metaDesc}>
+  <!-- State Hero Section -->
+  <section class="relative h-72 md:h-80 overflow-hidden">
+    <div class="absolute inset-0">
+      <img 
+        src={stateImage} 
+        alt={`${stateName} landscape`}
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
+    </div>
+    <div class="relative h-full max-w-4xl mx-auto px-4 flex flex-col justify-end pb-8">
       <!-- Breadcrumb -->
-      <nav class="mb-6">
-        <ol class="flex items-center space-x-2 text-sm text-gray-500">
-          <li><a href="/states/" class="hover:text-indigo-600">States</a></li>
+      <nav class="mb-4">
+        <ol class="flex items-center space-x-2 text-sm text-white/80">
+          <li><a href="/states/" class="hover:text-white">States</a></li>
           <li>→</li>
-          <li class="text-gray-900 font-medium">{stateName}</li>
+          <li class="text-white font-medium">{stateName}</li>
         </ol>
       </nav>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 font-heading">
+        Alcohol-Free Bars in {stateName}
+      </h1>
+      <p class="text-lg text-white/90">
+        Discover {totalVenues} alcohol-free venues across {citiesWithVenues.length} {citiesWithVenues.length === 1 ? 'city' : 'cities'}
+      </p>
+    </div>
+  </section>
 
-      <!-- State Overview -->
-      <div class="mb-8">
-        <h1 class="text-4xl font-bold text-gray-900 mb-4 font-heading">
-          🍹 Alcohol-Free Venues in {stateName}
-        </h1>
-        <p class="text-lg text-gray-600 mb-6">
-          Discover {totalVenues} amazing venues across {citiesWithVenues.length} {citiesWithVenues.length === 1 ? 'city' : 'cities'} for your next alcohol-free adventure.
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <!-- State Description for SEO -->
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-6 mb-8">
+        <p class="text-gray-700 leading-relaxed">
+          {stateDesc.intro}
         </p>
+      </div>
 
-        <!-- State Stats -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <!-- State Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div class="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 rounded-lg border border-blue-200">
             <div class="text-2xl font-bold text-blue-600">{totalVenues}</div>
             <div class="text-sm text-blue-700">Total Venues</div>
@@ -179,7 +237,6 @@ function getStateSlug(stateName: string) {
             <div class="text-2xl font-bold text-green-600">{totalThcVenues}</div>
             <div class="text-sm text-green-700">THC Venues</div>
           </div>
-        </div>
       </div>
 
       {citiesWithVenues.length > 0 ? (
@@ -187,26 +244,37 @@ function getStateSlug(stateName: string) {
           <!-- Top Cities Section -->
           {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).length > 0 && (
             <div class="mb-12">
-              <h2 class="text-2xl font-semibold text-gray-900 mb-6">🌟 Featured Cities</h2>
+              <h2 class="text-2xl font-semibold text-gray-900 mb-6">Featured Cities</h2>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).map((city) => (
                   <a 
                     href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
                     class="block bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300"
                   >
-                    <div class="relative h-32 bg-gradient-to-br from-indigo-100 to-purple-100">
-                      <img 
-                        src={getCityImage(city.city_name, city.venues)} 
-                        alt={`${city.city_name} nightlife scene`}
-                        class="w-full h-full object-cover"
-                        loading="lazy"
-                      />
-                      <div class="absolute top-3 left-3">
-                        <span class="bg-white/90 text-gray-900 text-xs font-bold px-2 py-1 rounded-full">
-                          {city.venues.length} venues
-                        </span>
+                    {getFeaturedCityImage(city.city_name) ? (
+                      <div class="relative h-36 overflow-hidden">
+                        <img 
+                          src={getFeaturedCityImage(city.city_name)} 
+                          alt={`${city.city_name}, ${stateName} - cityscape showing the urban landscape`}
+                          class="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute top-3 left-3">
+                          <span class="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            {city.venues.length} venues
+                          </span>
+                        </div>
                       </div>
-                    </div>
+                    ) : (
+                      <div class="relative h-36 bg-neutral-50 flex items-center justify-center">
+                        <div class="absolute top-3 left-3">
+                          <span class="bg-accent-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                            {city.venues.length} venues
+                          </span>
+                        </div>
+                      </div>
+                    )}
                     <div class="p-4">
                       <h3 class="text-lg font-bold text-gray-900 mb-1">{city.city_name}</h3>
                       {city.population && (
@@ -236,24 +304,15 @@ function getStateSlug(stateName: string) {
           )}
 
           <!-- All Cities -->
-          <h2 class="text-2xl font-semibold text-gray-900 mb-6">🏙️ All Cities</h2>
+          <h2 class="text-2xl font-semibold text-gray-900 mb-6">All Cities</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {citiesWithVenues.map((city) => (
               <a 
                 href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
                 class="block bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-lg transition-all duration-300"
               >
-                <div class="relative h-24 bg-gradient-to-r from-gray-100 to-indigo-100">
-                  <img 
-                    src={getCityImage(city.city_name, city.venues)} 
-                    alt={`${city.city_name} venues`}
-                    class="w-full h-full object-cover opacity-80"
-                    loading="lazy"
-                  />
-                  <div class="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
-                  <div class="absolute bottom-2 left-3">
-                    <h3 class="text-lg font-bold text-white drop-shadow-lg">{city.city_name}</h3>
-                  </div>
+                <div class="h-20 bg-neutral-50 flex items-center px-4">
+                  <h3 class="text-lg font-bold text-accent-900">{city.city_name}</h3>
                 </div>
                 
                 <div class="p-4">

@@ -43,7 +43,16 @@ const stateToCitiesArray: Record<string, string[]> = {};
   <meta name="supabase-key" content={supabaseKey} />
   
   <!-- Load Supabase client -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module">
+    // Use dynamic import to load Supabase
+    const { createClient } = await import('https://cdn.skypack.dev/@supabase/supabase-js@2');
+    window.supabase = { createClient };
+    window.supabaseLoaded = true;
+    
+    // Dispatch event when loaded
+    window.dispatchEvent(new CustomEvent('supabase-loaded'));
+    console.log('Supabase module loaded and exposed on window');
+  </script>
   
   <div class="min-h-screen bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 py-8">
@@ -155,39 +164,39 @@ const stateToCitiesArray: Record<string, string[]> = {};
 
       <!-- Venues Table -->
       <div class="bg-white rounded-lg shadow-sm border overflow-hidden">
-        <div class="overflow-x-auto">
-          <table class="min-w-full divide-y divide-gray-200">
+        <div class="overflow-hidden">
+          <table class="w-full table-fixed divide-y divide-gray-200">
             <thead class="bg-gray-50">
               <tr>
-                <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-48">Venue</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Image</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Rating</th>
-                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-48">Venue</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">Location</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Category</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-40">Description</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">Image</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-16">Rating</th>
+                <th class="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-24">Actions</th>
               </tr>
             </thead>
             <tbody id="venuesTableBody" class="bg-white divide-y divide-gray-200">
               {venues?.map((venue) => (
                 <tr class="venue-row hover:bg-gray-50" data-venue-id={venue.id}>
-                  <td class="px-4 py-4 whitespace-nowrap w-48">
+                  <td class="px-3 py-4 w-48">
                     <div class="font-medium text-gray-900 truncate">{venue.name}</div>
-                    <div class="text-sm text-gray-500">{venue.venue_type}</div>
+                    <div class="text-sm text-gray-500 truncate">{venue.venue_type}</div>
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <div class="text-sm text-gray-900">{venue.city}</div>
-                    <div class="text-sm text-gray-500">{venue.state}</div>
+                  <td class="px-3 py-4 w-32">
+                    <div class="text-sm text-gray-900 truncate">{venue.city}</div>
+                    <div class="text-sm text-gray-500 truncate">{venue.state}</div>
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
-                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                  <td class="px-3 py-4 w-20">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 truncate max-w-full">
                       {venue.category || 'Uncategorized'}
                     </span>
                   </td>
-                  <td class="px-6 py-4">
-                    <div class="max-w-xs">
+                  <td class="px-3 py-4 w-40">
+                    <div class="max-w-full">
                       {venue.description ? (
-                        <div class="text-sm text-gray-900 truncate" title={venue.description}>
+                        <div class="text-sm text-gray-900 line-clamp-2" title={venue.description}>
                           {venue.description}
                         </div>
                       ) : (
@@ -195,7 +204,7 @@ const stateToCitiesArray: Record<string, string[]> = {};
                       )}
                     </div>
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
+                  <td class="px-3 py-4 w-16">
                     {venue.image_url ? (
                       <img src={venue.image_url} alt={venue.name} class="w-12 h-12 rounded-lg object-cover" />
                     ) : (
@@ -206,23 +215,23 @@ const stateToCitiesArray: Record<string, string[]> = {};
                       </div>
                     )}
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap">
+                  <td class="px-3 py-4 w-16">
                     {venue.rating ? (
                       <div class="text-sm text-gray-900">{venue.rating}/5</div>
                     ) : (
                       <span class="text-sm text-gray-400">No rating</span>
                     )}
                   </td>
-                  <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <div class="flex space-x-2">
+                  <td class="px-3 py-4 w-24 text-sm font-medium">
+                    <div class="flex flex-col space-y-1">
                       <button
-                        class="edit-btn text-blue-600 hover:text-blue-900"
+                        class="edit-btn text-blue-600 hover:text-blue-900 text-left"
                         data-venue-id={venue.id}
                       >
                         Edit
                       </button>
                       <button
-                        class="delete-btn text-red-600 hover:text-red-900"
+                        class="delete-btn text-red-600 hover:text-red-900 text-left"
                         data-venue-id={venue.id}
                       >
                         Delete
@@ -462,9 +471,50 @@ const stateToCitiesArray: Record<string, string[]> = {};
     window.itemsPerPage = 50;
     window.filteredVenues = [];
 
+    // Wait for Supabase to load, then initialize
+    function waitForSupabase() {
+      return new Promise((resolve) => {
+        if (window.supabase && window.supabaseLoaded) {
+          console.log('Supabase already loaded');
+          resolve();
+          return;
+        }
+        
+        // Listen for the custom event
+        const onLoaded = () => {
+          console.log('Supabase loaded via event');
+          window.removeEventListener('supabase-loaded', onLoaded);
+          resolve();
+        };
+        window.addEventListener('supabase-loaded', onLoaded);
+        
+        // Also check periodically as fallback
+        const checkInterval = setInterval(() => {
+          if (window.supabase && window.supabaseLoaded) {
+            clearInterval(checkInterval);
+            window.removeEventListener('supabase-loaded', onLoaded);
+            resolve();
+          }
+        }, 100);
+        
+        // Timeout after 5 seconds
+        setTimeout(() => {
+          clearInterval(checkInterval);
+          window.removeEventListener('supabase-loaded', onLoaded);
+          if (!window.supabase || !window.supabaseLoaded) {
+            console.error('Supabase library failed to load');
+            showNotification('Failed to load Supabase library. Please refresh the page.', 'error');
+          }
+          resolve();
+        }, 5000);
+      });
+    }
+
     // Initialize when page loads
     document.addEventListener('DOMContentLoaded', async function() {
-      console.log('Admin page loaded, fetching fresh data...');
+      console.log('Admin page loaded, waiting for Supabase...');
+      await waitForSupabase();
+      console.log('Supabase loaded, fetching fresh data...');
       setupEventListeners();
       await refreshVenueData();  // This will also handle pagination and rendering
     });
@@ -587,6 +637,11 @@ const stateToCitiesArray: Record<string, string[]> = {};
     }
 
     function filterVenues() {
+      if (!Array.isArray(window.allVenues)) {
+        console.error('window.allVenues is not an array:', window.allVenues);
+        window.allVenues = [];
+      }
+      
       const searchInput = document.getElementById('search');
       const stateFilter = document.getElementById('stateFilter');
       const cityFilter = document.getElementById('cityFilter');
@@ -596,6 +651,14 @@ const stateToCitiesArray: Record<string, string[]> = {};
       const stateValue = stateFilter ? stateFilter.value : '';
       const cityValue = cityFilter ? cityFilter.value : '';
       const reviewValue = reviewFilter ? reviewFilter.value : '';
+
+      console.log('Filtering venues:', {
+        totalVenues: window.allVenues.length,
+        searchTerm,
+        stateValue,
+        cityValue,
+        reviewValue
+      });
 
       // Filter venues based on criteria
       window.filteredVenues = window.allVenues.filter(venue => {
@@ -687,31 +750,39 @@ const stateToCitiesArray: Record<string, string[]> = {};
 
     function renderVenues() {
       const tbody = document.getElementById('venuesTableBody');
-      if (!tbody) return;
+      if (!tbody) {
+        console.error('Table body not found');
+        return;
+      }
+      
+      console.log('Rendering venues. Total filtered:', window.filteredVenues.length);
       
       const start = (window.currentPage - 1) * window.itemsPerPage;
       const end = start + window.itemsPerPage;
       const pageVenues = window.filteredVenues.slice(start, end);
       
-      // Hide all rows first
-      const allRows = tbody.querySelectorAll('.venue-row');
-      allRows.forEach(row => row.style.display = 'none');
+      console.log(`Rendering page ${window.currentPage}: ${pageVenues.length} venues`);
       
-      // Show only the venues for current page
-      pageVenues.forEach(venue => {
-        let row = tbody.querySelector(`[data-venue-id="${venue.id}"]`);
-        
-        // If row doesn't exist (new venue), create it
-        if (!row) {
-          row = createVenueRow(venue);
+      // Clear all existing rows first
+      tbody.innerHTML = '';
+      
+      // Create rows for current page venues
+      if (pageVenues.length === 0) {
+        // Show empty state
+        const emptyRow = document.createElement('tr');
+        emptyRow.className = 'venue-row';
+        emptyRow.innerHTML = `
+          <td colspan="7" class="px-6 py-8 text-center text-gray-500">
+            No venues found. ${window.allVenues.length === 0 ? 'The database appears to be empty.' : 'Try adjusting your filters.'}
+          </td>
+        `;
+        tbody.appendChild(emptyRow);
+      } else {
+        pageVenues.forEach(venue => {
+          const row = createVenueRow(venue);
           tbody.appendChild(row);
-        } else {
-          // Update existing row data
-          updateVenueRow(row, venue);
-        }
-        
-        row.style.display = '';
-      });
+        });
+      }
     }
 
     function createVenueRow(venue) {
@@ -720,28 +791,28 @@ const stateToCitiesArray: Record<string, string[]> = {};
       row.setAttribute('data-venue-id', venue.id);
       
       row.innerHTML = `
-        <td class="px-4 py-4 whitespace-nowrap w-48">
+        <td class="px-3 py-4 w-48">
           <div class="font-medium text-gray-900 truncate">${venue.name}</div>
-          <div class="text-sm text-gray-500">${venue.venue_type || ''}</div>
+          <div class="text-sm text-gray-500 truncate">${venue.venue_type || ''}</div>
         </td>
-        <td class="px-6 py-4 whitespace-nowrap">
-          <div class="text-sm text-gray-900">${venue.city || ''}</div>
-          <div class="text-sm text-gray-500">${venue.state || ''}</div>
+        <td class="px-3 py-4 w-32">
+          <div class="text-sm text-gray-900 truncate">${venue.city || ''}</div>
+          <div class="text-sm text-gray-500 truncate">${venue.state || ''}</div>
         </td>
-        <td class="px-6 py-4 whitespace-nowrap">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+        <td class="px-3 py-4 w-20">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 truncate max-w-full">
             ${venue.category || 'Uncategorized'}
           </span>
         </td>
-        <td class="px-6 py-4">
-          <div class="max-w-xs">
+        <td class="px-3 py-4 w-40">
+          <div class="max-w-full">
             ${venue.description ? 
-              `<div class="text-sm text-gray-900 truncate" title="${venue.description}">${venue.description}</div>` :
+              `<div class="text-sm text-gray-900 line-clamp-2" title="${venue.description}">${venue.description}</div>` :
               '<span class="text-sm text-red-500 italic">No description</span>'
             }
           </div>
         </td>
-        <td class="px-6 py-4 whitespace-nowrap">
+        <td class="px-3 py-4 w-16">
           ${venue.image_url ? 
             `<img src="${venue.image_url}" alt="${venue.name}" class="w-12 h-12 rounded-lg object-cover" />` :
             `<div class="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
@@ -751,18 +822,18 @@ const stateToCitiesArray: Record<string, string[]> = {};
             </div>`
           }
         </td>
-        <td class="px-6 py-4 whitespace-nowrap">
+        <td class="px-3 py-4 w-16">
           ${venue.rating ? 
             `<div class="text-sm text-gray-900">${venue.rating}/5</div>` :
             '<span class="text-sm text-gray-400">No rating</span>'
           }
         </td>
-        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-          <div class="flex space-x-2">
-            <button class="edit-btn text-blue-600 hover:text-blue-900" data-venue-id="${venue.id}">
+        <td class="px-3 py-4 w-24 text-sm font-medium">
+          <div class="flex flex-col space-y-1">
+            <button class="edit-btn text-blue-600 hover:text-blue-900 text-left" data-venue-id="${venue.id}">
               Edit
             </button>
-            <button class="delete-btn text-red-600 hover:text-red-900" data-venue-id="${venue.id}">
+            <button class="delete-btn text-red-600 hover:text-red-900 text-left" data-venue-id="${venue.id}">
               Delete
             </button>
           </div>
@@ -779,27 +850,27 @@ const stateToCitiesArray: Record<string, string[]> = {};
         // Update venue name and type
         cells[0].innerHTML = `
           <div class="font-medium text-gray-900 truncate">${venue.name}</div>
-          <div class="text-sm text-gray-500">${venue.venue_type || ''}</div>
+          <div class="text-sm text-gray-500 truncate">${venue.venue_type || ''}</div>
         `;
         
         // Update location
         cells[1].innerHTML = `
-          <div class="text-sm text-gray-900">${venue.city || ''}</div>
-          <div class="text-sm text-gray-500">${venue.state || ''}</div>
+          <div class="text-sm text-gray-900 truncate">${venue.city || ''}</div>
+          <div class="text-sm text-gray-500 truncate">${venue.state || ''}</div>
         `;
         
         // Update category
         cells[2].innerHTML = `
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 truncate max-w-full">
             ${venue.category || 'Uncategorized'}
           </span>
         `;
         
         // Update description
         cells[3].innerHTML = `
-          <div class="max-w-xs">
+          <div class="max-w-full">
             ${venue.description ? 
-              `<div class="text-sm text-gray-900 truncate" title="${venue.description}">${venue.description}</div>` :
+              `<div class="text-sm text-gray-900 line-clamp-2" title="${venue.description}">${venue.description}</div>` :
               '<span class="text-sm text-red-500 italic">No description</span>'
             }
           </div>
@@ -842,13 +913,37 @@ const stateToCitiesArray: Record<string, string[]> = {};
         const supabaseUrl = document.querySelector('meta[name="supabase-url"]')?.getAttribute('content');
         const supabaseKey = document.querySelector('meta[name="supabase-key"]')?.getAttribute('content');
         
+        console.log('Supabase config check:', {
+          hasUrl: !!supabaseUrl,
+          hasKey: !!supabaseKey,
+          urlLength: supabaseUrl?.length || 0,
+          keyLength: supabaseKey?.length || 0,
+          hasSupabaseLib: !!window.supabase
+        });
+        
         if (!supabaseUrl || !supabaseKey) {
-          showNotification('Supabase configuration missing', 'error');
+          console.error('Supabase configuration missing:', { supabaseUrl: !!supabaseUrl, supabaseKey: !!supabaseKey });
+          showNotification('Supabase configuration missing. Check environment variables.', 'error');
+          return;
+        }
+
+        if (!window.supabase || !window.supabaseLoaded) {
+          console.error('Supabase library not loaded. Available globals:', Object.keys(window).filter(k => k.toLowerCase().includes('supabase')));
+          console.error('window.supabase:', window.supabase);
+          console.error('window.supabaseLoaded:', window.supabaseLoaded);
+          showNotification('Supabase library not loaded. Please refresh the page.', 'error');
           return;
         }
 
         const { createClient } = window.supabase;
+        if (!createClient) {
+          console.error('createClient not found in window.supabase');
+          showNotification('Supabase createClient not available. Please refresh the page.', 'error');
+          return;
+        }
+        
         const supabase = createClient(supabaseUrl, supabaseKey);
+        console.log('Supabase client created successfully');
 
         // Fetch all venues with pagination
         let allVenues = [];
@@ -856,6 +951,7 @@ const stateToCitiesArray: Record<string, string[]> = {};
         const pageSize = 1000;
 
         while (true) {
+          console.log(`Fetching venues page ${page + 1} (range: ${page * pageSize} to ${(page + 1) * pageSize - 1})...`);
           const { data: batch, error } = await supabase
             .from('venues')
             .select('*')
@@ -864,16 +960,33 @@ const stateToCitiesArray: Record<string, string[]> = {};
 
           if (error) {
             console.error('Error fetching venues:', error);
+            console.error('Error details:', {
+              message: error.message,
+              details: error.details,
+              hint: error.hint,
+              code: error.code
+            });
+            showNotification(`Error fetching venues: ${error.message}`, 'error');
             break;
           }
 
+          console.log(`Fetched ${batch?.length || 0} venues in this batch`);
+
           if (!batch || batch.length === 0) {
+            if (page === 0) {
+              console.warn('No venues found in database on first page');
+              showNotification('No venues found in database', 'info');
+            } else {
+              console.log('Reached end of data');
+            }
             break; // No more data
           }
 
           allVenues = allVenues.concat(batch);
+          console.log(`Total venues collected so far: ${allVenues.length}`);
           
           if (batch.length < pageSize) {
+            console.log('Last page reached (batch smaller than page size)');
             break; // Last page
           }
           
@@ -883,6 +996,11 @@ const stateToCitiesArray: Record<string, string[]> = {};
         // Update global data
         window.allVenues = allVenues;
         console.log(`Refreshed ${allVenues.length} venues from database`);
+        
+        if (allVenues.length === 0) {
+          console.warn('No venues loaded. Check database connection and permissions.');
+          showNotification('No venues found. Check database connection.', 'info');
+        }
 
         // Update stats in the overview section
         const totalVenueCount = document.getElementById('totalVenueCount');

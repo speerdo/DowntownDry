@@ -159,6 +159,13 @@ article > div {
   text-wrap: balance;
 }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 /* Components */
 .btn-primary {
   @apply bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg 
