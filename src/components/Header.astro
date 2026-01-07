@@ -8,8 +8,8 @@ const { pathname } = Astro.url;
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
       <div class="flex-shrink-0">
-        <a href="/" class="flex items-center space-x-3">
-          <div class="w-10 h-10 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg">
+        <a href="/" class="flex items-center space-x-3" aria-label="Downtown Dry - Home">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg" aria-hidden="true">
             <span class="text-white font-bold text-lg">DD</span>
           </div>
           <div class="flex flex-col">
@@ -20,7 +20,7 @@ const { pathname } = Astro.url;
       </div>
       
       <!-- Navigation -->
-      <nav class="hidden md:flex space-x-8">
+      <nav class="hidden md:flex space-x-8" aria-label="Main navigation">
         <a href="/" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>Home</a>
         <a href="/about" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/about' ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>About</a>
         <a href="/states" class={`text-sm font-medium transition-all duration-200 hover:text-accent-600 ${pathname === '/states' || pathname.startsWith('/states/') ? 'text-accent-600 border-b-2 border-accent-600 pb-1' : 'text-neutral-700 hover:border-b-2 hover:border-secondary-400 pb-1'}`}>States</a>
@@ -30,15 +30,21 @@ const { pathname } = Astro.url;
       </nav>
       
       <!-- Mobile menu button -->
-      <button class="md:hidden p-2 rounded-lg text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 transition-colors" id="mobile-menu-button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <button 
+        class="md:hidden p-2 rounded-lg text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 transition-colors" 
+        id="mobile-menu-button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </div>
     
     <!-- Mobile menu -->
-    <div class="md:hidden hidden" id="mobile-menu">
+    <nav class="md:hidden hidden" id="mobile-menu" aria-label="Mobile navigation">
       <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t border-neutral-100 bg-white">
         <a href="/" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Home</a>
         <a href="/about" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">About</a>
@@ -47,7 +53,7 @@ const { pathname } = Astro.url;
         <a href="/blog" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Blog</a>
         <a href="/contact" class="block px-3 py-2 text-base font-medium text-neutral-700 hover:text-accent-600 hover:bg-secondary-50 rounded-lg transition-colors">Contact</a>
       </div>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -56,14 +62,37 @@ const { pathname } = Astro.url;
     const button = document.getElementById('mobile-menu-button');
     const menu = document.getElementById('mobile-menu');
     
+    function toggleMenu(show?: boolean) {
+      const isHidden = menu?.classList.contains('hidden');
+      const shouldShow = show !== undefined ? show : isHidden;
+      
+      if (shouldShow) {
+        menu?.classList.remove('hidden');
+        button?.setAttribute('aria-expanded', 'true');
+        button?.setAttribute('aria-label', 'Close navigation menu');
+      } else {
+        menu?.classList.add('hidden');
+        button?.setAttribute('aria-expanded', 'false');
+        button?.setAttribute('aria-label', 'Open navigation menu');
+      }
+    }
+    
     button?.addEventListener('click', () => {
-      menu?.classList.toggle('hidden');
+      toggleMenu();
     });
     
     // Close mobile menu when clicking outside
     document.addEventListener('click', (e) => {
       if (!button?.contains(e.target as Node) && !menu?.contains(e.target as Node)) {
-        menu?.classList.add('hidden');
+        toggleMenu(false);
+      }
+    });
+    
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !menu?.classList.contains('hidden')) {
+        toggleMenu(false);
+        button?.focus();
       }
     });
   });

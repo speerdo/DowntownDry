@@ -1,0 +1,24 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://downtowndry.bar/sitemap-index.xml
+
+# Disallow admin/private paths (if any)
+Disallow: /api/
+Disallow: /_astro/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow important search engine bots full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+

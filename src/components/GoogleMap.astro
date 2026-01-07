@@ -42,8 +42,15 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
   </div>
 )}
 
-<div id={mapId} style={`height: ${height}; width: 100%;`} class="rounded-lg shadow-lg bg-gray-100 flex items-center justify-center">
-  <div class="text-gray-500">Loading map...</div>
+<div 
+  id={mapId} 
+  style={`height: ${height}; width: 100%;`} 
+  class="rounded-lg shadow-lg bg-gray-100 flex items-center justify-center"
+  role="application"
+  aria-label={`Interactive map showing ${venues.length} alcohol-free venue${venues.length === 1 ? '' : 's'}`}
+  tabindex="0"
+>
+  <div class="text-gray-500" aria-live="polite">Loading map...</div>
 </div>
 
 <script define:vars={{ venues, mapCenter, zoom, mapId, apiKey }}>

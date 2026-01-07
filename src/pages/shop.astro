@@ -3,9 +3,45 @@ import Layout from '../layouts/Layout.astro';
 import laguIpnaImage from '../assets/LagunitasIPNA.webp';
 import peroniNaImage from '../assets/Peroni0.0.webp';
 import beerBoxImage from '../assets/beer-box.webp';
+
+const url = new URL(Astro.request.url);
+const subscribed = url.searchParams.get('subscribed') === 'true';
 ---
 
-<Layout title="Shop Alcohol-Free Drinks - Downtown Dry" description="Shop the best NA beers, mocktails, delta THC drinks, and kava products. Curated alcohol-free beverages delivered to your door.">
+<Layout title="Shop NA Beer, Mocktails & Alcohol-Free Drinks | Downtown Dry" description="Shop craft non-alcoholic beer, premium mocktails & NA spirits from Better Rhodes (#1 rated retailer). Free shipping on orders $125+. Subscription boxes available.">
+  
+  {subscribed && (
+    <div id="success-toast" class="fixed top-4 right-4 z-50 animate-slide-in">
+      <div class="bg-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="font-bold">You're subscribed!</p>
+          <p class="text-sm text-green-100">Get exclusive deals and new product alerts.</p>
+        </div>
+        <button onclick="this.parentElement.parentElement.remove()" class="ml-4 text-green-200 hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <style>
+      @keyframes slide-in {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      .animate-slide-in { animation: slide-in 0.3s ease-out; }
+    </style>
+    <script>
+      setTimeout(() => {
+        const toast = document.getElementById('success-toast');
+        if (toast) toast.remove();
+      }, 5000);
+    </script>
+  )}
+
   <!-- Hero Section -->
   <section class="relative py-20 bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-500 text-white overflow-hidden">
     <!-- Geometric Background Elements -->
@@ -296,12 +332,19 @@ import beerBoxImage from '../assets/beer-box.webp';
       <p class="text-xl text-neutral-300 mb-12 max-w-2xl mx-auto leading-relaxed">
         Get exclusive access to new products, special offers, and the latest in alcohol-free lifestyle trends.
       </p>
-      <form class="max-w-lg mx-auto">
+      <form action="https://api.web3forms.com/submit" method="POST" class="max-w-lg mx-auto">
+        <input type="hidden" name="access_key" value="fec9718e-d4f8-479b-8157-2ae27536ac0e">
+        <input type="hidden" name="subject" value="New Newsletter Subscriber - Shop Page">
+        <input type="hidden" name="from_name" value="Downtown Dry Newsletter">
+        <input type="hidden" name="redirect" value="https://downtowndry.bar/shop?subscribed=true">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         <div class="flex gap-4">
           <input 
             type="email" 
+            name="email"
             placeholder="Enter your email" 
             class="flex-1 px-8 py-5 rounded-2xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-secondary-500/50 transition-all text-lg"
+            required
           >
           <button 
             type="submit" 

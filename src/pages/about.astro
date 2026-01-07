@@ -1,6 +1,41 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const url = new URL(Astro.request.url);
+const subscribed = url.searchParams.get('subscribed') === 'true';
 ---
+
+{subscribed && (
+  <div id="success-toast" class="fixed top-4 right-4 z-50 animate-slide-in">
+    <div class="bg-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+      <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+      </svg>
+      <div>
+        <p class="font-bold">You're subscribed!</p>
+        <p class="text-sm text-green-100">Welcome to the Downtown Dry community.</p>
+      </div>
+      <button onclick="this.parentElement.parentElement.remove()" class="ml-4 text-green-200 hover:text-white">
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <style>
+    @keyframes slide-in {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in { animation: slide-in 0.3s ease-out; }
+  </style>
+  <script>
+    setTimeout(() => {
+      const toast = document.getElementById('success-toast');
+      if (toast) toast.remove();
+    }, 5000);
+  </script>
+)}
 
 <!-- Structured Data for SEO -->
 <script type="application/ld+json">
@@ -84,8 +119,8 @@ import Layout from '../layouts/Layout.astro';
     <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
       <div class="text-center mb-12">
         <!-- Brand Icon -->
-        <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-full mb-8 shadow-2xl">
-          <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-full mb-8 shadow-2xl" aria-hidden="true">
+          <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
           </svg>
         </div>
@@ -123,7 +158,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- Mission & Story Section -->
-  <section class="py-20 bg-white" role="region" aria-labelledby="mission-heading">
+  <section id="main-content" class="py-20 bg-white" role="region" aria-labelledby="mission-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
@@ -208,7 +243,7 @@ import Layout from '../layouts/Layout.astro';
           </div>
           <h3 class="text-2xl font-bold text-neutral-900 mb-4 font-heading">CURATED SHOPPING</h3>
           <p class="text-neutral-700 leading-relaxed">
-            Through our partnership with Better Rhodes (voted #1 NA retailer), we offer carefully selected craft NA beers, premium spirits, and subscription boxes delivered to your door.
+            Through our partnership with <a href="https://www.betterrhodes.com/downtowndry" target="_blank" rel="noopener" class="text-primary-700 hover:text-primary-800 font-semibold">Better Rhodes</a> (voted #1 NA retailer), we offer carefully selected craft NA beers, premium spirits, and subscription boxes delivered to your door.
           </p>
         </div>
       </div>
@@ -241,7 +276,7 @@ import Layout from '../layouts/Layout.astro';
               <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
             </svg>
           </div>
-          <div class="text-4xl font-bold text-blue-400 mb-2">10,000+</div>
+          <div class="text-4xl font-bold text-blue-400 mb-2">Growing</div>
           <h3 class="text-lg font-bold mb-2">Active Users</h3>
           <p class="text-gray-300 text-sm leading-relaxed">
             Growing community discovering alcohol-free venues and experiences nationwide
@@ -539,9 +574,15 @@ import Layout from '../layouts/Layout.astro';
       <div class="max-w-lg mx-auto">
         <h3 class="text-2xl font-bold mb-4">Stay Updated</h3>
         <p class="text-neutral-300 mb-6">Get notified about new venues, expert guides, and community updates</p>
-        <form class="flex gap-4" aria-label="Newsletter subscription form">
+        <form action="https://api.web3forms.com/submit" method="POST" class="flex gap-4" aria-label="Newsletter subscription form">
+          <input type="hidden" name="access_key" value="fec9718e-d4f8-479b-8157-2ae27536ac0e">
+          <input type="hidden" name="subject" value="New Newsletter Subscriber - About Page">
+          <input type="hidden" name="from_name" value="Downtown Dry Newsletter">
+          <input type="hidden" name="redirect" value="https://downtowndry.bar/about?subscribed=true">
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
           <input 
             type="email" 
+            name="email"
             placeholder="Enter your email" 
             class="flex-1 px-6 py-4 rounded-xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-white/30 transition-all"
             aria-label="Email address for newsletter subscription"

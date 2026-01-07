@@ -24,7 +24,7 @@ Focus cities with custom SEO content:
 - **California**: Los Angeles, San Francisco, San Diego
 - **New York**: New York City, Brooklyn
 - **Indiana**: Indianapolis
-- **Nebraska**: Omaha, Lincoln
+- **Nebraska**: Omaha
 
 Each city page has:
 - [x] H1: "Alcohol-Free Bars in [City]"
@@ -39,15 +39,23 @@ Each city page has:
 - [x] States index page filters to show only CA/NY/IN/NE
 - [x] All state/city routes filtered to soft launch states only
 
+### Database-Driven Content ✅
+- [x] `states` table with image_url, description, meta_description, is_active flag
+- [x] `cities` table updated with image_url, description, meta_description
+- [x] All 4 states have complete SEO content
+- [x] All 98 cities with venues have SEO descriptions
+- [x] Repeatable script for generating city descriptions (`scripts/generate-city-descriptions.ts`)
+
 ## Build Stats
 
-- **Total Pages**: 115
 - **States**: 4 (California, Indiana, Nebraska, New York)
-- **Cities**: 
-  - California: 50+ cities
-  - New York: 20+ cities
-  - Indiana: 7 cities
-  - Nebraska: 1 city (Omaha)
+- **Total Venues**: 276
+- **Cities with Venues**: 
+  - California: 62 cities (138 venues)
+  - New York: 28 cities (111 venues)
+  - Indiana: 7 cities (24 venues)
+  - Nebraska: 1 city (3 venues)
+- **Cities with SEO Descriptions**: 98/98 (100%)
 - **Sitemap**: Generated at `/sitemap-index.xml`
 
 ## Files Modified

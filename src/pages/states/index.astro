@@ -135,7 +135,7 @@ function getStateSlug(stateName: string) {
 }
 ---
 
-<Layout title="Alcohol-Free Bars by State - CA, NY, IN, NE | Downtown Dry" description="Find alcohol-free bars, kava lounges, and sober venues in California, New York, Indiana, and Nebraska. Browse by state and city.">
+<Layout title={`Browse Alcohol-Free Bars by State | ${sortedStates.reduce((sum, s) => sum + s.venueCount, 0)}+ Venues | Downtown Dry`} description={`Find ${sortedStates.reduce((sum, s) => sum + s.venueCount, 0)}+ alcohol-free bars, kava lounges & sober venues across ${sortedStates.reduce((sum, s) => sum + s.cityCount, 0)}+ cities in ${sortedStates.map(s => s.name).join(', ')}. Filter by mocktails, kava, THC & more.`}>
   <!-- Hero Section -->
   <section class="py-20 bg-primary-700 text-white relative overflow-hidden">
         <!-- Geometric Background Elements -->
@@ -177,7 +177,7 @@ function getStateSlug(stateName: string) {
         </div>
       </section>
   
-  <main class="container mx-auto px-4 py-8">
+  <main id="main-content" class="container mx-auto px-4 py-8">
     <div class="max-w-6xl mx-auto">
       <!-- SEO Content - Compact -->
       <div class="mb-8 text-center max-w-4xl mx-auto">

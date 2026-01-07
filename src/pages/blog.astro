@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
+const url = new URL(Astro.request.url);
+const subscribed = url.searchParams.get('subscribed') === 'true';
+
 // Get all blog posts and sort by date (newest first)
 const allPosts = await getCollection('blog');
 const sortedPosts = allPosts.sort((a, b) => 
@@ -27,7 +30,40 @@ const categories = [
 ];
 ---
 
-<Layout title="Blog - Downtown Dry" description="Stay updated with the latest news, tips, and stories about alcohol-free nightlife, kava culture, delta THC wellness, and mindful social experiences.">
+<Layout title="Alcohol-Free Lifestyle Blog | Kava, Mocktails, THC Guides | Downtown Dry" description="Expert guides on kava culture, delta THC drinks, mocktail recipes & sober living. Tips for navigating alcohol-free nightlife and mindful socializing.">
+  
+  {subscribed && (
+    <div id="success-toast" class="fixed top-4 right-4 z-50 animate-slide-in">
+      <div class="bg-green-600 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+        </svg>
+        <div>
+          <p class="font-bold">You're subscribed!</p>
+          <p class="text-sm text-green-100">You'll get notified about new articles.</p>
+        </div>
+        <button onclick="this.parentElement.parentElement.remove()" class="ml-4 text-green-200 hover:text-white">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <style>
+      @keyframes slide-in {
+        from { transform: translateX(100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      .animate-slide-in { animation: slide-in 0.3s ease-out; }
+    </style>
+    <script>
+      setTimeout(() => {
+        const toast = document.getElementById('success-toast');
+        if (toast) toast.remove();
+      }, 5000);
+    </script>
+  )}
+
   <!-- Hero Section -->
   <section class="py-24 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 text-white relative overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
@@ -190,12 +226,19 @@ const categories = [
       <p class="text-xl text-neutral-300 mb-10 max-w-2xl mx-auto leading-relaxed">
         Subscribe to get the latest insights on alcohol-free nightlife delivered to your inbox.
       </p>
-      <form class="max-w-md mx-auto">
+      <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto">
+        <input type="hidden" name="access_key" value="fec9718e-d4f8-479b-8157-2ae27536ac0e">
+        <input type="hidden" name="subject" value="New Newsletter Subscriber - Blog Page">
+        <input type="hidden" name="from_name" value="Downtown Dry Newsletter">
+        <input type="hidden" name="redirect" value="https://downtowndry.bar/blog?subscribed=true">
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
         <div class="flex gap-4">
           <input 
             type="email" 
+            name="email"
             placeholder="Enter your email" 
             class="flex-1 px-6 py-4 rounded-xl text-neutral-900 bg-white focus:outline-none focus:ring-4 focus:ring-white/30 transition-all"
+            required
           >
           <button 
             type="submit" 

@@ -180,13 +180,62 @@ function getStateSlug(stateName: string) {
 
 ---
 
-<Layout title={`Alcohol-Free Bars in ${stateName} | Downtown Dry`} description={stateDesc.metaDesc}>
+<!-- Structured Data for State Page -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `Alcohol-Free Bars in ${stateName}`,
+  "description": stateDesc.metaDesc,
+  "url": `https://downtowndry.bar/states/${state}/`,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Downtown Dry",
+    "url": "https://downtowndry.bar"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://downtowndry.bar/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "States",
+        "item": "https://downtowndry.bar/states/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": stateName,
+        "item": `https://downtowndry.bar/states/${state}/`
+      }
+    ]
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": `Alcohol-Free Venues in ${stateName}`,
+    "numberOfItems": totalVenues,
+    "itemListElement": citiesWithVenues.slice(0, 10).map((city, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": `${city.city_name}, ${stateName}`,
+      "url": `https://downtowndry.bar/states/${state}/${getCitySlug(city.city_name)}/`
+    }))
+  }
+})} />
+</script>
+
+<Layout title={`Alcohol-Free Bars in ${stateName} | ${totalVenues} Venues | Downtown Dry`} description={stateDesc.metaDesc}>
   <!-- State Hero Section -->
-  <section class="relative h-72 md:h-80 overflow-hidden">
+  <section class="relative h-72 md:h-80 overflow-hidden" role="banner" aria-label={`${stateName} alcohol-free venues`}>
     <div class="absolute inset-0">
       <img 
         src={stateImage} 
-        alt={`${stateName} landscape`}
+        alt={`Scenic view of ${stateName} representing the state's alcohol-free venue scene`}
         class="w-full h-full object-cover"
         loading="eager"
       />
@@ -194,11 +243,11 @@ function getStateSlug(stateName: string) {
     </div>
     <div class="relative h-full max-w-4xl mx-auto px-4 flex flex-col justify-end pb-8">
       <!-- Breadcrumb -->
-      <nav class="mb-4">
+      <nav class="mb-4" aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2 text-sm text-white/80">
           <li><a href="/states/" class="hover:text-white">States</a></li>
-          <li>→</li>
-          <li class="text-white font-medium">{stateName}</li>
+          <li aria-hidden="true">→</li>
+          <li class="text-white font-medium" aria-current="page">{stateName}</li>
         </ol>
       </nav>
       <h1 class="text-4xl md:text-5xl font-bold text-white mb-2 font-heading">
@@ -210,7 +259,7 @@ function getStateSlug(stateName: string) {
     </div>
   </section>
 
-  <main class="container mx-auto px-4 py-8">
+  <main id="main-content" class="container mx-auto px-4 py-8">
     <div class="max-w-4xl mx-auto">
       <!-- State Description for SEO -->
       <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-6 mb-8">

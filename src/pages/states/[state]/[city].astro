@@ -320,19 +320,72 @@ const venueTypeNames: { [key: string]: string } = {
 // Get city description from database or use default
 const cityDescription = cityData?.description || DEFAULT_DESCRIPTION;
 const cityMetaDesc = cityData?.meta_description || `Find ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Discover mocktail bars, kava lounges & sober venues.`;
+
+// Calculate venue type counts for structured data
+const kavaCount = safeVenues.filter(v => v.serves_kava).length;
+const mocktailCount = safeVenues.filter(v => v.serves_mocktails).length;
+const thcCount = safeVenues.filter(v => v.serves_thc).length;
+const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 ---
 
-<Layout title={`Alcohol-Free Bars in ${cityName}, ${stateName} | Downtown Dry`} description={cityMetaDesc}>
-  <main class="container mx-auto px-4 py-8">
+<!-- Structured Data for City Page -->
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": `Alcohol-Free Bars in ${cityName}, ${stateName}`,
+  "description": cityMetaDesc,
+  "url": `https://downtowndry.bar/states/${state}/${city}/`,
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Downtown Dry",
+    "url": "https://downtowndry.bar"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://downtowndry.bar/" },
+      { "@type": "ListItem", "position": 2, "name": "States", "item": "https://downtowndry.bar/states/" },
+      { "@type": "ListItem", "position": 3, "name": stateName, "item": `https://downtowndry.bar/states/${state}/` },
+      { "@type": "ListItem", "position": 4, "name": cityName, "item": `https://downtowndry.bar/states/${state}/${city}/` }
+    ]
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": `Alcohol-Free Venues in ${cityName}`,
+    "numberOfItems": safeVenues.length,
+    "itemListElement": safeVenues.slice(0, 10).map((venue, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "item": {
+        "@type": "LocalBusiness",
+        "name": venue.name,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": venue.address,
+          "addressLocality": cityName,
+          "addressRegion": stateName,
+          "postalCode": venue.zip_code
+        },
+        ...(venue.rating && { "aggregateRating": { "@type": "AggregateRating", "ratingValue": venue.rating, "bestRating": 5 } }),
+        ...(venue.phone && { "telephone": venue.phone }),
+        ...(venue.website && { "url": venue.website })
+      }
+    }))
+  }
+})} />
+</script>
+
+<Layout title={`${safeVenues.length} Alcohol-Free Bars in ${cityName}, ${stateName} | Downtown Dry`} description={cityMetaDesc}>
+  <main id="main-content" class="container mx-auto px-4 py-8">
     <div class="max-w-6xl mx-auto">
       <!-- Breadcrumb -->
-      <nav class="mb-6">
+      <nav class="mb-6" aria-label="Breadcrumb">
         <ol class="flex items-center space-x-2 text-sm text-gray-500">
           <li><a href="/states/" class="hover:text-indigo-600">States</a></li>
-          <li>→</li>
+          <li aria-hidden="true">→</li>
           <li><a href={`/states/${getStateSlug(stateName)}/`} class="hover:text-indigo-600">{stateName}</a></li>
-          <li>→</li>
-          <li class="text-gray-900 font-medium">{cityName}</li>
+          <li aria-hidden="true">→</li>
+          <li class="text-gray-900 font-medium" aria-current="page">{cityName}</li>
         </ol>
       </nav>
 
@@ -344,7 +397,7 @@ const cityMetaDesc = cityData?.meta_description || `Find ${safeVenues.length} al
             <div class="absolute inset-0">
               <img 
                 src={cityData?.image_url || getCityImage(cityName, stateName)} 
-                alt={`${cityName}, ${stateName}`}
+                alt={`Cityscape of ${cityName}, ${stateName} - home to ${safeVenues.length} alcohol-free venues`}
                 class="w-full h-full object-cover"
                 loading="eager"
               />
@@ -514,15 +567,18 @@ const cityMetaDesc = cityData?.meta_description || `Find ${safeVenues.length} al
               </div>
 
               <!-- Filters and Sorting -->
-              <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6">
+              <div class="bg-white border border-gray-200 rounded-xl p-6 mb-6" role="search" aria-label="Filter and sort venues">
                 <div class="flex items-center justify-between mb-4">
-                  <h3 class="text-lg font-semibold text-gray-900">Filter & Sort</h3>
+                  <h3 class="text-lg font-semibold text-gray-900" id="filter-heading">Filter & Sort</h3>
                   <div class="flex items-center gap-3">
                     <button 
                       id="toggleFilters" 
                       class="md:hidden text-sm text-gray-600 hover:text-gray-700 font-medium"
+                      aria-expanded="false"
+                      aria-controls="filtersContent"
+                      aria-label="Toggle filter options"
                     >
-                      <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg class="w-4 h-4 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"></path>
                       </svg>
                       Filters
@@ -1007,9 +1063,11 @@ const cityMetaDesc = cityData?.meta_description || `Find ${safeVenues.length} al
           if (isHidden) {
             filtersContent.classList.remove('hidden');
             filtersContent.classList.add('block');
+            toggleButton.setAttribute('aria-expanded', 'true');
           } else {
             filtersContent.classList.add('hidden');
             filtersContent.classList.remove('block');
+            toggleButton.setAttribute('aria-expanded', 'false');
           }
         });
       }

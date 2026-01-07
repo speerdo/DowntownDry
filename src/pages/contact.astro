@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const url = new URL(Astro.request.url);
+const success = url.searchParams.get('success') === 'true';
 ---
 
-<Layout title="Contact - Downtown Dry" description="Get in touch with Downtown Dry to submit new venues, ask questions, or partner with us to promote alcohol-free nightlife in your city.">
+<Layout title="Contact Us | Submit a Venue | Downtown Dry" description="Submit an alcohol-free venue, partnership inquiry, or press request. Help us expand America's largest directory of sober nightlife venues.">
   <!-- Hero Section -->
   <section class="py-24 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 text-white relative overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
@@ -25,7 +28,26 @@ import Layout from '../layouts/Layout.astro';
         <!-- Contact Form -->
         <div>
           <h2 class="text-4xl font-bold text-neutral-900 mb-8 tracking-tight">SEND US A MESSAGE</h2>
-          <form class="space-y-6">
+          
+          {success && (
+            <div class="mb-8 p-6 bg-green-50 border border-green-200 rounded-2xl">
+              <div class="flex items-center">
+                <svg class="w-6 h-6 text-green-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <div>
+                  <h3 class="text-lg font-semibold text-green-800">Message Sent!</h3>
+                  <p class="text-green-700">Thank you for reaching out. We'll get back to you within 24-48 hours.</p>
+                </div>
+              </div>
+            </div>
+          )}
+          
+          <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+            <input type="hidden" name="access_key" value="fec9718e-d4f8-479b-8157-2ae27536ac0e">
+            <input type="hidden" name="from_name" value="Downtown Dry Contact Form">
+            <input type="hidden" name="redirect" value="https://downtowndry.bar/contact?success=true">
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div>
               <label for="name" class="block text-sm font-medium text-neutral-700 mb-2">Name</label>
               <input type="text" id="name" name="name" required 
@@ -41,11 +63,11 @@ import Layout from '../layouts/Layout.astro';
               <select id="subject" name="subject" required 
                       class="w-full px-4 py-3 border border-neutral-300 rounded-xl focus:ring-2 focus:ring-primary-700 focus:border-primary-700 transition-colors">
                 <option value="">Select a topic</option>
-                <option value="venue-submission">Submit a Venue</option>
-                <option value="partnership">Partnership Opportunity</option>
-                <option value="press">Press Inquiry</option>
-                <option value="feedback">Website Feedback</option>
-                <option value="other">Other</option>
+                <option value="Venue Submission">Submit a Venue</option>
+                <option value="Partnership Opportunity">Partnership Opportunity</option>
+                <option value="Press Inquiry">Press Inquiry</option>
+                <option value="Website Feedback">Website Feedback</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div>
