@@ -29,6 +29,7 @@
     "@astrojs/tailwind": "^5.1.5",
     "@google/generative-ai": "^0.21.0",
     "@supabase/supabase-js": "^2.45.7",
+    "@vercel/analytics": "^1.6.1",
     "astro": "^5.9.2",
     "axios": "^1.7.9",
     "csv-writer": "^1.6.0",
