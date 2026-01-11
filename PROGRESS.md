@@ -154,40 +154,55 @@ Create a second AI model to cross-verify Phase 2 results for high-confidence dec
 
 ---
 
-## 💰 Cost Tracking
+## 💰 Cost Tracking (Updated January 2026)
+
+### API Pricing (Current)
+
+| API | Free Tier | Paid Rate |
+|-----|-----------|-----------|
+| **Google Places (Text Search)** | **10,000/month FREE** | $32/1,000 after |
+| **Google Custom Search** | 100/day FREE | $5/1,000 queries |
+| **Gemini 2.5 Flash** | 250/day FREE | $1/1M tokens |
 
 ### Test Run (4 venues)
-- Google Places: 4 × $0.017 = **$0.07**
-- Google Search: 40 queries = **$0** (under 100/day free limit)
-- Gemini: 4 calls = **$0** (free tier)
-- **Total: $0.07**
+- Google Places: 4 calls = **$0** (under 10K free tier)
+- Google Search: 40 queries = **$0** (under 100/day free)
+- Gemini: 4 calls = **$0** (under 250/day free)
+- **Total: $0** ✅
 
-### Full Run Estimate (1,526 venues)
-- Google Places: 1,526 × $0.017 = **~$26**
-- Google Search: ~15,000 queries = **$0** (with delays) or **~$115** (fast mode)
-- Gemini: 1,526 calls = **$0** (free tier)
-- **Total: $26-141** (budget vs. fast mode)
+### Full Run Estimate (~1,250 non-production venues)
+
+| Mode | Places | Search | Gemini | Total | Time |
+|------|--------|--------|--------|-------|------|
+| **Ultra-Budget** | $0 | $0 | $0 | **$0** | ~125 days |
+| **Balanced** | $0 | ~$30 | $0 | **~$30** | ~10-15 days |
+| **Fast** | $0 | ~$62 | $0 | **~$62** | ~2-5 days |
+
+**Recommendation:** Balanced mode (~$30) offers best cost/time value.
 
 ---
 
 ## 🎯 Decision Points
 
-Before running full Phase 2, decide:
+Before running full verification, decide:
 
-1. **Speed vs. Cost:**
-   - Budget mode: ~30 days, ~$26 total
-   - Fast mode: 2-3 days, ~$141 total
+1. **Cost Mode (Updated January 2026):**
+   - **Ultra-Budget:** $0 total, ~125 days (all free tiers)
+   - **Balanced:** ~$30 total, ~10-15 days (recommended)
+   - **Fast:** ~$62 total, ~2-5 days
 
-2. **When to run:**
+2. **New Scripts Available:**
+   - `test-single-city.js` - Test one city first
+   - `verify-non-production-cities.js` - Full run (excludes production states)
+
+3. **Production States (EXCLUDED):**
+   - California, New York, Indiana, Nebraska (already verified)
+   - ~1,250 venues remain in non-production states
+
+4. **When to run:**
    - Can run in background (processes city-by-city)
    - Saves progress automatically
-   - Can stop/resume anytime
-
-3. **Next phases:**
-   - Phase 3: Secondary verification (optional)
-   - Phase 4: New venue discovery (adds ~15% more venues)
-   - Phase 5: Human review & approval
-   - Phase 6: Database updates
+   - Can stop/resume anytime (RESUME_MODE=true)
 
 ---
 
@@ -220,27 +235,37 @@ None! Everything tested is working correctly.
 node scripts/01_extract_venues.js
 ```
 
-### Run Phase 2 Test (Current Settings)
+### Test Single City (RECOMMENDED FIRST)
 ```bash
-node scripts/02_primary_verification.js
+# Default: Portland, Maine
+node scripts/test-single-city.js
+
+# Or specify city
+node scripts/test-single-city.js "Miami" "Florida"
 ```
 
-### Run Phase 2 Full (Edit script first)
+### Full Non-Production Verification
 ```bash
-# Edit TEST_CITY_LIMIT and TEST_VENUE_LIMIT to null
-node scripts/02_primary_verification.js
+# Excludes CA, NY, IN, NE (production states)
+node scripts/verify-non-production-cities.js
 ```
 
 ### Check Results
 ```bash
-# View summary
-cat data/primary_summary.json | jq '.'
+# View test results
+cat data/test_verification_portland_maine.json | jq '.decisions'
+
+# View full run summary
+cat data/non_production_verification_summary.json | jq '.cost_tracking'
 
 # View specific city
-cat data/primary_verification_charlotte_north_carolina.json | jq '.'
+cat data/verification_results/verification_miami_florida.json | jq '.decisions'
+```
 
-# Count decisions
-cat data/primary_summary.json | jq '.overall_decisions'
+### NPM Scripts
+```bash
+npm run test:city           # Test single city
+npm run verify:nonprod      # Full non-production run
 ```
 
 ---

@@ -1,0 +1,4541 @@
+
+══════════════════════════════════════════════════════════════════════
+🔍 PHASE 2: VENUE DISCOVERY - All Cities
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-11T13:18:29.709Z
+💰 Budget limit: $40
+
+🚀 PRODUCTION MODE - Processing ALL cities
+♻️  Resume Mode: ON
+
+🚫 Skipping Production States: California, New York, Indiana, Nebraska
+
+📊 Processing 502 cities
+   Existing venues in DB: 1526
+══════════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════
+🔍 [1/502] Addison, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] The Londoner Pub
+      ❌ Not qualified
+   [2/9] Lazy Dog Restaurants
+      ✅ QUALIFIED
+   [3/9] District dallas
+      ❌ Closed
+   [4/9] Uncle Julio's
+      ❌ Wrong city: Dallas (expected Addison)
+   [5/9] Beyond the Bar
+      ❌ Wrong city: Richardson (expected Addison)
+   [6/9] Hudson House
+      ❌ Not qualified
+   [7/9] The Kava Bar
+      ❌ Wrong city: Dallas (expected Addison)
+   [8/9] Kava Culture Kava Bar
+      ❌ Wrong city: Dallas (expected Addison)
+   [9/9] The Kava Bar - North Dallas
+      ❌ Wrong city: Dallas (expected Addison)
+   💾 Saved: discovery_addison_texas.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [2/502] Aiea, Hawaii
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Kava Queen Kava Bar 2
+      ❌ Wrong city: Waialua (expected Aiea)
+   [2/2] daCove Health Bar
+      ❌ Wrong city: Honolulu (expected Aiea)
+   💾 Saved: discovery_aiea_hawaii.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [3/502] Akron, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Sacred Vortex Teahouse
+      ❌ Wrong city: Cleveland (expected Akron)
+   [2/12] The Thirsty Goose
+      ❌ Not found
+   [3/12] Majestic Tails
+      ✅ QUALIFIED
+   [4/12] The Industry
+      ❌ Not qualified
+   [5/12] Liquid Lab & Studio
+      ✅ QUALIFIED
+   [6/12] Kava Culture
+      ✅ QUALIFIED
+   [7/12] Bottoms Up Lounge
+      ✅ QUALIFIED
+   [8/12] K & D's Lounge
+      ❌ Not qualified
+   [9/12] Sacred Waters
+      ❌ Wrong city: Lakewood (expected Akron)
+   [10/12] Kavé Coffee Bar
+      ❌ Wrong city: Barberton (expected Akron)
+   [11/12] The Roxbury Lounge
+      ✅ QUALIFIED
+   [12/12] Kava Sol
+      ❌ Not qualified
+   💾 Saved: discovery_akron_ohio.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [4/502] Albany, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Beerhead Bar & Eatery New Albany
+      ❌ Wrong state (expected Georgia)
+   [2/9] Dave and Buster's
+      ❌ Wrong state (expected Georgia)
+   [3/9] Another Broken Egg
+      ❌ Wrong city: Warner Robins (expected Albany)
+   [4/9] Firebirds Wood Fired Grill
+      ❌ Wrong state (expected Georgia)
+   [5/9] Island Root Kava Bar Jensen Beach
+      ❌ Wrong state (expected Georgia)
+   [6/9] Kava Mama
+      ❌ Wrong city: Atlanta (expected Albany)
+   [7/9] DB Zero Proof Kava Bar
+      ❌ Not found
+   [8/9] Kavasutra Kava Bar
+      ❌ Wrong state (expected Georgia)
+   [9/9] Melo Melo Kava Bar
+      ❌ Wrong state (expected Georgia)
+   💾 Saved: discovery_albany_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [5/502] Albuquerque, New Mexico
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Lost Cultures Tea Bar
+      ✅ QUALIFIED
+   [2/4] Botanic Bar
+      ✅ QUALIFIED
+   [3/4] M'tucci's Bar Roma
+      ✅ QUALIFIED
+   [4/4] Roots & Leaves
+      ✅ QUALIFIED
+   💾 Saved: discovery_albuquerque_new_mexico.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [6/502] Alexandria, Virginia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  23 potential venues extracted
+   ✨ 22 new candidates
+   [1/22] King's Ransom
+      ✅ QUALIFIED
+   [2/22] Ada's on the River
+      ✅ QUALIFIED
+   [3/22] Matt and Tony's All Day Kitchen Bar
+      ✅ QUALIFIED
+   [4/22] Hummingbird Bar + Kitchen
+      ✅ QUALIFIED
+   [5/22] Umbrella Dry Drinks
+      ❌ Closed
+   [6/22] Aslin Beer Co.
+      ✅ QUALIFIED
+   [7/22] The Majestic
+      ✅ QUALIFIED
+   [8/22] Point 5
+      ❌ Wrong city: Richmond (expected Alexandria)
+   [9/22] Kismet Modern Indian
+      ❌ Closed
+   [10/22] Wren
+      ❌ Wrong city: Tysons (expected Alexandria)
+   [11/22] Three Blacksmiths
+      ❌ Wrong city: Sperryville (expected Alexandria)
+   [12/22] Revel
+      ❌ Not qualified
+   [13/22] Alice Comfort Cocktail
+      ✅ QUALIFIED
+   [14/22] Cafe 44
+      ✅ QUALIFIED
+   [15/22] Masterpiece Mocktail Bar
+      ❌ Not qualified
+   [16/22] Barca Pier & Wine Bar
+      ✅ QUALIFIED
+   [17/22] Mia's Italian Kitchen
+      ✅ QUALIFIED
+   [18/22] ESP Tea and Coffee
+      ✅ QUALIFIED
+   [19/22] Qi Kratom CBD Tea
+      ❌ Wrong state (expected Virginia)
+   [20/22] Majestic Lounge
+      ✅ QUALIFIED
+   [21/22] Captain Gregory's
+      ✅ QUALIFIED
+   [22/22] Nero
+      ❌ Wrong state (expected Virginia)
+   💾 Saved: discovery_alexandria_virginia.json (13 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [7/502] Allentown, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] The Open Road
+      ❌ Wrong city: Pittsburgh (expected Allentown)
+   [2/14] Dirty Gertie's Non-Alcoholic Cocktails
+      ✅ QUALIFIED
+   [3/14] Tønic
+      ❌ Not qualified
+   [4/14] Bantha Tea Bar
+      ❌ Wrong city: Pittsburgh (expected Allentown)
+   [5/14] Cory's Kava Korner
+      ❌ Wrong city: Trucksville (expected Allentown)
+   [6/14] Jaya Kava
+      ❌ Wrong city: Philadelphia (expected Allentown)
+   [7/14] The Random Tea Room & Curiosity Shop
+      ❌ Wrong city: Philadelphia (expected Allentown)
+   [8/14] Lightbox Cafe
+      ❌ Wrong city: Philadelphia (expected Allentown)
+   [9/14] Mad Hatters Kava Bar
+      ❌ Wrong state (expected Pennsylvania)
+   [10/14] LOVE'S LOUNGE
+      ❌ Not qualified
+   [11/14] Shells Kava Bar
+      ❌ Wrong state (expected Pennsylvania)
+   [12/14] Kava Korner
+      ❌ Wrong city: Trucksville (expected Allentown)
+   [13/14] MagiKava
+      ❌ Wrong city: New Hope (expected Allentown)
+   [14/14] Kava Anba
+      ❌ Wrong city: Trucksville (expected Allentown)
+   💾 Saved: discovery_allentown_pennsylvania.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [8/502] Altamonte Springs, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Kava Cove Lounge
+      ❌ Wrong city: Winter Park (expected Altamonte Springs)
+   [2/10] Permanent Vacation
+      ❌ Wrong city: Maitland (expected Altamonte Springs)
+   [3/10] Hourglass
+      ❌ Wrong city: Longwood (expected Altamonte Springs)
+   [4/10] WFM COFFEE BAR
+      ❌ Wrong city: Winter Park (expected Altamonte Springs)
+   [5/10] Rosso
+      ❌ Wrong city: Longwood (expected Altamonte Springs)
+   [6/10] Kava Culture Kava Bar
+      ❌ Wrong city: Winter Springs (expected Altamonte Springs)
+   [7/10] Kavasutra Kava Bar
+      ❌ Wrong city: Casselberry (expected Altamonte Springs)
+   [8/10] Light On The Sugar Bakery & Café
+      ❌ Wrong city: Winter Park (expected Altamonte Springs)
+   [9/10] Rethink Food & Drink
+      ✅ QUALIFIED
+   [10/10] New Leaf Tea House
+      ❌ Wrong city: Casselberry (expected Altamonte Springs)
+   💾 Saved: discovery_altamonte_springs_florida.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [9/502] Amarillo, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Hummer's
+      ✅ QUALIFIED
+   [2/4] MJs Saloon and Grill
+      ❌ Closed
+   [3/4] Savor
+      ❌ Not qualified
+   [4/4] Bubba's 33
+      ✅ QUALIFIED
+   💾 Saved: discovery_amarillo_texas.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [10/502] Amelia, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Hodges Bend
+      ❌ Wrong state (expected Ohio)
+   [2/9] Amelia's
+      ❌ Wrong state (expected Ohio)
+   [3/9] Maypole
+      ✅ QUALIFIED
+   [4/9] Ivy
+      ❌ Wrong city: Batavia Township (expected Amelia)
+   [5/9] Asterisk Coffee Bar
+      ❌ Wrong city: Cuyahoga Falls (expected Amelia)
+   [6/9] Cameo Bar
+      ❌ Not found
+   [7/9] Amelia Gene's
+      ❌ Not qualified
+   [8/9] Kava Haus
+      ❌ Wrong city: Wilmington (expected Amelia)
+   [9/9] Sacred Waters
+      ❌ Wrong city: Lakewood (expected Amelia)
+   💾 Saved: discovery_amelia_ohio.json (1 new venues)
+
+   📊 Progress: 10 cities | 28 new venues | $1.12
+
+════════════════════════════════════════════════════════════
+🔍 [11/502] Anchorage, Alaska
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Sans Bar
+      ❌ Wrong state (expected Alaska)
+   [2/12] The Bear Paw Bar and Grill
+      ✅ QUALIFIED
+   [3/12] Anchorage Distillery
+      ✅ QUALIFIED
+   [4/12] Whisky & Ramen
+      ✅ QUALIFIED
+   [5/12] Mixology Mobile Bar
+      ❌ Not found
+   [6/12] Alaska Kava Bar
+      ❌ Not qualified
+   [7/12] Kava's Pancake House
+      ✅ QUALIFIED
+   [8/12] Whale's Tail
+      ❌ Excluded type: night_club
+   [9/12] Bernie's Bungalow Lounge
+      ❌ Not qualified
+   [10/12] Trophy Room Lounge
+      ❌ Not qualified
+   [11/12] The Kobuk
+      ❌ Not qualified
+   [12/12] Acai Alaska Smoothie and Kava
+      ✅ QUALIFIED
+   💾 Saved: discovery_anchorage_alaska.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [12/502] Ann Arbor, Michigan
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  18 potential venues extracted
+   ✨ 18 new candidates
+   [1/18] Rabbit Hole at Root
+      ❌ Excluded type: night_club
+   [2/18] Bar Bene
+      ✅ QUALIFIED
+   [3/18] Lowertown Bar and Cafe
+      ✅ QUALIFIED
+   [4/18] The Produce Station
+      ✅ QUALIFIED
+   [5/18] Brillig Dry Bar
+      ❌ Not qualified
+   [6/18] Salt Springs Brewery
+      ✅ QUALIFIED
+   [7/18] Peridot
+      ❌ Excluded type: night_club
+   [8/18] York
+      ❌ Excluded type: liquor_store
+   [9/18] Nightcap
+      ✅ QUALIFIED
+   [10/18] The Grotto
+      ❌ Excluded type: night_club
+   [11/18] North Star Lounge
+      ✅ QUALIFIED
+   [12/18] Vertex Coffee Roasters
+      ✅ QUALIFIED
+   [13/18] Kava Culture Ann Arbor
+      ❌ Wrong state (expected Michigan)
+   [14/18] First Bite
+      ✅ QUALIFIED
+   [15/18] Ethnospot
+      ❌ Wrong city: Ypsilanti (expected Ann Arbor)
+   [16/18] Babs' Underground Lounge
+      ❌ Excluded type: night_club
+   [17/18] Elevation
+      ✅ QUALIFIED
+   [18/18] Study Hall
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_ann_arbor_michigan.json (9 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [13/502] Arlington, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Fool's Kava House
+      ✅ QUALIFIED
+   [2/7] 4 Kahunas Tiki Lounge
+      ❌ Not qualified
+   [3/7] The Amber Room
+      ❌ Wrong city: Fort Worth (expected Arlington)
+   [4/7] Cidercade Arlington
+      ✅ QUALIFIED
+   [5/7] Cafe Americana
+      ❌ Not qualified
+   [6/7] The Library Bar
+      ❌ Wrong city: Fort Worth (expected Arlington)
+   [7/7] Elixir Lounge
+      ❌ Wrong city: Spring (expected Arlington)
+   💾 Saved: discovery_arlington_texas.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [14/502] Arlington, Virginia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  32 potential venues extracted
+   ✨ 32 new candidates
+   [1/32] Astro Beer Hall
+      ✅ QUALIFIED
+   [2/32] Nue: Elegantly Vietnamese
+      ❌ Wrong city: Falls Church (expected Arlington)
+   [3/32] Maison Cheryl
+      ✅ QUALIFIED
+   [4/32] Whino
+      ✅ QUALIFIED
+   [5/32] Founding Farmers
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [6/32] Busboys & Poets
+      ✅ QUALIFIED
+   [7/32] Ambar
+      ❌ Not qualified
+   [8/32] Bar Chinois
+      ✅ QUALIFIED
+   [9/32] Songbird
+      ❌ Wrong city: Fairfax (expected Arlington)
+   [10/32] Genki Izakaya
+      ❌ Wrong city: Fairfax (expected Arlington)
+   [11/32] Le Jardin
+      ❌ Wrong city: Falls Church (expected Arlington)
+   [12/32] Fats Fairfax
+      ❌ Wrong city: Fairfax (expected Arlington)
+   [13/32] Lantern House Kitchen
+      ❌ Wrong city: Reston (expected Arlington)
+   [14/32] Audacious Aleworks Brewery & Taproom
+      ❌ Wrong city: Falls Church (expected Arlington)
+   [15/32] Courthaus Social
+      ❌ Not qualified
+   [16/32] Aslin Beer
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [17/32] King's Ransom
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [18/32] Hawkers Asian Street Food
+      ✅ QUALIFIED
+   [19/32] The Liberty
+      ✅ QUALIFIED
+   [20/32] Tupelo Honey Southern Kitchen & Bar
+      ✅ QUALIFIED
+   [21/32] Circa at Clarendon
+      ✅ QUALIFIED
+   [22/32] Matt & Tony's
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [23/32] Pisco y Nazca Ceviche Gastrobar
+      ❌ Wrong state (expected Virginia)
+   [24/32] Ruthie's All-Day
+      ❌ Not qualified
+   [25/32] Ali's Bar
+      ❌ Wrong state (expected Virginia)
+   [26/32] The Board Room
+      ✅ QUALIFIED
+   [27/32] The Fool's Kava House
+      ❌ Wrong state (expected Virginia)
+   [28/32] ESP Tea and Coffee
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [29/32] Qi Kratom CBD Tea
+      ❌ Wrong state (expected Virginia)
+   [30/32] Majestic Lounge
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [31/32] Captain Gregory's
+      ❌ Wrong city: Alexandria (expected Arlington)
+   [32/32] MeloMelo Kava Bar
+      ❌ Wrong state (expected Virginia)
+   💾 Saved: discovery_arlington_virginia.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [15/502] Arlington Heights, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Cooper's Hawk
+      ✅ QUALIFIED
+   [2/2] Kahala Koa
+      ✅ QUALIFIED
+   💾 Saved: discovery_arlington_heights_illinois.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [16/502] Asheville, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  21 potential venues extracted
+   ✨ 19 new candidates
+   [1/19] NightShade
+      ✅ QUALIFIED
+   [2/19] Potential New Boyfriend
+      ✅ QUALIFIED
+   [3/19] Plant Bar
+      ✅ QUALIFIED
+   [4/19] DayTrip
+      ✅ QUALIFIED
+   [5/19] NØLO
+      ✅ QUALIFIED
+   [6/19] Ginger's Revenge
+      ✅ QUALIFIED
+   [7/19] Little Jumbo
+      ✅ QUALIFIED
+   [8/19] Rosetta's Kitchen
+      ✅ QUALIFIED
+   [9/19] Mountain Madre
+      ✅ QUALIFIED
+   [10/19] Botanist and Barrel Tasting Room
+      ✅ QUALIFIED
+   [11/19] The Tiki Easy Bar
+      ✅ QUALIFIED
+   [12/19] Antidote
+      ✅ QUALIFIED
+   [13/19] The Whale
+      ❌ Excluded type: liquor_store
+   [14/19] One World
+      ✅ QUALIFIED
+   [15/19] Times Bar
+      ✅ QUALIFIED
+   [16/19] Retrocade
+      ❌ Not qualified
+   [17/19] The Mule Tasting Room
+      ✅ QUALIFIED
+   [18/19] Hi Wires Tiki Bar
+      ✅ QUALIFIED
+   [19/19] 131 Main
+      ❌ Not qualified
+   💾 Saved: discovery_asheville_north_carolina.json (16 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [17/502] Athens, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Trappeze Pub
+      ✅ QUALIFIED
+   [2/5] South Kitchen and Bar
+      ✅ QUALIFIED
+   [3/5] Loving Botanicals
+      ✅ QUALIFIED
+   [4/5] Eat Athens
+      ❌ Not qualified
+   [5/5] Mai Kai Kava Lounge
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_athens_georgia.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [18/502] Atlanta, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  21 potential venues extracted
+   ✨ 19 new candidates
+   [1/19] Soberish
+      ✅ QUALIFIED
+   [2/19] Foundation Social Eatery
+      ❌ Wrong city: Alpharetta (expected Atlanta)
+   [3/19] Brush Sushi
+      ✅ QUALIFIED
+   [4/19] The General Muir
+      ✅ QUALIFIED
+   [5/19] Bacchanalia
+      ✅ QUALIFIED
+   [6/19] Bar Margot
+      ❌ Excluded type: night_club
+   [7/19] Lazy Betty
+      ✅ QUALIFIED
+   [8/19] Commune
+      ❌ Wrong city: Avondale Estates (expected Atlanta)
+   [9/19] The Zero Company
+      ❌ Excluded type: liquor_store
+   [10/19] Bar Politan
+      ✅ QUALIFIED
+   [11/19] Lügnerisch
+      ❌ Not qualified
+   [12/19] The Artillery Room at Gate City Brewing Company
+      ❌ Wrong city: Roswell (expected Atlanta)
+   [13/19] Aveline
+      ✅ QUALIFIED
+   [14/19] Flight Club Atlanta
+      ❌ Excluded type: night_club
+   [15/19] Kava Mama
+      ✅ QUALIFIED
+   [16/19] Bakaris Pizza & Kava Lounge
+      ✅ QUALIFIED
+   [17/19] Tea'z Social
+      ❌ Closed
+   [18/19] Golda Kombucha bar
+      ✅ QUALIFIED
+   [19/19] MaiKai Kava Lounge
+      ❌ Wrong city: Athens (expected Atlanta)
+   💾 Saved: discovery_atlanta_georgia.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [19/502] Auburn, Alabama
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] The Plains Taproom
+      ❌ Excluded type: night_club
+   [2/4] The Collegiate Hotel
+      ✅ QUALIFIED
+   [3/4] Kava Culture Kava Bar
+      ❌ Wrong state (expected Alabama)
+   [4/4] Deep Roots Kava Bar
+      ❌ Wrong state (expected Alabama)
+   💾 Saved: discovery_auburn_alabama.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [20/502] Augusta, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Dave and Buster's
+      ✅ QUALIFIED
+   [2/9] Fujiyama Augusta
+      ❌ Not qualified
+   [3/9] Pho Augusta Grill & Bar
+      ✅ QUALIFIED
+   [4/9] Another Broken Egg Cafe
+      ❌ Not qualified
+   [5/9] Kafe Kava
+      ❌ Wrong state (expected Georgia)
+   [6/9] Kava House Sav
+      ❌ Wrong city: Savannah (expected Augusta)
+   [7/9] Kava Mama
+      ❌ Wrong city: Atlanta (expected Augusta)
+   [8/9] Deep Roots Kava Bar
+      ❌ Wrong city: Columbus (expected Augusta)
+   [9/9] Mai Kai Athens
+      ❌ Wrong city: Athens (expected Augusta)
+   💾 Saved: discovery_augusta_georgia.json (2 new venues)
+
+   📊 Progress: 20 cities | 88 new venues | $3.85
+
+════════════════════════════════════════════════════════════
+🔍 [21/502] Austin, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] Sans Bar
+      ✅ QUALIFIED
+   [2/15] Holy Roller
+      ❌ Closed
+   [3/15] Dear Dry Drinkery
+      ❌ Closed
+   [4/15] Taano House
+      ✅ QUALIFIED
+   [5/15] Olamaie
+      ✅ QUALIFIED
+   [6/15] Hank's
+      ✅ QUALIFIED
+   [7/15] Electric Shuffle
+      ✅ QUALIFIED
+   [8/15] Hillside Farmacy
+      ✅ QUALIFIED
+   [9/15] Hotel Vegas & Volstead Lounge
+      ❌ Excluded type: night_club
+   [10/15] Cantero
+      ✅ QUALIFIED
+   [11/15] Vinaigrette
+      ✅ QUALIFIED
+   [12/15] Armadillo Den
+      ✅ QUALIFIED
+   [13/15] Lazy Bones Kava
+      ✅ QUALIFIED
+   [14/15] Tulum Botanical Bar
+      ✅ QUALIFIED
+   [15/15] Neshama Kava
+      ✅ QUALIFIED
+   💾 Saved: discovery_austin_texas.json (12 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [22/502] Avondale Estates, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Wild Heaven Beer
+      ✅ QUALIFIED
+   [2/5] The Lost Druid Brewery, Distillery & Gastropub
+      ✅ QUALIFIED
+   [3/5] Kava Daddy
+      ❌ Wrong state (expected Georgia)
+   [4/5] Bakaris Pizza & Kava Lounge
+      ❌ Wrong city: Atlanta (expected Avondale Estates)
+   [5/5] Kava Mama
+      ❌ Wrong city: Atlanta (expected Avondale Estates)
+   💾 Saved: discovery_avondale_estates_georgia.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [23/502] Baltimore, Maryland
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] Root City Kava Bar & Lounge
+      ❌ Excluded type: night_club
+   [2/15] CLOCK Restoration
+      ✅ QUALIFIED
+   [3/15] The Coral Wig
+      ✅ QUALIFIED
+   [4/15] Honey Pot
+      ✅ QUALIFIED
+   [5/15] The Ibis Tavern
+      ❌ Excluded type: night_club
+   [6/15] Blue Pit BBQ & Whiskey Bar
+      ✅ QUALIFIED
+   [7/15] Clavel
+      ✅ QUALIFIED
+   [8/15] Dutch Courage Gin Bar
+      ✅ QUALIFIED
+   [9/15] True Chesapeake Oyster Co
+      ❌ Not qualified
+   [10/15] Rye
+      ✅ QUALIFIED
+   [11/15] Ethels Creole Kitchen
+      ✅ QUALIFIED
+   [12/15] Bloom's
+      ✅ QUALIFIED
+   [13/15] Qi Kratom CBD Tea
+      ✅ QUALIFIED
+   [14/15] Pars Market
+      ❌ Wrong city: Columbia (expected Baltimore)
+   [15/15] The Green Zone
+      ✅ QUALIFIED
+   💾 Saved: discovery_baltimore_maryland.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [24/502] Barnegat, New Jersey
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Mud City Crabhouse
+      ❌ Wrong city: Manahawkin (expected Barnegat)
+   [2/5] Clemmy's
+      ❌ Wrong city: Waretown (expected Barnegat)
+   [3/5] How You Brewin®
+      ✅ QUALIFIED
+   [4/5] KAVA Coffee House
+      ❌ Wrong city: Howell Township (expected Barnegat)
+   [5/5] Refuel Kava lounge
+      ❌ Not found
+   💾 Saved: discovery_barnegat_new_jersey.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [25/502] Batavia, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Bean & Brew cafe
+      ❌ Not qualified
+   [2/13] Katharine Brasserie & Bar
+      ❌ Wrong state (expected Ohio)
+   [3/13] Bar Botanico
+      ❌ Wrong state (expected Ohio)
+   [4/13] Altbar
+      ❌ Wrong state (expected Ohio)
+   [5/13] DB Zero Proof Kava Bar
+      ❌ Not found
+   [6/13] Awa Na Kava Kava Bar
+      ❌ Wrong state (expected Ohio)
+   [7/13] Big Run Kava Bar
+      ❌ Wrong city: Athens (expected Batavia)
+   [8/13] casa cacao
+      ❌ Wrong city: Columbus (expected Batavia)
+   [9/13] Bula Kava House
+      ❌ Wrong state (expected Ohio)
+   [10/13] LovaKava Kava Bar and Restaurant
+      ❌ Wrong city: Wilmington (expected Batavia)
+   [11/13] Lightbox Vegan Cafe & Kava Bar
+      ❌ Not found
+   [12/13] KAVA COLLECTIVE
+      ❌ Not qualified
+   [13/13] Kava Diem
+      ❌ Not found
+   💾 Saved: discovery_batavia_ohio.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [26/502] Baton Rouge, Louisiana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Mestizo Louisiana-Mexican Cuisine
+      ✅ QUALIFIED
+   [2/5] DIY disco
+      ❌ Closed
+   [3/5] Dark 30
+      ✅ QUALIFIED
+   [4/5] KAVA HAVEN
+      ✅ QUALIFIED
+   [5/5] Pau Hana Kava Bar
+      ❌ Wrong state (expected Louisiana)
+   💾 Saved: discovery_baton_rouge_louisiana.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [27/502] Beaumont, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Nekter Juice Bar
+      ❌ Wrong state (expected Texas)
+   [2/3] All 5 Elements Metaphysical Shop & Kava Lounge
+      ❌ Wrong state (expected Texas)
+   [3/3] DB Zero Proof Kava Bar
+      ❌ Not found
+   💾 Saved: discovery_beaumont_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [28/502] Beaverton, Oregon
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Flora
+      ✅ QUALIFIED
+   [2/13] Teardrop Cocktail Lounge
+      ❌ Wrong city: Portland (expected Beaverton)
+   [3/13] Raindrop Tap House
+      ✅ QUALIFIED
+   [4/13] June
+      ✅ QUALIFIED
+   [5/13] Portal Adventures - Beaverton
+      ✅ QUALIFIED
+   [6/13] Club Soda Tasting Room
+      ❌ Wrong state (expected Oregon)
+   [7/13] Allan's Authentic Mexican Restaurant
+      ❌ Wrong city: Portland (expected Beaverton)
+   [8/13] Either/Or
+      ❌ Wrong city: Portland (expected Beaverton)
+   [9/13] Suckerpunch Mocktail Bar PDX
+      ❌ Closed
+   [10/13] Bula Kava House
+      ❌ Wrong city: Portland (expected Beaverton)
+   [11/13] Baristopia Coffee
+      ✅ QUALIFIED
+   [12/13] Kava Café & Bakery
+      ❌ Wrong state (expected Oregon)
+   [13/13] AVA Roasteria
+      ✅ QUALIFIED
+   💾 Saved: discovery_beaverton_oregon.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [29/502] Bellingham, Washington
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] RedRum
+      ✅ QUALIFIED
+   [2/16] B-Town Kitchen & Raw Bar
+      ✅ QUALIFIED
+   [3/16] Bloomhaven Bottle Shop
+      ✅ QUALIFIED
+   [4/16] Galloway's
+      ✅ QUALIFIED
+   [5/16] Black Sheep
+      ✅ QUALIFIED
+   [6/16] Redlight Kitchen & Bar
+      ✅ QUALIFIED
+   [7/16] The Orion
+      ✅ QUALIFIED
+   [8/16] Bellingham Bar and Grill
+      ❌ Not qualified
+   [9/16] Aslan Brewing Company
+      ✅ QUALIFIED
+   [10/16] Structures Brewing
+      ❌ Not qualified
+   [11/16] Stemma Brewing Co.
+      ✅ QUALIFIED
+   [12/16] Bellingham Cider
+      ✅ QUALIFIED
+   [13/16] The Blue Abode
+      ✅ QUALIFIED
+   [14/16] Bar Cicotti
+      ✅ QUALIFIED
+   [15/16] KAVA HAVEN
+      ❌ Not qualified
+   [16/16] 11th Hour Tea & Coffee Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_bellingham_washington.json (13 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [30/502] Belmar, New Jersey
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Bakes Brewing Co
+      ✅ QUALIFIED
+   [2/4] Spring Lake Seafood
+      ❌ Wrong city: Spring Lake (expected Belmar)
+   [3/4] KAVA Coffee House
+      ❌ Wrong city: Howell Township (expected Belmar)
+   [4/4] Kaya's Kitchen
+      ✅ QUALIFIED
+   💾 Saved: discovery_belmar_new_jersey.json (2 new venues)
+
+   📊 Progress: 30 cities | 138 new venues | $5.98
+
+════════════════════════════════════════════════════════════
+🔍 [31/502] Berwyn, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Output Berwyn
+      ✅ QUALIFIED
+   [2/4] Cigars and STRIPES B.B.Q Lounge Bar
+      ❌ Not qualified
+   [3/4] ON THE ROCKS - BERWYN
+      ❌ Not qualified
+   [4/4] Tropikava Kafe
+      ❌ Closed
+   💾 Saved: discovery_berwyn_illinois.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [32/502] Bethesda, Maryland
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Myx It Up
+      ❌ Not found
+   [2/13] Barrel & Crow
+      ✅ QUALIFIED
+   [3/13] Cooper's Mill
+      ✅ QUALIFIED
+   [4/13] Botanero Restaurant
+      ❌ Wrong city: Rockville (expected Bethesda)
+   [5/13] Java Nation
+      ❌ Wrong city: Rockville (expected Bethesda)
+   [6/13] PLANTA
+      ✅ QUALIFIED
+   [7/13] Root City Kava
+      ❌ Wrong city: Baltimore (expected Bethesda)
+   [8/13] The Chill Room Kava Bar
+      ❌ Wrong state (expected Maryland)
+   [9/13] Qi Kratom CBD Tea
+      ❌ Wrong state (expected Maryland)
+   [10/13] The Green Zone
+      ❌ Wrong state (expected Maryland)
+   [11/13] Myste Lounge
+      ❌ Wrong city: Laurel (expected Bethesda)
+   [12/13] ESP Tea and Coffee
+      ❌ Wrong state (expected Maryland)
+   [13/13] The Backroom Kava bar
+      ❌ Not qualified
+   💾 Saved: discovery_bethesda_maryland.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [33/502] Bethesda, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Shake Rag Bar & Lounge
+      ❌ Wrong state (expected Texas)
+   [2/9] JINYA Ramen Bar
+      ❌ Wrong state (expected Texas)
+   [3/9] LovaKava Kava Bar and Restaurant
+      ❌ Wrong city: Dallas (expected Bethesda)
+   [4/9] Nalu Kava Bar
+      ❌ Wrong state (expected Texas)
+   [5/9] SquareRut Congress
+      ❌ Closed
+   [6/9] SquareRut Lamar
+      ❌ Wrong city: Austin (expected Bethesda)
+   [7/9] ReKava
+      ❌ Not found
+   [8/9] The Fool's Kava House
+      ❌ Wrong city: Arlington (expected Bethesda)
+   [9/9] Frisco Kava Bar
+      ❌ Wrong city: Frisco (expected Bethesda)
+   💾 Saved: discovery_bethesda_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [34/502] Bethlehem, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] P.J. Whelihan's
+      ❌ Not qualified
+   [2/9] Seven Sirens Brewing Inc.
+      ✅ QUALIFIED
+   [3/9] Dudley's
+      ❌ Not qualified
+   [4/9] Tallyho
+      ❌ Excluded type: night_club
+   [5/9] ZEST bar+grille
+      ✅ QUALIFIED
+   [6/9] Kava Korner Pennsylvania
+      ❌ Wrong city: Trucksville (expected Bethlehem)
+   [7/9] MagiKava
+      ❌ Wrong city: New Hope (expected Bethlehem)
+   [8/9] Kavasutra Kava Bar
+      ❌ Wrong state (expected Pennsylvania)
+   [9/9] Elevate Kava | Social Lounge
+      ❌ Wrong state (expected Pennsylvania)
+   💾 Saved: discovery_bethlehem_pennsylvania.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [35/502] Big Pine Key, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Forks and Stix Restaurant
+      ✅ QUALIFIED
+   [2/3] Kava Culture Kava Bar
+      ✅ QUALIFIED
+   [3/3] Good Food Conspiracy
+      ✅ QUALIFIED
+   💾 Saved: discovery_big_pine_key_florida.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [36/502] Billings, Montana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] High Tide Casino and Bar
+      ✅ QUALIFIED
+   [2/7] Hold My Bar
+      ✅ QUALIFIED
+   [3/7] Walkers
+      ✅ QUALIFIED
+   [4/7] Skyward Brews
+      ✅ QUALIFIED
+   [5/7] Thirsty Street Brewing
+      ✅ QUALIFIED
+   [6/7] The Cove Bar & Grill
+      ❌ Not qualified
+   [7/7] Bee Bar Billings
+      ❌ Excluded type: liquor_store
+   💾 Saved: discovery_billings_montana.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [37/502] Birmingham, Alabama
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  18 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] The Garage
+      ❌ Not qualified
+   [2/15] Wooden City
+      ✅ QUALIFIED
+   [3/15] Cayo Coco Rum Bar
+      ✅ QUALIFIED
+   [4/15] Hop City Beer & Wine
+      ❌ Excluded type: liquor_store
+   [5/15] LeNell's Beverage Boutique
+      ❌ Excluded type: liquor_store
+   [6/15] Harvest Roots Kombucha Taproom
+      ❌ Closed
+   [7/15] Chez Fonfon
+      ✅ QUALIFIED
+   [8/15] Parkside on 5th
+      ✅ QUALIFIED
+   [9/15] Tasty Town
+      ✅ QUALIFIED
+   [10/15] SoHo Social
+      ❌ Wrong city: Homewood (expected Birmingham)
+   [11/15] The Margaret
+      ✅ QUALIFIED
+   [12/15] Kava Haven
+      ❌ Not qualified
+   [13/15] The Sound Garden Kava Bar
+      ❌ Wrong state (expected Alabama)
+   [14/15] Mountain Vibes KAVA Lounge
+      ❌ Wrong state (expected Alabama)
+   [15/15] The Gnarly Kava Bar
+      ❌ Wrong state (expected Alabama)
+   💾 Saved: discovery_birmingham_alabama.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [38/502] Birmingham, Michigan
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  18 potential venues extracted
+   ✨ 18 new candidates
+   [1/18] Shift
+      ✅ QUALIFIED
+   [2/18] Madam
+      ✅ QUALIFIED
+   [3/18] Tallulah Wine Bar and Bistro
+      ❌ Not qualified
+   [4/18] Hazel's
+      ✅ QUALIFIED
+   [5/18] 220 Merrill
+      ✅ QUALIFIED
+   [6/18] Social Kitchen & Bar
+      ❌ Not qualified
+   [7/18] Sips
+      ❌ Wrong city: Farmington (expected Birmingham)
+   [8/18] Market
+      ❌ Not qualified
+   [9/18] Bar Pigalle
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [10/18] Basan
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [11/18] Castalia at Sfumato
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [12/18] Dragonfly
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [13/18] Frame
+      ❌ Wrong city: Bloomfield Hills (expected Birmingham)
+   [14/18] Grey Ghost
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [15/18] Ivy Kitchen and Bar
+      ❌ Wrong city: Detroit (expected Birmingham)
+   [16/18] Eli Tea Bar
+      ❌ Closed
+   [17/18] Kava Kasa GR
+      ❌ Wrong city: Grand Rapids (expected Birmingham)
+   [18/18] Synergy Smoothie and Elixir Bar
+      ❌ Not qualified
+   💾 Saved: discovery_birmingham_michigan.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [39/502] Blairsville, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Blairsville Social
+      ✅ QUALIFIED
+   [2/8] Mai Kai Kava Bar
+      ✅ QUALIFIED
+   [3/8] Mai Kai Athens
+      ✅ QUALIFIED
+   [4/8] The Flying Trout
+      ✅ QUALIFIED
+   [5/8] The Mason Bar
+      ❌ Wrong state (expected Georgia)
+   [6/8] Kava House
+      ✅ QUALIFIED
+   [7/8] Traveling Gypsies and Kava Den
+      ❌ Wrong city: Rome (expected Blairsville)
+   [8/8] Kava Mama
+      ✅ QUALIFIED
+   💾 Saved: discovery_blairsville_georgia.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [40/502] Boca Raton, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] Sixty Vines
+      ✅ QUALIFIED
+   [2/15] Sip'n Style
+      ❌ Not found
+   [3/15] Tap 42
+      ✅ QUALIFIED
+   [4/15] Kapow Noodle Bar
+      ✅ QUALIFIED
+   [5/15] Morton's The Steakhouse
+      ✅ QUALIFIED
+   [6/15] Lazy Dog Restaurants
+      ✅ QUALIFIED
+   [7/15] Rocco's Tacos & Tequila Bar
+      ✅ QUALIFIED
+   [8/15] True Food Kitchen
+      ❌ Not qualified
+   [9/15] Tryst
+      ✅ QUALIFIED
+   [10/15] Vi Coffee Bar
+      ✅ QUALIFIED
+   [11/15] Kavasutra Kava Bar
+      ❌ Wrong city: Deerfield Beach (expected Boca Raton)
+   [12/15] The Nak Kava Bar
+      ✅ QUALIFIED
+   [13/15] Herb'n Roots Exotic Tea Lounge
+      ✅ QUALIFIED
+   [14/15] The Backroom Kava bar
+      ❌ Wrong city: Deerfield Beach (expected Boca Raton)
+   [15/15] Purple Lotus Kava Bar
+      ❌ Wrong city: Delray Beach (expected Boca Raton)
+   💾 Saved: discovery_boca_raton_florida.json (10 new venues)
+
+   📊 Progress: 40 cities | 178 new venues | $8.02
+
+════════════════════════════════════════════════════════════
+🔍 [41/502] Bolingbrook, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Krafted Burger Bar + Tap
+      ❌ Closed
+   [2/2] Danny's Pizza, Pasta and Burgers
+      ❌ Closed
+   💾 Saved: discovery_bolingbrook_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [42/502] Bonita Springs, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Lake House Bar & Grill
+      ✅ QUALIFIED
+   [2/3] Kava Culture Kava Bar
+      ❌ Excluded type: night_club
+   [3/3] Kava Culture Bonita Springs
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_bonita_springs_florida.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [43/502] Boone, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Mocksie
+      ❌ Not qualified
+   [2/9] The Horton Hotel Rooftop Bar
+      ❌ Excluded type: night_club
+   [3/9] New River Grill
+      ✅ QUALIFIED
+   [4/9] Clashin Adventurez
+      ❌ Not qualified
+   [5/9] Elevated Kava Lounge
+      ❌ Excluded type: night_club
+   [6/9] Da Kine's Kava
+      ❌ Excluded type: night_club
+   [7/9] The Table restaurant
+      ❌ Not qualified
+   [8/9] The Kava Bar of Conover NC
+      ❌ Wrong city: Conover (expected Boone)
+   [9/9] Port City Vapor Kava & Oxygen Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_boone_north_carolina.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [44/502] Boston, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] Backbar
+      ❌ Wrong city: Somerville (expected Boston)
+   [2/16] Barra
+      ❌ Wrong city: Somerville (expected Boston)
+   [3/16] Dray Drinks
+      ✅ QUALIFIED
+   [4/16] Earls
+      ✅ QUALIFIED
+   [5/16] Wusong Road
+      ❌ Wrong city: Cambridge (expected Boston)
+   [6/16] Kowloon
+      ❌ Wrong city: Saugus (expected Boston)
+   [7/16] Banyan
+      ❌ Not qualified
+   [8/16] Temazcal
+      ❌ Not qualified
+   [9/16] Loretta's Last Call
+      ✅ QUALIFIED
+   [10/16] Blossom Bar
+      ❌ Wrong city: Brookline (expected Boston)
+   [11/16] Alden & Harlow
+      ❌ Wrong city: Cambridge (expected Boston)
+   [12/16] Blue Owl
+      ❌ Closed
+   [13/16] Bubble Bar Boston
+      ❌ Not qualified
+   [14/16] Hecate
+      ✅ QUALIFIED
+   [15/16] Root Awakening Kava Bar
+      ❌ Wrong state (expected Massachusetts)
+   [16/16] KAVA neo-taverna
+      ❌ Not qualified
+   💾 Saved: discovery_boston_massachusetts.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [45/502] Boulder, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  19 potential venues extracted
+   ✨ 18 new candidates
+   [1/18] Tonic Alchemy Lounge
+      ❌ Excluded type: night_club
+   [2/18] Postino Boulder
+      ✅ QUALIFIED
+   [3/18] Cozobi Fonda Fina
+      ✅ QUALIFIED
+   [4/18] Nora's Speakeasy
+      ❌ Wrong city: Louisville (expected Boulder)
+   [5/18] River and Woods
+      ❌ Not qualified
+   [6/18] The Jasmine Bar
+      ❌ Wrong city: Louisville (expected Boulder)
+   [7/18] The Rayback
+      ✅ QUALIFIED
+   [8/18] Jungle
+      ✅ QUALIFIED
+   [9/18] Bootstrap Brewing Company
+      ❌ Wrong city: Longmont (expected Boulder)
+   [10/18] Bottom Shelf Brewery
+      ❌ Wrong city: Bayfield (expected Boulder)
+   [11/18] Boulder Social
+      ✅ QUALIFIED
+   [12/18] Dostal Alley Brewpub & Casino
+      ❌ Wrong city: Central City (expected Boulder)
+   [13/18] Southern Sun Pub & Brewery
+      ✅ QUALIFIED
+   [14/18] Gemini
+      ✅ QUALIFIED
+   [15/18] Bartaco
+      ✅ QUALIFIED
+   [16/18] Santo
+      ✅ QUALIFIED
+   [17/18] Rosetta Hall
+      ✅ QUALIFIED
+   [18/18] Elevated Kava
+      ❌ Not qualified
+   💾 Saved: discovery_boulder_colorado.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [46/502] Boynton Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  21 potential venues extracted
+   ✨ 19 new candidates
+   [1/19] Myth
+      ❌ Wrong city: Jacksonville (expected Boynton Beach)
+   [2/19] Liquid Diamondz Bar
+      ❌ Wrong city: Lauderhill (expected Boynton Beach)
+   [3/19] Flagler Steakhouse
+      ❌ Wrong city: Palm Beach (expected Boynton Beach)
+   [4/19] Drive Shack West Palm
+      ❌ Wrong city: West Palm Beach (expected Boynton Beach)
+   [5/19] FLORIE'S AT THE FOUR SEASONS
+      ❌ Wrong city: Palm Beach (expected Boynton Beach)
+   [6/19] THE SEAFOOD BAR AT THE BREAKERS
+      ❌ Wrong city: Palm Beach (expected Boynton Beach)
+   [7/19] CAFÉ L'EUROPE
+      ❌ Wrong city: Palm Beach (expected Boynton Beach)
+   [8/19] LE BILBOQUET
+      ❌ Wrong city: Palm Beach (expected Boynton Beach)
+   [9/19] Swifty's
+      ❌ Wrong city: 155 Hammon Ave (expected Boynton Beach)
+   [10/19] Loveleigh Sips Spritz Bar
+      ❌ Wrong city: Lantana (expected Boynton Beach)
+   [11/19] Miller's Ale House (Boynton Beach)
+      ❌ Not qualified
+   [12/19] Island Vibes Kava Bar
+      ❌ Wrong city: Lantana Square A5 (expected Boynton Beach)
+   [13/19] Vosamana Kava
+      ❌ Excluded type: night_club
+   [14/19] Island Root Kava Bar Abacoa
+      ❌ Wrong city: Jupiter (expected Boynton Beach)
+   [15/19] Tenaga Kava
+      ❌ Excluded type: night_club
+   [16/19] Purple Lotus Kava Bar
+      ❌ Wrong city: Delray Beach (expected Boynton Beach)
+   [17/19] Island Root Kava Bar Boynton Beach
+      ❌ Not qualified
+   [18/19] Temanatu West Palm Beach Kava Bar
+      ❌ Excluded type: night_club
+   [19/19] Island Root Kava Bar (Royal Palm Beach)
+      ❌ Wrong city: West Palm Beach (expected Boynton Beach)
+   💾 Saved: discovery_boynton_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [47/502] Bozeman, Montana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Montana Ale Works
+      ✅ QUALIFIED
+   [2/13] Bozeman Spirits
+      ❌ Excluded type: liquor_store
+   [3/13] Devil's Toboggan
+      ✅ QUALIFIED
+   [4/13] Bacchus Pub
+      ❌ Excluded type: liquor_store
+   [5/13] Mountains Walking Brewery & Pub
+      ❌ Excluded type: liquor_store
+   [6/13] Dean's Zesty Booch
+      ❌ Closed
+   [7/13] Bridger Brewing
+      ✅ QUALIFIED
+   [8/13] Shine Beer Sanctuary
+      ❌ Excluded type: liquor_store
+   [9/13] Copper
+      ❌ Not qualified
+   [10/13] Bozeman Kratom & Kava
+      ✅ QUALIFIED
+   [11/13] Tea Rex Botanicals
+      ✅ QUALIFIED
+   [12/13] Bozeman Kratom & Kava Tea Shop
+      ✅ QUALIFIED
+   [13/13] Ohana Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_bozeman_montana.json (7 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [48/502] Bradenton, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] No Worries Kava Bar
+      ✅ QUALIFIED
+   [2/9] Taverna Toscana
+      ✅ QUALIFIED
+   [3/9] Lunga Lounge
+      ❌ Wrong city: Tampa (expected Bradenton)
+   [4/9] Bulla Gastrobar
+      ❌ Wrong city: Tampa (expected Bradenton)
+   [5/9] Mar Vista Dockside Restaurant
+      ❌ Wrong city: Longboat Key (expected Bradenton)
+   [6/9] Adobe Kava
+      ✅ QUALIFIED
+   [7/9] Manna Tea & Kava Bar
+      ❌ Wrong city: Sarasota (expected Bradenton)
+   [8/9] Oscura
+      ✅ QUALIFIED
+   [9/9] Khrome
+      ❌ Closed
+   💾 Saved: discovery_bradenton_florida.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [49/502] Brandon, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Wildcrafters
+      ❌ Wrong city: Jacksonville (expected Brandon)
+   [2/10] Kanji Sushi & Ramen
+      ❌ Not qualified
+   [3/10] The GOAT - Tapas and Bar
+      ❌ Wrong city: Jacksonville Beach (expected Brandon)
+   [4/10] JUCE
+      ❌ Wrong city: Valrico (expected Brandon)
+   [5/10] The Bay Kava Lounge
+      ❌ Excluded type: night_club
+   [6/10] Twist Smokeshop & Kava Bar
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [7/10] Kava Culture Kava Bar
+      ❌ Excluded type: night_club
+   [8/10] Twist Kava Cafe
+      ✅ QUALIFIED
+   [9/10] Moon Mountain
+      ❌ Excluded type: night_club
+   [10/10] Vapor Road Brandon Kava Bar & Smoke Shop
+      ❌ Closed
+   💾 Saved: discovery_brandon_florida.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [50/502] Bridgeport, Connecticut
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] 1928 Cocktail Club
+      ❌ Wrong city: Branford (expected Bridgeport)
+   [2/11] Eye Kava
+      ✅ QUALIFIED
+   [3/11] FRANKIES SPORT LOUNGE
+      ❌ Excluded type: night_club
+   [4/11] Frenchies Coffee Bar
+      ❌ Wrong city: Stratford (expected Bridgeport)
+   [5/11] Greer Southern Table
+      ❌ Wrong city: Norwalk (expected Bridgeport)
+   [6/11] Island Kava
+      ❌ Wrong state (expected Connecticut)
+   [7/11] Kava Lounge
+      ✅ QUALIFIED
+   [8/11] Local Kitchen & Beer Bar
+      ❌ Wrong city: Fairfield (expected Bridgeport)
+   [9/11] Mercato Italian Kitchen & Bar
+      ❌ Not qualified
+   [10/11] Sip-A-Dee-Doo-Da
+      ✅ QUALIFIED
+   [11/11] Two Roads Brewing Company
+      ❌ Wrong city: Stratford (expected Bridgeport)
+   💾 Saved: discovery_bridgeport_connecticut.json (3 new venues)
+
+   📊 Progress: 50 cities | 209 new venues | $9.82
+
+════════════════════════════════════════════════════════════
+🔍 [51/502] Brockton, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] THE SPOT LOUNGE
+      ❌ Not qualified
+   [2/6] Dave & Buster's
+      ❌ Wrong city: Braintree (expected Brockton)
+   [3/6] Root Awakenings
+      ❌ Not qualified
+   [4/6] Kavasutra Kava Bar
+      ❌ Not qualified
+   [5/6] Island Vibes Kava Bar
+      ❌ Wrong state (expected Massachusetts)
+   [6/6] Kava Neo Taverna
+      ❌ Wrong city: Boston (expected Brockton)
+   💾 Saved: discovery_brockton_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [52/502] Brookfield, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Cooper's Hawk
+      ❌ Wrong state (expected Wisconsin)
+   [2/5] BelAir Cantina
+      ✅ QUALIFIED
+   [3/5] Camp Bar
+      ❌ Wrong city: Wauwatosa (expected Brookfield)
+   [4/5] ZERO Cocktail Bar
+      ❌ Wrong state (expected Wisconsin)
+   [5/5] Moai Kava Bar & Herb Shop
+      ❌ Not qualified
+   💾 Saved: discovery_brookfield_wisconsin.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [53/502] Brookline, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Bar 'Cino Brookline
+      ✅ QUALIFIED
+   [2/8] Canary Square
+      ❌ Closed
+   [3/8] Lemongrass
+      ❌ Not qualified
+   [4/8] Barcelona Wine Bar
+      ❌ Not qualified
+   [5/8] MERAI
+      ✅ QUALIFIED
+   [6/8] Barlette
+      ✅ QUALIFIED
+   [7/8] Kava Neo-Taverna
+      ❌ Wrong city: Boston (expected Brookline)
+   [8/8] Root Awakening Kava Bar
+      ❌ Wrong state (expected Massachusetts)
+   💾 Saved: discovery_brookline_massachusetts.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [54/502] Brownsville, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] el Almacén Creative Space
+      ✅ QUALIFIED
+   [2/7] Oak Texas Bar & Grill
+      ❌ Closed
+   [3/7] Buho Bookstore
+      ✅ QUALIFIED
+   [4/7] Bubba's 33
+      ❌ Not qualified
+   [5/7] LandShark Bar & Grill
+      ❌ Wrong city: South Padre Island (expected Brownsville)
+   [6/7] DB Zero Proof Kava Bar
+      ❌ Wrong city: Dallas (expected Brownsville)
+   [7/7] Kaapeh House
+      ✅ QUALIFIED
+   💾 Saved: discovery_brownsville_texas.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [55/502] Bryan, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  1 potential venues extracted
+   ✨ 1 new candidates
+   [1/1] Bubba's 33
+      ❌ Wrong city: College Station (expected Bryan)
+   💾 Saved: discovery_bryan_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [56/502] Buckingham, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Harvest Seasonal Grill and Wine Bar
+      ❌ Wrong city: Newtown (expected Buckingham)
+   [2/12] Earl's New American
+      ❌ Wrong city: New Hope (expected Buckingham)
+   [3/12] Altered State Distillery
+      ❌ Wrong city: Erie (expected Buckingham)
+   [4/12] Southern Cross Kitchen
+      ❌ Wrong city: Conshohocken (expected Buckingham)
+   [5/12] City Works Restaurant and Bar
+      ❌ Wrong city: King of Prussia (expected Buckingham)
+   [6/12] The Pineville Tavern
+      ❌ Wrong city: 1098 Durham Rd (expected Buckingham)
+   [7/12] Bar Botanico
+      ❌ Wrong city: Pittsburgh (expected Buckingham)
+   [8/12] Hidden Harbor
+      ❌ Wrong state (expected Pennsylvania)
+   [9/12] Lavery Brewing
+      ❌ Wrong city: Erie (expected Buckingham)
+   [10/12] MagiKava
+      ❌ Wrong city: New Hope (expected Buckingham)
+   [11/12] DB Zero Proof Kava Bar
+      ❌ Not found
+   [12/12] Wana Navu Kava Bar
+      ❌ Wrong state (expected Pennsylvania)
+   💾 Saved: discovery_buckingham_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [57/502] Buffalo, New Mexico
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Fireworks
+      ❌ Wrong city: Anthony (expected Buffalo)
+   [2/10] Luxe Lounge
+      ❌ Wrong city: Alamogordo (expected Buffalo)
+   [3/10] Lost Cultures Tea Bar
+      ❌ Wrong city: Albuquerque (expected Buffalo)
+   [4/10] PURE SOCIAL bar & grill
+      ❌ Wrong state (expected New Mexico)
+   [5/10] Kavasutra New York
+      ❌ Not found
+   [6/10] Mystic Water Kava Bar
+      ❌ Wrong state (expected New Mexico)
+   [7/10] Kava Kasa
+      ❌ Wrong state (expected New Mexico)
+   [8/10] House of Charm
+      ❌ Wrong state (expected New Mexico)
+   [9/10] The Kratom Shop
+      ❌ Not found
+   [10/10] Apothecary Santa Fe Oxygen and Healing Bar
+      ❌ Wrong city: Santa Fe (expected Buffalo)
+   💾 Saved: discovery_buffalo_new_mexico.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [58/502] Burlington, Vermont
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Vermont Comedy Club
+      ✅ QUALIFIED
+   [2/14] Three Needs
+      ❌ Not qualified
+   [3/14] Bistro de Margot
+      ✅ QUALIFIED
+   [4/14] The Daily Planet
+      ✅ QUALIFIED
+   [5/14] Tonique Mobile Bar
+      ❌ Not found
+   [6/14] The Venetian Soda Lounge
+      ✅ QUALIFIED
+   [7/14] Zero Gravity Craft Brewery
+      ✅ QUALIFIED
+   [8/14] Honey Road
+      ✅ QUALIFIED
+   [9/14] The 126
+      ✅ QUALIFIED
+   [10/14] Pizzeria Verità
+      ✅ QUALIFIED
+   [11/14] May Day
+      ❌ Not qualified
+   [12/14] Drink Bar
+      ❌ Excluded type: night_club
+   [13/14] Juniper Bar and Restaurant
+      ✅ QUALIFIED
+   [14/14] Railyard Apothecary
+      ✅ QUALIFIED
+   💾 Saved: discovery_burlington_vermont.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [59/502] CADOTT, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  1 potential venues extracted
+   ✨ 1 new candidates
+   [1/1] The Reboot Social
+      ❌ Wrong city: Eau Claire (expected CADOTT)
+   💾 Saved: discovery_cadott_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [60/502] Caldwell, Idaho
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Water Bear Bar
+      ❌ Wrong city: Boise (expected Caldwell)
+   [2/5] Highlander Rooftop Bar
+      ❌ Wrong city: Boise (expected Caldwell)
+   [3/5] With Honey Coffee Cart
+      ❌ Wrong city: Post Falls (expected Caldwell)
+   [4/5] Karuna Kava
+      ❌ Wrong city: Garden City (expected Caldwell)
+   [5/5] Quig's Kava Lounge
+      ❌ Wrong state (expected Idaho)
+   💾 Saved: discovery_caldwell_idaho.json (0 new venues)
+
+   📊 Progress: 60 cities | 226 new venues | $11.05
+
+════════════════════════════════════════════════════════════
+🔍 [61/502] Cambridge, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  27 potential venues extracted
+   ✨ 26 new candidates
+   [1/26] backbar
+      ❌ Wrong city: Somerville (expected Cambridge)
+   [2/26] Brick & Mortar
+      ✅ QUALIFIED
+   [3/26] Darling
+      ✅ QUALIFIED
+   [4/26] Tall Order
+      ❌ Wrong city: Somerville (expected Cambridge)
+   [5/26] Wusong Road
+      ✅ QUALIFIED
+   [6/26] DRAY
+      ❌ Wrong city: Boston (expected Cambridge)
+   [7/26] Saloniki
+      ✅ QUALIFIED
+   [8/26] Bar Enza
+      ✅ QUALIFIED
+   [9/26] Gustazo Cuban Kitchen & Bar
+      ✅ QUALIFIED
+   [10/26] Noir Bar
+      ✅ QUALIFIED
+   [11/26] Regattabar
+      ❌ Excluded type: night_club
+   [12/26] Henrietta's Table
+      ✅ QUALIFIED
+   [13/26] Viale
+      ✅ QUALIFIED
+   [14/26] Remnant
+      ❌ Wrong city: Somerville (expected Cambridge)
+   [15/26] Barlette
+      ❌ Wrong city: Brookline (expected Cambridge)
+   [16/26] The Wig Shop
+      ❌ Wrong city: Boston (expected Cambridge)
+   [17/26] The Longfellow Bar
+      ✅ QUALIFIED
+   [18/26] Hobgoblin
+      ❌ Wrong city: Boston (expected Cambridge)
+   [19/26] Gopagu
+      ✅ QUALIFIED
+   [20/26] Kava Neo-Taverna
+      ❌ Wrong city: Boston (expected Cambridge)
+   [21/26] Kang's Corner
+      ❌ Closed
+   [22/26] PURO ceviche bar
+      ❌ Wrong city: Boston (expected Cambridge)
+   [23/26] MixStirs
+      ❌ Closed
+   [24/26] Committee
+      ❌ Not qualified
+   [25/26] Elevated Kava
+      ❌ Wrong state (expected Massachusetts)
+   [26/26] Kava Lounge
+      ❌ Not qualified
+   💾 Saved: discovery_cambridge_massachusetts.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [62/502] Canton, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Kate's Mobile Bar
+      ❌ Not found
+   [2/8] North End Kitchen & Bar
+      ❌ Not qualified
+   [3/8] Kava Culture Kava Bar
+      ❌ Wrong state (expected Georgia)
+   [4/8] Bula Kavananda Kava Bar
+      ❌ Wrong state (expected Georgia)
+   [5/8] Tea'z Social
+      ❌ Not qualified
+   [6/8] Dragonfly lounge Mocktails Bar
+      ❌ Wrong city: Kennesaw (expected Canton)
+   [7/8] The Chill Room Kava Bar
+      ❌ Wrong state (expected Georgia)
+   [8/8] Bakaris Pizza & Kava Lounge
+      ❌ Wrong city: Atlanta (expected Canton)
+   💾 Saved: discovery_canton_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [63/502] Cape Coral, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Botanical Brewing Taproom
+      ❌ Excluded type: night_club
+   [2/14] Jungle Bird Tiki
+      ✅ QUALIFIED
+   [3/14] Front Porch Social
+      ❌ Not qualified
+   [4/14] The 86 Room
+      ❌ Wrong city: Fort Myers (expected Cape Coral)
+   [5/14] Sip & Sizzle
+      ❌ Wrong city: Fort Myers (expected Cape Coral)
+   [6/14] BackStreets Sports Bar
+      ✅ QUALIFIED
+   [7/14] Millennial Brewing Company
+      ❌ Wrong city: Fort Myers (expected Cape Coral)
+   [8/14] Dragonfly lounge Mocktails Bar
+      ❌ Wrong city: Neptune Beach (expected Cape Coral)
+   [9/14] Fish Tale Grill
+      ✅ QUALIFIED
+   [10/14] WTF
+      ✅ QUALIFIED
+   [11/14] ZEN KAVA BAR
+      ❌ Not qualified
+   [12/14] Island Vibes Kava Bar
+      ❌ Wrong city: North Fort Myers (expected Cape Coral)
+   [13/14] Roots House of Kava
+      ✅ QUALIFIED
+   [14/14] NectarLab
+      ❌ Wrong city: Fort Myers (expected Cape Coral)
+   💾 Saved: discovery_cape_coral_florida.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [64/502] Captain Cook, Hawaii
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Tonga Room & Hurricane Bar
+      ❌ Wrong state (expected Hawaii)
+   [2/7] Blue Heaven
+      ❌ Not qualified
+   [3/7] JINYA Ramen Bar
+      ❌ Wrong city: Honolulu (expected Captain Cook)
+   [4/7] Ho'o Hui
+      ✅ QUALIFIED
+   [5/7] Ohana Kava Bars
+      ✅ QUALIFIED
+   [6/7] Root Awakening
+      ❌ Not qualified
+   [7/7] Kanaka Kava
+      ✅ QUALIFIED
+   💾 Saved: discovery_captain_cook_hawaii.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [65/502] Carrboro, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Boro Beverage
+      ❌ Closed
+   [2/2] Krave
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_carrboro_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [66/502] Carrollton, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] DREAM LOUNGE
+      ✅ QUALIFIED
+   [2/10] Beyond the Bar Bottle Shop
+      ❌ Wrong city: Richardson (expected Carrollton)
+   [3/10] JINYA Ramen Bar
+      ❌ Not qualified
+   [4/10] Studio Movie Grill
+      ❌ Wrong city: The Colony (expected Carrollton)
+   [5/10] The Kava Bar
+      ❌ Wrong city: Dallas (expected Carrollton)
+   [6/10] Kava Culture Kava Bar
+      ❌ Wrong city: Lewisville (expected Carrollton)
+   [7/10] The Kava Bar – Oak Cliff
+      ❌ Wrong city: Dallas (expected Carrollton)
+   [8/10] ZENN VAPES DEITA
+      ❌ Wrong city: Dallas (expected Carrollton)
+   [9/10] Kava Culture Denton
+      ❌ Closed
+   [10/10] Kava Culture Kava Bar - Southlake
+      ❌ Wrong city: Lewisville (expected Carrollton)
+   💾 Saved: discovery_carrollton_texas.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [67/502] Carson City, Nevada
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Saltwater Tavern
+      ✅ QUALIFIED
+   [2/5] Keva Juice
+      ✅ QUALIFIED
+   [3/5] Bare Roots Coffee Roasting
+      ❌ Wrong state (expected Nevada)
+   [4/5] Reno roots kava bar
+      ❌ Wrong city: Reno (expected Carson City)
+   [5/5] Elixart
+      ❌ Wrong city: Nevada City (expected Carson City)
+   💾 Saved: discovery_carson_city_nevada.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [68/502] Cary, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] The Walk Up
+      ✅ QUALIFIED
+   [2/11] Umbrella Dry Bar
+      ❌ Closed
+   [3/11] Da Kine's Kava
+      ❌ Wrong city: Durham (expected Cary)
+   [4/11] Dram And Draught
+      ✅ QUALIFIED
+   [5/11] The Bark Bar
+      ✅ QUALIFIED
+   [6/11] RBF
+      ✅ QUALIFIED
+   [7/11] The Willard Rooftop
+      ❌ Wrong city: Raleigh (expected Cary)
+   [8/11] The Velvet Hippo Rooftop Bar & Lounge
+      ❌ Wrong city: Durham (expected Cary)
+   [9/11] Krave Tea House & Bar (Raleigh)
+      ❌ Wrong city: Raleigh (expected Cary)
+   [10/11] Wana Navu Kava Bar
+      ❌ Wrong city: Sanford (expected Cary)
+   [11/11] Krave Kava Bar & Tea Lounge (Carrboro)
+      ❌ Wrong city: Carrboro (expected Cary)
+   💾 Saved: discovery_cary_north_carolina.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [69/502] Casper, Wyoming
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Horse Palace
+      ✅ QUALIFIED
+   [2/6] Backwards Distilling Company
+      ❌ Excluded type: liquor_store
+   [3/6] Sanford's Grub & Pub
+      ❌ Not qualified
+   [4/6] The Drinkery
+      ✅ QUALIFIED
+   [5/6] Local Nakamal
+      ❌ Wrong city: Sheridan (expected Casper)
+   [6/6] The Void
+      ❌ Closed
+   💾 Saved: discovery_casper_wyoming.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [70/502] Cedar Rapids, Iowa
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] The Green House
+      ❌ Not qualified
+   [2/16] Cobble Hill
+      ✅ QUALIFIED
+   [3/16] Cedar Ridge
+      ✅ QUALIFIED
+   [4/16] Hip-Stir
+      ❌ Wrong city: Marion (expected Cedar Rapids)
+   [5/16] Theatre Cedar Rapids
+      ❌ Not qualified
+   [6/16] Big Grove Brewery & Taproom
+      ❌ Excluded type: liquor_store
+   [7/16] Pickle Palace
+      ✅ QUALIFIED
+   [8/16] Lacayo
+      ❌ Closed
+   [9/16] The Inn Restaurant and Bar
+      ❌ Not qualified
+   [10/16] Bar Winslow
+      ❌ Wrong city: Cedar Falls (expected Cedar Rapids)
+   [11/16] The Stuffed Olive
+      ❌ Wrong city: Cedar Falls (expected Cedar Rapids)
+   [12/16] Kava House Cafe
+      ❌ Wrong city: Swisher (expected Cedar Rapids)
+   [13/16] Java House
+      ❌ Wrong city: Iowa City (expected Cedar Rapids)
+   [14/16] Sidekick
+      ❌ Wrong city: Iowa City (expected Cedar Rapids)
+   [15/16] Apple Coffee Creek Co.
+      ❌ Wrong city: Center Point (expected Cedar Rapids)
+   [16/16] Uptown Coffee
+      ❌ Wrong city: Marion (expected Cedar Rapids)
+   💾 Saved: discovery_cedar_rapids_iowa.json (3 new venues)
+
+   📊 Progress: 70 cities | 257 new venues | $12.82
+
+════════════════════════════════════════════════════════════
+🔍 [71/502] Chandler, Arizona
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Rooted Kava Bar
+      ❌ Excluded type: night_club
+   [2/5] Maple House
+      ✅ QUALIFIED
+   [3/5] Alchemy 48
+      ❌ Wrong city: Mesa (expected Chandler)
+   [4/5] Black Sheep Wine Bar
+      ✅ QUALIFIED
+   [5/5] Mad Hatter Kava
+      ❌ Wrong city: Phoenix (expected Chandler)
+   💾 Saved: discovery_chandler_arizona.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [72/502] Chapel Hill, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Da Kine's Kava
+      ✅ QUALIFIED
+   [2/7] Krave
+      ❌ Wrong city: Carrboro (expected Chapel Hill)
+   [3/7] The Velvet Hippo Bar & Lounge
+      ❌ Wrong city: Durham (expected Chapel Hill)
+   [4/7] Carolina Brewery
+      ✅ QUALIFIED
+   [5/7] Oakleaf
+      ❌ Wrong city: Carrboro (expected Chapel Hill)
+   [6/7] Weldon Mills Distillery Durham
+      ❌ Wrong city: Durham (expected Chapel Hill)
+   [7/7] Queeny's
+      ✅ QUALIFIED
+   💾 Saved: discovery_chapel_hill_north_carolina.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [73/502] Charleston, South Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  18 potential venues extracted
+   ✨ 18 new candidates
+   [1/18] Sèchey
+      ❌ Excluded type: liquor_store
+   [2/18] Momo
+      ✅ QUALIFIED
+   [3/18] Camellias
+      ✅ QUALIFIED
+   [4/18] The Watch Rooftop Kitchen & Spirits
+      ❌ Excluded type: night_club
+   [5/18] High Rise Dry Bar
+      ✅ QUALIFIED
+   [6/18] Halls
+      ✅ QUALIFIED
+   [7/18] Prohibition
+      ❌ Excluded type: night_club
+   [8/18] Little Palm
+      ✅ QUALIFIED
+   [9/18] Smoke n Brew 3
+      ✅ QUALIFIED
+   [10/18] Airavata Vapors
+      ❌ Wrong city: Mt Pleasant (expected Charleston)
+   [11/18] The Bangkok Lounge
+      ❌ Excluded type: night_club
+   [12/18] Herbal Passion
+      ✅ QUALIFIED
+   [13/18] Forte Jazz
+      ✅ QUALIFIED
+   [14/18] The Kava Konnection
+      ❌ Wrong city: Greenville (expected Charleston)
+   [15/18] Kava Culture Kava Bar
+      ❌ Wrong city: Spartanburg (expected Charleston)
+   [16/18] Airavata Vapors and So-bar
+      ❌ Wrong city: Greenville (expected Charleston)
+   [17/18] Vintage Kava
+      ✅ QUALIFIED
+   [18/18] The Kava Bar
+      ❌ Wrong city: Greenville (expected Charleston)
+   💾 Saved: discovery_charleston_south_carolina.json (9 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [74/502] Charleston, West Virginia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Fort Bar and Grill
+      ✅ QUALIFIED
+   [2/7] Applebee's
+      ✅ QUALIFIED
+   [3/7] Recovery Sports Grill
+      ✅ QUALIFIED
+   [4/7] Charleston Hemp Collective
+      ✅ QUALIFIED
+   [5/7] Charleston Nano Brewery
+      ✅ QUALIFIED
+   [6/7] Kava Culture Kava Bar
+      ❌ Wrong state (expected West Virginia)
+   [7/7] Sugeys
+      ❌ Wrong state (expected West Virginia)
+   💾 Saved: discovery_charleston_west_virginia.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [75/502] Charlestown, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] The Anchor
+      ❌ Not qualified
+   [2/11] Tradesman Charlestown
+      ❌ Wrong city: Boston (expected Charlestown)
+   [3/11] Waverly Kitchen & Bar
+      ✅ QUALIFIED
+   [4/11] Good Company
+      ❌ Wrong city: Boston (expected Charlestown)
+   [5/11] Waypoint
+      ❌ Wrong city: Cambridge (expected Charlestown)
+   [6/11] Little Donkey
+      ❌ Wrong city: Cambridge (expected Charlestown)
+   [7/11] Kava Neo-Taverna
+      ❌ Wrong city: Boston (expected Charlestown)
+   [8/11] The Nitro Bar
+      ❌ Wrong state (expected Massachusetts)
+   [9/11] Caf Bar
+      ❌ Wrong state (expected Massachusetts)
+   [10/11] Elevated Kava
+      ❌ Not found
+   [11/11] Kava Lounge
+      ❌ Wrong city: Boston (expected Charlestown)
+   💾 Saved: discovery_charlestown_massachusetts.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [76/502] Charlotte, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  23 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] Stumptown Station
+      ❌ Wrong city: Matthews (expected Charlotte)
+   [2/16] The Degenerate
+      ❌ Not qualified
+   [3/16] Sugar Lounge
+      ❌ Closed
+   [4/16] The Loft at Duckworth's
+      ❌ Excluded type: night_club
+   [5/16] Resident Culture
+      ✅ QUALIFIED
+   [6/16] NODA
+      ❌ Wrong state (expected North Carolina)
+   [7/16] Burial
+      ✅ QUALIFIED
+   [8/16] Restaurant Constance
+      ✅ QUALIFIED
+   [9/16] Charlotte Tiki Bar
+      ❌ Not qualified
+   [10/16] Idlewild
+      ✅ QUALIFIED
+   [11/16] Humbug
+      ❌ Not qualified
+   [12/16] Brinson Spirits
+      ❌ Wrong state (expected North Carolina)
+   [13/16] North Main Kava Bar
+      ❌ Wrong city: Lowell (expected Charlotte)
+   [14/16] Buddhas Bazaar
+      ✅ QUALIFIED
+   [15/16] Komodo Kava House
+      ❌ Closed
+   [16/16] LovaKava Kava Bar
+      ❌ Wrong city: Lowell (expected Charlotte)
+   💾 Saved: discovery_charlotte_north_carolina.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [77/502] Chaska, Minnesota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Nothing But Hemp
+      ✅ QUALIFIED
+   [2/4] KAVA HAVEN
+      ❌ Wrong state (expected Minnesota)
+   [3/4] DB Zero Proof Kava Bar
+      ❌ Wrong city: Minneapolis (expected Chaska)
+   [4/4] Smile Tea Bar
+      ❌ Wrong city: Hopkins (expected Chaska)
+   💾 Saved: discovery_chaska_minnesota.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [78/502] Chesapeake, Virginia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Honey and Hooch
+      ✅ QUALIFIED
+   [2/4] Biggby Coffee Virginia Beach
+      ❌ Wrong city: Virginia Beach (expected Chesapeake)
+   [3/4] Union Taco - Chesapeake
+      ✅ QUALIFIED
+   [4/4] Prince Tea House
+      ❌ Wrong city: Virginia Beach (expected Chesapeake)
+   💾 Saved: discovery_chesapeake_virginia.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [79/502] Cheyenne, Wyoming
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Flydragon Design Art Studio
+      ✅ QUALIFIED
+   [2/8] PARAMOUNT BALLROOM
+      ❌ Excluded type: night_club
+   [3/8] The Lincoln
+      ✅ QUALIFIED
+   [4/8] Horse Palace
+      ✅ QUALIFIED
+   [5/8] Silly Sips
+      ✅ QUALIFIED
+   [6/8] The Kava Klub
+      ❌ Wrong state (expected Wyoming)
+   [7/8] Roots And Leaves Kava
+      ❌ Wrong state (expected Wyoming)
+   [8/8] Kavasutra Kava Bar
+      ❌ Wrong state (expected Wyoming)
+   💾 Saved: discovery_cheyenne_wyoming.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [80/502] Chicago, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  30 potential venues extracted
+   ✨ 28 new candidates
+   [1/28] Prazbar
+      ✅ QUALIFIED
+   [2/28] Bendición Dry Bar
+      ❌ Closed
+   [3/28] Eli Tea Bar
+      ✅ QUALIFIED
+   [4/28] Atelier Restaurant
+      ✅ QUALIFIED
+   [5/28] Bokeh
+      ✅ QUALIFIED
+   [6/28] Anelya
+      ✅ QUALIFIED
+   [7/28] Cebu
+      ✅ QUALIFIED
+   [8/28] Superkhana International
+      ✅ QUALIFIED
+   [9/28] Chiya Chai Café
+      ✅ QUALIFIED
+   [10/28] In Good Spirits
+      ✅ QUALIFIED
+   [11/28] Hollow Leg
+      ✅ QUALIFIED
+   [12/28] Chicity Sips
+      ❌ Not found
+   [13/28] The Victor Bar
+      ❌ Not qualified
+   [14/28] Elixir Lounge Andersonville
+      ✅ QUALIFIED
+   [15/28] Daisies
+      ✅ QUALIFIED
+   [16/28] Amaru
+      ✅ QUALIFIED
+   [17/28] Hurley Tap
+      ✅ QUALIFIED
+   [18/28] Bar Siena
+      ✅ QUALIFIED
+   [19/28] Clara
+      ✅ QUALIFIED
+   [20/28] Truce
+      ✅ QUALIFIED
+   [21/28] Replay Lincoln Park
+      ✅ QUALIFIED
+   [22/28] CBD Kratom
+      ✅ QUALIFIED
+   [23/28] JuiceRx
+      ✅ QUALIFIED
+   [24/28] Meeting House Tavern
+      ✅ QUALIFIED
+   [25/28] City Winery
+      ❌ Not qualified
+   [26/28] Tropikava
+      ❌ Closed
+   [27/28] LÝRA
+      ✅ QUALIFIED
+   [28/28] Juice House
+      ✅ QUALIFIED
+   💾 Saved: discovery_chicago_illinois.json (23 new venues)
+
+   📊 Progress: 80 cities | 312 new venues | $15.10
+
+════════════════════════════════════════════════════════════
+🔍 [81/502] Chicago city, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] Bendición Dry Bar & Non-Alcoholic Bottle Shop
+      ❌ Closed
+   [2/15] Sparrow
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [3/15] Hollow Leg
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [4/15] Chicity Sips
+      ❌ Not found
+   [5/15] The Victor Bar
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [6/15] Elixir Lounge
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [7/15] Hala Kahiki
+      ❌ Wrong city: River Grove (expected Chicago city)
+   [8/15] Cindy's
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [9/15] Pourfection Mobile Bar
+      ❌ Not found
+   [10/15] Z Bar
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [11/15] ROOP Chicago
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [12/15] CBD Kratom
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [13/15] DB Zero Proof Kava Bar
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [14/15] Juice House Pilsen
+      ❌ Wrong city: Chicago (expected Chicago city)
+   [15/15] LÝRA
+      ❌ Wrong city: Chicago (expected Chicago city)
+   💾 Saved: discovery_chicago_city_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [82/502] CHIPPEWA FALLS, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Market On River
+      ✅ QUALIFIED
+   [2/10] Helix Wine, Craft Bar & Cafe
+      ❌ Wrong city: Altoona (expected CHIPPEWA FALLS)
+   [3/10] Reboot Social
+      ❌ Wrong city: Eau Claire (expected CHIPPEWA FALLS)
+   [4/10] The Bar
+      ❌ Not qualified
+   [5/10] Deep Roots Kava Bar
+      ❌ Wrong state (expected Wisconsin)
+   [6/10] Kava Social Club
+      ❌ Wrong state (expected Wisconsin)
+   [7/10] KAVA SHACK
+      ❌ Not qualified
+   [8/10] KAVA CULTURE KAVA BAR
+      ❌ Wrong state (expected Wisconsin)
+   [9/10] Kahvi Coffee House + Cafe
+      ❌ Wrong city: Eau Claire (expected CHIPPEWA FALLS)
+   [10/10] Kavasutra Kava Bar
+      ❌ Not qualified
+   💾 Saved: discovery_chippewa_falls_wisconsin.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [83/502] Cincinnati, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] 1215 Wine Bar & Coffee Lab
+      ✅ QUALIFIED
+   [2/11] Somerset Bar
+      ✅ QUALIFIED
+   [3/11] BrewDog – Cincinnati
+      ❌ Closed
+   [4/11] HomeMakers Bar
+      ✅ QUALIFIED
+   [5/11] Juniper's Gin Bar
+      ❌ Wrong state (expected Ohio)
+   [6/11] Lost & Found OTR
+      ✅ QUALIFIED
+   [7/11] The Green Door
+      ❌ Wrong state (expected Ohio)
+   [8/11] Vice City Kava
+      ❌ Wrong state (expected Ohio)
+   [9/11] Rune Juicery + Plant-Based Market
+      ✅ QUALIFIED
+   [10/11] CBD Source
+      ❌ Closed
+   [11/11] Symphony Hotel
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_cincinnati_ohio.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [84/502] Clarksville, Tennessee
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Dave and Buster's
+      ✅ QUALIFIED
+   [2/5] Ashley McBryde's Non-Alcoholic Bar
+      ❌ Not qualified
+   [3/5] Royal Lounge
+      ✅ QUALIFIED
+   [4/5] Blackhorse Pub & Brewery
+      ✅ QUALIFIED
+   [5/5] Passage Kava Lounge
+      ❌ Wrong city: Madison (expected Clarksville)
+   💾 Saved: discovery_clarksville_tennessee.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [85/502] Clearwater, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Rumba Island Bar & Grill
+      ❌ Not qualified
+   [2/12] 3 Daughters Brewing
+      ✅ QUALIFIED
+   [3/12] Agrodolce
+      ❌ Not qualified
+   [4/12] Johnny's Smoke Shop & Kava Bar
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [5/12] Clear Sky Cafe
+      ❌ Not qualified
+   [6/12] Badfins Food + Brew
+      ❌ Not qualified
+   [7/12] Hi-Fi Rooftop Bar
+      ❌ Wrong city: Dunedin (expected Clearwater)
+   [8/12] Gigglewaters
+      ❌ Wrong city: Safety Harbor (expected Clearwater)
+   [9/12] Joseph's Tea Bar & Shop
+      ✅ QUALIFIED
+   [10/12] Kava Culture Clearwater
+      ❌ Excluded type: night_club
+   [11/12] Low Tide Kava Bar
+      ❌ Wrong city: Gulfport (expected Clearwater)
+   [12/12] The Muddy Root Kava Cafe
+      ✅ QUALIFIED
+   💾 Saved: discovery_clearwater_florida.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [86/502] Cleveland, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 17 new candidates
+   [1/17] Verbena Free Spirited
+      ✅ QUALIFIED
+   [2/17] Kava Sol
+      ❌ Wrong city: Willoughby (expected Cleveland)
+   [3/17] Cloak & Dagger
+      ❌ Excluded type: night_club
+   [4/17] Tapster Cleveland
+      ❌ Wrong city: Lakewood (expected Cleveland)
+   [5/17] Clandestina
+      ✅ QUALIFIED
+   [6/17] Literary Tavern
+      ✅ QUALIFIED
+   [7/17] Dante
+      ✅ QUALIFIED
+   [8/17] Jaja
+      ❌ Not qualified
+   [9/17] Heck's Cafe
+      ✅ QUALIFIED
+   [10/17] Jukebox
+      ✅ QUALIFIED
+   [11/17] LBM
+      ❌ Wrong city: Lakewood (expected Cleveland)
+   [12/17] Alley Cat Oyster Bar
+      ✅ QUALIFIED
+   [13/17] Amba
+      ✅ QUALIFIED
+   [14/17] Viking public house
+      ✅ QUALIFIED
+   [15/17] Sacred Waters Kava Bar
+      ❌ Wrong city: Lakewood (expected Cleveland)
+   [16/17] The Sacred Vortex
+      ✅ QUALIFIED
+   [17/17] Kava Culture Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_cleveland_ohio.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [87/502] Clifton, New Jersey
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Iron Bar & Lounge
+      ❌ Wrong city: Morristown (expected Clifton)
+   [2/6] Spuntino Wine Bar
+      ✅ QUALIFIED
+   [3/6] Aura Lounge
+      ❌ Excluded type: night_club
+   [4/6] Vice City Kava
+      ❌ Not found
+   [5/6] Qahwah House
+      ✅ QUALIFIED
+   [6/6] CAVA
+      ❌ Wrong city: Wayne (expected Clifton)
+   💾 Saved: discovery_clifton_new_jersey.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [88/502] Cocoa, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Booch Kombucha Bar
+      ❌ Excluded type: night_club
+   [2/10] Dragonfly lounge Mocktails Bar
+      ❌ Wrong city: Neptune Beach (expected Cocoa)
+   [3/10] Coca-Cola Store Rooftop Beverage Bar
+      ❌ Wrong city: Orlando (expected Cocoa)
+   [4/10] Keep It Local Café
+      ✅ QUALIFIED
+   [5/10] Bula Cocoa Beach Kava Bar
+      ❌ Excluded type: night_club
+   [6/10] Chameleon Kava Lounge
+      ✅ QUALIFIED
+   [7/10] Kavasutra Kava Bar
+      ❌ Not qualified
+   [8/10] Kava Cabana Bar
+      ✅ QUALIFIED
+   [9/10] Kava Kula - Kava Bar & Lounge
+      ❌ Wrong city: Ormond Beach (expected Cocoa)
+   [10/10] Cloud Parlor Speakeasy Cafe
+      ✅ QUALIFIED
+   💾 Saved: discovery_cocoa_florida.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [89/502] Cocoa Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Booch Kombucha Bar
+      ❌ Excluded type: night_club
+   [2/9] Nakava kava bar
+      ❌ Excluded type: night_club
+   [3/9] Dragonfly Lounge Mocktails Bar
+      ❌ Wrong city: Neptune Beach (expected Cocoa Beach)
+   [4/9] The Alibi Cocktails and Bites
+      ✅ QUALIFIED
+   [5/9] Bula Cocoa Beach Kava Bar
+      ❌ Excluded type: night_club
+   [6/9] Kavasutra Kava Bar
+      ❌ Wrong city: Melbourne (expected Cocoa Beach)
+   [7/9] The Calm Collective Lounge
+      ✅ QUALIFIED
+   [8/9] The Backroom Kava Bar
+      ❌ Wrong city: Deerfield Beach (expected Cocoa Beach)
+   [9/9] Island Root Kava Bar
+      ❌ Wrong city: Melbourne (expected Cocoa Beach)
+   💾 Saved: discovery_cocoa_beach_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [90/502] Coeur d'Alene, Idaho
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Steady Bar
+      ✅ QUALIFIED
+   [2/13] 315 Cuisine
+      ✅ QUALIFIED
+   [3/13] Tony's on the Lake
+      ✅ QUALIFIED
+   [4/13] Bier Haus
+      ❌ Not qualified
+   [5/13] Applebee's
+      ❌ Not qualified
+   [6/13] The Coeur d'Alene Resort
+      ✅ QUALIFIED
+   [7/13] Crafted Tap House
+      ✅ QUALIFIED
+   [8/13] Little Dragon
+      ❌ Wrong city: Worley (expected Coeur d'Alene)
+   [9/13] Stylus Wine and Vinyl Bar
+      ✅ QUALIFIED
+   [10/13] River City Lanes
+      ❌ Wrong city: Post Falls (expected Coeur d'Alene)
+   [11/13] Whispers
+      ✅ QUALIFIED
+   [12/13] Mik's
+      ❌ Excluded type: night_club
+   [13/13] Coeur d Alene FRESH
+      ❌ Closed
+   💾 Saved: discovery_coeur_d_alene_idaho.json (7 new venues)
+
+   📊 Progress: 90 cities | 350 new venues | $17.05
+
+════════════════════════════════════════════════════════════
+🔍 [91/502] Colorado Springs, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Gratitude Zero Proof Bar
+      ✅ QUALIFIED
+   [2/14] Bloom Ultra Lounge
+      ❌ Excluded type: night_club
+   [3/14] 503W
+      ✅ QUALIFIED
+   [4/14] The Mining Exchange Hotel
+      ✅ QUALIFIED
+   [5/14] Rock Bottom Brewery (Colorado Springs)
+      ✅ QUALIFIED
+   [6/14] OCC Brewing
+      ❌ Not qualified
+   [7/14] Cork & Cask
+      ✅ QUALIFIED
+   [8/14] The Fifty-Niner
+      ✅ QUALIFIED
+   [9/14] Wobbly Olive
+      ✅ QUALIFIED
+   [10/14] Allusion
+      ✅ QUALIFIED
+   [11/14] Golden Hour
+      ❌ Not qualified
+   [12/14] Voodoo Brewing Co. - Colorado Springs
+      ✅ QUALIFIED
+   [13/14] Kavaworks
+      ✅ QUALIFIED
+   [14/14] Kavasutra Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_colorado_springs_colorado.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [92/502] Columbia, South Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] Boku Kitchen and Saloon
+      ❌ Not qualified
+   [2/15] Umbrella Dry Bar
+      ❌ Wrong state (expected South Carolina)
+   [3/15] 929 Kitchen & Bar
+      ✅ QUALIFIED
+   [4/15] Bierkeller Brewing Company
+      ✅ QUALIFIED
+   [5/15] The Dragon Room
+      ✅ QUALIFIED
+   [6/15] Kao Thai Cusine
+      ✅ QUALIFIED
+   [7/15] Publico Kitchen & Tap
+      ❌ Not qualified
+   [8/15] Chayz Lounge
+      ❌ Excluded type: night_club
+   [9/15] Kolas Kava Bar and Wellness
+      ✅ QUALIFIED
+   [10/15] The Kava Konnection
+      ❌ Wrong city: Greenville (expected Columbia)
+   [11/15] Airavata Vapors and So-bar
+      ❌ Wrong city: Greenville (expected Columbia)
+   [12/15] Vintage Kava
+      ❌ Wrong state (expected South Carolina)
+   [13/15] The Kava Bar
+      ❌ Not qualified
+   [14/15] Kava Culture Kava Bar
+      ❌ Wrong city: Spartanburg (expected Columbia)
+   [15/15] Curiosity Coffee Bar
+      ❌ Excluded type: liquor_store
+   💾 Saved: discovery_columbia_south_carolina.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [93/502] Columbia, Missouri
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] Dive Bar
+      ❌ Not qualified
+   [2/11] Shakespeares Pizza
+      ❌ Not qualified
+   [3/11] Shiloh Bar & Grill
+      ❌ Not qualified
+   [4/11] International Tap House
+      ❌ Excluded type: liquor_store
+   [5/11] Eastside Tavern
+      ❌ Excluded type: night_club
+   [6/11] Delias Mexican Grill
+      ✅ QUALIFIED
+   [7/11] Broadway Brewery
+      ❌ Not qualified
+   [8/11] Six-Mile Ordinary
+      ✅ QUALIFIED
+   [9/11] Hexagon Alley
+      ✅ QUALIFIED
+   [10/11] Vault
+      ❌ Excluded type: night_club
+   [11/11] Kava Haven
+      ❌ Not found
+   💾 Saved: discovery_columbia_missouri.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [94/502] Columbus, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  21 potential venues extracted
+   ✨ 21 new candidates
+   [1/21] Rehab Tavern
+      ❌ Not qualified
+   [2/21] Miner 49er
+      ✅ QUALIFIED
+   [3/21] Axis Nightclub
+      ❌ Excluded type: night_club
+   [4/21] Threes Above High
+      ❌ Not qualified
+   [5/21] Goodale Station
+      ✅ QUALIFIED
+   [6/21] The Thurman Cafe
+      ❌ Not qualified
+   [7/21] Dry Mill
+      ❌ Closed
+   [8/21] Verbena
+      ❌ Wrong city: Cleveland (expected Columbus)
+   [9/21] The Hills Market Downtown
+      ❌ Excluded type: liquor_store
+   [10/21] Soul at The Joseph
+      ✅ QUALIFIED
+   [11/21] Watershed Distillery Kitchen & Bar
+      ❌ Closed
+   [12/21] The Guild House
+      ✅ QUALIFIED
+   [13/21] Vaso
+      ❌ Wrong city: Dublin (expected Columbus)
+   [14/21] Huli Huli Tiki Lounge
+      ❌ Wrong city: Powell (expected Columbus)
+   [15/21] Comune Restaurant
+      ✅ QUALIFIED
+   [16/21] Strongwater Food and Spirits
+      ❌ Not qualified
+   [17/21] Veritas
+      ❌ Not qualified
+   [18/21] Denmark
+      ✅ QUALIFIED
+   [19/21] High Bank Distillery
+      ❌ Not qualified
+   [20/21] Law
+      ✅ QUALIFIED
+   [21/21] Casa Cacao
+      ✅ QUALIFIED
+   💾 Saved: discovery_columbus_ohio.json (8 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [95/502] Concord, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Ibis
+      ❌ Not qualified
+   [2/12] The Concord
+      ❌ Wrong state (expected North Carolina)
+   [3/12] Spindle Bar
+      ❌ Wrong city: Charlotte (expected Concord)
+   [4/12] Dave and Buster's
+      ✅ QUALIFIED
+   [5/12] The Basement Arcade Bar
+      ✅ QUALIFIED
+   [6/12] The Watering Hole Bar
+      ❌ Wrong city: Statesville (expected Concord)
+   [7/12] Concorde Espresso Bar
+      ❌ Wrong city: Wilmington (expected Concord)
+   [8/12] North Main Kava Bar
+      ❌ Wrong city: Lowell (expected Concord)
+   [9/12] Noble Kava
+      ❌ Wrong city: Boone (expected Concord)
+   [10/12] The Kava Bar
+      ❌ Wrong city: Hickory (expected Concord)
+   [11/12] Mountain Vibes Kava Lounge
+      ❌ Wrong city: Waynesville (expected Concord)
+   [12/12] Elevated Kava Lounge
+      ❌ Wrong city: Asheville (expected Concord)
+   💾 Saved: discovery_concord_north_carolina.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [96/502] Conroe, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Elixir Lounge Kava Bar
+      ❌ Wrong city: Spring (expected Conroe)
+   [2/2] Kava Culture Kava Bar
+      ❌ Wrong city: Lewisville (expected Conroe)
+   💾 Saved: discovery_conroe_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [97/502] Conway, Arkansas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] The Rogue Roundabout
+      ✅ QUALIFIED
+   [2/4] CBD AMERICAN SHAMAN + KAVA BAR & SHAMAN YOGA
+      ✅ QUALIFIED
+   [3/4] KAVASUTRA KAVA BAR
+      ❌ Wrong state (expected Arkansas)
+   [4/4] DB Zero Proof Kava Bar
+      ❌ Wrong state (expected Arkansas)
+   💾 Saved: discovery_conway_arkansas.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [98/502] Coon Rapids, Minnesota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Time & Place Restaurant
+      ❌ Not qualified
+   [2/5] Te'amo Boba Bar
+      ✅ QUALIFIED
+   [3/5] Kava Bar Mpls
+      ❌ Wrong city: St Paul (expected Coon Rapids)
+   [4/5] The Zen Room
+      ❌ Wrong state (expected Minnesota)
+   [5/5] Qahwah House
+      ❌ Wrong city: Minneapolis (expected Coon Rapids)
+   💾 Saved: discovery_coon_rapids_minnesota.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [99/502] Coral Springs, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] TacoCraft Coral Springs
+      ✅ QUALIFIED
+   [2/2] Kava Culture Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_coral_springs_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [100/502] Corpus Christi, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Texas Roadhouse
+      ✅ QUALIFIED
+   [2/14] Chuy's – Corpus Christi
+      ❌ Not qualified
+   [3/14] Doc's Seafood & Steaks
+      ❌ Not qualified
+   [4/14] Boathouse Bar & Grill
+      ❌ Closed
+   [5/14] Bella Luna Downtown
+      ❌ Not qualified
+   [6/14] Bar Under the Sun
+      ❌ Not qualified
+   [7/14] Applebee's
+      ❌ Not qualified
+   [8/14] 361 Bar
+      ❌ Wrong city: Port Aransas (expected Corpus Christi)
+   [9/14] RETRO
+      ❌ Not qualified
+   [10/14] BJ's Restaurant & Brewhouse
+      ❌ Not qualified
+   [11/14] CALLER & CRITIC
+      ❌ Not qualified
+   [12/14] THE RABBIT HOLE
+      ❌ Not qualified
+   [13/14] Inland Kava
+      ✅ QUALIFIED
+   [14/14] Kava Cantina
+      ❌ Wrong city: Fort Worth (expected Corpus Christi)
+   💾 Saved: discovery_corpus_christi_texas.json (2 new venues)
+
+   📊 Progress: 100 cities | 386 new venues | $19.36
+
+════════════════════════════════════════════════════════════
+🔍 [101/502] Covington, Kentucky
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Green Door
+      ✅ QUALIFIED
+   [2/7] Second Story Bar
+      ✅ QUALIFIED
+   [3/7] Somerset Bar
+      ❌ Wrong state (expected Kentucky)
+   [4/7] The Hannaford
+      ✅ QUALIFIED
+   [5/7] Knowledge Bar and Social Room
+      ✅ QUALIFIED
+   [6/7] Cave Valley Kava
+      ❌ Wrong city: Louisville (expected Covington)
+   [7/7] THE CBD LOUNGE
+      ❌ Closed
+   💾 Saved: discovery_covington_kentucky.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [102/502] Cranston, Rhode Island
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Buttonwoods Brewery
+      ❌ Wrong city: Providence (expected Cranston)
+   [2/7] Athena's
+      ✅ QUALIFIED
+   [3/7] Courtland Club
+      ❌ Wrong city: Providence (expected Cranston)
+   [4/7] Avvio
+      ✅ QUALIFIED
+   [5/7] Origin Beer Project
+      ❌ Wrong city: Providence (expected Cranston)
+   [6/7] THE NITRO BAR
+      ❌ Wrong city: Providence (expected Cranston)
+   [7/7] Cafe Ava RI
+      ✅ QUALIFIED
+   💾 Saved: discovery_cranston_rhode_island.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [103/502] Dallas, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  25 potential venues extracted
+   ✨ 21 new candidates
+   [1/21] Beyond the Bar Bottle Shop
+      ❌ Wrong city: Richardson (expected Dallas)
+   [2/21] Monarch
+      ✅ QUALIFIED
+   [3/21] Sidecar Social
+      ❌ Wrong city: Addison (expected Dallas)
+   [4/21] Yardhouse
+      ✅ QUALIFIED
+   [5/21] Ida Claire
+      ✅ QUALIFIED
+   [6/21] HG Sply Co.
+      ✅ QUALIFIED
+   [7/21] Paradisio
+      ✅ QUALIFIED
+   [8/21] Anise
+      ✅ QUALIFIED
+   [9/21] AT Bistro
+      ❌ Closed
+   [10/21] Bar Louie
+      ❌ Excluded type: night_club
+   [11/21] Community Beer
+      ✅ QUALIFIED
+   [12/21] Electric Shuffle
+      ✅ QUALIFIED
+   [13/21] Parliament
+      ✅ QUALIFIED
+   [14/21] Haywire
+      ✅ QUALIFIED
+   [15/21] Terra
+      ❌ Not qualified
+   [16/21] Goodwin's
+      ✅ QUALIFIED
+   [17/21] Sixty Vines
+      ✅ QUALIFIED
+   [18/21] 4 Kahunas Tiki
+      ❌ Wrong city: Arlington (expected Dallas)
+   [19/21] The People's Last Stand
+      ✅ QUALIFIED
+   [20/21] Swirled Peace
+      ✅ QUALIFIED
+   [21/21] Frisco Kava Bar
+      ❌ Wrong city: Frisco (expected Dallas)
+   💾 Saved: discovery_dallas_texas.json (14 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [104/502] Danbury, Connecticut
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Rebellion Kitchen + Bar
+      ❌ Not qualified
+   [2/6] Cross Culture Kombucha
+      ✅ QUALIFIED
+   [3/6] Kava Lounge
+      ✅ QUALIFIED
+   [4/6] Island Kava
+      ✅ QUALIFIED
+   [5/6] Natural Paths - Alternative Solutions CBD, Vape
+      ✅ QUALIFIED
+   [6/6] DB Zero Proof Kava Bar
+      ❌ Not found
+   💾 Saved: discovery_danbury_connecticut.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [105/502] DANBURY, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Chateau St. Croix Winery
+      ❌ Wrong city: St Croix Falls (expected DANBURY)
+   [2/12] Center mocktail bar
+      ❌ Not qualified
+   [3/12] DB Zero Proof Kava Bar
+      ❌ Not found
+   [4/12] Ignite
+      ✅ QUALIFIED
+   [5/12] Kava Lounge
+      ❌ Wrong city: Madison (expected DANBURY)
+   [6/12] Here & Now Kava Bar
+      ❌ Not found
+   [7/12] Misfit Kava Bar
+      ❌ Not found
+   [8/12] Kava Coffee House
+      ❌ Wrong city: Madison (expected DANBURY)
+   [9/12] Krave Kava Bar
+      ❌ Not found
+   [10/12] KAVA neo-taverna
+      ❌ Wrong state (expected Wisconsin)
+   [11/12] Passage Kava Lounge
+      ❌ Not found
+   [12/12] Kratom Kava
+      ❌ Not found
+   💾 Saved: discovery_danbury_wisconsin.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [106/502] Dania Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Vault Bar & Restaurant
+      ❌ Wrong city: Pompano Beach (expected Dania Beach)
+   [2/7] DND Kava Bar
+      ✅ QUALIFIED
+   [3/7] Revelry
+      ❌ Wrong city: Pompano Beach (expected Dania Beach)
+   [4/7] Cooper's Hawk
+      ✅ QUALIFIED
+   [5/7] Alchemist
+      ❌ Wrong city: Wilton Manors (expected Dania Beach)
+   [6/7] The Retreat Kava Lounge
+      ❌ Wrong city: Pompano Beach (expected Dania Beach)
+   [7/7] Chillers Kava and Coffee
+      ❌ Wrong city: Pompano Beach (expected Dania Beach)
+   💾 Saved: discovery_dania_beach_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [107/502] Davie, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Rienne
+      ❌ Wrong city: Coral Gables (expected Davie)
+   [2/5] Sumo Asian Kitchen
+      ✅ QUALIFIED
+   [3/5] Esposito's Pizza Bar Restaurant
+      ❌ Not qualified
+   [4/5] Kavana Kava Bar
+      ✅ QUALIFIED
+   [5/5] The Kave Kava Lounge
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_davie_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [108/502] Dayton, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 15 new candidates
+   [1/15] D20
+      ✅ QUALIFIED
+   [2/15] Lily's
+      ✅ QUALIFIED
+   [3/15] Bock Family Brewing
+      ✅ QUALIFIED
+   [4/15] Sacred Vortex Teahouse
+      ❌ Wrong city: Cleveland (expected Dayton)
+   [5/15] Ghostlight Coffee
+      ✅ QUALIFIED
+   [6/15] Bar Granada
+      ❌ Closed
+   [7/15] Wheat Penny Oven & Bar
+      ✅ QUALIFIED
+   [8/15] Silos Dayton
+      ✅ QUALIFIED
+   [9/15] Meadowlark
+      ✅ QUALIFIED
+   [10/15] Blind Bob's
+      ✅ QUALIFIED
+   [11/15] Good Vibes Kava Bar
+      ❌ Wrong state (expected Ohio)
+   [12/15] Big Run Kava Bar
+      ❌ Wrong city: Athens (expected Dayton)
+   [13/15] Kava Culture Kava Bar
+      ❌ Not qualified
+   [14/15] Sacred Waters Kava Bar
+      ❌ Wrong city: Lakewood (expected Dayton)
+   [15/15] Kava Haus Xenia
+      ❌ Wrong city: Xenia (expected Dayton)
+   💾 Saved: discovery_dayton_ohio.json (8 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [109/502] Daytona Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Green Turtle Kava Bar Daytona Beach
+      ✅ QUALIFIED
+   [2/14] Rooting Around Downtown
+      ✅ QUALIFIED
+   [3/14] Kava Kula Kava Bar & Lounge
+      ❌ Wrong city: Ormond Beach (expected Daytona Beach)
+   [4/14] Kava Culture Kava Bar Ormond Beach
+      ❌ Wrong city: Ormond Beach (expected Daytona Beach)
+   [5/14] NE Roots Kava
+      ✅ QUALIFIED
+   [6/14] Bliss Beach Cafe
+      ✅ QUALIFIED
+   [7/14] 509 Lounge
+      ❌ Excluded type: night_club
+   [8/14] Mama Foo Foo
+      ❌ Excluded type: night_club
+   [9/14] Crabby's Oceanside
+      ✅ QUALIFIED
+   [10/14] Blue Flame
+      ❌ Not qualified
+   [11/14] Ocean Deck
+      ❌ Not qualified
+   [12/14] Full Moon
+      ❌ Not qualified
+   [13/14] CorkScrew Bar & Grille
+      ❌ Wrong city: New Smyrna Beach (expected Daytona Beach)
+   [14/14] Dave and Buster's
+      ✅ QUALIFIED
+   💾 Saved: discovery_daytona_beach_florida.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [110/502] Daytona Beach Shores, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Bliss Beach Cafe
+      ✅ QUALIFIED
+   [2/5] Green Turtle Kava Bar
+      ❌ Wrong city: Daytona Beach (expected Daytona Beach Shores)
+   [3/5] Kava Kula
+      ❌ Wrong city: Ormond Beach (expected Daytona Beach Shores)
+   [4/5] Rooting Around Downtown
+      ❌ Wrong city: Daytona Beach (expected Daytona Beach Shores)
+   [5/5] The Driink Kava Bar
+      ❌ Wrong city: Daytona Beach (expected Daytona Beach Shores)
+   💾 Saved: discovery_daytona_beach_shores_florida.json (1 new venues)
+
+   📊 Progress: 110 cities | 431 new venues | $21.40
+
+════════════════════════════════════════════════════════════
+🔍 [111/502] De Pere, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Plank Road Pub & Grill
+      ❌ Not qualified
+   [2/9] T & C Bar & Grill
+      ❌ Closed
+   [3/9] Mr. Brew's Taphouse
+      ❌ Closed
+   [4/9] Sante Wine Bar & Bistro
+      ❌ Wrong city: Neenah (expected De Pere)
+   [5/9] WINEaLOT Wine Pub
+      ❌ Wrong city: Greenleaf (expected De Pere)
+   [6/9] Cycling Brews
+      ✅ QUALIFIED
+   [7/9] Plae Bistro
+      ❌ Wrong city: Green Bay (expected De Pere)
+   [8/9] Kava Culture Kava Bar
+      ❌ Not found
+   [9/9] Tiki Java'n Cuban Coffee & Kava Bar
+      ❌ Wrong state (expected Wisconsin)
+   💾 Saved: discovery_de_pere_wisconsin.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [112/502] Decatur, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] The Wakery
+      ❌ Not found
+   [2/8] Chai Pani
+      ❌ Wrong state (expected Illinois)
+   [3/8] Elevate Kava
+      ❌ Not qualified
+   [4/8] DB Zero Proof Kava Bar
+      ❌ Not qualified
+   [5/8] KAVA HAVEN
+      ❌ Not qualified
+   [6/8] Golden Kava Lounge
+      ❌ Wrong state (expected Illinois)
+   [7/8] SquareRoots Kava Lounge
+      ❌ Wrong state (expected Illinois)
+   [8/8] Ohana Kava Bar
+      ❌ Wrong state (expected Illinois)
+   💾 Saved: discovery_decatur_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [113/502] Deerfield Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Myth
+      ❌ Wrong city: Jacksonville (expected Deerfield Beach)
+   [2/7] Patio Bar and Grill
+      ❌ Not qualified
+   [3/7] The Whale's Rib Raw Bar
+      ❌ Not qualified
+   [4/7] The Vault Bar & Restaurant
+      ❌ Wrong city: Pompano Beach (expected Deerfield Beach)
+   [5/7] Baja Cafe Dos
+      ❌ Not qualified
+   [6/7] The Break House Kitchen + Beach Bar
+      ❌ Not qualified
+   [7/7] The Backroom Kava Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_deerfield_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [114/502] DeLand, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] THE LOUNGE
+      ✅ QUALIFIED
+   [2/5] Mantra Kava
+      ✅ QUALIFIED
+   [3/5] Delly Deck
+      ✅ QUALIFIED
+   [4/5] Rootz Kava Lounge
+      ✅ QUALIFIED
+   [5/5] Kava Culture
+      ✅ QUALIFIED
+   💾 Saved: discovery_deland_florida.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [115/502] Delray Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] THRōW Social Delray Beach
+      ❌ Not qualified
+   [2/9] The Hampton Social Delray Beach
+      ✅ QUALIFIED
+   [3/9] Kapow Noodle Bar
+      ✅ QUALIFIED
+   [4/9] Warren Delray
+      ❌ Not qualified
+   [5/9] Deck 84
+      ❌ Not qualified
+   [6/9] Rocco's Tacos & Tequila Bar
+      ❌ Not qualified
+   [7/9] Burt & Max's Bar and Grille
+      ✅ QUALIFIED
+   [8/9] Purple Lotus Kava Bar
+      ✅ QUALIFIED
+   [9/9] Pause Kava Lounge
+      ❌ Closed
+   💾 Saved: discovery_delray_beach_florida.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [116/502] Denton, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Yellow Dog Art Bar
+      ✅ QUALIFIED
+   [2/7] Miss Angeline's
+      ✅ QUALIFIED
+   [3/7] The Bearded Monk
+      ✅ QUALIFIED
+   [4/7] East Side Denton
+      ✅ QUALIFIED
+   [5/7] MIX'D
+      ✅ QUALIFIED
+   [6/7] Union Bear Brewing
+      ❌ Not qualified
+   [7/7] Hemlock Fox
+      ✅ QUALIFIED
+   💾 Saved: discovery_denton_texas.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [117/502] Denver, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  26 potential venues extracted
+   ✨ 25 new candidates
+   [1/25] The Night Owls bar
+      ❌ Wrong city: Lakewood (expected Denver)
+   [2/25] Honey Elixir Bar
+      ✅ QUALIFIED
+   [3/25] Death & Co Denver
+      ❌ Excluded type: night_club
+   [4/25] Room for Milly
+      ✅ QUALIFIED
+   [5/25] Poka Lola Social Club
+      ✅ QUALIFIED
+   [6/25] Beckon
+      ✅ QUALIFIED
+   [7/25] The Root Kava Co.
+      ❌ Wrong city: Boulder (expected Denver)
+   [8/25] Fellow Traveler
+      ❌ Wrong city: Englewood (expected Denver)
+   [9/25] Peach Crease Club
+      ✅ QUALIFIED
+   [10/25] Boombots Pasta Shop
+      ✅ QUALIFIED
+   [11/25] Lady Jane
+      ✅ QUALIFIED
+   [12/25] Retrograde
+      ✅ QUALIFIED
+   [13/25] BrewDog Denver
+      ✅ QUALIFIED
+   [14/25] Briar Common Brewery + Eatery
+      ✅ QUALIFIED
+   [15/25] Hudson Hill
+      ✅ QUALIFIED
+   [16/25] Forget Me Not
+      ✅ QUALIFIED
+   [17/25] Flora
+      ✅ QUALIFIED
+   [18/25] BurnDown
+      ✅ QUALIFIED
+   [19/25] That's Kava
+      ❌ Wrong city: Englewood (expected Denver)
+   [20/25] Roots & Leaves Kava & Teas
+      ❌ Wrong city: Westminster (expected Denver)
+   [21/25] The Corner Beet
+      ✅ QUALIFIED
+   [22/25] Royal Kumete kava Lounge
+      ✅ QUALIFIED
+   [23/25] Ohana Kava Bar
+      ❌ Wrong city: Colorado Springs (expected Denver)
+   [24/25] Mad Hatter's
+      ❌ Wrong city: Cascade (expected Denver)
+   [25/25] The Karma House
+      ❌ Wrong city: Lakewood (expected Denver)
+   💾 Saved: discovery_denver_colorado.json (16 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [118/502] Des Moines, Iowa
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  18 potential venues extracted
+   ✨ 17 new candidates
+   [1/17] Secret Admirer
+      ✅ QUALIFIED
+   [2/17] The Bartender's Handshake
+      ✅ QUALIFIED
+   [3/17] Hello, Marjorie
+      ✅ QUALIFIED
+   [4/17] In Confidence
+      ❌ Excluded type: night_club
+   [5/17] Unimpaired Dry Bar
+      ❌ Not qualified
+   [6/17] Revival House
+      ❌ Excluded type: night_club
+   [7/17] Barn Town Brewing
+      ✅ QUALIFIED
+   [8/17] Bellhop
+      ✅ QUALIFIED
+   [9/17] Clyde's Fine Diner
+      ✅ QUALIFIED
+   [10/17] El Bait Shop
+      ✅ QUALIFIED
+   [11/17] Coa Cantina
+      ✅ QUALIFIED
+   [12/17] The Contrary
+      ❌ Excluded type: night_club
+   [13/17] Des Moines Athletic Club
+      ✅ QUALIFIED
+   [14/17] Fresko
+      ✅ QUALIFIED
+   [15/17] Revelry
+      ✅ QUALIFIED
+   [16/17] Greater Des Moines Botanical Garden
+      ✅ QUALIFIED
+   [17/17] Harbinger Des Moines
+      ✅ QUALIFIED
+   💾 Saved: discovery_des_moines_iowa.json (13 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [119/502] Des Plaines, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] AquaBar
+      ❌ Not qualified
+   [2/4] Lady Dahlia
+      ❌ Wrong city: Mt Prospect (expected Des Plaines)
+   [3/4] Holloways Bar
+      ❌ Wrong city: Chicago (expected Des Plaines)
+   [4/4] Tropikava Kafe
+      ❌ Wrong city: Chicago (expected Des Plaines)
+   💾 Saved: discovery_des_plaines_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [120/502] DeSoto, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] The Honor Bar
+      ❌ Wrong city: Dallas (expected DeSoto)
+   [2/6] THE LIBERTINE BAR
+      ❌ Wrong city: Dallas (expected DeSoto)
+   [3/6] Bubba's 33
+      ❌ Wrong city: The Colony (expected DeSoto)
+   [4/6] Rose32 Coffee
+      ❌ Not found
+   [5/6] The Kava Bar
+      ❌ Wrong city: Dallas (expected DeSoto)
+   [6/6] The Fool's Kava House
+      ❌ Wrong city: Arlington (expected DeSoto)
+   💾 Saved: discovery_desoto_texas.json (0 new venues)
+
+   📊 Progress: 120 cities | 476 new venues | $23.65
+
+════════════════════════════════════════════════════════════
+🔍 [121/502] Detroit, Michigan
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  23 potential venues extracted
+   ✨ 22 new candidates
+   [1/22] Berkley Coffee + Oak Park Dry
+      ❌ Closed
+   [2/22] Spot Lite Detroit
+      ✅ QUALIFIED
+   [3/22] Willis Show Bar
+      ❌ Not qualified
+   [4/22] Monster's Ball
+      ✅ QUALIFIED
+   [5/22] Delux Lounge
+      ❌ Not qualified
+   [6/22] Zuzu Detroit
+      ✅ QUALIFIED
+   [7/22] Five15
+      ❌ Wrong city: Royal Oak (expected Detroit)
+   [8/22] The Black Salt
+      ❌ Wrong city: Hamtramck (expected Detroit)
+   [9/22] Basan
+      ✅ QUALIFIED
+   [10/22] Syndicate Ferndale
+      ❌ Wrong city: Ferndale (expected Detroit)
+   [11/22] Iron Gate Bar
+      ❌ Wrong city: Wyandotte (expected Detroit)
+   [12/22] Rose House Brunch
+      ❌ Wrong city: Shelby Township (expected Detroit)
+   [13/22] Le Suprême
+      ✅ QUALIFIED
+   [14/22] Host Utica
+      ❌ Wrong city: Utica (expected Detroit)
+   [15/22] Bar Pigalle
+      ✅ QUALIFIED
+   [16/22] Eastern Palace Club
+      ❌ Wrong city: Hazel Park (expected Detroit)
+   [17/22] Testa Barrá Kitchen & Cocktails
+      ❌ Wrong city: Macomb (expected Detroit)
+   [18/22] Nepantla
+      ✅ QUALIFIED
+   [19/22] Candy Bar
+      ✅ QUALIFIED
+   [20/22] Grey Ghost
+      ✅ QUALIFIED
+   [21/22] The Library
+      ✅ QUALIFIED
+   [22/22] Sen Kava
+      ✅ QUALIFIED
+   💾 Saved: discovery_detroit_michigan.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [122/502] Doral, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] The Doral Yard
+      ❌ Not qualified
+   [2/6] Roots Kava Lounge
+      ❌ Wrong city: Lake Worth Beach (expected Doral)
+   [3/6] Love Kava Bar
+      ✅ QUALIFIED
+   [4/6] Twisted Roots Kava Brewery
+      ❌ Wrong city: Hollywood (expected Doral)
+   [5/6] Karma Kava
+      ❌ Wrong city: Fort Lauderdale (expected Doral)
+   [6/6] Kavasutra Kava Bar Jupiter
+      ❌ Wrong city: Jupiter (expected Doral)
+   💾 Saved: discovery_doral_florida.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [123/502] Dorchester, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Dorchester Brewing Company
+      ❌ Wrong city: Boston (expected Dorchester)
+   [2/6] Hunter's Kitchen & Bar
+      ✅ QUALIFIED
+   [3/6] Chubbs Taco & Tequila Bar
+      ❌ Wrong city: Boston (expected Dorchester)
+   [4/6] Stars
+      ❌ Not qualified
+   [5/6] Castle Island Brewing
+      ❌ Wrong city: Boston (expected Dorchester)
+   [6/6] Boston Bowl
+      ❌ Not qualified
+   💾 Saved: discovery_dorchester_massachusetts.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [124/502] Dormont, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Open Road
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [2/7] Margaux
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [3/7] Bar Botanico
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [4/7] Commerce
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [5/7] Bantha Tea Bar
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [6/7] Puff House
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   [7/7] Dobra Tea Pittsburgh
+      ❌ Wrong city: Pittsburgh (expected Dormont)
+   💾 Saved: discovery_dormont_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [125/502] Dothan, Alabama
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] DB Zero Proof Kava Bar
+      ❌ Not found
+   [2/7] The Kava Boys Kava Bar
+      ❌ Wrong city: Abbeville (expected Dothan)
+   [3/7] Midtown Kava Lounge
+      ❌ Wrong state (expected Alabama)
+   [4/7] KAVA COFFEE EXCHANGE
+      ❌ Wrong city: Abbeville (expected Dothan)
+   [5/7] Ohana Kava Bar
+      ❌ Wrong state (expected Alabama)
+   [6/7] Well Rooted
+      ✅ QUALIFIED
+   [7/7] Kavakaze
+      ❌ Not qualified
+   💾 Saved: discovery_dothan_alabama.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [126/502] Draper, Utah
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] The Vibe Mocktails Virgin Bar
+      ❌ Not found
+   [2/6] Royal Kava Bar
+      ❌ Closed
+   [3/6] SquareRoots Kava Lounge
+      ❌ Wrong city: Orem (expected Draper)
+   [4/6] Kava Beast from the East
+      ❌ Not qualified
+   [5/6] Bonfiya Kava Lounge
+      ❌ Wrong city: South Salt Lake (expected Draper)
+   [6/6] Kai Po Kava Lounge & Polynesia Restaurant
+      ❌ Wrong city: Salt Lake City (expected Draper)
+   💾 Saved: discovery_draper_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [127/502] Dubuque, Iowa
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Kava Kafê
+      ✅ QUALIFIED
+   [2/3] Nekter Juice Bar
+      ✅ QUALIFIED
+   [3/3] Unimpaired Dry Bar and Eats
+      ❌ Wrong city: Davenport (expected Dubuque)
+   💾 Saved: discovery_dubuque_iowa.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [128/502] Dunedin, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Dunedin Hemp Company
+      ✅ QUALIFIED
+   [2/7] Giancarlo's
+      ✅ QUALIFIED
+   [3/7] Joseph's Tea Bar
+      ✅ QUALIFIED
+   [4/7] Dunedin MockFusion
+      ✅ QUALIFIED
+   [5/7] Pana Kava Java
+      ✅ QUALIFIED
+   [6/7] Kava Culture Kava Bar
+      ❌ Wrong city: Clearwater (expected Dunedin)
+   [7/7] Dharma Kava Lounge
+      ❌ Wrong city: Largo (expected Dunedin)
+   💾 Saved: discovery_dunedin_florida.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [129/502] Dunwoody, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Select
+      ❌ Wrong city: Sandy Springs (expected Dunwoody)
+   [2/7] Lazy Dog Restaurants
+      ✅ QUALIFIED
+   [3/7] Another Broken Egg Cafe
+      ❌ Not qualified
+   [4/7] Love Kava
+      ❌ Wrong state (expected Georgia)
+   [5/7] Kava Mama
+      ❌ Wrong city: Atlanta (expected Dunwoody)
+   [6/7] Island Vibes Kava Bar
+      ❌ Closed
+   [7/7] Bakaris Pizza & Kava Lounge
+      ❌ Wrong city: Atlanta (expected Dunwoody)
+   💾 Saved: discovery_dunwoody_georgia.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [130/502] Durham, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] The Velvet Hippo Rooftop Bar & Lounge
+      ✅ QUALIFIED
+   [2/10] Umbrella Dry Bar
+      ❌ Not qualified
+   [3/10] Hi-Wire Brewing
+      ✅ QUALIFIED
+   [4/10] Boxcar Bar + Arcade
+      ✅ QUALIFIED
+   [5/10] Proximity Brewing
+      ✅ QUALIFIED
+   [6/10] Weldon
+      ❌ Not qualified
+   [7/10] Krave
+      ❌ Wrong city: Carrboro (expected Durham)
+   [8/10] Oasis
+      ❌ Wrong city: Carrboro (expected Durham)
+   [9/10] Der Nachbar
+      ❌ Excluded type: liquor_store
+   [10/10] Krave Tea House & Bar
+      ❌ Wrong city: Raleigh (expected Durham)
+   💾 Saved: discovery_durham_north_carolina.json (4 new venues)
+
+   📊 Progress: 130 cities | 502 new venues | $25.18
+
+════════════════════════════════════════════════════════════
+🔍 [131/502] Eagan, Minnesota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Minnesota Orchestra
+      ❌ Wrong city: Minneapolis (expected Eagan)
+   [2/9] Lone Oak Grill
+      ❌ Not qualified
+   [3/9] CRAVE American Kitchen & Sushi Bar
+      ❌ Wrong city: Bloomington (expected Eagan)
+   [4/9] Mason Jar Kitchen & Bar
+      ❌ Not qualified
+   [5/9] EMBER & ICE
+      ❌ Excluded type: night_club
+   [6/9] Kava Bar Mpls
+      ❌ Wrong city: St Paul (expected Eagan)
+   [7/9] Speakeasy Kava Lounge
+      ❌ Excluded type: night_club
+   [8/9] Zen Room Kava Lounge
+      ❌ Wrong city: St Paul (expected Eagan)
+   [9/9] Natreum Hemp Wellness
+      ❌ Wrong city: St Louis Park (expected Eagan)
+   💾 Saved: discovery_eagan_minnesota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [132/502] East Arapahoe, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] DNVR Bar
+      ❌ Wrong city: Denver (expected East Arapahoe)
+   [2/8] Kavasutra Kava Bar
+      ❌ Wrong city: Denver (expected East Arapahoe)
+   [3/8] That's Kava
+      ❌ Wrong city: Englewood (expected East Arapahoe)
+   [4/8] Roots And Leaves
+      ❌ Wrong state (expected Colorado)
+   [5/8] Golden Leaf Botanicals
+      ❌ Wrong state (expected Colorado)
+   [6/8] KAVA HAVEN
+      ❌ Wrong city: Greenwood Village (expected East Arapahoe)
+   [7/8] Colorado Mountain Kava Company
+      ❌ Wrong city: Longmont (expected East Arapahoe)
+   [8/8] The Karma House
+      ❌ Wrong city: Lakewood (expected East Arapahoe)
+   💾 Saved: discovery_east_arapahoe_colorado.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [133/502] East Boston, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] Backbar
+      ❌ Wrong city: Somerville (expected East Boston)
+   [2/12] Seabiscuit
+      ❌ Wrong city: Boston (expected East Boston)
+   [3/12] Cunard Tavern
+      ❌ Wrong city: Boston (expected East Boston)
+   [4/12] Dillon's Back Bay
+      ❌ Wrong city: Boston (expected East Boston)
+   [5/12] Blossom Bar
+      ❌ Wrong city: Brookline (expected East Boston)
+   [6/12] Temezcal
+      ❌ Wrong city: Harborside Dr (expected East Boston)
+   [7/12] Dray Drinks
+      ❌ Wrong city: Boston (expected East Boston)
+   [8/12] Kava Neo-Taverna
+      ❌ Wrong city: Boston (expected East Boston)
+   [9/12] South End Buttery
+      ❌ Wrong city: Boston (expected East Boston)
+   [10/12] Natural Life
+      ❌ Closed
+   [11/12] MixStirs
+      ❌ Closed
+   [12/12] Rooted In
+      ❌ Wrong city: Boston (expected East Boston)
+   💾 Saved: discovery_east_boston_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [134/502] East Dubuque, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Bellhop
+      ❌ Wrong state (expected Illinois)
+   [2/4] Kava Kafê
+      ❌ Wrong state (expected Illinois)
+   [3/4] Natural Nectars Kava Bar
+      ❌ Wrong state (expected Illinois)
+   [4/4] Kava Kava
+      ❌ Wrong state (expected Illinois)
+   💾 Saved: discovery_east_dubuque_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [135/502] East Grand Forks, Minnesota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Up North Pizza Pub
+      ❌ Not qualified
+   [2/6] Bernie's
+      ❌ Not qualified
+   [3/6] Bully Brew Coffee House
+      ✅ QUALIFIED
+   [4/6] Turning Leaf
+      ❌ Wrong state (expected Minnesota)
+   [5/6] KAVA HAVEN
+      ❌ Not found
+   [6/6] Fog Haus Vape Lounge
+      ❌ Not qualified
+   💾 Saved: discovery_east_grand_forks_minnesota.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [136/502] East Hartford, Connecticut
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The 196 Club
+      ❌ Closed
+   [2/7] Rooster
+      ❌ Wrong city: Hartford (expected East Hartford)
+   [3/7] Le Mazet
+      ❌ Wrong city: West Hartford (expected East Hartford)
+   [4/7] PAPPY'S CAFE
+      ❌ Not qualified
+   [5/7] Kava Lounge
+      ❌ Wrong state (expected Connecticut)
+   [6/7] Island Kava
+      ❌ Wrong city: Hartford (expected East Hartford)
+   [7/7] Qahwah House
+      ❌ Wrong state (expected Connecticut)
+   💾 Saved: discovery_east_hartford_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [137/502] East Rutherford, New Jersey
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] The Hop
+      ❌ Not qualified
+   [2/3] Park Tavern
+      ❌ Not qualified
+   [3/3] Marcus Live
+      ❌ Not qualified
+   💾 Saved: discovery_east_rutherford_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [138/502] Eau Claire, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Cowboy Jack's
+      ❌ Wrong city: Altoona (expected Eau Claire)
+   [2/8] The Fire House
+      ✅ QUALIFIED
+   [3/8] The Phoenix Taproom & Kitchen
+      ✅ QUALIFIED
+   [4/8] Valley Burger
+      ✅ QUALIFIED
+   [5/8] The Lakely at The Oxbow Hotel
+      ❌ Excluded type: night_club
+   [6/8] Kahvi Coffee House + Cafe
+      ✅ QUALIFIED
+   [7/8] Wonders Of Nature Cafe
+      ✅ QUALIFIED
+   [8/8] Kapua Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_eau_claire_wisconsin.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [139/502] Edina, Minnesota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Mr. Paul's Supper Club
+      ✅ QUALIFIED
+   [2/10] McCormick & Schmick's Seafood & Steaks
+      ✅ QUALIFIED
+   [3/10] CRAVE American Kitchen & Sushi Bar
+      ✅ QUALIFIED
+   [4/10] Minnesota Orchestra
+      ❌ Wrong city: Minneapolis (expected Edina)
+   [5/10] Hi Flora!
+      ❌ Closed
+   [6/10] Dave and Buster's
+      ✅ QUALIFIED
+   [7/10] Nothing But Hemp
+      ❌ Wrong city: St Paul (expected Edina)
+   [8/10] Kava Bar Mpls
+      ❌ Wrong city: St Paul (expected Edina)
+   [9/10] Speakeasy Kava Lounge
+      ❌ Wrong state (expected Minnesota)
+   [10/10] Zen Room Kava
+      ❌ Wrong city: St Paul (expected Edina)
+   💾 Saved: discovery_edina_minnesota.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [140/502] Edinburg, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Tropicana Lounge
+      ❌ Excluded type: night_club
+   [2/3] SIN Night Club
+      ❌ Closed
+   [3/3] Another Broken Egg Cafe
+      ❌ Wrong city: McAllen (expected Edinburg)
+   💾 Saved: discovery_edinburg_texas.json (0 new venues)
+
+   📊 Progress: 140 cities | 513 new venues | $26.23
+
+════════════════════════════════════════════════════════════
+🔍 [141/502] El Paso, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Tin Man
+      ❌ Not qualified
+   [2/10] 1922
+      ✅ QUALIFIED
+   [3/10] Applebee's
+      ❌ Not qualified
+   [4/10] Crave Kitchen and Bar
+      ❌ Not qualified
+   [5/10] Tiki Bar
+      ✅ QUALIFIED
+   [6/10] Klevy Tea
+      ✅ QUALIFIED
+   [7/10] El Paso Kava
+      ❌ Not qualified
+   [8/10] Mellow Kava Bar
+      ❌ Wrong state (expected Texas)
+   [9/10] TIPPI TEAS
+      ✅ QUALIFIED
+   [10/10] Nekter Juice Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_el_paso_texas.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [142/502] Ellicott City, Maryland
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Binge bar
+      ❌ Wrong state (expected Maryland)
+   [2/5] Sobardrinks
+      ❌ Not qualified
+   [3/5] The Crazy Mason Milkshake Bar
+      ✅ QUALIFIED
+   [4/5] Root City Kava Bar & Lounge
+      ❌ Wrong city: Baltimore (expected Ellicott City)
+   [5/5] Kavasutra Kava Bar
+      ❌ Wrong city: Baltimore (expected Ellicott City)
+   💾 Saved: discovery_ellicott_city_maryland.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [143/502] Englewood, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Western Sky Bar & Taproom
+      ✅ QUALIFIED
+   [2/8] SportyPickle
+      ✅ QUALIFIED
+   [3/8] Fellow Traveler
+      ✅ QUALIFIED
+   [4/8] One Barrel
+      ✅ QUALIFIED
+   [5/8] Rootstalk
+      ❌ Not found
+   [6/8] Death & Co
+      ❌ Wrong city: Denver (expected Englewood)
+   [7/8] Honey Elixir Bar
+      ❌ Wrong city: Denver (expected Englewood)
+   [8/8] Roots & Leaves Kava & Teas
+      ❌ Wrong city: Westminster (expected Englewood)
+   💾 Saved: discovery_englewood_colorado.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [144/502] Essex, Maryland
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Blk Swan
+      ❌ Wrong city: Baltimore (expected Essex)
+   [2/4] Root City Kava Bar & Lounge
+      ❌ Wrong city: Baltimore (expected Essex)
+   [3/4] The Comfy Cup
+      ✅ QUALIFIED
+   [4/4] Inland Kava Bar
+      ❌ Not qualified
+   💾 Saved: discovery_essex_maryland.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [145/502] Eugene, Oregon
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] High Street Tonics
+      ✅ QUALIFIED
+   [2/9] barTini bistro
+      ✅ QUALIFIED
+   [3/9] The Monkey's Paw
+      ❌ Wrong city: Springfield (expected Eugene)
+   [4/9] Play Eugene
+      ✅ QUALIFIED
+   [5/9] Akira
+      ✅ QUALIFIED
+   [6/9] Bar Purlieu
+      ✅ QUALIFIED
+   [7/9] Sunriver Brewing
+      ✅ QUALIFIED
+   [8/9] Jackalope Lounge
+      ❌ Excluded type: night_club
+   [9/9] Portal Tea
+      ✅ QUALIFIED
+   💾 Saved: discovery_eugene_oregon.json (7 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [146/502] Everett, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Park-9 Dog Bar
+      ✅ QUALIFIED
+   [2/8] Little Trúc
+      ❌ Wrong city: 150 Pleasant St 101 REAR (expected Everett)
+   [3/8] Scutra
+      ❌ Wrong city: Arlington (expected Everett)
+   [4/8] The Fox Den
+      ❌ Wrong city: Woburn (expected Everett)
+   [5/8] Bar 'Cino Brookline
+      ❌ Wrong city: Brookline (expected Everett)
+   [6/8] Brick & Mortar
+      ❌ Wrong city: Cambridge (expected Everett)
+   [7/8] Gingerman
+      ❌ Not found
+   [8/8] Kava Neo-Taverna
+      ❌ Wrong city: Boston (expected Everett)
+   💾 Saved: discovery_everett_massachusetts.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [147/502] Fairfax, Virginia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  20 potential venues extracted
+   ✨ 20 new candidates
+   [1/20] Songbird
+      ✅ QUALIFIED
+   [2/20] Genki Izakaya
+      ✅ QUALIFIED
+   [3/20] Le Jardin
+      ❌ Wrong city: Falls Church (expected Fairfax)
+   [4/20] Fats Fairfax
+      ❌ Not qualified
+   [5/20] Lantern House Kitchen & Bar
+      ❌ Wrong city: Reston (expected Fairfax)
+   [6/20] Ocean Paradise Restaurant & Bar
+      ✅ QUALIFIED
+   [7/20] Mackenzie's Tunes & Tonics
+      ✅ QUALIFIED
+   [8/20] Wren Tysons
+      ❌ Wrong city: Tysons (expected Fairfax)
+   [9/20] Neutral Ground Bar + Kitchen McLean
+      ❌ Wrong city: McLean (expected Fairfax)
+   [10/20] Davio's Italian Steakhouse Reston
+      ❌ Wrong city: Reston (expected Fairfax)
+   [11/20] Caboose Tavern Vienna
+      ❌ Wrong city: Vienna (expected Fairfax)
+   [12/20] bartaco
+      ✅ QUALIFIED
+   [13/20] Muse Paintbar
+      ✅ QUALIFIED
+   [14/20] Gyu Shige Japanese BBQ & Bar
+      ✅ QUALIFIED
+   [15/20] Lazy Dog Restaurant + Bar
+      ✅ QUALIFIED
+   [16/20] Studio Eats Kitchen & Bar
+      ✅ QUALIFIED
+   [17/20] We Old Fashion
+      ❌ Not qualified
+   [18/20] Martinez Bar
+      ✅ QUALIFIED
+   [19/20] Wu Wei Tea Temple
+      ❌ Wrong state (expected Virginia)
+   [20/20] MeloMelo Kava Bar
+      ❌ Wrong state (expected Virginia)
+   💾 Saved: discovery_fairfax_virginia.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [148/502] Fairfield, Iowa
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 1 new candidates
+   [1/1] Veraison Wine Bar Fairfield
+      ❌ Closed
+   💾 Saved: discovery_fairfield_iowa.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [149/502] Fall River, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Famous Smoke Shop Tropical Kava Bar
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [2/4] Atlas Smoke Shop
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [3/4] Jay's Smoke Shop
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [4/4] Cosmopolitan
+      ❌ Not qualified
+   💾 Saved: discovery_fall_river_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [150/502] Fargo, North Dakota
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  4 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] CRAVE American Kitchen & Sushi Bar
+      ✅ QUALIFIED
+   [2/3] Beer & Fish Company
+      ❌ Not qualified
+   [3/3] 2 B Fit Wellness Club
+      ✅ QUALIFIED
+   💾 Saved: discovery_fargo_north_dakota.json (2 new venues)
+
+   📊 Progress: 150 cities | 544 new venues | $27.91
+
+════════════════════════════════════════════════════════════
+🔍 [151/502] Farmington, Connecticut
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] The Olive Bar
+      ❌ Wrong city: Unionville (expected Farmington)
+   [2/8] Stadium XV
+      ✅ QUALIFIED
+   [3/8] Fork and Fire
+      ✅ QUALIFIED
+   [4/8] Five Corners Bistro & Craft Bar
+      ❌ Not qualified
+   [5/8] Market Place Kitchen & Bar
+      ❌ Wrong city: Avon (expected Farmington)
+   [6/8] Kava Lounge
+      ❌ Not qualified
+   [7/8] Qahwah House
+      ❌ Wrong state (expected Connecticut)
+   [8/8] Yemerica Coffee
+      ✅ QUALIFIED
+   💾 Saved: discovery_farmington_connecticut.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [152/502] Fayetteville, North Carolina
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Foundation
+      ❌ Not qualified
+   [2/5] Heard the Buzz Sober Bar
+      ❌ Wrong city: Wesley Chapel (expected Fayetteville)
+   [3/5] The Velvet Hippo Rooftop Bar & Lounge
+      ❌ Wrong city: Durham (expected Fayetteville)
+   [4/5] Killjoy
+      ❌ Wrong city: Raleigh (expected Fayetteville)
+   [5/5] Element Gastropub
+      ✅ QUALIFIED
+   💾 Saved: discovery_fayetteville_north_carolina.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [153/502] Fayetteville, Arkansas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Maxine's Taproom
+      ✅ QUALIFIED
+   [2/7] Bordinos Restaurant & Wine Bar
+      ❌ Not qualified
+   [3/7] PINPOINT FAYETTEVILLE
+      ✅ QUALIFIED
+   [4/7] Hugo's Restaurant Fayetteville
+      ❌ Not qualified
+   [5/7] Lambeth Lounge & Coffee Bar
+      ✅ QUALIFIED
+   [6/7] THE BOTANICAL LIVE FAYETTEVILLE
+      ✅ QUALIFIED
+   [7/7] Ozark Herbal Creations
+      ❌ Not qualified
+   💾 Saved: discovery_fayetteville_arkansas.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [154/502] Ferndale, Michigan
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] The Corner
+      ✅ QUALIFIED
+   [2/10] The Loving Touch
+      ✅ QUALIFIED
+   [3/10] Michigan Squeeze Station
+      ❌ Wrong city: Detroit (expected Ferndale)
+   [4/10] Imperial
+      ✅ QUALIFIED
+   [5/10] Kava Culture Kava Bar
+      ❌ Not qualified
+   [6/10] Ethnospot
+      ❌ Wrong city: Pleasant Ridge (expected Ferndale)
+   [7/10] Pavilion
+      ✅ QUALIFIED
+   [8/10] Qahwah House
+      ✅ QUALIFIED
+   [9/10] Kava Sol I Non-Alcoholic Botanical Bar
+      ❌ Wrong state (expected Michigan)
+   [10/10] SPKRBOX Detroit
+      ❌ Wrong city: Detroit (expected Ferndale)
+   💾 Saved: discovery_ferndale_michigan.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [155/502] Flagstaff, Arizona
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] AWA Kava Bar
+      ✅ QUALIFIED
+   [2/9] Oeno Wine Lounge
+      ❌ Excluded type: liquor_store
+   [3/9] Shift Kitchen & Bar
+      ✅ QUALIFIED
+   [4/9] Lumberyard Brewing Company
+      ✅ QUALIFIED
+   [5/9] Beaver Street Brewery
+      ✅ QUALIFIED
+   [6/9] Karma Sushi Bar Grill
+      ✅ QUALIFIED
+   [7/9] CINÉ Bar (Harkins Theatres)
+      ✅ QUALIFIED
+   [8/9] Fat Olives
+      ❌ Not qualified
+   [9/9] Zane Grey Ballroom, Bar & Balcony
+      ✅ QUALIFIED
+   💾 Saved: discovery_flagstaff_arizona.json (7 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [156/502] Flower Mound, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] LOCAL PINT
+      ✅ QUALIFIED
+   [2/5] Tycoon
+      ❌ Excluded type: night_club
+   [3/5] TeaLatte Bar
+      ❌ Closed
+   [4/5] Kava Culture Kava Bar
+      ❌ Wrong city: Lewisville (expected Flower Mound)
+   [5/5] The Kava Bar
+      ❌ Wrong city: Lewisville (expected Flower Mound)
+   💾 Saved: discovery_flower_mound_texas.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [157/502] Forest Park, Illinois
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  2 potential venues extracted
+   ✨ 1 new candidates
+   [1/1] Bobby's Eastside
+      ✅ QUALIFIED
+   💾 Saved: discovery_forest_park_illinois.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [158/502] Fort Collins, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  15 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] The Atrium
+      ✅ QUALIFIED
+   [2/13] Brothers Bar & Grill
+      ✅ QUALIFIED
+   [3/13] Cafe Vino
+      ✅ QUALIFIED
+   [4/13] Social
+      ✅ QUALIFIED
+   [5/13] The Love Shack
+      ❌ Wrong city: Loveland (expected Fort Collins)
+   [6/13] Beerwerks Fort Collins
+      ✅ QUALIFIED
+   [7/13] The Emporium
+      ✅ QUALIFIED
+   [8/13] Union Bar & Soda Fountain
+      ✅ QUALIFIED
+   [9/13] Horse & Dragon Brewing Company
+      ✅ QUALIFIED
+   [10/13] Elliot's martini bar
+      ✅ QUALIFIED
+   [11/13] Herbal Mocktails
+      ✅ QUALIFIED
+   [12/13] The Mocktail Movement
+      ❌ Not qualified
+   [13/13] Roots & Leaves Kava & Teas
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_fort_collins_colorado.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [159/502] Fort Lauderdale, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  21 potential venues extracted
+   ✨ 17 new candidates
+   [1/17] JWB Prime Steak and Seafood
+      ❌ Wrong city: Hollywood (expected Fort Lauderdale)
+   [2/17] Laser Wolf
+      ❌ Not qualified
+   [3/17] Moxies - Fort Lauderdale
+      ❌ Excluded type: night_club
+   [4/17] Rhythm & Vine
+      ❌ Excluded type: night_club
+   [5/17] Nectar Lab Kava Bar
+      ❌ Excluded type: night_club
+   [6/17] Tacocraft Taqueria & Tequila Bar
+      ✅ QUALIFIED
+   [7/17] Howl at the Moon
+      ✅ QUALIFIED
+   [8/17] LauderAle Brewery
+      ✅ QUALIFIED
+   [9/17] Tarpon River Brewing
+      ❌ Not qualified
+   [10/17] South Bar & Kitchen
+      ❌ Wrong city: Pompano Beach (expected Fort Lauderdale)
+   [11/17] Circuit Arcade Bar
+      ❌ Excluded type: night_club
+   [12/17] The Wilder
+      ❌ Excluded type: night_club
+   [13/17] Nube Rooftop Bar & Restaurant
+      ❌ Excluded type: night_club
+   [14/17] Casa De Kava
+      ✅ QUALIFIED
+   [15/17] Sunbelt Kava Co.
+      ❌ Excluded type: night_club
+   [16/17] Black Klover Kava Inc.
+      ❌ Excluded type: night_club
+   [17/17] Kavanation Botanical Beverage Group
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_fort_lauderdale_florida.json (4 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [161/502] Fort Myers, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  20 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] The 86 Room
+      ❌ Not qualified
+   [2/16] Botanical Brewing Taproom
+      ❌ Wrong city: Cape Coral (expected Fort Myers)
+   [3/16] Sip & Sizzle
+      ❌ Not qualified
+   [4/16] Remedies Parlor
+      ✅ QUALIFIED
+   [5/16] Backyard Social
+      ❌ Not qualified
+   [6/16] Millennial Brewing Company
+      ✅ QUALIFIED
+   [7/16] Pro Southern Roots Kava and Kratom Bar
+      ✅ QUALIFIED
+   [8/16] Connors Steak & Seafood
+      ✅ QUALIFIED
+   [9/16] Oxbow
+      ❌ Not qualified
+   [10/16] Matanzas on the Bay
+      ✅ QUALIFIED
+   [11/16] Dave & Buster's Fort Myers
+      ✅ QUALIFIED
+   [12/16] Kava Culture Kava Bar
+      ❌ Excluded type: night_club
+   [13/16] Kava Culture Kava Bar Fort Myers Beach
+      ❌ Excluded type: night_club
+   [14/16] Kava Culture Kava Bar Downtown Fort Myers
+      ❌ Excluded type: night_club
+   [15/16] Sincerely, Me Kava Lounge
+      ❌ Excluded type: night_club
+   [16/16] Kava Culture Kava Bar North Fort Myers
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_fort_myers_florida.json (6 new venues)
+
+   📊 Progress: 160 cities | 586 new venues | $30.07
+
+════════════════════════════════════════════════════════════
+🔍 [162/502] Fort Myers Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Millennial Brewing Company
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   [2/8] Botanical Brewing Taproom
+      ❌ Wrong city: Cape Coral (expected Fort Myers Beach)
+   [3/8] Sip & Sizzle
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   [4/8] Remedies Parlor
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   [5/8] Backyard Social
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   [6/8] Sound Garden Kava Bar
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   [7/8] Coconut Telegraph Coffee Shop
+      ✅ QUALIFIED
+   [8/8] Kapua Kava Bar
+      ❌ Wrong city: Fort Myers (expected Fort Myers Beach)
+   💾 Saved: discovery_fort_myers_beach_florida.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [163/502] Fort Pierce, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Oxbow Bar & Grill
+      ❌ Wrong city: Fort Myers (expected Fort Pierce)
+   [2/7] Millennial Brewing Company
+      ❌ Wrong city: Fort Myers (expected Fort Pierce)
+   [3/7] Sound Garden Kava Bar
+      ❌ Not qualified
+   [4/7] Kava Culture Kava Bar
+      ❌ Not qualified
+   [5/7] Kapua Kava Bar
+      ❌ Not qualified
+   [6/7] Kava Culture Kava Bar Fort Myers Beach
+      ❌ Wrong city: Fort Myers (expected Fort Pierce)
+   [7/7] Kava Culture Kava Bar Bonita Springs
+      ❌ Wrong city: Bonita Springs (expected Fort Pierce)
+   💾 Saved: discovery_fort_pierce_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [164/502] Fort Smith, Arkansas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] KPOT
+      ✅ QUALIFIED
+   [2/3] American Shaman Kava Bar + Premium CBD
+      ❌ Not found
+   [3/3] Island Vibes Kava Bar
+      ❌ Wrong state (expected Arkansas)
+   💾 Saved: discovery_fort_smith_arkansas.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [165/502] Fort Worth, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 13 new candidates
+   [1/13] Kava Culture Kava Bar
+      ❌ Excluded type: night_club
+   [2/13] Cookie's Cocktails
+      ❌ Wrong city: Colleyville (expected Fort Worth)
+   [3/13] Thompson's
+      ❌ Excluded type: night_club
+   [4/13] The Amber Room
+      ❌ Not qualified
+   [5/13] The Usual
+      ✅ QUALIFIED
+   [6/13] Brewed
+      ✅ QUALIFIED
+   [7/13] Nickel City
+      ✅ QUALIFIED
+   [8/13] Dirty Laundry
+      ❌ Not qualified
+   [9/13] The Cicada
+      ✅ QUALIFIED
+   [10/13] Rex's Bar & Grill
+      ✅ QUALIFIED
+   [11/13] Bar Dryce
+      ✅ QUALIFIED
+   [12/13] Proper
+      ❌ Excluded type: night_club
+   [13/13] Fool's Kava House
+      ❌ Wrong city: Arlington (expected Fort Worth)
+   💾 Saved: discovery_fort_worth_texas.json (6 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [166/502] Fort Wright, Kentucky
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Piper's Ice Cream Bar
+      ❌ Wrong city: Covington (expected Fort Wright)
+   [2/5] Somerset Bar
+      ❌ Wrong state (expected Kentucky)
+   [3/5] Knowledge Bar and Social Room
+      ❌ Wrong city: Covington (expected Fort Wright)
+   [4/5] Momma's Tap House Bar And Lounge
+      ❌ Wrong city: Nicholasville (expected Fort Wright)
+   [5/5] Big Bar
+      ❌ Not qualified
+   💾 Saved: discovery_fort_wright_kentucky.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [167/502] Framingham, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Burtons Grill & Bar
+      ✅ QUALIFIED
+   [2/6] Margaritas Mexican Restaurant
+      ❌ Excluded type: night_club
+   [3/6] Route 9 Sports Bar
+      ✅ QUALIFIED
+   [4/6] Bourbon's Kitchen & Cocktails
+      ❌ Excluded type: night_club
+   [5/6] Root Awakening Kava Bar
+      ❌ Wrong city: Worcester (expected Framingham)
+   [6/6] Island Vibes Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_framingham_massachusetts.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [168/502] Franklin, Tennessee
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  12 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] Passage Kava Lounge
+      ❌ Wrong city: Madison (expected Franklin)
+   [2/11] Redemption
+      ❌ Not qualified
+   [3/11] Bar 79 at Perry's Steakhouse & Grille
+      ✅ QUALIFIED
+   [4/11] Connors Steak & Seafood
+      ✅ QUALIFIED
+   [5/11] Chrysalis
+      ❌ Not qualified
+   [6/11] Culaccino
+      ✅ QUALIFIED
+   [7/11] Kratom Kava Bar
+      ❌ Wrong city: Nashville (expected Franklin)
+   [8/11] The Spot by Dre and Snoop
+      ❌ Wrong city: Nashville (expected Franklin)
+   [9/11] McGavock's Coffee Bar & Provisions
+      ✅ QUALIFIED
+   [10/11] Kava Culture Kava Bar

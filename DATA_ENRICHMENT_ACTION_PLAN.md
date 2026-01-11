@@ -7,33 +7,46 @@
 
 ---
 
-## ✅ Progress Tracker
+## ✅ Progress Tracker (Updated January 2026)
 
-| Phase                               | Status            | Completion Date | Notes                                               |
-| ----------------------------------- | ----------------- | --------------- | --------------------------------------------------- |
-| **Phase 1: Data Extraction**        | ✅ Complete       | Nov 2, 2025     | 1,526 venues extracted across 518 cities            |
-| **Phase 2: Primary Verification**   | ✅ Built & Tested | Nov 2, 2025     | 100% accuracy on 4 test venues. Ready for full run. |
-| **Phase 3: Secondary Verification** | ⏳ Pending        | -               | Not started                                         |
-| **Phase 4: Data Enrichment**        | ⏳ Pending        | -               | Not started                                         |
-| **Phase 5: Final Verification**     | ⏳ Pending        | -               | Not started                                         |
-| **Phase 6: Database Updates**       | ⏳ Pending        | -               | Not started                                         |
-| **Phase 7: Long-Term Maintenance**  | ⏳ Pending        | -               | Not started                                         |
+| Phase | Status | Date | Notes |
+|-------|--------|------|-------|
+| **Phase 1: Data Extraction** | ✅ Complete | Nov 2, 2025 | 1,526 venues extracted |
+| **Phase 2A: Verification** | 🟡 Ready to Run | Jan 10, 2026 | 100% accuracy on Portland test |
+| **Phase 2B: Discovery** | 🟡 Ready to Run | Jan 10, 2026 | Script built, runs after 2A |
+| **Phase 3: Secondary Verification** | ⏳ Optional | - | May skip if 2A accuracy holds |
+| **Phase 4: Data Enrichment** | ⏳ Pending | - | Not started |
+| **Phase 5: Human Review** | ⏳ Pending | - | Review results before DB update |
+| **Phase 6: Database Updates** | ⏳ Pending | - | Apply verified changes |
+| **Phase 7: Long-Term Maintenance** | ⏳ Pending | - | Monthly re-verification |
 
-### Phase 2 Test Results (Nov 2, 2025)
+### Two-Phase Production Approach (January 2026)
 
-- **Venues Tested:** 4 (Addison, Aiea, Akron)
-- **Accuracy:** 100% (4/4 verified manually)
-- **Category Corrections:** 13 flags fixed
-- **Key Features Validated:**
-  - ✅ Address-First verification working
-  - ✅ Category validation catching errors
-  - ✅ Contact info extraction accurate
-  - ✅ Description generation high quality
-  - ✅ Google Places API integration working
-  - ✅ Gemini AI analysis accurate
+**Phase 2A: Verification** (~$60, 5 days)
+- Verify all 1,250 non-production venues
+- Fix category flags, detect closures
+- Generate descriptions for KEEP venues
 
-**Ready for Full Run:** Yes  
-**Estimated Full Run:** 2-3 days, ~$26-141 cost
+**Phase 2B: Discovery** (~$35, 3-5 days)  
+- Search all 588 cities for missing venues
+- Find new kava bars, mocktail bars, etc.
+- Cross-reference against existing database
+
+**Combined Cost:** ~$95 (under $100 budget) ✅
+
+### Latest Test Results (Jan 10, 2026 - Portland, ME)
+
+- **Venues Tested:** 9
+- **Accuracy:** 100% (9/9 verified by Gemini Pro)
+- **Closures Detected:** 2 (Sagamore Hill, Maine Craft Distilling)
+- **Category Corrections:** 15+ flags fixed
+- **THC Legality:** Correctly handled (no false positives)
+
+**Key Improvements:**
+- ✅ THC legality check by state
+- ✅ Budget limit safety ($100 max)
+- ✅ Resume mode (can stop/restart)
+- ✅ Progress tracking every 10 cities
 
 ---
 
@@ -1268,67 +1281,52 @@ DowntownDry/
 
 ---
 
-## 💰 Cost Estimation
+## 💰 Cost Estimation (Updated January 2026)
 
-### LLM Costs (Gemini 2.5 Pro)
+### 🎉 MAJOR PRICING UPDATE (January 2026)
 
-**Your Pixel 10 Pro Subscription:**
+Google updated their Maps Platform pricing in March 2025. The new structure is MUCH more favorable:
 
-- ✅ **FREE** Google AI Pro plan (1-year subscription)
-- ✅ **100 prompts per day** limit
-- ✅ Valid through November 2026
-- ✅ Includes Gemini 2.5 Pro (latest model)
+### Google Places API (Text Search Essentials)
 
-**Project Requirements:**
+| Tier | Free Monthly Requests | After Free Tier |
+|------|----------------------|-----------------|
+| **Essentials** | **10,000 FREE** | $32/1,000 |
+| Pro | 5,000 free | $32/1,000 |
+| Enterprise | 1,000 free | $35/1,000 |
 
-- Primary verification: 1,526 Gemini prompts
-- Secondary verification: 1,526 Gemini prompts
-- **Total:** ~3,052 prompts
+**Our needs:** ~1,250 requests = **$0** ✅ (well under 10,000 free tier!)
 
-**Processing Time:**
-
-- At 100 prompts/day: 31 days
-- At 50 venues/day (2 prompts per venue): 31 days
-- **Cost:** $0 ✅
-
-### API Costs
-
-**Google Custom Search API:**
+### Google Custom Search API
 
 - **Free tier:** 100 queries/day
-- **Paid tier:** $5 per 1,000 additional queries
-- **Project needs:** ~25,000 queries total
+- **Paid tier:** $5 per 1,000 queries
+- **Our needs:** ~12,500 queries (1,250 venues × 10 searches)
 
-**Budget Mode (RECOMMENDED):**
+### Gemini API (gemini-2.5-flash)
 
-- Stay under 100 queries/day
-- Spread over 30-35 days
-- **Cost: $0** ✅
+- **Free tier:** 250 requests/day (RPD)
+- **Paid tier:** $1/1M input tokens, $3.50/1M output
+- **Our needs:** ~1,250 requests = **$0** ✅ (completes in ~5 days at free tier)
 
-**Speed Mode:**
+### Total Project Cost (January 2026)
 
-- Use paid queries for faster processing
-- **Cost: ~$115** ❌
+| Mode | Places | Search | Gemini | Total | Timeline |
+|------|--------|--------|--------|-------|----------|
+| **Ultra-Budget** | $0 | $0 | $0 | **$0** | ~125 days |
+| **Balanced** | $0 | ~$30 | $0 | **~$30** | ~10-15 days |
+| **Fast** | $0 | ~$62 | $0 | **~$62** | ~2-5 days |
 
-**Google Places API:**
+**💰 RECOMMENDATION:** Balanced Mode (~$30) offers best value - complete in 10-15 days!
 
-- **Cost:** $0.017 per request
-- **Project needs:** 1,526 requests
-- No free tier available
-- **Cost: ~$26** (unavoidable)
+### Cost Comparison
 
-### Total Project Cost
+| Estimate | Places | Search | Gemini | Total |
+|----------|--------|--------|--------|-------|
+| **Original (Nov 2025)** | $26 | $0-115 | $0 | $26-141 |
+| **Updated (Jan 2026)** | **$0** | $0-62 | $0 | **$0-62** |
 
-| Mode                     | Gemini | Search | Places | Total    | Timeline   |
-| ------------------------ | ------ | ------ | ------ | -------- | ---------- |
-| **Budget (Recommended)** | $0     | $0     | $26    | **$26**  | 30-35 days |
-| Speed                    | $0     | $115   | $26    | **$141** | 15-20 days |
-
-**💰 RECOMMENDATION:** Budget Mode saves you **$115** for only 2-3 weeks extra time. Let it run in the background!
-
-**Original Estimate:** $200-300
-**Actual Cost with Pixel 10 Pro:** $26
-**TOTAL SAVINGS:** $174-274 🎉
+**SAVINGS:** The new Places API free tier (10,000/month) eliminated the biggest cost!
 
 ---
 
@@ -2057,19 +2055,19 @@ If you need results faster:
 
 ---
 
-## 🎯 Final Summary: Cost-Optimized Solution
+## 🎯 Final Summary: Cost-Optimized Solution (Updated January 2026)
 
 ### Total Project Cost Breakdown
 
 | Component                | Free Tier             | Paid Tier             | Chosen    | Cost      |
 | ------------------------ | --------------------- | --------------------- | --------- | --------- |
-| **Gemini 2.5 Flash API** | FREE (input & output) | $0.30-$2.50/1M tokens | Free Tier | **$0** ✅ |
-| **Google Custom Search** | 100 queries/day       | $5/1,000 queries      | Free Tier | **$0** ✅ |
-| **Google Places API**    | None                  | $0.017/request        | Paid      | **$26**   |
+| **Gemini 2.5 Flash API** | 250/day FREE          | $1-3.50/1M tokens     | Free Tier | **$0** ✅ |
+| **Google Custom Search** | 100 queries/day       | $5/1,000 queries      | Mixed     | **$0-62** |
+| **Google Places API**    | **10,000/month FREE** | $32/1,000 requests    | Free Tier | **$0** ✅ |
 | **Node.js Packages**     | All open-source       | N/A                   | Free      | **$0** ✅ |
 | **Supabase**             | Included              | Included              | Free      | **$0** ✅ |
 
-**TOTAL PROJECT COST: ~$26** (Google Places API only)
+**TOTAL PROJECT COST: $0-62** (depending on speed preference)
 
 ### What You're Getting for $26
 

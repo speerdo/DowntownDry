@@ -1,0 +1,3963 @@
+
+══════════════════════════════════════════════════════════════════════
+🚀 FULL VERIFICATION: Non-Production Cities
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-10T22:22:01.457Z
+
+💰 Cost Mode: BALANCED
+   ~$30 cost, ~10-15 days
+   Daily limit: 125 venues/day
+
+🚫 Excluding Production States:
+   • California
+   • New York
+   • Indiana
+   • Nebraska
+
+🚀 PRODUCTION MODE - Processing ALL non-production cities
+   💰 Budget limit: $100
+
+♻️  Resume Mode: ON (will skip already-processed cities)
+══════════════════════════════════════════════════════════════════════
+
+📊 Processing Plan:
+   • Cities: 502
+   • Venues: ~1452
+   • Est. Time: 36 minutes
+   • Est. Cost: ~$24.68 (Places API)
+   ⏭️  Skipping Addison, Texas (already processed)
+   ⏭️  Skipping Aiea, Hawaii (already processed)
+   ⏭️  Skipping Akron, Ohio (already processed)
+   ⏭️  Skipping Albany, Georgia (already processed)
+   ⏭️  Skipping Albuquerque, New Mexico (already processed)
+   ⏭️  Skipping Alexandria, Virginia (already processed)
+   ⏭️  Skipping Allentown, Pennsylvania (already processed)
+   ⏭️  Skipping Altamonte Springs, Florida (already processed)
+   ⏭️  Skipping Amarillo, Texas (already processed)
+   ⏭️  Skipping Amelia, Ohio (already processed)
+   ⏭️  Skipping Anchorage, Alaska (already processed)
+   ⏭️  Skipping Ann Arbor, Michigan (already processed)
+   ⏭️  Skipping Arlington, Texas (already processed)
+   ⏭️  Skipping Arlington, Virginia (already processed)
+   ⏭️  Skipping Arlington Heights, Illinois (already processed)
+   ⏭️  Skipping Asheville, North Carolina (already processed)
+   ⏭️  Skipping Athens, Georgia (already processed)
+   ⏭️  Skipping Atlanta, Georgia (already processed)
+   ⏭️  Skipping Auburn, Alabama (already processed)
+   ⏭️  Skipping Augusta, Georgia (already processed)
+   ⏭️  Skipping Austin, Texas (already processed)
+   ⏭️  Skipping Avondale Estates, Georgia (already processed)
+   ⏭️  Skipping Baltimore, Maryland (already processed)
+   ⏭️  Skipping Barnegat, New Jersey (already processed)
+   ⏭️  Skipping Batavia, Ohio (already processed)
+   ⏭️  Skipping Baton Rouge, Louisiana (already processed)
+   ⏭️  Skipping Beaumont, Texas (already processed)
+   ⏭️  Skipping Beaverton, Oregon (already processed)
+   ⏭️  Skipping Bellingham, Washington (already processed)
+   ⏭️  Skipping Belmar, New Jersey (already processed)
+   ⏭️  Skipping Berwyn, Illinois (already processed)
+   ⏭️  Skipping Bethesda, Maryland (already processed)
+   ⏭️  Skipping Bethesda, Texas (already processed)
+   ⏭️  Skipping Bethlehem, Pennsylvania (already processed)
+   ⏭️  Skipping Big Pine Key, Florida (already processed)
+   ⏭️  Skipping Billings, Montana (already processed)
+   ⏭️  Skipping Birmingham, Alabama (already processed)
+   ⏭️  Skipping Birmingham, Michigan (already processed)
+   ⏭️  Skipping Blairsville, Georgia (already processed)
+   ⏭️  Skipping Boca Raton, Florida (already processed)
+   ⏭️  Skipping Bolingbrook, Illinois (already processed)
+   ⏭️  Skipping Bonita Springs, Florida (already processed)
+   ⏭️  Skipping Boone, North Carolina (already processed)
+   ⏭️  Skipping Boston, Massachusetts (already processed)
+   ⏭️  Skipping Boulder, Colorado (already processed)
+   ⏭️  Skipping Boynton Beach, Florida (already processed)
+   ⏭️  Skipping Bozeman, Montana (already processed)
+   ⏭️  Skipping Bradenton, Florida (already processed)
+   ⏭️  Skipping Brandon, Florida (already processed)
+   ⏭️  Skipping Bridgeport, Connecticut (already processed)
+   ⏭️  Skipping Brockton, Massachusetts (already processed)
+   ⏭️  Skipping Brookfield, Wisconsin (already processed)
+   ⏭️  Skipping Brookline, Massachusetts (already processed)
+   ⏭️  Skipping Brownsville, Texas (already processed)
+   ⏭️  Skipping Bryan, Texas (already processed)
+   ⏭️  Skipping Buckingham, Pennsylvania (already processed)
+   ⏭️  Skipping Buffalo, New Mexico (already processed)
+   ⏭️  Skipping Burlington, Vermont (already processed)
+   ⏭️  Skipping CADOTT, Wisconsin (already processed)
+   ⏭️  Skipping Caldwell, Idaho (already processed)
+   ⏭️  Skipping Cambridge, Massachusetts (already processed)
+   ⏭️  Skipping Canton, Georgia (already processed)
+   ⏭️  Skipping Cape Coral, Florida (already processed)
+   ⏭️  Skipping Captain Cook, Hawaii (already processed)
+   ⏭️  Skipping Carrboro, North Carolina (already processed)
+   ⏭️  Skipping Carrollton, Texas (already processed)
+   ⏭️  Skipping Carson City, Nevada (already processed)
+   ⏭️  Skipping Cary, North Carolina (already processed)
+   ⏭️  Skipping Casper, Wyoming (already processed)
+   ⏭️  Skipping Cedar Rapids, Iowa (already processed)
+   ⏭️  Skipping Chandler, Arizona (already processed)
+   ⏭️  Skipping Chapel Hill, North Carolina (already processed)
+   ⏭️  Skipping Charleston, South Carolina (already processed)
+   ⏭️  Skipping Charleston, West Virginia (already processed)
+   ⏭️  Skipping Charlestown, Massachusetts (already processed)
+   ⏭️  Skipping Charlotte, North Carolina (already processed)
+   ⏭️  Skipping Chaska, Minnesota (already processed)
+   ⏭️  Skipping Chesapeake, Virginia (already processed)
+   ⏭️  Skipping Cheyenne, Wyoming (already processed)
+   ⏭️  Skipping Chicago, Illinois (already processed)
+   ⏭️  Skipping Chicago city, Illinois (already processed)
+   ⏭️  Skipping CHIPPEWA FALLS, Wisconsin (already processed)
+   ⏭️  Skipping Cincinnati, Ohio (already processed)
+   ⏭️  Skipping Clarksville, Tennessee (already processed)
+   ⏭️  Skipping Clearwater, Florida (already processed)
+   ⏭️  Skipping Cleveland, Ohio (already processed)
+   ⏭️  Skipping Clifton, New Jersey (already processed)
+   ⏭️  Skipping Cocoa, Florida (already processed)
+   ⏭️  Skipping Cocoa Beach, Florida (already processed)
+   ⏭️  Skipping Coeur d'Alene, Idaho (already processed)
+   ⏭️  Skipping Colorado Springs, Colorado (already processed)
+   ⏭️  Skipping Columbia, South Carolina (already processed)
+   ⏭️  Skipping Columbia, Missouri (already processed)
+   ⏭️  Skipping Columbus, Ohio (already processed)
+   ⏭️  Skipping Concord, North Carolina (already processed)
+   ⏭️  Skipping Conroe, Texas (already processed)
+   ⏭️  Skipping Conway, Arkansas (already processed)
+   ⏭️  Skipping Coon Rapids, Minnesota (already processed)
+   ⏭️  Skipping Coral Springs, Florida (already processed)
+   ⏭️  Skipping Corpus Christi, Texas (already processed)
+   ⏭️  Skipping Covington, Kentucky (already processed)
+   ⏭️  Skipping Cranston, Rhode Island (already processed)
+   ⏭️  Skipping Dallas, Texas (already processed)
+   ⏭️  Skipping Danbury, Connecticut (already processed)
+   ⏭️  Skipping DANBURY, Wisconsin (already processed)
+   ⏭️  Skipping Dania Beach, Florida (already processed)
+   ⏭️  Skipping Davie, Florida (already processed)
+   ⏭️  Skipping Dayton, Ohio (already processed)
+   ⏭️  Skipping Daytona Beach, Florida (already processed)
+   ⏭️  Skipping Daytona Beach Shores, Florida (already processed)
+   ⏭️  Skipping De Pere, Wisconsin (already processed)
+   ⏭️  Skipping Decatur, Illinois (already processed)
+   ⏭️  Skipping Deerfield Beach, Florida (already processed)
+   ⏭️  Skipping DeLand, Florida (already processed)
+   ⏭️  Skipping Delray Beach, Florida (already processed)
+   ⏭️  Skipping Denton, Texas (already processed)
+   ⏭️  Skipping Denver, Colorado (already processed)
+   ⏭️  Skipping Des Moines, Iowa (already processed)
+   ⏭️  Skipping Des Plaines, Illinois (already processed)
+   ⏭️  Skipping DeSoto, Texas (already processed)
+   ⏭️  Skipping Detroit, Michigan (already processed)
+   ⏭️  Skipping Doral, Florida (already processed)
+   ⏭️  Skipping Dorchester, Massachusetts (already processed)
+   ⏭️  Skipping Dormont, Pennsylvania (already processed)
+   ⏭️  Skipping Dothan, Alabama (already processed)
+   ⏭️  Skipping Draper, Utah (already processed)
+   ⏭️  Skipping Dubuque, Iowa (already processed)
+   ⏭️  Skipping Dunedin, Florida (already processed)
+   ⏭️  Skipping Dunwoody, Georgia (already processed)
+   ⏭️  Skipping Durham, North Carolina (already processed)
+   ⏭️  Skipping Eagan, Minnesota (already processed)
+   ⏭️  Skipping East Arapahoe, Colorado (already processed)
+   ⏭️  Skipping East Boston, Massachusetts (already processed)
+   ⏭️  Skipping East Dubuque, Illinois (already processed)
+   ⏭️  Skipping East Grand Forks, Minnesota (already processed)
+   ⏭️  Skipping East Hartford, Connecticut (already processed)
+   ⏭️  Skipping East Rutherford, New Jersey (already processed)
+   ⏭️  Skipping Eau Claire, Wisconsin (already processed)
+   ⏭️  Skipping Edina, Minnesota (already processed)
+   ⏭️  Skipping Edinburg, Texas (already processed)
+   ⏭️  Skipping El Paso, Texas (already processed)
+   ⏭️  Skipping Ellicott City, Maryland (already processed)
+   ⏭️  Skipping Englewood, Colorado (already processed)
+   ⏭️  Skipping Essex, Maryland (already processed)
+   ⏭️  Skipping Eugene, Oregon (already processed)
+   ⏭️  Skipping Everett, Massachusetts (already processed)
+   ⏭️  Skipping Fairfax, Virginia (already processed)
+   ⏭️  Skipping Fairfield, Iowa (already processed)
+   ⏭️  Skipping Fall River, Massachusetts (already processed)
+   ⏭️  Skipping Fargo, North Dakota (already processed)
+   ⏭️  Skipping Farmington, Connecticut (already processed)
+   ⏭️  Skipping Fayetteville, North Carolina (already processed)
+   ⏭️  Skipping Fayetteville, Arkansas (already processed)
+   ⏭️  Skipping Ferndale, Michigan (already processed)
+   ⏭️  Skipping Flagstaff, Arizona (already processed)
+   ⏭️  Skipping Flower Mound, Texas (already processed)
+   ⏭️  Skipping Forest Park, Illinois (already processed)
+   ⏭️  Skipping Fort Collins, Colorado (already processed)
+   ⏭️  Skipping Fort Lauderdale, Florida (already processed)
+   ⚠️  Skipping entry with null city/state: {"city":"Fort Lauderdale","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [161/502] Fort Myers, Florida
+   10 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/10] The Soundgarden Kava Bar
+      ✅ KEEP
+   [2/10] Kava Nirvana Kava Bar
+      ✅ KEEP
+   [3/10] 13 Barrels Kava Lounge
+      ❌ REMOVE
+   [4/10] Flying Eagle Kombucha
+      ❌ REMOVE
+   [5/10] Burma Kava Company
+      ✅ KEEP
+   [6/10] Island Vibes Kava Bar - Fort Myers
+      ❓ UNCERTAIN
+   [7/10] Kapua Kava Bar
+      ✅ KEEP
+   [8/10] Kava Nirvana Kava Bar
+      ✅ KEEP
+   [9/10] Nectar Lab Kava Bar
+      ✅ KEEP
+   [10/10] The Sound Garden Kava Bar (Under Const.)
+      ✅ KEEP
+   💾 Saved: verification_fort_myers_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [162/502] Fort Myers Beach, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Culture Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_fort_myers_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [163/502] Fort Pierce, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Rooted Reef Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_fort_pierce_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [164/502] Fort Smith, Arkansas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Recovery Room Club
+      ❌ REMOVE
+   💾 Saved: verification_fort_smith_arkansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [165/502] Fort Worth, Texas
+   14 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/14] The Kava Bar Fort Worth
+      ✅ KEEP
+   [2/14] the basement lounge
+      ✅ KEEP
+   [3/14] The Bar at Bowie House
+      ✅ KEEP
+   [4/14] Tricia's Rock House
+      ❌ REMOVE
+   [5/14] The Boiled Owl Tavern
+      ❌ REMOVE
+   [6/14] Charlie brown's
+      ❌ REMOVE
+   [7/14] Sidesaddle Saloon
+      ✅ KEEP
+   [8/14] Bodega West 7th
+      ❌ REMOVE
+   [9/14] Pour Decisions
+      ✅ KEEP
+   [10/14] Junk Punch
+      ❌ REMOVE
+   [11/14] P R's
+      ❌ REMOVE
+   [12/14] The Basement Bar
+      ❌ REMOVE
+   [13/14] Hell's Half Acre Saloon
+      ❌ REMOVE
+   [14/14] Kava Culture - North Fort Worth
+      ✅ KEEP
+   💾 Saved: verification_fort_worth_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [166/502] Fort Wright, Kentucky
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Dickmann's Sports Barn
+      ❌ REMOVE
+   💾 Saved: verification_fort_wright_kentucky.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [167/502] Framingham, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Tacos & More Cantina
+      ❌ REMOVE
+   💾 Saved: verification_framingham_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [168/502] Franklin, Tennessee
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Parlor at Bubble Joy - Private Event Space, Jewelry Bar, Mocktail Bar & Oxygen Bar
+      ✅ KEEP
+   💾 Saved: verification_franklin_tennessee.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [169/502] Franklin Park, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bottle Republic Franklin Park
+      ✅ KEEP
+   💾 Saved: verification_franklin_park_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [170/502] Frederick, Maryland
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Fiesta Tejana Bar and Grill
+      ❌ REMOVE
+   💾 Saved: verification_frederick_maryland.json
+
+   📊 Progress: 10 cities | Cost so far: $1.05
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [171/502] Frisco, Texas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Nerdvana
+      ❌ REMOVE
+   [2/2] Mi Cocina
+      ❌ REMOVE
+   💾 Saved: verification_frisco_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [172/502] Gainesville, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Mai Kai Kava Bar
+      ✅ KEEP
+   [2/2] The Midnight Underground
+      ❌ REMOVE
+   💾 Saved: verification_gainesville_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [173/502] Galveston, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Marina Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_galveston_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [174/502] Gambrills, Maryland
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Crofton Cantina
+      ❌ REMOVE
+   💾 Saved: verification_gambrills_maryland.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [175/502] Garden City, Idaho
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Karuna Kava (2nd Location)
+      ✅ KEEP
+   [2/2] Karuna Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_garden_city_idaho.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [176/502] Gilbert, Arizona
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Arizona Bar Car
+      ❌ REMOVE
+   [2/2] Mad Hatter Kava
+      ✅ KEEP
+   💾 Saved: verification_gilbert_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [177/502] Glendale, Arizona
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] LA MALQUERIDA CANTINA
+      ❌ REMOVE
+   💾 Saved: verification_glendale_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [178/502] Glenn Dale, Maryland
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] SoBe Resturant and Lounge
+      ❌ REMOVE
+   💾 Saved: verification_glenn_dale_maryland.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [179/502] Golden, Colorado
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Golden Kava Lounge (Under Const.)
+      ✅ KEEP
+   💾 Saved: verification_golden_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [180/502] Grand Forks, North Dakota
+   7 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/7] Downtown Axe
+      ❌ REMOVE
+   [2/7] Kelly's Bar
+      ❌ REMOVE
+   [3/7] Half Brothers Brewing Co.
+      ❌ REMOVE
+   [4/7] Charlie's Public House
+      ❌ REMOVE
+   [5/7] Ground Round Grill & Bar-Grand Forks, ND
+      ❌ REMOVE
+   [6/7] Tavern United Grand Forks
+      ❌ REMOVE
+   [7/7] SouthTown PourHouse
+      ❌ REMOVE
+   💾 Saved: verification_grand_forks_north_dakota.json
+
+   📊 Progress: 20 cities | Cost so far: $2.00
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [181/502] Grand Rapids, Michigan
+   14 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/14] Mammoth Distilling Cocktail Lounge
+      ❌ REMOVE
+   [2/14] The Friesian Gastro Pub
+      ✅ KEEP
+   [3/14] Glass House
+      ❌ REMOVE
+   [4/14] Meanwhile Bar, Inc.
+      ❌ REMOVE
+   [5/14] Broad Leaf Underground
+      ✅ KEEP
+   [6/14] 7 Monks Taproom Grand Rapids
+      ✅ KEEP
+   [7/14] The Nightwatch Lounge
+      ❌ REMOVE
+   [8/14] Lumber Baron Bar
+      ❌ REMOVE
+   [9/14] Monarchs' Corner Bar
+      ❌ REMOVE
+   [10/14] Tip Top Deluxe Bar & Grill
+      ❌ REMOVE
+   [11/14] Bridge Street Bar
+      ❌ REMOVE
+   [12/14] The Iron Well
+      ❌ REMOVE
+   [13/14] Shepards Grill & Tavern
+      ❌ REMOVE
+   [14/14] Kava Kasa
+      ✅ KEEP
+   💾 Saved: verification_grand_rapids_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [182/502] Grapevine, Texas
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Willhoite's Restaurant
+      ❌ REMOVE
+   [2/3] Third Rail Bar + Events
+      ❌ REMOVE
+   [3/3] Esparza's Restaurante Mexicano
+      ❌ REMOVE
+   💾 Saved: verification_grapevine_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [183/502] Greeley, Colorado
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Roots And Leaves: Stampede Kava Bar
+      ✅ KEEP
+   [2/3] The Bula Basement, A KavaKlub
+      ✅ KEEP
+   [3/3] The Bula Basement, A KavaKlub
+      ✅ KEEP
+   💾 Saved: verification_greeley_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [184/502] Green Bay, Wisconsin
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] Hammer Inn
+      ❓ UNCERTAIN
+   [2/6] Studio 1212 Cafe & Wine Bar
+      ❌ REMOVE
+   [3/6] The Alibi Tavern
+      ❌ REMOVE
+   [4/6] The Settlement Bar & Grill
+      ❌ REMOVE
+   [5/6] River's Bend
+      ✅ KEEP
+   [6/6] Ned Kelly's Pub
+      ❌ REMOVE
+   💾 Saved: verification_green_bay_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [185/502] Greenacres, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kavasutra Kava Bar Greenacres
+      ✅ KEEP
+   💾 Saved: verification_greenacres_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [186/502] Greensboro, North Carolina
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] The Bearded Goat
+      ✅ KEEP
+   [2/8] House Divided Bottles and Taps
+      ❌ REMOVE
+   [3/8] The Abbey Taphouse
+      ✅ KEEP
+   [4/8] Old Town Draught House
+      ❌ REMOVE
+   [5/8] Westerwood Tavern
+      ❌ REMOVE
+   [6/8] The Speakeasy Tavern
+      ❌ REMOVE
+   [7/8] Walker's Bar
+      ❌ REMOVE
+   [8/8] The Corner Bar
+      ❌ REMOVE
+   💾 Saved: verification_greensboro_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [187/502] Greenville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Sain Kava + Tea Bar
+      ❌ REMOVE
+   💾 Saved: verification_greenville_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [188/502] Greenville, South Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Kava Konnection
+      ✅ KEEP
+   💾 Saved: verification_greenville_south_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [189/502] Gresham, Oregon
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Apple Barrels
+      ❌ REMOVE
+   [2/2] Standing Room Only Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_gresham_oregon.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [190/502] Gulfport, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Low Tide Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_gulfport_florida.json
+
+   📊 Progress: 30 cities | Cost so far: $3.85
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [191/502] Hanover, Maryland
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Original Cancun Cantina
+      ❌ REMOVE
+   💾 Saved: verification_hanover_maryland.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [192/502] Harrisburg, Pennsylvania
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] rijuice
+      ✅ KEEP
+   [2/4] Boneshire Taps @ SOMA
+      ❌ REMOVE
+   [3/4] Liquid 891 INC
+      ❌ REMOVE
+   [4/4] Arooga's
+      ❌ REMOVE
+   💾 Saved: verification_harrisburg_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [193/502] Henderson, Nevada
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] PKWY Tavern Marks
+      ❌ REMOVE
+   [2/2] Sunset Patio Bar
+      ❌ REMOVE
+   💾 Saved: verification_henderson_nevada.json
+   ⚠️  Skipping entry with null city/state: {"city":"Henderson","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [195/502] Hendersonville, Tennessee
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Trattoria La Caverna
+      ❌ REMOVE
+   💾 Saved: verification_hendersonville_tennessee.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [196/502] Hendersonville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Shakedown Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_hendersonville_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [197/502] Hialeah, Florida
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Bar La Rosa
+      ❌ REMOVE
+   [2/5] Raisin Bar
+      ❌ REMOVE
+   [3/5] Bar milagros
+      ❌ REMOVE
+   [4/5] Bar
+      ❌ REMOVE
+   [5/5] Fusion Billar & Sports Bar
+      ❓ UNCERTAIN
+   💾 Saved: verification_hialeah_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [198/502] High Point, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Nomad Wine Works
+      ❌ REMOVE
+   💾 Saved: verification_high_point_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [199/502] Hoboken, New Jersey
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Texas Arizona
+      ❌ REMOVE
+   [2/2] Perico Speakeasy
+      ❌ REMOVE
+   💾 Saved: verification_hoboken_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [200/502] Hoffman Estates, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] sdesrtre4
+      ❌ REMOVE
+   💾 Saved: verification_hoffman_estates_illinois.json
+   ⚠️  Skipping entry with null city/state: {"city":"Hollywood","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [202/502] Hollywood, Florida
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] Happytizer Bar
+      ❌ REMOVE
+   [2/6] Artie's Sportsmen's Lounge
+      ❌ REMOVE
+   [3/6] WHY NOT?
+      ❌ REMOVE
+   [4/6] NobleStar Kava House
+      ❌ REMOVE
+   [5/6] Quantum kava
+      ✅ KEEP
+   [6/6] Twisted Roots Kava Brewery
+      ✅ KEEP
+   💾 Saved: verification_hollywood_florida.json
+
+   📊 Progress: 40 cities | Cost so far: $4.90
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [203/502] Homewood, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Red Lion Lounge
+      ❌ REMOVE
+   💾 Saved: verification_homewood_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [204/502] Honolulu, Hawaii
+   7 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/7] Waikiki Tiki Bar
+      ❓ UNCERTAIN
+   [2/7] Bar Leather Apron
+      ❌ REMOVE
+   [3/7] Bar Elixrs
+      ❌ REMOVE
+   [4/7] The Row Bar by Tamura’s
+      ❌ REMOVE
+   [5/7] Fiji Kava Bar Honolulu
+      ✅ KEEP
+   [6/7] Kava Queen - Saturdays 8AM-12PM
+      ✅ KEEP
+   [7/7] MeloMelo Kava Bar (Under Construction)
+      ❌ REMOVE
+   💾 Saved: verification_honolulu_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [205/502] Hoover, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Tre Luna Bar and Kitchen
+      ❌ REMOVE
+   💾 Saved: verification_hoover_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [206/502] HOULTON, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] CAJUN CLUB
+      ❌ REMOVE
+   💾 Saved: verification_houlton_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [207/502] Houston, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Woodland Social
+      ❌ REMOVE
+   💾 Saved: verification_houston_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [208/502] Inverness, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Sunshine Supply 352 Kava & Tea Bar
+      ✅ KEEP
+   💾 Saved: verification_inverness_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [209/502] Iowa City, Iowa
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Coa Cantina
+      ❌ REMOVE
+   [2/2] Mexico Lindo Grill & Cantina
+      ❌ REMOVE
+   💾 Saved: verification_iowa_city_iowa.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [210/502] Itasca, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] No school Tomorrow
+      ❌ REMOVE
+   💾 Saved: verification_itasca_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [211/502] Jacksonville, Florida
+   7 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/7] Wildcrafters Booze-Free & Kava Bar
+      ❌ REMOVE
+   [2/7] Estrella Cocina
+      ❌ REMOVE
+   [3/7] Miller's Ale House
+      ❌ REMOVE
+   [4/7] Art of Kava
+      ✅ KEEP
+   [5/7] Kava & Company - Mandarin
+      ✅ KEEP
+   [6/7] Kava & Company (San Marco)
+      ✅ KEEP
+   [7/7] Wildcrafters Booze-Free Bar Tea | Kava | Cocktails
+      ❌ REMOVE
+   💾 Saved: verification_jacksonville_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [212/502] Jacksonville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Carolina Ale House - Jacksonville
+      ❌ REMOVE
+   💾 Saved: verification_jacksonville_north_carolina.json
+
+   📊 Progress: 50 cities | Cost so far: $6.05
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [213/502] Jacksonville Beach, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Jax Beach Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_jacksonville_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [214/502] Jensen Beach, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Me Krazy (Opens Oct/Nov)
+      ✅ KEEP
+   💾 Saved: verification_jensen_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [215/502] Johns Creek, Georgia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] 酒酒
+      ❌ REMOVE
+   💾 Saved: verification_johns_creek_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [216/502] Joliet, Illinois
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Nena’s Cantina
+      ❌ REMOVE
+   [2/2] Steel City Saloon
+      ❌ REMOVE
+   💾 Saved: verification_joliet_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [217/502] Joplin, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Xscape Bar
+      ❌ REMOVE
+   💾 Saved: verification_joplin_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [218/502] Jupiter, Florida
+   9 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/9] Square Grouper Tiki Bar Jupiter Inlet
+      ❌ REMOVE
+   [2/9] Island Vibes Kava Bar Jupiter
+      ✅ KEEP
+   [3/9] Island Root Abacoa Kava Bar
+      ✅ KEEP
+   [4/9] Kavasutra Kava Bar Jupiter
+      ✅ KEEP
+   [5/9] Portobello Cucina Italiana
+      ❌ REMOVE
+   [6/9] Island Root Abacoa Kava Bar
+      ✅ KEEP
+   [7/9] Island Vibes Kava Bar Jupiter
+      ✅ KEEP
+   [8/9] Kavasutra Kava Bar Jupiter
+      ✅ KEEP
+   [9/9] Oasis Root Coffee and Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_jupiter_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [219/502] Kailua, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Queen - Sundays 8AM-12PM
+      ❓ UNCERTAIN
+   💾 Saved: verification_kailua_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [220/502] Kailua-Kona, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kanaka Kava
+      ✅ KEEP
+   💾 Saved: verification_kailua_kona_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [221/502] Kansas City, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Midtown Kava
+      ❌ REMOVE
+   💾 Saved: verification_kansas_city_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [222/502] Kapaʻa, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Kauai / RealKava
+      ✅ KEEP
+   💾 Saved: verification_kapa_a_hawaii.json
+
+   📊 Progress: 60 cities | Cost so far: $6.90
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [223/502] Kenner, Louisiana
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Second Line Co
+      ❌ REMOVE
+   💾 Saved: verification_kenner_louisiana.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [224/502] Kennesaw, Georgia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bowlero Kennesaw
+      ❌ REMOVE
+   💾 Saved: verification_kennesaw_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [225/502] Kenneth City, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Tribe Tea House and Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_kenneth_city_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [226/502] Kenosha, Wisconsin
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] 24's Rumors Lounge
+      ❌ REMOVE
+   [2/2] The Port of Kenosha Beverage House
+      ❌ REMOVE
+   💾 Saved: verification_kenosha_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [227/502] Key West, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Change of Scenery Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_key_west_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [228/502] Keyport, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] McDonagh’s Pub & Restaurant
+      ❌ REMOVE
+   💾 Saved: verification_keyport_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [229/502] Kihei, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Haleakava
+      ✅ KEEP
+   💾 Saved: verification_kihei_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [230/502] Killeen, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Brotherhood Bar & Lounge
+      ❌ REMOVE
+   💾 Saved: verification_killeen_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [231/502] Kissimmee, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Cabana Bar and Beach Club
+      ❌ REMOVE
+   💾 Saved: verification_kissimmee_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [232/502] Kittery, Maine
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Woodland Farms Brewery
+      ✅ KEEP
+   💾 Saved: verification_kittery_maine.json
+
+   📊 Progress: 70 cities | Cost so far: $7.40
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [233/502] Knoxville, Tennessee
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Noble Kava Ethnobotanical Tea Bar
+      ✅ KEEP
+   [2/2] Noble Kava Ethnobotanical Tea Bar
+      ✅ KEEP
+   💾 Saved: verification_knoxville_tennessee.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [234/502] Lacey, Washington
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Viking Lounge
+      ❌ REMOVE
+   💾 Saved: verification_lacey_washington.json
+   ⚠️  Skipping entry with null city/state: {"city":"Lafayette","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [236/502] Lafayette, Louisiana
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Corner Bar
+      ❌ REMOVE
+   [2/2] Freetown Boom Boom Room
+      ❌ REMOVE
+   💾 Saved: verification_lafayette_louisiana.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [237/502] Lafayette, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] World of Beer
+      ❌ REMOVE
+   💾 Saved: verification_lafayette_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [238/502] Lahaina, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Haleakava (Destroyed in Maui Fire)
+      ❌ REMOVE
+   💾 Saved: verification_lahaina_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [239/502] Lake Buena Vista, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Laguna Bar
+      ❌ REMOVE
+   💾 Saved: verification_lake_buena_vista_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [240/502] Lake Charles, Louisiana
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] LUNA Bar & Grill Downtown
+      ❌ REMOVE
+   [2/4] Luna Bar & Grill South
+      ❌ REMOVE
+   [3/4] Lagunas Mexican Grill & Cantina
+      ❓ UNCERTAIN
+   [4/4] Crystal's Downtown
+      ❌ REMOVE
+   💾 Saved: verification_lake_charles_louisiana.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [241/502] Lake Havasu City, Arizona
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] “MAS LOCOS” Locos Bar and Cocina
+      ❌ REMOVE
+   [2/4] BJ's Cabana Bar & Karaoke
+      ❌ REMOVE
+   [3/4] Locos Bar and Cocina
+      ❌ REMOVE
+   [4/4] Javelina Cantina
+      ❌ REMOVE
+   💾 Saved: verification_lake_havasu_city_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [242/502] Lake Worth Beach, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] The Irish Brigade
+      ❌ REMOVE
+   [2/3] Kavasutra Kava Bar - Lake Worth
+      ✅ KEEP
+   [3/3] Pause...at 615 Lake Ave Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lake_worth_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [243/502] Lake Worth Corridor, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Island Vibes Lake Worth Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lake_worth_corridor_florida.json
+
+   📊 Progress: 80 cities | Cost so far: $8.35
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [244/502] Lakeland, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] N7 Nitro Kava Bar Lakeland
+      ✅ KEEP
+   [2/3] Quinteassence Kava Bar
+      ✅ KEEP
+   [3/3] Sun Kava
+      ❌ REMOVE
+   💾 Saved: verification_lakeland_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [245/502] Lakewood, Colorado
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] Roots and Leaves: Peak Kava
+      ✅ KEEP
+   [2/6] KavaDen
+      ✅ KEEP
+   [3/6] Kavasutra Kava Bar - Lakewood
+      ❌ REMOVE
+   [4/6] Kavasutra Kava Bar - Lakewood
+      ✅ KEEP
+   [5/6] Roots and Leaves: Peak Kava
+      ✅ KEEP
+   [6/6] The Karma House Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lakewood_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [246/502] Lakewood, Ohio
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] The Chamber
+      ❌ REMOVE
+   [2/4] Sacred Waters Kava Bar (Botanical Sales Moratorium)
+      ✅ KEEP
+   [3/4] One Star Bar Oh
+      ✅ KEEP
+   [4/4] Riverwood Cafe
+      ❌ REMOVE
+   💾 Saved: verification_lakewood_ohio.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [247/502] Lansing, Michigan
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Stober's Bar
+      ✅ KEEP
+   [2/2] Rooted Socialite Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lansing_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [248/502] Lantana, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kavasutra Kava Bar - Lantana
+      ✅ KEEP
+   💾 Saved: verification_lantana_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [249/502] Laredo, Texas
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] La Mina Cantina Bar
+      ❌ REMOVE
+   [2/3] Charlie's Corona Bar and Grill
+      ❌ REMOVE
+   [3/3] Safe House
+      ❌ REMOVE
+   💾 Saved: verification_laredo_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [250/502] Largo, Florida
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] Dharma Kava Lounge
+      ✅ KEEP
+   [2/8] Speakeasy Kava
+      ✅ KEEP
+   [3/8] Java Kava Cafe Kratom CBD Delta 8
+      ✅ KEEP
+   [4/8] Kava Kraze
+      ✅ KEEP
+   [5/8] N7 Nitro Kava Bar Drivethru Seminole Blvd
+      ✅ KEEP
+   [6/8] N7 Nitro Kava Bar West Bay
+      ❌ REMOVE
+   [7/8] Speakeasy Kava
+      ✅ KEEP
+   [8/8] Tribe Tea House Kava Bar Largo
+      ✅ KEEP
+   💾 Saved: verification_largo_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [251/502] Las Vegas, Nevada
+   31 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/31] Beer Zombies Draft Room
+      ❌ REMOVE
+   [2/31] WLVS DEN Kava Lounge
+      ✅ KEEP
+   [3/31] Rum Runner Lounge
+      ❌ REMOVE
+   [4/31] The Lock Speakeasy at Horseshoe Las Vegas
+      ✅ KEEP
+   [5/31] OneBar
+      ❌ REMOVE
+   [6/31] Botellas Tras Botellas
+      ❌ REMOVE
+   [7/31] Lobby Bar
+      ❌ REMOVE
+   [8/31] Electra Cocktail Club
+      ✅ KEEP
+   [9/31] Hola Habibi
+      ❌ REMOVE
+   [10/31] Nukha Restaurant - Lounge
+      ❌ REMOVE
+   [11/31] VICE VERSA Patio & Lounge
+      ❌ REMOVE
+   [12/31] LIFTOFF Bar & Ride
+      ✅ KEEP
+   [13/31] 7th & Carson
+      ❌ REMOVE
+   [14/31] Re:Match Bar at The LINQ
+      ❌ REMOVE
+   [15/31] PT's Pub
+      ❌ REMOVE
+   [16/31] Cheba Hut "Toasted" Subs
+      ❌ REMOVE
+   [17/31] Evel Pie
+      ❌ REMOVE
+   [18/31] Hakkasan Nightclub
+      ✅ KEEP
+   [19/31] Blue Ox Tavern
+      ❌ REMOVE
+   [20/31] Dino's Lounge
+      ❌ REMOVE
+   [21/31] The Cabinet of Curiosities
+      ✅ KEEP
+   [22/31] Dylans Sports Pub
+      ❌ REMOVE
+   [23/31] Piranha Nightclub
+      ❌ REMOVE
+   [24/31] ALIBI Ultra Lounge
+      ❌ REMOVE
+   [25/31] PKWY Tavern Decatur
+      ✅ KEEP
+   [26/31] Lakes Lounge
+      ❌ REMOVE
+   [27/31] The NoMad Bar
+      ✅ KEEP
+   [28/31] Buffalo Wild Wings
+      ❓ UNCERTAIN
+   [29/31] Charlie's Las Vegas
+      ❌ REMOVE
+   [30/31] La Diosa Cantina
+      ❌ REMOVE
+   [31/31] Wlvs Den Kava
+      ✅ KEEP
+   💾 Saved: verification_las_vegas_nevada.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [252/502] Lauderhill, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Shells Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lauderhill_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [253/502] Laurel, Montana
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Roots - The Vault
+      ✅ KEEP
+   💾 Saved: verification_laurel_montana.json
+
+   📊 Progress: 90 cities | Cost so far: $11.20
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [254/502] Lawrence, Kansas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Mana Bar: Exotic Beverage Lounge
+      ✅ KEEP
+   [2/2] Cork & Barrel
+      ❌ REMOVE
+   💾 Saved: verification_lawrence_kansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [255/502] Lawrence, Massachusetts
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Terra Luna
+      ❌ REMOVE
+   [2/2] El Vago Cantina
+      ❌ REMOVE
+   💾 Saved: verification_lawrence_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [256/502] Lawton, Oklahoma
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Salas Urban Cantina
+      ❌ REMOVE
+   💾 Saved: verification_lawton_oklahoma.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [257/502] Lee's Summit, Missouri
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Carmen's Cantina
+      ❌ REMOVE
+   [2/2] Do Drop Inn
+      ❌ REMOVE
+   💾 Saved: verification_lee_s_summit_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [258/502] Lenexa, Kansas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Saloon “Whiskey & Tequila Bar”
+      ❌ REMOVE
+   💾 Saved: verification_lenexa_kansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [259/502] Lewiston, Maine
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Sonder & Dram
+      ❌ REMOVE
+   [2/2] Legends Sports Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_lewiston_maine.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [260/502] Lexington, Kentucky
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Ona
+      ✅ KEEP
+   [2/2] Seltzer Club
+      ❌ REMOVE
+   💾 Saved: verification_lexington_kentucky.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [261/502] Little Rock, Arkansas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Six Ten Center
+      ❌ REMOVE
+   💾 Saved: verification_little_rock_arkansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [262/502] Livonia, Michigan
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] MI Slingers
+      ❌ REMOVE
+   💾 Saved: verification_livonia_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [263/502] Longmont, Colorado
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Colorado Mountain Kava Company
+      ✅ KEEP
+   [2/3] Colorado Mountain Kava
+      ✅ KEEP
+   [3/3] Rocky Mountain Kava Co (Investors Needed)
+      ✅ KEEP
+   💾 Saved: verification_longmont_colorado.json
+
+   📊 Progress: 100 cities | Cost so far: $11.95
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [264/502] Longwood, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Sodo Kava - Longwood
+      ✅ KEEP
+   💾 Saved: verification_longwood_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [265/502] Lorain, Ohio
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Brass & Bronze Foundry Bar
+      ✅ KEEP
+   💾 Saved: verification_lorain_ohio.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [266/502] Louisville, Kentucky
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] The House Lounge
+      ❌ REMOVE
+   [2/8] Third Street Dive
+      ❌ REMOVE
+   [3/8] Library Bar
+      ✅ KEEP
+   [4/8] The Deuce
+      ❌ REMOVE
+   [5/8] Wiseguy Lounge - Baxter Ave
+      ❌ REMOVE
+   [6/8] Monnik Beer Company
+      ❌ REMOVE
+   [7/8] Trouble Bar
+      ❌ REMOVE
+   [8/8] Cave Valley Kava
+      ✅ KEEP
+   💾 Saved: verification_louisville_kentucky.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [267/502] Lousiville, Kentucky
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Mag Bar
+      ❌ REMOVE
+   💾 Saved: verification_lousiville_kentucky.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [268/502] Loveland, Colorado
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] The Love Shack - Craft Mocktails
+      ✅ KEEP
+   [2/2] Sage Speakeasy & Lounge
+      ❌ REMOVE
+   💾 Saved: verification_loveland_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [269/502] Lowell, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] North Main Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_lowell_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [270/502] Lubbock, Texas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] La Sirena
+      ✅ KEEP
+   [2/2] Rehab Bar Lubbock
+      ❌ REMOVE
+   💾 Saved: verification_lubbock_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [271/502] Lutz, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Kava Cave
+      ❌ REMOVE
+   [2/2] Cheval Athletic Club
+      ❌ REMOVE
+   💾 Saved: verification_lutz_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [272/502] Lynn Haven, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] 390 Kava House
+      ✅ KEEP
+   💾 Saved: verification_lynn_haven_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [273/502] Macon, Georgia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Grants Lounge
+      ❌ REMOVE
+   💾 Saved: verification_macon_georgia.json
+
+   📊 Progress: 110 cities | Cost so far: $12.80
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [274/502] Madeira Beach, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Bula Kava Bar & Coffee House (Bula on the Beach)
+      ❌ REMOVE
+   [2/2] The Kava Shack - Coffee and Kava
+      ❌ REMOVE
+   💾 Saved: verification_madeira_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [275/502] Madison, Alabama
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] SZND Kitchen & Cocktails
+      ❌ REMOVE
+   [2/2] Sidelines Pub & Grub
+      ❓ UNCERTAIN
+   💾 Saved: verification_madison_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [276/502] Madison, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Rooted In Sanity Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_madison_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [277/502] Madison Heights, Michigan
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Salty Dog
+      ❌ REMOVE
+   💾 Saved: verification_madison_heights_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [278/502] Maitland, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Elevate Kava Bar & Lounge
+      ✅ KEEP
+   💾 Saved: verification_maitland_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [279/502] Malaga, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kavanagh's Irish Pub & Grille
+      ❌ REMOVE
+   💾 Saved: verification_malaga_new_jersey.json
+   ⚠️  Skipping entry with null city/state: {"city":"Mandarin","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [281/502] Manitowoc, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Waterfront Wine Bar
+      ✅ KEEP
+   💾 Saved: verification_manitowoc_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [282/502] Mansfield, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Trattoria Della Nonna
+      ❌ REMOVE
+   💾 Saved: verification_mansfield_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [283/502] Mapleton, Utah
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Bags
+      ✅ KEEP
+   💾 Saved: verification_mapleton_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [284/502] Margate, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Burn One Cigar Bar
+      ❌ REMOVE
+   💾 Saved: verification_margate_florida.json
+
+   📊 Progress: 120 cities | Cost so far: $13.25
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [285/502] Maricopa, Arizona
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Mandy's Wine Bar
+      ❌ REMOVE
+   [2/2] Night Sweats Gone Llc
+      ❌ REMOVE
+   💾 Saved: verification_maricopa_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [286/502] McAllen, Texas
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Frida's Grill & Cantina
+      ❌ REMOVE
+   [2/4] La Tejana
+      ❌ REMOVE
+   [3/4] The Grubb
+      ❌ REMOVE
+   [4/4] Recovery Room Lounge
+      ❌ REMOVE
+   💾 Saved: verification_mcallen_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [287/502] McKinney, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Happy it's Ours
+      ❌ REMOVE
+   💾 Saved: verification_mckinney_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [288/502] McLean, Virginia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Lebanese Taverna
+      ❌ REMOVE
+   💾 Saved: verification_mclean_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [289/502] Melbourne, Florida
+   9 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/9] Island Root Kava Bar
+      ❌ REMOVE
+   [2/9] Makai Kava Bar & Grille
+      ❌ REMOVE
+   [3/9] Kavasutra Kava Bar Melbourne
+      ✅ KEEP
+   [4/9] Island Root Kava Bar EGAD
+      ✅ KEEP
+   [5/9] Island Root Kava Bar Suntree
+      ❌ REMOVE
+   [6/9] Island Root Kava Bar
+      ❌ REMOVE
+   [7/9] Kavasutra Kava Bar Palm Bay
+      ✅ KEEP
+   [8/9] Razin Shellz Kava Bar, LLC (Under Construction)
+      ✅ KEEP
+   [9/9] The Reef Kava Lounge
+      ❌ REMOVE
+   💾 Saved: verification_melbourne_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [290/502] Meriden, Connecticut
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Dawg House Bar & Grill
+      ❌ REMOVE
+   [2/2] Scotty O Boyles Pub
+      ❌ REMOVE
+   💾 Saved: verification_meriden_connecticut.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [291/502] Merritt Island, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Blue Lagoon Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_merritt_island_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [292/502] Miami, Florida
+   11 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/11] Old's Havana Cuban Bar & Cocina
+      ❌ REMOVE
+   [2/11] Miami Kava & Coffee - Magic City
+      ✅ KEEP
+   [3/11] Corona Beach House
+      ❌ REMOVE
+   [4/11] R House Wynwood
+      ✅ KEEP
+   [5/11] Santé Cocktail Lounge
+      ❌ REMOVE
+   [6/11] Fox's Lounge
+      ❌ REMOVE
+   [7/11] Tabu Taverna
+      ❌ REMOVE
+   [8/11] Zero Proof Speakeasy-er
+      ❌ REMOVE
+   [9/11] Kava Villa
+      ✅ KEEP
+   [10/11] Miami Kava & Coffee - Little River
+      ✅ KEEP
+   [11/11] Roots Miami Kava Bar & Eatery
+      ✅ KEEP
+   💾 Saved: verification_miami_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [293/502] Miami Beach, Florida
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] Red Bar @ Catalina
+      ✅ KEEP
+   [2/8] Bob's Your Uncle
+      ❌ REMOVE
+   [3/8] SoBe Hookah
+      ❌ REMOVE
+   [4/8] Serena
+      ✅ KEEP
+   [5/8] Bar Mañana
+      ❌ REMOVE
+   [6/8] Elixir Kava Boutique | SoBe
+      ✅ KEEP
+   [7/8] Kava Garden
+      ✅ KEEP
+   [8/8] Purple Lotus Kava Bar (Temp Closed)
+      ❌ REMOVE
+   💾 Saved: verification_miami_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [294/502] Miami Gardens, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava and Coffee Lounge
+      ❓ UNCERTAIN
+   💾 Saved: verification_miami_gardens_florida.json
+
+   📊 Progress: 130 cities | Cost so far: $15.10
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [295/502] Middleton, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] LongTable Beer Cafe
+      ❌ REMOVE
+   💾 Saved: verification_middleton_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [296/502] Midland, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Carne seca buena
+      ❌ REMOVE
+   💾 Saved: verification_midland_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [297/502] Milawaukee, Wisconsin
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Beans and Barley
+      ✅ KEEP
+   [2/3] Champion's Pub
+      ❌ REMOVE
+   [3/3] Nomad World Pub
+      ❌ REMOVE
+   💾 Saved: verification_milawaukee_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [298/502] Millvale, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Harold's Haunt
+      ✅ KEEP
+   💾 Saved: verification_millvale_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [299/502] Milwaukee, Wisconsin
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Art Bar Cafe + Gallery
+      ✅ KEEP
+   [2/3] Blackbird Bar
+      ✅ KEEP
+   [3/3] Cactus Club
+      ✅ KEEP
+   💾 Saved: verification_milwaukee_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [300/502] Minneapolis, Minnesota
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] Zero Proof | N/A Beverage House
+      ✅ KEEP
+   [2/6] A Bar of Their Own
+      ✅ KEEP
+   [3/6] Stanley S Northeast Bar
+      ✅ KEEP
+   [4/6] Cardinal Bar
+      ❌ REMOVE
+   [5/6] Morrissey S Irish Pub
+      ❌ REMOVE
+   [6/6] Palmers Bar
+      ❌ REMOVE
+   💾 Saved: verification_minneapolis_minnesota.json
+   ⚠️  Skipping entry with null city/state: {"city":"Minneapolis","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [302/502] Mobile, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Midtown Pub
+      ❌ REMOVE
+   💾 Saved: verification_mobile_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [303/502] Montgomery, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Crimson & Cream Wellness Bar
+      ❓ UNCERTAIN
+   💾 Saved: verification_montgomery_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [304/502] Montgomery, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Social Speakeasy
+      ✅ KEEP
+   💾 Saved: verification_montgomery_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [305/502] Mooresville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Barrel
+      ❌ REMOVE
+   💾 Saved: verification_mooresville_north_carolina.json
+
+   📊 Progress: 140 cities | Cost so far: $16.00
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [306/502] Morristown, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Horseshoe Tavern
+      ❌ REMOVE
+   💾 Saved: verification_morristown_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [307/502] Morton Grove, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bringer Inn
+      ❌ REMOVE
+   💾 Saved: verification_morton_grove_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [308/502] Mountain Brook, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Key Circle Commons
+      ❌ REMOVE
+   💾 Saved: verification_mountain_brook_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [309/502] Mt Prospect, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Mrs P & Me
+      ❌ REMOVE
+   💾 Saved: verification_mt_prospect_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [310/502] Murfreesboro, Tennessee
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Nirvana Bar & Lounge
+      ❌ REMOVE
+   💾 Saved: verification_murfreesboro_tennessee.json
+   ⚠️  Skipping entry with null city/state: {"city":"Napa","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [312/502] Naperville, Illinois
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Zorba Cocktail Bar
+      ✅ KEEP
+   [2/2] Tap in Pub
+      ❌ REMOVE
+   💾 Saved: verification_naperville_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [313/502] Naples, Florida
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Alchemist Kava Bar & Lounge
+      ✅ KEEP
+   [2/4] Cosmic Kava
+      ✅ KEEP
+   [3/4] Kava Luv Social Lounge
+      ✅ KEEP
+   [4/4] Nectar Lab Coffee & Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_naples_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [314/502] Nashua, New Hampshire
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Lost Cowboy Brewing Company
+      ❌ REMOVE
+   [2/3] Elie’s smoking lounge
+      ❌ REMOVE
+   [3/3] Root Awakening Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_nashua_new_hampshire.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [315/502] Nashville, Tennessee
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] lou/na
+      ❌ REMOVE
+   [2/4] The Goat Sobro
+      ❌ REMOVE
+   [3/4] Schulman's
+      ❌ REMOVE
+   [4/4] Passage Kava Lounge *NOW OPEN*
+      ✅ KEEP
+   💾 Saved: verification_nashville_tennessee.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [316/502] Naugatuck, Connecticut
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] 3-21 NO Kiddin' LLC
+      ✅ KEEP
+   💾 Saved: verification_naugatuck_connecticut.json
+
+   📊 Progress: 150 cities | Cost so far: $16.90
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [317/502] New Bedford, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Tropicana Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_new_bedford_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [318/502] New Berlin, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] 19th Hole Country Club
+      ❌ REMOVE
+   💾 Saved: verification_new_berlin_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [319/502] New Brunswick, New Jersey
+   14 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/14] La Famosa Bar
+      ❌ REMOVE
+   [2/14] Stuff Yer Face
+      ❌ REMOVE
+   [3/14] What A Knight
+      ❌ REMOVE
+   [4/14] Scarlet Pub
+      ❌ REMOVE
+   [5/14] Space Lounge
+      ❌ REMOVE
+   [6/14] Patrick's Pub
+      ❌ REMOVE
+   [7/14] Sobriety and Beyond
+      ✅ KEEP
+   [8/14] Ale 'N 'Wich Pub
+      ❌ REMOVE
+   [9/14] Blackthorn Restaurant & Irish Pub
+      ❌ REMOVE
+   [10/14] Golden Rail Pub
+      ❌ REMOVE
+   [11/14] Cancun bar
+      ❌ REMOVE
+   [12/14] The Court Tavern
+      ✅ KEEP
+   [13/14] Huey's Knight Club
+      ❌ REMOVE
+   [14/14] Veganica
+      ❌ REMOVE
+   💾 Saved: verification_new_brunswick_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [320/502] New Haven, Connecticut
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Viva Zapata/ VivaZ Cantina
+      ❌ REMOVE
+   [2/3] Contois Tavern
+      ❌ REMOVE
+   [3/3] Rudy's Bar
+      ❌ REMOVE
+   💾 Saved: verification_new_haven_connecticut.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [321/502] New Hope, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] MagiKava
+      ✅ KEEP
+   💾 Saved: verification_new_hope_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [322/502] New Orleans, Louisiana
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Bar Babe
+      ✅ KEEP
+   [2/2] Euphorbia Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_new_orleans_louisiana.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [323/502] Newark, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Prices Lounge
+      ❌ REMOVE
+   💾 Saved: verification_newark_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [324/502] Newport News, Virginia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] District 41 Sports Bar
+      ❌ REMOVE
+   💾 Saved: verification_newport_news_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [325/502] Niles, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Yacko's Bar in Niles
+      ❌ REMOVE
+   💾 Saved: verification_niles_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [326/502] Norfolk, Virginia
+   14 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/14] 508 Crafthouse
+      ❌ REMOVE
+   [2/14] 37th & Zen
+      ❌ REMOVE
+   [3/14] The Taphouse Grill
+      ❌ REMOVE
+   [4/14] MJ's Tavern
+      ❌ REMOVE
+   [5/14] Tap It Local
+      ❌ REMOVE
+   [6/14] The Birch
+      ✅ KEEP
+   [7/14] No Frill Bar And Grill
+      ❌ REMOVE
+   [8/14] Trolley Pub Norfolk
+      ❌ REMOVE
+   [9/14] Gershwin's
+      ✅ KEEP
+   [10/14] Ez Inn
+      ❌ REMOVE
+   [11/14] Murphy's Law Southern Grill
+      ❌ REMOVE
+   [12/14] Grace O'Malley's Irish Pub and Restaurant
+      ❌ REMOVE
+   [13/14] Monarch Recovery Sports Grill
+      ❌ REMOVE
+   [14/14] Blue Moon Taphouse
+      ✅ KEEP
+   💾 Saved: verification_norfolk_virginia.json
+
+   📊 Progress: 160 cities | Cost so far: $18.70
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [327/502] Norfolk, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] THE EDGE
+      ❌ REMOVE
+   💾 Saved: verification_norfolk_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [328/502] North Bergen, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Brass Rail Pub
+      ❌ REMOVE
+   💾 Saved: verification_north_bergen_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [329/502] North Brunswick Township, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] North Brunswick Pub
+      ❌ REMOVE
+   💾 Saved: verification_north_brunswick_township_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [330/502] North Fort Myers, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Island Vibes Kava - North Fort Myers
+      ✅ KEEP
+   💾 Saved: verification_north_fort_myers_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [331/502] North Little Rock, Arkansas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Chaps
+      ❌ REMOVE
+   💾 Saved: verification_north_little_rock_arkansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [332/502] North Miami, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Elixir Kava Boutique | North Miami
+      ✅ KEEP
+   [2/3] Euphoria Juice & Kava Bar
+      ✅ KEEP
+   [3/3] Makana Kava Gastrobar
+      ✅ KEEP
+   💾 Saved: verification_north_miami_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [333/502] North Palm Beach, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Kavasutra Kava Bar - North Palm Beach
+      ✅ KEEP
+   [2/2] Vosamana Kava
+      ✅ KEEP
+   💾 Saved: verification_north_palm_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [334/502] North Richland Hills, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] False Idol Brewing
+      ✅ KEEP
+   💾 Saved: verification_north_richland_hills_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [335/502] Novi, Michigan
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Border Cantina
+      ❌ REMOVE
+   💾 Saved: verification_novi_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [336/502] Oak Lawn, Illinois
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] St. James Place
+      ❌ REMOVE
+   💾 Saved: verification_oak_lawn_illinois.json
+
+   📊 Progress: 170 cities | Cost so far: $19.30
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [337/502] Ocala, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Muddy Lotus Tea Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_ocala_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [338/502] Ocean Springs, Mississippi
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Red Apple Lounge
+      ❌ REMOVE
+   💾 Saved: verification_ocean_springs_mississippi.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [339/502] Ocean View, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Pū’iwa’ Hawaiian Farms (Kava Farm)
+      ❌ REMOVE
+   💾 Saved: verification_ocean_view_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [340/502] Odessa, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The House Downtown Bar
+      ❌ REMOVE
+   💾 Saved: verification_odessa_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [341/502] Ogden, Utah
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bout Time Pub & Grub Ogden
+      ❌ REMOVE
+   💾 Saved: verification_ogden_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [342/502] Olathe, Kansas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Quaint
+      ✅ KEEP
+   [2/2] Sharkbite Cocktails LLC
+      ✅ KEEP
+   💾 Saved: verification_olathe_kansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [343/502] Oldsmar, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] N7 Nitro Kava Bar - Oldsmar
+      ❌ REMOVE
+   💾 Saved: verification_oldsmar_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [344/502] Orem, Utah
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Kisa's Kava Vending Machine
+      ❓ UNCERTAIN
+   [2/3] OFA’S KAVA
+      ❌ REMOVE
+   [3/3] SquareRoots Kava
+      ✅ KEEP
+   💾 Saved: verification_orem_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [345/502] Orlando, Florida
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Lina's Cafe & healty juice bar barbecue haitian food and catering
+      ❌ REMOVE
+   [2/5] KavaSutra Kava Bar - Orlando
+      ✅ KEEP
+   [3/5] Pacific Rootz Kava Lounge
+      ✅ KEEP
+   [4/5] SODO KAVA
+      ✅ KEEP
+   [5/5] The Muddy Root Kava Cafe
+      ❌ REMOVE
+   💾 Saved: verification_orlando_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [346/502] Ormond Beach, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Iron Horse Saloon
+      ❌ REMOVE
+   [2/3] Kava Kula Kava Bar & Lounge
+      ✅ KEEP
+   [3/3] Kava Culture
+      ✅ KEEP
+   💾 Saved: verification_ormond_beach_florida.json
+
+   📊 Progress: 180 cities | Cost so far: $20.00
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [347/502] Oviedo, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Legacy Kava
+      ✅ KEEP
+   💾 Saved: verification_oviedo_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [348/502] Owensboro, Kentucky
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Cuffed Monkey Sober Bar
+      ❌ REMOVE
+   💾 Saved: verification_owensboro_kentucky.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [349/502] Pāhoa, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] La Hiki Ola Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_p_hoa_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [350/502] Palatine, Illinois
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Donkey Inn
+      ❌ REMOVE
+   [2/2] Splinters Sports Pub
+      ❌ REMOVE
+   💾 Saved: verification_palatine_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [351/502] Palm Bay, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Kalea Kava House
+      ✅ KEEP
+   [2/2] Kava Depot
+      ❌ REMOVE
+   💾 Saved: verification_palm_bay_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [352/502] Palm Beach Gardens, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Kava Daddy
+      ✅ KEEP
+   [2/2] Tenaga Kava
+      ✅ KEEP
+   💾 Saved: verification_palm_beach_gardens_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [353/502] Palm Coast, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Ocean Bar
+      ❌ REMOVE
+   💾 Saved: verification_palm_coast_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [354/502] Palm Harbor, Florida
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Hookah House Lounge And Kava Bar
+      ✅ KEEP
+   [2/5] B J's Pub
+      ❌ REMOVE
+   [3/5] Palm Harbor House of Beer
+      ❌ REMOVE
+   [4/5] The Vantage Kava & Wellness
+      ✅ KEEP
+   [5/5] TranquiliTea Kava & Coffee Lounge
+      ❓ UNCERTAIN
+   💾 Saved: verification_palm_harbor_florida.json
+   ⚠️  Skipping entry with null city/state: {"city":"Palo Alto","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [356/502] Parker, Colorado
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Parker Pour House
+      ❌ REMOVE
+   💾 Saved: verification_parker_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [357/502] Pasadena, Texas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Turn Around Club Pasadena
+      ❌ REMOVE
+   [2/2] Skyview at the Palm Grill Pasadena
+      ❌ REMOVE
+   💾 Saved: verification_pasadena_texas.json
+
+   📊 Progress: 190 cities | Cost so far: $20.06
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [358/502] Passaic, New Jersey
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Tiny Tijuana
+      ❌ REMOVE
+   [2/3] El Anochecer Bar
+      ❌ REMOVE
+   [3/3] Knockout Sports Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_passaic_new_jersey.json
+   ⚠️  Skipping entry with null city/state: {"city":"Pearland","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [360/502] Pembroke Pines, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Twin Peaks
+      ❌ REMOVE
+   [2/3] The Brass Tap
+      ❌ REMOVE
+   [3/3] JP Mulligans
+      ❌ REMOVE
+   💾 Saved: verification_pembroke_pines_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [361/502] Pensacola, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Pacific Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_pensacola_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [362/502] Peoria, Illinois
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Skwurt Inn
+      ❌ REMOVE
+   [2/4] Red Barn
+      ❌ REMOVE
+   [3/4] Friendly Valley Tavern
+      ❌ REMOVE
+   [4/4] Nightjar
+      ❌ REMOVE
+   💾 Saved: verification_peoria_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [363/502] Philadelphia, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] El Mezcal Cantina
+      ❌ REMOVE
+   💾 Saved: verification_philadelphia_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [364/502] Phoenix, Arizona
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Blanco Cocina + Cantina
+      ❌ REMOVE
+   [2/5] The Spot Sober Lounge
+      ✅ KEEP
+   [3/5] Kavasutra Kava Bar Phoenix
+      ❌ REMOVE
+   [4/5] Lacuna Kava Bar Phoenix
+      ✅ KEEP
+   [5/5] Meraki AZ Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_phoenix_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [365/502] Pitman, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Gem Life + Bar
+      ❌ REMOVE
+   💾 Saved: verification_pitman_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [366/502] Pittsburg, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Skorz Sports Bar
+      ❌ REMOVE
+   💾 Saved: verification_pittsburg_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [367/502] Pittsburgh, Pennsylvania
+   7 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/7] Gene's Place
+      ❌ REMOVE
+   [2/7] Obey House Tavern
+      ❌ REMOVE
+   [3/7] Nico's Recovery Room
+      ❌ REMOVE
+   [4/7] Gooski's
+      ❌ REMOVE
+   [5/7] Unspeakable
+      ❌ REMOVE
+   [6/7] Souper Bowl
+      ❌ REMOVE
+   [7/7] Two Frays Brewery
+      ❌ REMOVE
+   💾 Saved: verification_pittsburgh_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [368/502] Plainfield, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Maree Group
+      ❌ REMOVE
+   💾 Saved: verification_plainfield_new_jersey.json
+
+   📊 Progress: 200 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [369/502] Plant City, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Yerb Labs Kava Lounge
+      ❌ REMOVE
+   💾 Saved: verification_plant_city_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [370/502] Plymouth, New Hampshire
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Last Chair Brewery & Restaurant
+      ❌ REMOVE
+   💾 Saved: verification_plymouth_new_hampshire.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [371/502] Pompano Beach, Florida
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] Island Vibes Kava Bar Pompano
+      ❌ REMOVE
+   [2/6] Delight Kava Bar
+      ✅ KEEP
+   [3/6] Awa Na Kava Lounge
+      ✅ KEEP
+   [4/6] Awa Na Zen Kava Bar
+      ❌ REMOVE
+   [5/6] Chillers Kava and Coffee
+      ✅ KEEP
+   [6/6] Euphoric Roots KAVA Lounge
+      ❌ REMOVE
+   💾 Saved: verification_pompano_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [372/502] Pontiac, Michigan
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] El Maguey Restaurant and Cantina
+      ❌ REMOVE
+   [2/2] Sabor Latino Club
+      ❌ REMOVE
+   💾 Saved: verification_pontiac_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [373/502] Port Arthur, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Opulence Lounge
+      ❌ REMOVE
+   💾 Saved: verification_port_arthur_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [374/502] Port Charlotte, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Kava Culture Kava Bar
+      ❓ UNCERTAIN
+   [2/3] Black Sheep Kava Bar
+      ❌ REMOVE
+   [3/3] Black Sheep Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_port_charlotte_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [375/502] Port Richey, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Redemption Kava & Tea
+      ❌ REMOVE
+   💾 Saved: verification_port_richey_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [376/502] Port St. Lucie, Florida
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Island Root Kava Bar Port Saint Lucie
+      ✅ KEEP
+   [2/5] Kavasutra Kava Bar Port Saint Lucie
+      ✅ KEEP
+   [3/5] Island Root Kava Bar Port Saint Lucie
+      ✅ KEEP
+   [4/5] Kava Kat
+      ❌ REMOVE
+   [5/5] Kavasutra Kava Bar Port Saint Lucie
+      ❌ REMOVE
+   💾 Saved: verification_port_st__lucie_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [377/502] Portland, Maine
+   9 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/9] Sagamore Hill Lounge
+      ❌ REMOVE
+   [2/9] Geno’s Rock Club
+      ❌ REMOVE
+   [3/9] Flask Lounge
+      ❌ REMOVE
+   [4/9] Munjoy Hill Tavern
+      ❌ REMOVE
+   [5/9] On the Rocks Cocktail Cruises
+      ❌ REMOVE
+   [6/9] Top of the East
+      ❌ REMOVE
+   [7/9] Maine Craft Distilling
+      ❌ REMOVE
+   [8/9] Five of Clubs
+      ❌ REMOVE
+   [9/9] Lava Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_portland_maine.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [378/502] Portland, Connecticut
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Concentric Brewing Company
+      ❌ REMOVE
+   💾 Saved: verification_portland_connecticut.json
+
+   📊 Progress: 210 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [379/502] Portland, Oregon
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Bula Kava House
+      ❌ REMOVE
+   [2/2] Nalu Kava Lounge Tea House
+      ❌ REMOVE
+   💾 Saved: verification_portland_oregon.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [380/502] Providence, Rhode Island
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Terra Negra Cantina
+      ❌ REMOVE
+   💾 Saved: verification_providence_rhode_island.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [381/502] Provo, Utah
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Zero Proof Mocktails
+      ❌ REMOVE
+   [2/3] Next Door
+      ❌ REMOVE
+   [3/3] ABG's Bar
+      ❌ REMOVE
+   💾 Saved: verification_provo_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [382/502] Punta Gorda, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Downtown Kava
+      ❌ REMOVE
+   💾 Saved: verification_punta_gorda_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [383/502] Queen Creek, Arizona
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Skippy's Grille & Cantina
+      ❌ REMOVE
+   💾 Saved: verification_queen_creek_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [384/502] Racine, Wisconsin
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Pepis Pub And Grill
+      ❌ REMOVE
+   [2/2] Blue Rock Lounge
+      ❌ REMOVE
+   💾 Saved: verification_racine_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [385/502] Raleigh, North Carolina
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Umbrella Dry Bar
+      ❌ REMOVE
+   [2/3] The Blind Barbour
+      ❌ REMOVE
+   [3/3] Krave Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_raleigh_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [386/502] Rapid City, South Dakota
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Que Pasa Mexican Cantina
+      ❌ REMOVE
+   💾 Saved: verification_rapid_city_south_dakota.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [387/502] Redmond, Washington
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Agave Cocina & Cantina
+      ❌ REMOVE
+   💾 Saved: verification_redmond_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [388/502] Reno, Nevada
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Reno Roots Kava Bar (Issues with Health Dept)
+      ✅ KEEP
+   💾 Saved: verification_reno_nevada.json
+
+   📊 Progress: 220 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [389/502] Reston, Virginia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Crafthouse Reston
+      ❌ REMOVE
+   💾 Saved: verification_reston_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [390/502] Richmond, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] ABY'S MOCKTAILS
+      ❌ REMOVE
+   💾 Saved: verification_richmond_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [391/502] Richmond, Virginia
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Cobra Cabana
+      ❌ REMOVE
+   [2/4] Thirsty's RVA
+      ❌ REMOVE
+   [3/4] Three Notch'd Brewing Company - Richmond
+      ❌ REMOVE
+   [4/4] KavaClub
+      ❌ REMOVE
+   💾 Saved: verification_richmond_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [392/502] Richmond, Oregon
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Foundation
+      ❌ REMOVE
+   💾 Saved: verification_richmond_oregon.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [393/502] RIVER FALLS, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] RIVER FALLS GOLF CLUB
+      ❌ REMOVE
+   💾 Saved: verification_river_falls_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [394/502] Rockledge, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Flamingo Kava & Acai
+      ❌ REMOVE
+   💾 Saved: verification_rockledge_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [395/502] Rocky Mount, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bright Penny Brewing Outpost Rocky Mount
+      ❌ REMOVE
+   💾 Saved: verification_rocky_mount_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [396/502] Rogers, Arkansas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Angus Grill & Cantina
+      ❌ REMOVE
+   [2/2] Core Public House - Rogers
+      ❌ REMOVE
+   💾 Saved: verification_rogers_arkansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [397/502] Rome, Georgia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Traveling Gypsies & Kava Den
+      ✅ KEEP
+   💾 Saved: verification_rome_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [398/502] Round Rock, Texas
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] La Esquina Cantina
+      ❌ REMOVE
+   [2/3] The Alcove Cantina
+      ❌ REMOVE
+   [3/3] Besos Cocina & Cantina
+      ❌ REMOVE
+   💾 Saved: verification_round_rock_texas.json
+
+   📊 Progress: 230 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [399/502] Royal Palm Beach, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Kavasutra Kava Bar Royal Palm
+      ❌ REMOVE
+   [2/3] Island Vibes Kava Bar Royal Palm Beach
+      ❌ REMOVE
+   [3/3] Kavasutra Kava Bar Royal Palm
+      ✅ KEEP
+   💾 Saved: verification_royal_palm_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [400/502] Saint Charles, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kickin' it with Kava
+      ❌ REMOVE
+   💾 Saved: verification_saint_charles_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [401/502] Salt Lake City, Utah
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Kai Po Polynesian Restaurant & Kava Lounge
+      ❌ REMOVE
+   [2/2] Pure Kava
+      ❓ UNCERTAIN
+   💾 Saved: verification_salt_lake_city_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [402/502] San Marcos, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Stonewall Warehouse
+      ❌ REMOVE
+   💾 Saved: verification_san_marcos_texas.json
+   ⚠️  Skipping entry with null city/state: {"city":"San Mateo","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [404/502] Sandy Springs, Georgia
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Chapter Room
+      ❌ REMOVE
+   [2/3] The Ship & Anchor Pub
+      ❌ REMOVE
+   [3/3] Thos. O'Reilly's Public House
+      ❌ REMOVE
+   💾 Saved: verification_sandy_springs_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [405/502] Sanford, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Wana Navu Kava Bar (Under Remodel)
+      ❌ REMOVE
+   💾 Saved: verification_sanford_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [406/502] Santa Fe, New Mexico
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Coyote Cafe & Rooftop Cantina
+      ❌ REMOVE
+   [2/2] Roots and Leaves: Casa De Kava
+      ❌ REMOVE
+   💾 Saved: verification_santa_fe_new_mexico.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [407/502] Sarasota, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Manna Tea & Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_sarasota_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [408/502] Schaumburg, Illinois
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] easy street pub
+      ❌ REMOVE
+   [2/2] Escape Lounge & Sports Bar
+      ❌ REMOVE
+   💾 Saved: verification_schaumburg_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [409/502] Seattle, Washington
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Montana
+      ❌ REMOVE
+   [2/2] Gourmet Hawaiian Kava
+      ✅ KEEP
+   💾 Saved: verification_seattle_washington.json
+
+   📊 Progress: 240 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [410/502] Sedona, Arizona
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Lacuna Kava Bar Sedona
+      ❌ REMOVE
+   💾 Saved: verification_sedona_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [411/502] Seminole, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Driftwood Kava and Roastery
+      ✅ KEEP
+   [2/2] N7 Nitro Kava Bar Seminole
+      ✅ KEEP
+   💾 Saved: verification_seminole_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [412/502] Sheridan, Wyoming
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Coral Sea Kava
+      ❌ REMOVE
+   💾 Saved: verification_sheridan_wyoming.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [413/502] Sidney, Ohio
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Austeria Wine Boutique
+      ❌ REMOVE
+   💾 Saved: verification_sidney_ohio.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [414/502] Silver Spring, Maryland
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Fusion Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_silver_spring_maryland.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [415/502] Skokie, Illinois
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Skokie House
+      ❌ REMOVE
+   [2/3] Village Roadhouse
+      ❌ REMOVE
+   [3/3] The Curragh
+      ❌ REMOVE
+   💾 Saved: verification_skokie_illinois.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [416/502] Smyrna, Georgia
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] El Atorón Wings & cantina
+      ❌ REMOVE
+   [2/3] Blue Moon Pizza of Smyrna
+      ❌ REMOVE
+   [3/3] Monterrey Of Smyrna
+      ❌ REMOVE
+   💾 Saved: verification_smyrna_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [417/502] Smyrna, Tennessee
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Camino Real - Smyrna
+      ❌ REMOVE
+   [2/2] Willie's Wet Spot
+      ❌ REMOVE
+   💾 Saved: verification_smyrna_tennessee.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [418/502] Somerville, Massachusetts
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Saloon
+      ❌ REMOVE
+   [2/4] The Burren
+      ❌ REMOVE
+   [3/4] Sally O'Brien's
+      ❌ REMOVE
+   [4/4] Sligo Pub
+      ❌ REMOVE
+   💾 Saved: verification_somerville_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [419/502] South Hadley, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Halfway House Lounge
+      ❌ REMOVE
+   💾 Saved: verification_south_hadley_massachusetts.json
+
+   📊 Progress: 250 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [420/502] South Portland, Maine
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Journey Magazine
+      ❌ REMOVE
+   💾 Saved: verification_south_portland_maine.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [421/502] South River, New Jersey
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] South River Pub
+      ❌ REMOVE
+   💾 Saved: verification_south_river_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [422/502] South Salt Lake, Utah
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bonfiyah Kava Lounge
+      ❌ REMOVE
+   💾 Saved: verification_south_salt_lake_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [423/502] South St Paul, Minnesota
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Polish National Alliance PNA
+      ❌ REMOVE
+   💾 Saved: verification_south_st_paul_minnesota.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [424/502] Southampton, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Steam Pub
+      ❌ REMOVE
+   💾 Saved: verification_southampton_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [425/502] Southfield, Michigan
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Bar 7 & Grill
+      ❌ REMOVE
+   [2/2] Starter's Bar and Grill Southfield
+      ❌ REMOVE
+   💾 Saved: verification_southfield_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [426/502] Sparks, Nevada
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] La Morena Bar
+      ❌ REMOVE
+   💾 Saved: verification_sparks_nevada.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [427/502] Spokane, Washington
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Cease and Desist Book Club
+      ❌ REMOVE
+   💾 Saved: verification_spokane_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [428/502] Spring, Texas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] The Blind Finch
+      ❌ REMOVE
+   [2/2] Prohibition Texas
+      ❌ REMOVE
+   💾 Saved: verification_spring_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [429/502] Spring Hill, Tennessee
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Magnolia’s Hideaway
+      ❌ REMOVE
+   💾 Saved: verification_spring_hill_tennessee.json
+
+   📊 Progress: 260 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [430/502] Springfield, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Shadow Bar & Lounge
+      ❌ REMOVE
+   💾 Saved: verification_springfield_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [431/502] St Charles, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kickin' it with Kava
+      ❌ REMOVE
+   💾 Saved: verification_st_charles_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [432/502] St Cloud, Minnesota
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Ducks Sports Bar Grill
+      ❌ REMOVE
+   💾 Saved: verification_st_cloud_minnesota.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [433/502] ST CROIX FALLS, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] DALLES HOUSE RESTAURANT
+      ❌ REMOVE
+   💾 Saved: verification_st_croix_falls_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [434/502] St Louis Park, Minnesota
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Steel Toe Brewing
+      ❌ REMOVE
+   💾 Saved: verification_st_louis_park_minnesota.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [435/502] St Paul, Minnesota
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Club Throw Down Sober Bar
+      ✅ KEEP
+   💾 Saved: verification_st_paul_minnesota.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [436/502] St Peters, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] South 94 Bistro
+      ❌ REMOVE
+   💾 Saved: verification_st_peters_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [437/502] St. Augustine, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Green Turtle Kava Bar - St. Augustine
+      ❌ REMOVE
+   [2/2] Kafe Kava - St. Augustine Kava Bar
+      ✅ KEEP
+   💾 Saved: verification_st__augustine_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [438/502] St. Louis, Missouri
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Halfway Haus
+      ❌ REMOVE
+   💾 Saved: verification_st__louis_missouri.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [439/502] St. Pete Beach, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Teaki Tavern Kava Tea & Juices
+      ❌ REMOVE
+   💾 Saved: verification_st__pete_beach_florida.json
+
+   📊 Progress: 270 cities | Cost so far: $20.11
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [440/502] St. Petersburg, Florida
+   9 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/9] Johnny's Kratom Kava THC Vapes
+      ✅ KEEP
+   [2/9] The Kenwood
+      ❌ REMOVE
+   [3/9] Driftwood Kava & Roastery St. Pete
+      ✅ KEEP
+   [4/9] 54th Ave Kava House
+      ✅ KEEP
+   [5/9] Bula Kava Bar & Coffee House (BULA KAFE)
+      ❌ REMOVE
+   [6/9] Kava House Brand
+      ❌ REMOVE
+   [7/9] Mad Hatters Kava Bar
+      ❌ REMOVE
+   [8/9] Muddy Water Kava
+      ✅ KEEP
+   [9/9] Speakeasy Central Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_st__petersburg_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [441/502] Sterling, Michigan
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Sip'n Whiskey Saloon
+      ❌ REMOVE
+   💾 Saved: verification_sterling_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [442/502] Sterling Heights, Michigan
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] RJ's Bar & Grill
+      ❌ REMOVE
+   [2/2] Club 54
+      ❌ REMOVE
+   💾 Saved: verification_sterling_heights_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [443/502] Stevens Point, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Father Fat S Public House
+      ❌ REMOVE
+   💾 Saved: verification_stevens_point_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [444/502] Stonecrest, Georgia
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Vybez Restaurant & Lounge
+      ❌ REMOVE
+   💾 Saved: verification_stonecrest_georgia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [445/502] Stuart, Florida
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Hava Kava
+      ❌ REMOVE
+   [2/3] Island Root Kava Bar Stuart
+      ❌ REMOVE
+   [3/3] Island Vibes Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_stuart_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [446/502] Suffolk, Virginia
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Suffolk Booster Club Inc
+      ❌ REMOVE
+   [2/4] Sojourn Fermentory
+      ❌ REMOVE
+   [3/4] Decent People Taproom
+      ❌ REMOVE
+   [4/4] The Silos Bar
+      ❌ REMOVE
+   💾 Saved: verification_suffolk_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [447/502] Sugar Land, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Benihana
+      ❌ REMOVE
+   💾 Saved: verification_sugar_land_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [448/502] Tacoma, Washington
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Church Cantina
+      ❌ REMOVE
+   💾 Saved: verification_tacoma_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [449/502] Tallahassee, Florida
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Kavakaze
+      ❌ REMOVE
+   [2/5] KAVA BAR
+      ✅ KEEP
+   [3/5] OverHang Bar
+      ❓ UNCERTAIN
+   [4/5] Kavakaze
+      ❌ REMOVE
+   [5/5] Midtown Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_tallahassee_florida.json
+
+   📊 Progress: 280 cities | Cost so far: $20.13
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [450/502] Tampa, Florida
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] Dignitary Tea & Kava House
+      ❌ REMOVE
+   [2/8] AstroBrew Coffee Tea Kava Hemp
+      ✅ KEEP
+   [3/8] Bula Kavananda Kava Bar & Coffee House
+      ✅ KEEP
+   [4/8] DRIP Kratom Kava Tea & Vapor Bar
+      ✅ KEEP
+   [5/8] Grassroots Kava House
+      ✅ KEEP
+   [6/8] Indica Cafe Kava Kratom CBD BAR
+      ✅ KEEP
+   [7/8] Modernesian Kava Social (Relocating)
+      ❌ REMOVE
+   [8/8] Ritual Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_tampa_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [451/502] Taunton, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bobby’s Place Night Club
+      ❌ REMOVE
+   💾 Saved: verification_taunton_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [452/502] Taylor, Michigan
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Salute Taverna
+      ❌ REMOVE
+   💾 Saved: verification_taylor_michigan.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [453/502] Tempe, Arizona
+   16 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/16] Kavasutra Kava Bar - Tempe
+      ✅ KEEP
+   [2/16] Devil's Hideaway
+      ❌ REMOVE
+   [3/16] Massrecovery
+      ❌ REMOVE
+   [4/16] Palo Verde Lounge
+      ❌ REMOVE
+   [5/16] Kavasutra Kava Bar
+      ✅ KEEP
+   [6/16] Taste of Tops
+      ❌ REMOVE
+   [7/16] Yucca Tap Room
+      ❌ REMOVE
+   [8/16] Fat Tuesday
+      ❌ REMOVE
+   [9/16] Sunbar Tempe
+      ❌ REMOVE
+   [10/16] Final Round
+      ❌ REMOVE
+   [11/16] Time Out Lounge
+      ❌ REMOVE
+   [12/16] The Dark Side
+      ❌ REMOVE
+   [13/16] Freely Taproom & Kitchen
+      ❌ REMOVE
+   [14/16] The Golden Pineapple Craft Lounge
+      ❌ REMOVE
+   [15/16] Rúla Búla Tempe Irish Pub and Restaurant
+      ❌ REMOVE
+   [16/16] KavaSutra Kava Bar - Tempe
+      ❓ UNCERTAIN
+   💾 Saved: verification_tempe_arizona.json
+   ⚠️  Skipping entry with null city/state: {"city":"Tempe","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [455/502] Tequesta, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Jupiter Pointe Club and Marina
+      ❌ REMOVE
+   💾 Saved: verification_tequesta_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [456/502] The Woodlands, Texas
+   10 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/10] Kirby Ice House - The Woodlands
+      ❌ REMOVE
+   [2/10] The Goose's Acre
+      ❌ REMOVE
+   [3/10] Bar Louie - The Woodlands
+      ❌ REMOVE
+   [4/10] Como Social Club
+      ❌ REMOVE
+   [5/10] Ronny G's
+      ❌ REMOVE
+   [6/10] Cellar Twenty Four
+      ❌ REMOVE
+   [7/10] Mahoney's
+      ❌ REMOVE
+   [8/10] Hearsay On The Waterway
+      ❌ REMOVE
+   [9/10] Postino Woodlands
+      ❌ REMOVE
+   [10/10] BLEND Bar with Davidoff Cigars
+      ✅ KEEP
+   💾 Saved: verification_the_woodlands_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [457/502] Trenton, New Jersey
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] La Liga Sport Bar
+      ❌ REMOVE
+   [2/3] Joe's Mill Hill Saloon
+      ❌ REMOVE
+   [3/3] Rho Waterfront
+      ❌ REMOVE
+   💾 Saved: verification_trenton_new_jersey.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [458/502] Trucksville, Pennsylvania
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Merch by Cory’s Kava Korner
+      ❌ REMOVE
+   💾 Saved: verification_trucksville_pennsylvania.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [459/502] Tucson, Arizona
+   6 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/6] The Kava Den
+      ❌ REMOVE
+   [2/6] La Esquina Bar
+      ❌ REMOVE
+   [3/6] Sonora Moonshine Company
+      ❌ REMOVE
+   [4/6] Home Plate Marana
+      ❌ REMOVE
+   [5/6] The Kava Bar
+      ✅ KEEP
+   [6/6] The Kava Den
+      ✅ KEEP
+   💾 Saved: verification_tucson_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [460/502] TURTLE LAKE, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] HOTEL BAR & GRILL
+      ❌ REMOVE
+   💾 Saved: verification_turtle_lake_wisconsin.json
+
+   📊 Progress: 290 cities | Cost so far: $20.15
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [461/502] Tuscaloosa, Alabama
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Nocturnal Tavern
+      ❌ REMOVE
+   💾 Saved: verification_tuscaloosa_alabama.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [462/502] Twin Falls, Idaho
+   4 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/4] Freddy’s Speakeasy
+      ❌ REMOVE
+   [2/4] Griff's
+      ❌ REMOVE
+   [3/4] Stone House & Co.
+      ❌ REMOVE
+   [4/4] Turf Club
+      ❌ REMOVE
+   💾 Saved: verification_twin_falls_idaho.json
+   ⚠️  Skipping entry with null city/state: {"city":"Union City","state":null}
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [464/502] Valrico, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Lucid Zero Proof Lounge & Restaurant
+      ✅ KEEP
+   💾 Saved: verification_valrico_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [465/502] Vancouver, Washington
+   3 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/3] Pour Choices Pub
+      ❌ REMOVE
+   [2/3] The Drunken Crow
+      ❌ REMOVE
+   [3/3] Bula Kava House #2
+      ❌ REMOVE
+   💾 Saved: verification_vancouver_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [466/502] Venice, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Cigar Lounge-48102
+      ❌ REMOVE
+   💾 Saved: verification_venice_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [467/502] Vero Beach, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Island Vibes Kava Bar - Vero Beach
+      ✅ KEEP
+   💾 Saved: verification_vero_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [468/502] Virginia Beach, Virginia
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Side Street Cantina
+      ❌ REMOVE
+   [2/2] Rudee's Restaurant and Cabana Bar
+      ❌ REMOVE
+   💾 Saved: verification_virginia_beach_virginia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [469/502] Virginia Gardens, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Bryson's Irish Pub
+      ❌ REMOVE
+   💾 Saved: verification_virginia_gardens_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [470/502] Waialua, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] The Kava Queen - Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_waialua_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [471/502] Waldorf, Maryland
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Gold mine saloon
+      ❌ REMOVE
+   [2/2] Babes Boys Tavern
+      ❌ REMOVE
+   💾 Saved: verification_waldorf_maryland.json
+
+   📊 Progress: 300 cities | Cost so far: $20.15
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [472/502] Waltham, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Copper House Tavern
+      ❌ REMOVE
+   💾 Saved: verification_waltham_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [473/502] Washington, District of Columbia
+   66 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/66] Sudhouse DC
+      ❌ REMOVE
+   [2/66] Free State
+      ❌ REMOVE
+   [3/66] The Bottom Line
+      ❌ REMOVE
+   [4/66] McClellan's Retreat
+      ❌ REMOVE
+   [5/66] Off the Record
+      ❌ REMOVE
+   [6/66] Union Trust
+      ❌ REMOVE
+   [7/66] Lost & Found DC
+      ❌ REMOVE
+   [8/66] Left Door
+      ❌ REMOVE
+   [9/66] Board Room
+      ❌ REMOVE
+   [10/66] Red Derby
+      ❌ REMOVE
+   [11/66] The Alchemist DC
+      ❌ REMOVE
+   [12/66] Service Bar DC
+      ❌ REMOVE
+   [13/66] Looking Glass Lounge
+      ❌ REMOVE
+   [14/66] No Kisses Bar
+      ❌ REMOVE
+   [15/66] metrobar
+      ❌ REMOVE
+   [16/66] Trouble Bird
+      ❌ REMOVE
+   [17/66] Suburbia
+      ❌ REMOVE
+   [18/66] Jane Jane
+      ❌ REMOVE
+   [19/66] Never Looked Better
+      ❌ REMOVE
+   [20/66] ChurchKey
+      ❌ REMOVE
+   [21/66] Other Half Brewing Washington DC
+      ❌ REMOVE
+   [22/66] CODE RED
+      ❌ REMOVE
+   [23/66] Solly's
+      ❌ REMOVE
+   [24/66] Blaguard
+      ❌ REMOVE
+   [25/66] Tap99
+      ❌ REMOVE
+   [26/66] Exiles Bar
+      ❌ REMOVE
+   [27/66] The Wells
+      ❌ REMOVE
+   [28/66] Trusty's
+      ❌ REMOVE
+   [29/66] The Green Zone
+      ❌ REMOVE
+   [30/66] Little Miss Whiskey's Golden Dollar
+      ❌ REMOVE
+   [31/66] The Crown & Crow
+      ❌ REMOVE
+   [32/66] Voodoo Bar DC
+      ❌ REMOVE
+   [33/66] Allegory
+      ❌ REMOVE
+   [34/66] The Dew Drop Inn
+      ❌ REMOVE
+   [35/66] 600 T
+      ❌ REMOVE
+   [36/66] Cotton & Reed
+      ❌ REMOVE
+   [37/66] Pop Fizz Bar
+      ❌ REMOVE
+   [38/66] Jimmy Valentine's Lonely Hearts Club
+      ❌ REMOVE
+   [39/66] Electric Cool-Aid
+      ❌ REMOVE
+   [40/66] Raven Grill
+      ❌ REMOVE
+   [41/66] Copycat Co.
+      ❌ REMOVE
+   [42/66] Bar Charley
+      ❌ REMOVE
+   [43/66] Nellie's Sports Bar
+      ❌ REMOVE
+   [44/66] 12 Stories
+      ❌ REMOVE
+   [45/66] Reliable Tavern
+      ❌ REMOVE
+   [46/66] Breadsoda Bar, Deli & Billiards
+      ❌ REMOVE
+   [47/66] OKPB
+      ❌ REMOVE
+   [48/66] Serenata
+      ❌ REMOVE
+   [49/66] Death & Co. D.C.
+      ❌ REMOVE
+   [50/66] Show of Hands
+      ❌ REMOVE
+   [51/66] Alchy Cocktails
+      ❌ REMOVE
+   [52/66] The Fox and Hounds Lounge
+      ❌ REMOVE
+   [53/66] TKYO SPEAKS BAR
+      ❌ REMOVE
+   [54/66] barmini
+      ❌ REMOVE
+   [55/66] Dram & Grain
+      ❌ REMOVE
+   [56/66] Death Punch
+      ❌ REMOVE
+   [57/66] 1831 bar & lounge
+      ❌ REMOVE
+   [58/66] Bar Betsie
+      ❌ REMOVE
+   [59/66] Lola's A Neighborhood Bar
+      ❌ REMOVE
+   [60/66] ThereGo MyDrink
+      ❌ REMOVE
+   [61/66] Agave Room
+      ❌ REMOVE
+   [62/66] Toro Bar
+      ❌ REMOVE
+   [63/66] St. Regis Bar
+      ❌ REMOVE
+   [64/66] THE BETSY
+      ❌ REMOVE
+   [65/66] The District Sports Bar
+      ❌ REMOVE
+   [66/66] sPACYcLOUd Kava Bar (Confirmed)
+      ❌ REMOVE
+   💾 Saved: verification_washington_district_of_columbia.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [474/502] Washington, Washington
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Side Door
+      ❌ REMOVE
+   [2/5] Kingfisher
+      ❓ UNCERTAIN
+   [3/5] Last Call Bar
+      ❌ REMOVE
+   [4/5] The Mirror
+      ❌ REMOVE
+   [5/5] Tilt
+      ✅ KEEP
+   💾 Saved: verification_washington_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [475/502] Washington, Utah
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Barrel
+      ❌ REMOVE
+   💾 Saved: verification_washington_utah.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [476/502] Waterford, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Spankys Sports Bar And Grill
+      ❌ REMOVE
+   💾 Saved: verification_waterford_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [477/502] Waterloo, Iowa
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Verve Kombucha Kitchen & Bar
+      ❌ REMOVE
+   💾 Saved: verification_waterloo_iowa.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [478/502] Waukesha, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Club 400
+      ❌ REMOVE
+   💾 Saved: verification_waukesha_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [479/502] Waynesville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Mountain Vibes Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_waynesville_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [480/502] Weaverville, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Vintage Kava
+      ❌ REMOVE
+   💾 Saved: verification_weaverville_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [481/502] Wellington, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Riptidez Kava Bar of Wellington
+      ❌ REMOVE
+   💾 Saved: verification_wellington_florida.json
+
+   📊 Progress: 310 cities | Cost so far: $20.15
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [482/502] West Allis, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Persona Bar
+      ❌ REMOVE
+   💾 Saved: verification_west_allis_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [483/502] West Bend, Wisconsin
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] 6th Ave Bar & Grill
+      ❌ REMOVE
+   💾 Saved: verification_west_bend_wisconsin.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [484/502] West Haven, Connecticut
+   5 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/5] Dive Bar & Restaurant
+      ❌ REMOVE
+   [2/5] Boku Cocktail and Latin Dance
+      ❌ REMOVE
+   [3/5] PUB 34
+      ❌ REMOVE
+   [4/5] Synergy Hookah Lounge
+      ❌ REMOVE
+   [5/5] Duffy's Tavern
+      ❌ REMOVE
+   💾 Saved: verification_west_haven_connecticut.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [485/502] West Melbourne, Florida
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Pau Hana Kava Bar
+      ✅ KEEP
+   [2/2] Pau Hana Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_west_melbourne_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [486/502] West Palm Beach, Florida
+   17 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/17] Island Root Kava Bar Royal Palm
+      ✅ KEEP
+   [2/17] Purple Lotus Kava Bar
+      ✅ KEEP
+   [3/17] Oahu Kava Bar
+      ✅ KEEP
+   [4/17] Banko Cantina
+      ❌ REMOVE
+   [5/17] Northwood Hideout Kava and Tea Bar
+      ✅ KEEP
+   [6/17] Tribal Kava Bar
+      ✅ KEEP
+   [7/17] The Lab
+      ❌ REMOVE
+   [8/17] Island Vibes Kava Bar, Inc
+      ❌ REMOVE
+   [9/17] Hakuna Makava - Kava Bar
+      ✅ KEEP
+   [10/17] Hideout Kava and Tea Bar
+      ✅ KEEP
+   [11/17] Hideout Kava and Tea Clematis
+      ❌ REMOVE
+   [12/17] Island Root Kava Bar Royal Palm
+      ❌ REMOVE
+   [13/17] Native kava Okeechobee
+      ❌ REMOVE
+   [14/17] Oahu Kava Bar
+      ❌ REMOVE
+   [15/17] Purple Lotus Kava Bar
+      ❌ REMOVE
+   [16/17] Temanatu Kava Bar
+      ✅ KEEP
+   [17/17] Tribal Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_west_palm_beach_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [487/502] Westminster, Colorado
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Roots And Leaves: Mile High Kava Bar
+      ✅ KEEP
+   [2/2] Roots & Leaves Mile High Kava
+      ✅ KEEP
+   💾 Saved: verification_westminster_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [488/502] Wichita, Kansas
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] The Humidor Cocktail Lounge
+      ❌ REMOVE
+   [2/2] Kirby's
+      ❌ REMOVE
+   💾 Saved: verification_wichita_kansas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [489/502] Wichita, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Peerless
+      ❌ REMOVE
+   💾 Saved: verification_wichita_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [490/502] Wilmington, North Carolina
+   8 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/8] Kat 5 Kava
+      ❌ REMOVE
+   [2/8] manna
+      ❌ REMOVE
+   [3/8] Rooted Kava Lounge
+      ❌ REMOVE
+   [4/8] Retroscape Soda Lounge
+      ❌ REMOVE
+   [5/8] Pour Taproom Wilmington
+      ❌ REMOVE
+   [6/8] Kat 5 Kava
+      ❌ REMOVE
+   [7/8] Peace and Kava
+      ❌ REMOVE
+   [8/8] Rooted Kava Lounge
+      ✅ KEEP
+   💾 Saved: verification_wilmington_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [491/502] Wilmington, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Tavern Law 1832
+      ❌ REMOVE
+   💾 Saved: verification_wilmington_massachusetts.json
+
+   📊 Progress: 320 cities | Cost so far: $20.15
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [492/502] Wilmington, Delaware
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] Piccolina Toscana
+      ❌ REMOVE
+   [2/2] Rooted Kava Lounge
+      ❌ REMOVE
+   💾 Saved: verification_wilmington_delaware.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [493/502] Wilton Manors, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Jive
+      ❌ REMOVE
+   💾 Saved: verification_wilton_manors_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [494/502] Wimberley, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Wimberley Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_wimberley_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [495/502] Winston-Salem, North Carolina
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Whiskey Dawgs
+      ❌ REMOVE
+   💾 Saved: verification_winston_salem_north_carolina.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [496/502] Winter Park, Colorado
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Winter Park Group
+      ❓ UNCERTAIN
+   💾 Saved: verification_winter_park_colorado.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [497/502] Winter Park, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Kava Cove Lounge
+      ❌ REMOVE
+   💾 Saved: verification_winter_park_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [498/502] Winter Springs, Florida
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Lei Kava Cafe
+      ❌ REMOVE
+   💾 Saved: verification_winter_springs_florida.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [499/502] Worcester, Massachusetts
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Root Awakening Kava Bar
+      ❌ REMOVE
+   💾 Saved: verification_worcester_massachusetts.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [500/502] Yakima, Washington
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Avenida Cantina
+      ❌ REMOVE
+   💾 Saved: verification_yakima_washington.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [501/502] Youngstown, Ohio
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] El Tapatio Mexican Restaurant & Cantina
+      ❌ REMOVE
+   💾 Saved: verification_youngstown_ohio.json
+
+   📊 Progress: 330 cities | Cost so far: $20.15
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [502/502] Yuma, Arizona
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Mine Shaft
+      ❌ REMOVE
+   💾 Saved: verification_yuma_arizona.json
+
+══════════════════════════════════════════════════════════════════════
+✅ VERIFICATION COMPLETE
+══════════════════════════════════════════════════════════════════════
+
+📊 Summary:
+   • Cities Processed: 331
+   • Cities Skipped: 171
+   • Venues Processed: 838
+
+📈 Decisions:
+   ✅ KEEP:      224
+   ❌ REMOVE:    596
+   ❓ UNCERTAIN: 18
+
+💰 Cost Summary:
+   • Mode: BALANCED
+   • Places API: 838 calls (FREE under 10K/month)
+   • Search API: 4131 calls ($20.15)
+   • Gemini API: 773 calls (FREE under 250/day)
+   • TOTAL COST: $20.15
+
+⏱️  Total Time: 391 minutes
+
+💾 Summary: non_production_verification_summary.json
+   Results: data/verification_results/*.json
+
+══════════════════════════════════════════════════════════════════════
+📋 NEXT STEPS
+══════════════════════════════════════════════════════════════════════
+
+1. Review the summary: cat data/non_production_verification_summary.json
+2. Spot-check city results in data/verification_results/
+3. Run: node scripts/03_secondary_verification.js (if built)
+4. Run: node scripts/06_database_update.js (to apply changes)
+

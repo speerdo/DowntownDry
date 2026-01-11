@@ -14,7 +14,15 @@
     "enrich": "node scripts/04_data_enrichment.js",
     "review": "node scripts/05_final_verification.js",
     "deploy": "node scripts/06_database_update.js",
-    "test": "node scripts/01_extract_venues.js"
+    "test:city": "node scripts/test-single-city.js",
+    "verify:nonprod": "node scripts/verify-non-production-cities.js",
+    "discover:city": "node scripts/discover-new-venues.js",
+    "discover:all": "node scripts/discover-all-cities.js",
+    "apply:dry-run": "node scripts/apply-verification-results.js --dry-run",
+    "apply:live": "node scripts/apply-verification-results.js --apply",
+    "enrich:dry-run": "node scripts/enrich-venue-data.js --dry-run",
+    "enrich:auto": "node scripts/enrich-venue-data.js --auto",
+    "enrich:review": "node scripts/enrich-venue-data.js --review"
   },
   "keywords": [
     "venue",

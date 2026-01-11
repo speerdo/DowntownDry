@@ -1,0 +1,91 @@
+
+══════════════════════════════════════════════════════════════════════
+🚀 FULL VERIFICATION: Non-Production Cities
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-10T15:39:56.697Z
+
+💰 Cost Mode: BALANCED
+   ~$30 cost, ~10-15 days
+   Daily limit: 125 venues/day
+
+🚫 Excluding Production States:
+   • California
+   • New York
+   • Indiana
+   • Nebraska
+
+⚠️  TEST MODE ENABLED:
+   - Limited to 3 cities
+   - Limited to 5 venues per city
+
+♻️  Resume Mode: ON (will skip already-processed cities)
+══════════════════════════════════════════════════════════════════════
+
+📊 Processing Plan:
+   • Cities: 3
+   • Venues: ~4
+   • Est. Time: 0 minutes
+   • Est. Cost: ~$0.07 (Places API)
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [1/3] Addison, Texas
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Sidecar Social Addison
+      ❌ REMOVE
+   💾 Saved: verification_addison_texas.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [2/3] Aiea, Hawaii
+   1 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/1] Ozia - Kava Kava Candy
+      ❌ REMOVE
+   💾 Saved: verification_aiea_hawaii.json
+
+══════════════════════════════════════════════════════════════════════
+🏙️  [3/3] Akron, Ohio
+   2 venues to process
+══════════════════════════════════════════════════════════════════════
+   [1/2] South Point Tavern
+      ❌ REMOVE
+   [2/2] Perfect Pour - Akron
+      ✅ KEEP
+   💾 Saved: verification_akron_ohio.json
+
+══════════════════════════════════════════════════════════════════════
+✅ VERIFICATION COMPLETE
+══════════════════════════════════════════════════════════════════════
+
+📊 Summary:
+   • Cities Processed: 3
+   • Cities Skipped: 0
+   • Venues Processed: 4
+
+📈 Decisions:
+   ✅ KEEP:      1
+   ❌ REMOVE:    3
+   ❓ UNCERTAIN: 0
+
+💰 Cost Summary:
+   • Mode: BALANCED
+   • Places API: 4 calls (FREE under 10K/month)
+   • Search API: 40 calls ($0.00)
+   • Gemini API: 4 calls (FREE under 250/day)
+   • TOTAL COST: $0.00
+
+⏱️  Total Time: 2 minutes
+
+💾 Summary: non_production_verification_summary.json
+   Results: data/verification_results/*.json
+
+══════════════════════════════════════════════════════════════════════
+📋 NEXT STEPS
+══════════════════════════════════════════════════════════════════════
+
+1. Review the summary: cat data/non_production_verification_summary.json
+2. Spot-check city results in data/verification_results/
+3. Run: node scripts/03_secondary_verification.js (if built)
+4. Run: node scripts/06_database_update.js (to apply changes)
+
