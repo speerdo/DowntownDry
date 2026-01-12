@@ -26,6 +26,7 @@ while (true) {
   const { data: batch } = await supabase
     .from('venues')
     .select('city, state, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, is_sober_friendly')
+    .eq('data_complete', true)  // Only active venues
     .in('state', activeStateNames)
     .range(from, from + batchSize - 1);
   
@@ -899,8 +900,8 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <article class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-3xl">
           <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            <svg width="32" height="32" class="text-white block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" style="display: block; flex-shrink: 0;">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
           </div>
           <h3 class="text-2xl font-bold text-neutral-900 mb-4 font-heading">Better Health Outcomes</h3>
@@ -911,7 +912,7 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
         
         <article class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl">
           <div class="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <svg width="32" height="32" class="text-white block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" style="display: block; flex-shrink: 0;">
               <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
             </svg>
           </div>
@@ -923,7 +924,7 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
         
         <article class="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-3xl">
           <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <svg width="32" height="32" class="text-white block" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true" style="display: block; flex-shrink: 0;">
               <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
             </svg>
           </div>

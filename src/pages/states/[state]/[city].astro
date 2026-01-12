@@ -3,9 +3,6 @@ import Layout from '../../../layouts/Layout.astro';
 import GoogleMap from '../../../components/GoogleMap.astro';
 import { createClient } from '@supabase/supabase-js';
 
-// Soft launch states
-const SOFT_LAUNCH_STATES = ['California', 'New York', 'Indiana', 'Nebraska'];
-
 // Default descriptions for cities without database content
 const DEFAULT_DESCRIPTION = `Discover the growing alcohol-free scene in this city. From craft mocktail bars to kava lounges, find the perfect spot for mindful drinking and sober socializing.`;
 const DEFAULT_META_DESC = 'Find alcohol-free bars and sober venues in this city. Your guide to mocktail bars, kava lounges & mindful nightlife.';
@@ -15,10 +12,15 @@ export async function getStaticPaths() {
   const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
 
-  // Soft launch states
-  const SOFT_LAUNCH_STATES = ['California', 'New York', 'Indiana', 'Nebraska'];
+  // Get active states from database (controlled via is_active flag)
+  const { data: activeStatesData } = await supabase
+    .from('states')
+    .select('state_name')
+    .eq('is_active', true);
+  
+  const ACTIVE_STATES = activeStatesData?.map(s => s.state_name) || [];
 
-  // Get all unique city-state combinations from venues table - handle pagination properly
+  // Get all unique city-state combinations from active venues
   let allVenues = [];
   let from = 0;
   const batchSize = 1000;
@@ -27,9 +29,10 @@ export async function getStaticPaths() {
     const { data: batch } = await supabase
       .from('venues')
       .select('city, state')
+      .eq('data_complete', true)  // Only active venues
       .not('state', 'is', null)
       .not('city', 'is', null)
-      .in('state', SOFT_LAUNCH_STATES)
+      .in('state', ACTIVE_STATES)
       .range(from, from + batchSize - 1);
     
     if (!batch || batch.length === 0) break;
@@ -48,7 +51,6 @@ export async function getStaticPaths() {
   }, new Map()) || new Map();
 
   return Array.from(uniqueCityStates.values())
-    .filter(({ state }) => SOFT_LAUNCH_STATES.includes(state))
     .map(({ city, state }) => ({
       params: { 
         state: state.toLowerCase().replace(/\s+/g, '-'),
@@ -78,10 +80,11 @@ const { data: cityDataArray, error: cityError } = await supabase
 // Extract first city data if available, or null if none found
 const cityData = cityDataArray && cityDataArray.length > 0 ? cityDataArray[0] : null;
 
-// Get all venues for this city
+// Get all active venues for this city
 const { data: venues, error: venuesError } = await supabase
   .from('venues')
   .select('*')
+  .eq('data_complete', true)  // Only active venues
   .eq('city', cityName)
   .eq('state', stateName)
   .order('rating', { ascending: false })

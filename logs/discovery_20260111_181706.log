@@ -1,0 +1,2939 @@
+
+══════════════════════════════════════════════════════════════════════
+🔍 PHASE 2: VENUE DISCOVERY - All Cities
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-11T23:17:06.585Z
+💰 Budget limit: $40
+
+🚀 PRODUCTION MODE - Processing ALL cities
+♻️  Resume Mode: ON
+
+🚫 Skipping Production States: California, New York, Indiana, Nebraska
+
+📊 Processing 502 cities
+   Existing venues in DB: 1526
+══════════════════════════════════════════════════════════════════════
+   ⏭️  Skipped 50 already-processed cities...
+   ⏭️  Skipped 100 already-processed cities...
+   ⏭️  Skipped 150 already-processed cities...
+   ⚠️  Skipping entry with null city/state
+   ⚠️  Skipping entry with null city/state
+   ⏭️  Skipped 200 already-processed cities...
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [222/502] Kapaʻa, Hawaii
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] Namaka Restaurant N Bar
+      ✅ QUALIFIED
+   [2/3] AWA HALE
+      ✅ QUALIFIED
+   [3/3] Kava Queen Kava Bar
+      ❌ Wrong city: Waialua (expected Kapaʻa)
+   💾 Saved: discovery_kapa_a_hawaii.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [223/502] Kenner, Louisiana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Zea Rotisserie & Bar
+      ✅ QUALIFIED
+   [2/6] Copeland's of New Orleans
+      ❌ Not qualified
+   [3/6] RUMBA
+      ❌ Wrong city: Metairie (expected Kenner)
+   [4/6] Carousel Bar & Lounge
+      ❌ Wrong city: New Orleans (expected Kenner)
+   [5/6] Euphorbia Kava Bar
+      ❌ Wrong city: New Orleans (expected Kenner)
+   [6/6] Cafe Du Monde
+      ✅ QUALIFIED
+   💾 Saved: discovery_kenner_louisiana.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [224/502] Kennesaw, Georgia
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] The Candela Bar
+      ❌ Wrong city: Powder Springs (expected Kennesaw)
+   [2/10] IGNITE HOOKAH LOUNGE
+      ✅ QUALIFIED
+   [3/10] The SOS Tiki Bar
+      ❌ Wrong city: Decatur (expected Kennesaw)
+   [4/10] Highlands Grill Kennesaw
+      ❌ Excluded type: night_club
+   [5/10] Mazzy's Sports Bar & Grill
+      ❌ Not qualified
+   [6/10] The Third Door
+      ❌ Wrong city: Marietta (expected Kennesaw)
+   [7/10] Pizookah Lounge
+      ❌ Not qualified
+   [8/10] Sivas Tavern
+      ❌ Excluded type: night_club
+   [9/10] Moustache Hookah Bar
+      ❌ Wrong city: Sandy Springs (expected Kennesaw)
+   [10/10] Kava Mama
+      ❌ Wrong city: Atlanta (expected Kennesaw)
+   💾 Saved: discovery_kennesaw_georgia.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [225/502] Kenneth City, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] KAVATAR
+      ❌ Closed
+   [2/4] The Spot Smoke Shop & Kava Bar
+      ❌ Excluded type: night_club
+   [3/4] Sunsip Kava & Coffee
+      ✅ QUALIFIED
+   [4/4] Kava Culture Kava Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_kenneth_city_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [226/502] Kenosha, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Kenosha Coffee Roasters
+      ✅ QUALIFIED
+   [2/9] Inmoxicated
+      ❌ Closed
+   [3/9] Bristol Renaissance Faire
+      ✅ QUALIFIED
+   [4/9] Boathouse Dockside Pub & Eatery
+      ✅ QUALIFIED
+   [5/9] Living Full Kombucha
+      ❌ Wrong state (expected Wisconsin)
+   [6/9] ONO
+      ❌ Excluded type: night_club
+   [7/9] Kava Culture Kava Bar
+      ❌ Wrong state (expected Wisconsin)
+   [8/9] Moai Kava Bar & Herb Shop
+      ❌ Not qualified
+   [9/9] Blend'd Smoothie Bar
+      ❌ Wrong state (expected Wisconsin)
+   💾 Saved: discovery_kenosha_wisconsin.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [227/502] Key West, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Myth
+      ✅ QUALIFIED
+   [2/10] 22&Co
+      ✅ QUALIFIED
+   [3/10] Tiki House
+      ✅ QUALIFIED
+   [4/10] Better Than Sex
+      ✅ QUALIFIED
+   [5/10] General Horseplay
+      ✅ QUALIFIED
+   [6/10] Glitch Experience
+      ❌ Wrong city: Fort Lauderdale (expected Key West)
+   [7/10] Schooner Wharf Bar
+      ✅ QUALIFIED
+   [8/10] Square Grouper Bar and Grill
+      ✅ QUALIFIED
+   [9/10] Bearded Lady
+      ✅ QUALIFIED
+   [10/10] Kava Culture Kava Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_key_west_florida.json (8 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [228/502] Keyport, New Jersey
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] Drew's Bayshore Bistro
+      ✅ QUALIFIED
+   [2/11] The Cannabar Dispensary
+      ❌ Wrong city: Matawan (expected Keyport)
+   [3/11] Getaway
+      ❌ Not found
+   [4/11] Kavasutra
+      ❌ Wrong state (expected New Jersey)
+   [5/11] The Alchemist's Kitchen
+      ❌ Not qualified
+   [6/11] Island Kava
+      ❌ Wrong state (expected New Jersey)
+   [7/11] Hekate Café & Elixir
+      ❌ Wrong state (expected New Jersey)
+   [8/11] kava social
+      ❌ Wrong state (expected New Jersey)
+   [9/11] Brooklyn Kava
+      ❌ Not qualified
+   [10/11] Bushwick's House of Kava
+      ❌ Wrong state (expected New Jersey)
+   [11/11] Misfit Kava Bar Bk
+      ❌ Wrong state (expected New Jersey)
+   💾 Saved: discovery_keyport_new_jersey.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [229/502] Kihei, Hawaii
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] deVine Wine Lounge Maui
+      ✅ QUALIFIED
+   [2/5] Leilani's Beach Bar
+      ❌ Wrong city: Lahaina (expected Kihei)
+   [3/5] Moku Kitchen
+      ❌ Wrong city: Honolulu (expected Kihei)
+   [4/5] Aumakua Kava Lounge
+      ❌ Wrong city: Paia (expected Kihei)
+   [5/5] Da Kava Spot
+      ✅ QUALIFIED
+   💾 Saved: discovery_kihei_hawaii.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [230/502] Killeen, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Dave and Buster's
+      ❌ Not qualified
+   [2/9] BITBAR
+      ❌ Not qualified
+   [3/9] Bubba's 33
+      ✅ QUALIFIED
+   [4/9] SquareRüt Kava Bar
+      ❌ Wrong city: Austin (expected Killeen)
+   [5/9] Tulum Kava & Kratom
+      ❌ Wrong city: Austin (expected Killeen)
+   [6/9] JuiceLand
+      ❌ Wrong city: Round Rock (expected Killeen)
+   [7/9] Neshama Kava
+      ❌ Not qualified
+   [8/9] Kava Culture Kava Bar
+      ❌ Wrong city: Lewisville (expected Killeen)
+   [9/9] Booch Kombucha Bar
+      ❌ Wrong state (expected Texas)
+   💾 Saved: discovery_killeen_texas.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [231/502] Kissimmee, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  16 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] Lazy Dog Restaurant + Bar
+      ✅ QUALIFIED
+   [2/16] Leeward & Windward Pool Bars
+      ❌ Not qualified
+   [3/16] Bar at Comfort Suites Maingate East
+      ✅ QUALIFIED
+   [4/16] Studio Movie Grill
+      ✅ QUALIFIED
+   [5/16] The Salty Rim Bar & Grill
+      ✅ QUALIFIED
+   [6/16] Sodo Kava
+      ❌ Wrong city: Orlando (expected Kissimmee)
+   [7/16] Kava Cove Lounge
+      ❌ Wrong city: Winter Park (expected Kissimmee)
+   [8/16] Pacific Rootz
+      ❌ Wrong city: Orlando (expected Kissimmee)
+   [9/16] Island Vibes Kava Bar
+      ❌ Closed
+   [10/16] Kava Culture
+      ❌ Wrong city: Orlando (expected Kissimmee)
+   [11/16] Chameleon Kava Lounge
+      ❌ Wrong city: Cocoa (expected Kissimmee)
+   [12/16] Kavasutra Kava Bar
+      ❌ Wrong city: Orlando (expected Kissimmee)
+   [13/16] Kava Garden
+      ❌ Wrong city: Miami Beach (expected Kissimmee)
+   [14/16] Kava Nirvana
+      ❌ Wrong city: Fort Myers (expected Kissimmee)
+   [15/16] Kavakaze
+      ❌ Not found
+   [16/16] KaVapor
+      ❌ Closed
+   💾 Saved: discovery_kissimmee_florida.json (4 new venues)
+
+   📊 Progress: 10 cities | 26 new venues | $1.03
+
+════════════════════════════════════════════════════════════
+🔍 [232/502] Kittery, Maine
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] The Wallingford Dram
+      ✅ QUALIFIED
+   [2/6] One Reason Garden Bar
+      ❌ Wrong state (expected Maine)
+   [3/6] The Black Birch
+      ✅ QUALIFIED
+   [4/6] Federal Cigar Bar
+      ❌ Wrong state (expected Maine)
+   [5/6] Namaste& Brand
+      ❌ Not found
+   [6/6] Root Awakening Kava Bar
+      ❌ Wrong state (expected Maine)
+   💾 Saved: discovery_kittery_maine.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [233/502] Knoxville, Tennessee
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 12 new candidates
+   [1/12] The Boocherie
+      ✅ QUALIFIED
+   [2/12] The Wandery
+      ✅ QUALIFIED
+   [3/12] Vida
+      ✅ QUALIFIED
+   [4/12] Tern Club
+      ✅ QUALIFIED
+   [5/12] Brother Wolf
+      ✅ QUALIFIED
+   [6/12] Daisy's NA Bar & Bottle Shop
+      ❌ Wrong city: Maryville (expected Knoxville)
+   [7/12] Peter Kern Library
+      ✅ QUALIFIED
+   [8/12] Pretentious Beer Co
+      ✅ QUALIFIED
+   [9/12] Space Bar - Knoxville
+      ✅ QUALIFIED
+   [10/12] Monkey's Bar
+      ✅ QUALIFIED
+   [11/12] Hummingbird Apothecary
+      ✅ QUALIFIED
+   [12/12] Apotheca Cannabis
+      ✅ QUALIFIED
+   💾 Saved: discovery_knoxville_tennessee.json (11 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [234/502] Lacey, Washington
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] Ricardo's Kitchen & Bar
+      ✅ QUALIFIED
+   [2/7] Three Magnets Brewing Company
+      ❌ Wrong city: Olympia (expected Lacey)
+   [3/7] The Perfect Pour Mobile Bar
+      ❌ Wrong state (expected Washington)
+   [4/7] 1889 Prime Steakhouse
+      ❌ Wrong city: Olympia (expected Lacey)
+   [5/7] Chelsea Farms Oyster Bar
+      ❌ Wrong city: Olympia (expected Lacey)
+   [6/7] Golden Hour Exotic Tea
+      ❌ Wrong city: Olympia (expected Lacey)
+   [7/7] Euphorbia Kava & Coffee Bar
+      ❌ Wrong state (expected Washington)
+   💾 Saved: discovery_lacey_washington.json (1 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [236/502] Lafayette, Louisiana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 17 new candidates
+   [1/17] Adopted Dog Brewing
+      ✅ QUALIFIED
+   [2/17] The Yard Goat
+      ✅ QUALIFIED
+   [3/17] Marcello's
+      ❌ Excluded type: liquor_store
+   [4/17] Spoonbill Watering Hole
+      ✅ QUALIFIED
+   [5/17] Five Mile Eatery
+      ✅ QUALIFIED
+   [6/17] Social Southern Table
+      ❌ Not qualified
+   [7/17] Hideaway on Lee
+      ✅ QUALIFIED
+   [8/17] Mandez's Seafood Bar & Grill
+      ❌ Not qualified
+   [9/17] Dave and Buster's
+      ✅ QUALIFIED
+   [10/17] Wild Child Wine Shop
+      ❌ Excluded type: liquor_store
+   [11/17] PALMYRE
+      ❌ Excluded type: night_club
+   [12/17] Mercy Kitchen
+      ✅ QUALIFIED
+   [13/17] La Pizzeria Lafayette
+      ✅ QUALIFIED
+   [14/17] SUGAR 'N SPICE ACADEMY MOCKTAIL BAR
+      ❌ Not qualified
+   [15/17] Rock-n-Sake
+      ❌ Not qualified
+   [16/17] PAMPLONA Tapas Bar and Restaurant
+      ✅ QUALIFIED
+   [17/17] Bula Kavananda Kava Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_lafayette_louisiana.json (9 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [237/502] Lafayette, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Point 5
+      ❌ Not found
+   [2/10] Kavana Dania Beach
+      ❌ Wrong city: Dania Beach (expected Lafayette)
+   [3/10] Lafayette's Hideout Bar
+      ❌ Wrong state (expected Florida)
+   [4/10] Palmyre
+      ❌ Wrong state (expected Florida)
+   [5/10] Mercy Kitchen
+      ❌ Wrong state (expected Florida)
+   [6/10] La Pizzeria Lafayette
+      ❌ Wrong state (expected Florida)
+   [7/10] Another Broken Egg
+      ❌ Wrong state (expected Florida)
+   [8/10] DB Zero Proof Kava Bar
+      ❌ Not found
+   [9/10] The Nakava Kava Bar
+      ❌ Wrong city: Boca Raton (expected Lafayette)
+   [10/10] Baya Bar
+      ❌ Wrong state (expected Florida)
+   💾 Saved: discovery_lafayette_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [238/502] Lahaina, Hawaii
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 10 new candidates
+   [1/10] Merriman's Kapalua
+      ✅ QUALIFIED
+   [2/10] Longhi's
+      ❌ Excluded type: night_club
+   [3/10] Lahaina Noon
+      ❌ Not qualified
+   [4/10] Maui Chocolate Tour
+      ✅ QUALIFIED
+   [5/10] Royal Lahaina Resort
+      ❌ Not qualified
+   [6/10] Kitchen 5315 Restaurant & Tiki Bar
+      ❌ Wrong city: Napili-Honokowai (expected Lahaina)
+   [7/10] Aumakua Kava Lounge
+      ❌ Wrong city: Paia (expected Lahaina)
+   [8/10] Papa'aina at the Pioneer Inn
+      ❌ Not qualified
+   [9/10] Wow Wee Maui's Kava Bar & Grill
+      ❌ Wrong city: Kahului (expected Lahaina)
+   [10/10] 'Awa Hou Kava Lounge
+      ❌ Wrong city: Honolulu (expected Lahaina)
+   💾 Saved: discovery_lahaina_hawaii.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [239/502] Lake Buena Vista, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] Miller's Ale House
+      ❌ Wrong city: Orlando (expected Lake Buena Vista)
+   [2/8] Summer House on the Lake
+      ✅ QUALIFIED
+   [3/8] 88 Live Piano Bar
+      ❌ Wrong city: Bradenton (expected Lake Buena Vista)
+   [4/8] Jock Lindsey's Hangar Bar
+      ✅ QUALIFIED
+   [5/8] The Boathouse Orlando
+      ❌ Not qualified
+   [6/8] Kavasutra Kava Bar (Orlando)
+      ❌ Wrong city: Orlando (expected Lake Buena Vista)
+   [7/8] Kava Culture Kava Bar
+      ❌ Wrong city: Orlando (expected Lake Buena Vista)
+   [8/8] Cloud Parlor Kava Bar & Cafe
+      ❌ Wrong city: Cocoa Beach (expected Lake Buena Vista)
+   💾 Saved: discovery_lake_buena_vista_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [240/502] Lake Charles, Louisiana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  14 potential venues extracted
+   ✨ 14 new candidates
+   [1/14] Good News
+      ❌ Not qualified
+   [2/14] Chère Petite Bar Co.
+      ❌ Not found
+   [3/14] OMetaAl
+      ❌ Not qualified
+   [4/14] The Mocktail Lounge
+      ❌ Excluded type: night_club
+   [5/14] Euphorbia Coffee and Kava Bar
+      ✅ QUALIFIED
+   [6/14] Uxi Duxi
+      ❌ Not found
+   [7/14] RA Shop Metairie
+      ❌ Wrong city: Metairie (expected Lake Charles)
+   [8/14] Taz Smoke Shack
+      ❌ Wrong city: New Orleans (expected Lake Charles)
+   [9/14] Constellation Botanicals
+      ❌ Not found
+   [10/14] Kava Culture Kava Bar
+      ❌ Not found
+   [11/14] Kava Bar LA & Botanical Lounge
+      ❌ Wrong state (expected Louisiana)
+   [12/14] Twist Kava Bar
+      ❌ Not qualified
+   [13/14] Kava Kulture LA
+      ❌ Wrong state (expected Louisiana)
+   [14/14] Melo Melo Kava Bar
+      ❌ Wrong state (expected Louisiana)
+   💾 Saved: discovery_lake_charles_louisiana.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [241/502] Lake Havasu City, Arizona
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  11 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] The Bunker Bar
+      ✅ QUALIFIED
+   [2/11] Lake Havasu Cigars
+      ❌ Not qualified
+   [3/11] THAT DANE BAR
+      ❌ Closed
+   [4/11] LIGHTHOUSE LOUNGE
+      ❌ Not qualified
+   [5/11] Lola's
+      ❌ Wrong city: Glendale (expected Lake Havasu City)
+   [6/11] Rooted Kava Bar
+      ❌ Wrong city: Chandler (expected Lake Havasu City)
+   [7/11] Wild Coffee - AZ Coffee & Breakfast Bar
+      ✅ QUALIFIED
+   [8/11] Ohana Kava Bar
+      ❌ Wrong state (expected Arizona)
+   [9/11] Kavasutra Kava Bar
+      ❌ Wrong city: Tempe (expected Lake Havasu City)
+   [10/11] KAVA HAVEN
+      ✅ QUALIFIED
+   [11/11] Keva Juice
+      ✅ QUALIFIED
+   💾 Saved: discovery_lake_havasu_city_arizona.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [242/502] Lake Worth Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 3 new candidates
+   [1/3] The Chill Room
+      ❌ Excluded type: night_club
+   [2/3] Island Vibes Kava Bar Lake Worth
+      ❌ Wrong city: Lantana Square A5 (expected Lake Worth Beach)
+   [3/3] Mystic Roots Kava Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_lake_worth_beach_florida.json (0 new venues)
+
+   📊 Progress: 20 cities | 58 new venues | $2.83
+
+════════════════════════════════════════════════════════════
+🔍 [243/502] Lake Worth Corridor, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] The Chill Room
+      ❌ Wrong city: Lake Worth Beach (expected Lake Worth Corridor)
+   [2/7] Kavasutra Kava Bar
+      ❌ Wrong city: Lake Worth Beach (expected Lake Worth Corridor)
+   [3/7] 3Natives
+      ❌ Wrong city: Lake Worth (expected Lake Worth Corridor)
+   [4/7] Jeni's Ice Creams
+      ❌ Wrong city: Lake Worth Beach (expected Lake Worth Corridor)
+   [5/7] Island Vibes Kava Bar
+      ❌ Wrong city: Lantana Square A5 (expected Lake Worth Corridor)
+   [6/7] Mystic Roots Kava Bar
+      ❌ Wrong city: Lake Worth Beach (expected Lake Worth Corridor)
+   [7/7] Tribe Tea Lounge & Kava Bar
+      ❌ Wrong city: Margate (expected Lake Worth Corridor)
+   💾 Saved: discovery_lake_worth_corridor_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [244/502] Lakeland, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  8 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Botanical Brewing Taproom
+      ✅ QUALIFIED
+   [2/6] N7 Nitro Kava Bar - Lakeland
+      ❌ Not qualified
+   [3/6] Pana Kava Java
+      ✅ QUALIFIED
+   [4/6] Yerb Labs
+      ❌ Wrong city: Plant City (expected Lakeland)
+   [5/6] The Juice Box
+      ✅ QUALIFIED
+   [6/6] Tea Largo
+      ✅ QUALIFIED
+   💾 Saved: discovery_lakeland_florida.json (4 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [245/502] Lakewood, Colorado
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Old Crow Antiques
+      ❌ Wrong city: Golden (expected Lakewood)
+   [2/4] The Night Owls Bar
+      ✅ QUALIFIED
+   [3/4] Leiffa
+      ✅ QUALIFIED
+   [4/4] Roots & Leaves Kava & Teas
+      ✅ QUALIFIED
+   💾 Saved: discovery_lakewood_colorado.json (3 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [246/502] Lakewood, Ohio
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  13 potential venues extracted
+   ✨ 11 new candidates
+   [1/11] Verbena Free Spirited
+      ❌ Wrong city: Cleveland (expected Lakewood)
+   [2/11] Lakewood Truck Park
+      ❌ Not qualified
+   [3/11] LBM
+      ✅ QUALIFIED
+   [4/11] Tapster
+      ✅ QUALIFIED
+   [5/11] Crumb & Spigot
+      ✅ QUALIFIED
+   [6/11] Amazonia
+      ✅ QUALIFIED
+   [7/11] Char Whiskey Bar & Grille
+      ❌ Wrong city: Rocky River (expected Lakewood)
+   [8/11] Jukebox
+      ❌ Wrong city: Cleveland (expected Lakewood)
+   [9/11] Muddy Waters
+      ✅ QUALIFIED
+   [10/11] Kava Culture
+      ❌ Not qualified
+   [11/11] The Sacred Vortex Teahouse & Kombuchery
+      ❌ Wrong city: Cleveland (expected Lakewood)
+   💾 Saved: discovery_lakewood_ohio.json (5 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [247/502] Lansing, Michigan
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 16 new candidates
+   [1/16] Dimes Brewhouse
+      ❌ Wrong city: Dimondale (expected Lansing)
+   [2/16] Sidecar Slider Bar - Lansing
+      ❌ Not qualified
+   [3/16] Art & Jakes Sports Bar & Grill
+      ❌ Not qualified
+   [4/16] Graham Vineyards and Winery
+      ❌ Wrong city: Laingsburg (expected Lansing)
+   [5/16] Crunchy's
+      ✅ QUALIFIED
+   [6/16] Bordeaux
+      ❌ Not qualified
+   [7/16] The English Inn
+      ❌ Wrong city: Eaton Rapids (expected Lansing)
+   [8/16] Lansing Shuffle
+      ✅ QUALIFIED
+   [9/16] American Fifth
+      ✅ QUALIFIED
+   [10/16] Bowdie's Chophouse - Lansing
+      ✅ QUALIFIED
+   [11/16] The People's Kitchen
+      ✅ QUALIFIED
+   [12/16] OneNorth Kitchen & Bar
+      ✅ QUALIFIED
+   [13/16] Six Lounge
+      ✅ QUALIFIED
+   [14/16] The Haven SmokeShop
+      ❌ Excluded name pattern: /smoke\s*shop/i
+   [15/16] The Comfort Zone Cigar Lounge & Bistro
+      ❌ Excluded type: night_club
+   [16/16] The Exchange of Lansing
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_lansing_michigan.json (7 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [248/502] Lantana, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Rocco's Tacos & Tequila Bar
+      ❌ Wrong city: Delray Beach (expected Lantana)
+   [2/4] The Chill Room
+      ❌ Wrong city: Lake Worth Beach (expected Lantana)
+   [3/4] ROOTED KAVA
+      ❌ Excluded type: night_club
+   [4/4] Island Vibes Kava Bar Lake Worth
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_lantana_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [249/502] Laredo, Texas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  7 potential venues extracted
+   ✨ 7 new candidates
+   [1/7] ArKay House
+      ❌ Not qualified
+   [2/7] Bubba's 33
+      ❌ Not qualified
+   [3/7] Shaka Y'all Kava Bar
+      ❌ Not qualified
+   [4/7] Bare Roots Coffee & Kava Lounge
+      ❌ Wrong state (expected Texas)
+   [5/7] The Kava Bar
+      ❌ Wrong city: Fort Worth (expected Laredo)
+   [6/7] Kava Culture Kava Bar
+      ❌ Closed
+   [7/7] SquareRut Kava Bar
+      ❌ Wrong city: Austin (expected Laredo)
+   💾 Saved: discovery_laredo_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [250/502] Largo, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 4 new candidates
+   [1/4] Dragonfly lounge Mocktails Bar
+      ❌ Wrong city: Neptune Beach (expected Largo)
+   [2/4] Tribe Tea House and Kava Bar
+      ❌ Excluded type: night_club
+   [3/4] Dharma Hookah & Kava Lounge
+      ✅ QUALIFIED
+   [4/4] All 5 Elements
+      ✅ QUALIFIED
+   💾 Saved: discovery_largo_florida.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [251/502] Las Vegas, Nevada
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  29 potential venues extracted
+   ✨ 27 new candidates
+   [1/27] Echo Taste & Sound
+      ✅ QUALIFIED
+   [2/27] Stray Pirate
+      ✅ QUALIFIED
+   [3/27] Oddwood
+      ❌ Excluded type: night_club
+   [4/27] Mizumi
+      ✅ QUALIFIED
+   [5/27] The Golden Tiki
+      ✅ QUALIFIED
+   [6/27] Golden Gai Cocktail Club
+      ✅ QUALIFIED
+   [7/27] Vanderpump Cocktail Garden
+      ✅ QUALIFIED
+   [8/27] The Chandelier
+      ❌ Excluded type: night_club
+   [9/27] Vanderpump Paris
+      ✅ QUALIFIED
+   [10/27] Nobu
+      ✅ QUALIFIED
+   [11/27] Skybar
+      ❌ Closed
+   [12/27] The Bedford
+      ✅ QUALIFIED
+   [13/27] Hells Kitchen
+      ✅ QUALIFIED
+   [14/27] Parasol Down
+      ✅ QUALIFIED
+   [15/27] Minus 5 Ice Bar
+      ❌ Excluded type: night_club
+   [16/27] Red Square
+      ❌ Closed
+   [17/27] BrewDog-Las Vegas
+      ❌ Not qualified
+   [18/27] Las Vegas Brewing Company - Downtown
+      ❌ Not qualified
+   [19/27] Yard House
+      ✅ QUALIFIED
+   [20/27] Bar Centro
+      ✅ QUALIFIED
+   [21/27] CASBAR Lounge at SAHARA Las Vegas
+      ❌ Excluded type: night_club
+   [22/27] MixxieMixologist
+      ❌ Not found
+   [23/27] Overlook Lounge, Aperitifs & Spirits
+      ✅ QUALIFIED
+   [24/27] Velveteen Rabbit
+      ✅ QUALIFIED
+   [25/27] Firefly* Tapas Kitchen & Bar
+      ✅ QUALIFIED
+   [26/27] Guud Kava
+      ❌ Excluded type: night_club
+   [27/27] 9th Island Kava Lounge
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_las_vegas_nevada.json (16 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [252/502] Lauderhill, Florida
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  10 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Drynk Bar & Lounge
+      ❌ Wrong city: Wilton Manors (expected Lauderhill)
+   [2/9] Kava Culture Toledo
+      ❌ Wrong city: Wilton Manors (expected Lauderhill)
+   [3/9] Rocco's Tacos & Tequila Bar
+      ❌ Wrong city: Fort Lauderdale (expected Lauderhill)
+   [4/9] Kapow Noodle Bar
+      ❌ Wrong city: Boca Raton (expected Lauderhill)
+   [5/9] Shooters
+      ❌ Wrong city: Fort Lauderdale (expected Lauderhill)
+   [6/9] Timpano Las Olas
+      ❌ Wrong city: Fort Lauderdale (expected Lauderhill)
+   [7/9] Awa Na Kava and Hookah Lounge
+      ❌ Wrong city: Pompano Beach (expected Lauderhill)
+   [8/9] Kavasutra Kava Bar Melbourne
+      ❌ Wrong city: Fort Lauderdale (expected Lauderhill)
+   [9/9] Kavana Kava Bar Dania Beach
+      ❌ Wrong city: Dania Beach (expected Lauderhill)
+   💾 Saved: discovery_lauderhill_florida.json (0 new venues)
+
+   📊 Progress: 30 cities | 95 new venues | $4.72
+
+════════════════════════════════════════════════════════════
+🔍 [253/502] Laurel, Montana
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  3 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Kava Roots The Vault
+      ✅ QUALIFIED
+   [2/2] Kava Haven
+      ❌ Not qualified
+   💾 Saved: discovery_laurel_montana.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [254/502] Lawrence, Kansas
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Nostalgia Room
+      ✅ QUALIFIED
+   [2/5] Wild Child
+      ❌ Wrong city: Shawnee (expected Lawrence)
+   [3/5] Namaste& Brand
+      ✅ QUALIFIED
+   [4/5] The Myers Hotel Bar
+      ❌ Excluded type: night_club
+   [5/5] Elixir at the Museum of Kansas City
+      ❌ Wrong city: Kansas City (expected Lawrence)
+   💾 Saved: discovery_lawrence_kansas.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [255/502] Lawrence, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  6 potential venues extracted
+   ✨ 6 new candidates
+   [1/6] Rapscallion
+      ✅ QUALIFIED
+   [2/6] The Nostalgia Room
+      ❌ Wrong state (expected Massachusetts)
+   [3/6] Mass St Soda
+      ✅ QUALIFIED
+   [4/6] MANA BAR
+      ❌ Excluded type: night_club
+   [5/6] Amber Scullery
+      ❌ Not found
+   [6/6] DB Zero Proof Kava Bar
+      ❌ Excluded type: night_club
+   💾 Saved: discovery_lawrence_massachusetts.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [256/502] Lawton, Oklahoma
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  5 potential venues extracted
+   ✨ 5 new candidates
+   [1/5] Dry Beaver Supper Club
+      ❌ Not qualified
+   [2/5] Anastasia Catering & Bar Services
+      ❌ Not found
+   [3/5] Texas Roadhouse
+      ✅ QUALIFIED
+   [4/5] OCÉANO SALSA CLUB
+      ❌ Excluded type: night_club
+   [5/5] Kava Culture Kava Bar
+      ❌ Not qualified
+   💾 Saved: discovery_lawton_oklahoma.json (1 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [257/502] Lee's Summit, Missouri
+════════════════════════════════════════════════════════════
+   📄 90 search results
+   🏷️  17 potential venues extracted
+   ✨ 17 new candidates
+   [1/17] Tinsel @ Tipsy Taco
+      ❌ Not qualified
+   [2/17] The W
+      ✅ QUALIFIED
+   [3/17] Third Street Social
+      ✅ QUALIFIED
+   [4/17] Roots
+      ❌ Not qualified
+   [5/17] The Savoy
+      ❌ Not qualified
+   [6/17] Iron Horse Bar and Grill (Lee's Summit)
+      ✅ QUALIFIED
+   [7/17] Libations & Co.
+      ❌ Excluded type: night_club
+   [8/17] Hand in Glove
+      ✅ QUALIFIED
+   [9/17] Black Dolphin
+      ❌ Wrong state (expected Missouri)
+   [10/17] CBD American Shaman - Lee's Summit
+      ✅ QUALIFIED
+   [11/17] Midtown Kava
+      ✅ QUALIFIED
+   [12/17] CBD American Shaman Raytown
+      ✅ QUALIFIED
+   [13/17] Diametric Brewing Co
+      ✅ QUALIFIED
+   [14/17] Nekter Juice Bar
+      ✅ QUALIFIED
+   [15/17] Cloud Parlor Kava Bar & Cafe
+      ❌ Wrong state (expected Missouri)
+   [16/17] Iron Horse Bar and Grill (Leawood)
+      ✅ QUALIFIED
+   [17/17] Kavasutra Kava Bar
+      ❌ Not qualified
+   💾 Saved: discovery_lee_s_summit_missouri.json (10 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [258/502] Lenexa, Kansas
+════════════════════════════════════════════════════════════
+   📄 10 search results
+   🏷️  2 potential venues extracted
+   ✨ 2 new candidates
+   [1/2] Justin's of Lenexa
+      ❌ Excluded type: liquor_store
+   [2/2] Pigwich
+      ❌ Wrong city: Kansas City (expected Lenexa)
+   💾 Saved: discovery_lenexa_kansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [259/502] Lewiston, Maine
+════════════════════════════════════════════════════════════
+   📄 50 search results
+   🏷️  8 potential venues extracted
+   ✨ 8 new candidates
+   [1/8] DB Zero Proof Kava Bar
+      ❌ Not found
+   [2/8] KAVA HAVEN
+      ❌ Not qualified
+   [3/8] 5th Pillar Tea Gouse
+      ❌ Not found
+   [4/8] Manna Tea & Kava Bar
+      ❌ Wrong state (expected Maine)
+   [5/8] Nalu Kava Lounge
+      ❌ Not found
+   [6/8] Kava Cafe
+      ❌ Wrong city: Portland (expected Lewiston)
+   [7/8] Rooted - Coffee Shop
+      ❌ Wrong city: Buxton (expected Lewiston)
+   [8/8] The Sacred Vortex Teahouse and Kombuchery
+      ❌ Wrong state (expected Maine)
+   💾 Saved: discovery_lewiston_maine.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [260/502] Lexington, Kentucky
+════════════════════════════════════════════════════════════
+   📄 20 search results
+   🏷️  9 potential venues extracted
+   ✨ 9 new candidates
+   [1/9] Casablanca Hookah Lounge
+      ✅ QUALIFIED
+   [2/9] Buddha Lounge
+      ❌ Not qualified
+   [3/9] Ruby's Lounge
+      ❌ Closed
+   [4/9] The Botany Bay
+      ❌ Not qualified
+   [5/9] Cave Valley Kava
+      ❌ Wrong city: Louisville (expected Lexington)
+   [6/9] DB Zero Proof Kava Bar
+      ❌ Not found
+   [7/9] The Green Door
+      ❌ Wrong city: Covington (expected Lexington)
+   [8/9] Root City Kava
+      ❌ Wrong state (expected Kentucky)
+   [9/9] CannaBuzz Bar
+      ✅ QUALIFIED
+   💾 Saved: discovery_lexington_kentucky.json (2 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [261/502] Little Rock, Arkansas
+════════════════════════════════════════════════════════════
+   📄 10 search results
+   🏷️  1 potential venues extracted
+   ✨ 1 new candidates
+   [1/1] The Virgin Mary bar
+      ❌ Not found
+   💾 Saved: discovery_little_rock_arkansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [262/502] Livonia, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_livonia_michigan.json (0 new venues)
+
+   📊 Progress: 40 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [263/502] Longmont, Colorado
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_longmont_colorado.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [264/502] Longwood, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_longwood_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [265/502] Lorain, Ohio
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lorain_ohio.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [266/502] Louisville, Kentucky
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_louisville_kentucky.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [267/502] Lousiville, Kentucky
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lousiville_kentucky.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [268/502] Loveland, Colorado
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_loveland_colorado.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [269/502] Lowell, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lowell_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [270/502] Lubbock, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lubbock_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [271/502] Lutz, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lutz_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [272/502] Lynn Haven, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_lynn_haven_florida.json (0 new venues)
+
+   📊 Progress: 50 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [273/502] Macon, Georgia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_macon_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [274/502] Madeira Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_madeira_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [275/502] Madison, Alabama
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_madison_alabama.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [276/502] Madison, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_madison_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [277/502] Madison Heights, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_madison_heights_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [278/502] Maitland, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_maitland_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [279/502] Malaga, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_malaga_new_jersey.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [281/502] Manitowoc, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_manitowoc_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [282/502] Mansfield, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mansfield_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [283/502] Mapleton, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mapleton_utah.json (0 new venues)
+
+   📊 Progress: 60 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [284/502] Margate, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_margate_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [285/502] Maricopa, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_maricopa_arizona.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [286/502] McAllen, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mcallen_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [287/502] McKinney, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mckinney_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [288/502] McLean, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mclean_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [289/502] Melbourne, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_melbourne_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [290/502] Meriden, Connecticut
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_meriden_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [291/502] Merritt Island, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_merritt_island_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [292/502] Miami, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_miami_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [293/502] Miami Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_miami_beach_florida.json (0 new venues)
+
+   📊 Progress: 70 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [294/502] Miami Gardens, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_miami_gardens_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [295/502] Middleton, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_middleton_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [296/502] Midland, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_midland_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [297/502] Milawaukee, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_milawaukee_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [298/502] Millvale, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_millvale_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [299/502] Milwaukee, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_milwaukee_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [300/502] Minneapolis, Minnesota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_minneapolis_minnesota.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [302/502] Mobile, Alabama
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mobile_alabama.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [303/502] Montgomery, Alabama
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_montgomery_alabama.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [304/502] Montgomery, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_montgomery_texas.json (0 new venues)
+
+   📊 Progress: 80 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [305/502] Mooresville, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mooresville_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [306/502] Morristown, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_morristown_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [307/502] Morton Grove, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_morton_grove_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [308/502] Mountain Brook, Alabama
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mountain_brook_alabama.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [309/502] Mt Prospect, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_mt_prospect_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [310/502] Murfreesboro, Tennessee
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_murfreesboro_tennessee.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [312/502] Naperville, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_naperville_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [313/502] Naples, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_naples_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [314/502] Nashua, New Hampshire
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_nashua_new_hampshire.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [315/502] Nashville, Tennessee
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_nashville_tennessee.json (0 new venues)
+
+   📊 Progress: 90 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [316/502] Naugatuck, Connecticut
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_naugatuck_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [317/502] New Bedford, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_bedford_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [318/502] New Berlin, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_berlin_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [319/502] New Brunswick, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_brunswick_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [320/502] New Haven, Connecticut
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_haven_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [321/502] New Hope, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_hope_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [322/502] New Orleans, Louisiana
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_new_orleans_louisiana.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [323/502] Newark, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_newark_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [324/502] Newport News, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_newport_news_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [325/502] Niles, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_niles_illinois.json (0 new venues)
+
+   📊 Progress: 100 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [326/502] Norfolk, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_norfolk_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [327/502] Norfolk, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_norfolk_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [328/502] North Bergen, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_bergen_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [329/502] North Brunswick Township, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_brunswick_township_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [330/502] North Fort Myers, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_fort_myers_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [331/502] North Little Rock, Arkansas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_little_rock_arkansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [332/502] North Miami, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_miami_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [333/502] North Palm Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_palm_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [334/502] North Richland Hills, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_north_richland_hills_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [335/502] Novi, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_novi_michigan.json (0 new venues)
+
+   📊 Progress: 110 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [336/502] Oak Lawn, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_oak_lawn_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [337/502] Ocala, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_ocala_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [338/502] Ocean Springs, Mississippi
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_ocean_springs_mississippi.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [339/502] Ocean View, Hawaii
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_ocean_view_hawaii.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [340/502] Odessa, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_odessa_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [341/502] Ogden, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_ogden_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [342/502] Olathe, Kansas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_olathe_kansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [343/502] Oldsmar, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_oldsmar_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [344/502] Orem, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_orem_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [345/502] Orlando, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_orlando_florida.json (0 new venues)
+
+   📊 Progress: 120 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [346/502] Ormond Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_ormond_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [347/502] Oviedo, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_oviedo_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [348/502] Owensboro, Kentucky
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_owensboro_kentucky.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [349/502] Pāhoa, Hawaii
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_p_hoa_hawaii.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [350/502] Palatine, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_palatine_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [351/502] Palm Bay, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_palm_bay_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [352/502] Palm Beach Gardens, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_palm_beach_gardens_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [353/502] Palm Coast, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_palm_coast_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [354/502] Palm Harbor, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_palm_harbor_florida.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [356/502] Parker, Colorado
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_parker_colorado.json (0 new venues)
+
+   📊 Progress: 130 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [357/502] Pasadena, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pasadena_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [358/502] Passaic, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_passaic_new_jersey.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [360/502] Pembroke Pines, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pembroke_pines_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [361/502] Pensacola, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pensacola_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [362/502] Peoria, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_peoria_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [363/502] Philadelphia, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_philadelphia_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [364/502] Phoenix, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_phoenix_arizona.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [365/502] Pitman, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pitman_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [366/502] Pittsburg, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pittsburg_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [367/502] Pittsburgh, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pittsburgh_pennsylvania.json (0 new venues)
+
+   📊 Progress: 140 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [368/502] Plainfield, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_plainfield_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [369/502] Plant City, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_plant_city_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [370/502] Plymouth, New Hampshire
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_plymouth_new_hampshire.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [371/502] Pompano Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pompano_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [372/502] Pontiac, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_pontiac_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [373/502] Port Arthur, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_port_arthur_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [374/502] Port Charlotte, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_port_charlotte_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [375/502] Port Richey, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_port_richey_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [376/502] Port St. Lucie, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_port_st__lucie_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [377/502] Portland, Maine
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_portland_maine.json (0 new venues)
+
+   📊 Progress: 150 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [378/502] Portland, Connecticut
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_portland_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [379/502] Portland, Oregon
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_portland_oregon.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [380/502] Providence, Rhode Island
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_providence_rhode_island.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [381/502] Provo, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_provo_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [382/502] Punta Gorda, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_punta_gorda_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [383/502] Queen Creek, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_queen_creek_arizona.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [384/502] Racine, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_racine_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [385/502] Raleigh, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_raleigh_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [386/502] Rapid City, South Dakota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_rapid_city_south_dakota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [387/502] Redmond, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_redmond_washington.json (0 new venues)
+
+   📊 Progress: 160 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [388/502] Reno, Nevada
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_reno_nevada.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [389/502] Reston, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_reston_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [390/502] Richmond, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_richmond_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [391/502] Richmond, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_richmond_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [392/502] Richmond, Oregon
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_richmond_oregon.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [393/502] RIVER FALLS, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_river_falls_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [394/502] Rockledge, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_rockledge_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [395/502] Rocky Mount, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_rocky_mount_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [396/502] Rogers, Arkansas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_rogers_arkansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [397/502] Rome, Georgia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_rome_georgia.json (0 new venues)
+
+   📊 Progress: 170 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [398/502] Round Rock, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_round_rock_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [399/502] Royal Palm Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_royal_palm_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [400/502] Saint Charles, Missouri
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_saint_charles_missouri.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [401/502] Salt Lake City, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_salt_lake_city_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [402/502] San Marcos, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_san_marcos_texas.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [404/502] Sandy Springs, Georgia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sandy_springs_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [405/502] Sanford, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sanford_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [406/502] Santa Fe, New Mexico
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_santa_fe_new_mexico.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [407/502] Sarasota, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sarasota_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [408/502] Schaumburg, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_schaumburg_illinois.json (0 new venues)
+
+   📊 Progress: 180 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [409/502] Seattle, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_seattle_washington.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [410/502] Sedona, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sedona_arizona.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [411/502] Seminole, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_seminole_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [412/502] Sheridan, Wyoming
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sheridan_wyoming.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [413/502] Sidney, Ohio
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sidney_ohio.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [414/502] Silver Spring, Maryland
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_silver_spring_maryland.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [415/502] Skokie, Illinois
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_skokie_illinois.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [416/502] Smyrna, Georgia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_smyrna_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [417/502] Smyrna, Tennessee
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_smyrna_tennessee.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [418/502] Somerville, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_somerville_massachusetts.json (0 new venues)
+
+   📊 Progress: 190 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [419/502] South Hadley, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_south_hadley_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [420/502] South Portland, Maine
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_south_portland_maine.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [421/502] South River, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_south_river_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [422/502] South Salt Lake, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_south_salt_lake_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [423/502] South St Paul, Minnesota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_south_st_paul_minnesota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [424/502] Southampton, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_southampton_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [425/502] Southfield, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_southfield_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [426/502] Sparks, Nevada
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sparks_nevada.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [427/502] Spokane, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_spokane_washington.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [428/502] Spring, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_spring_texas.json (0 new venues)
+
+   📊 Progress: 200 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [429/502] Spring Hill, Tennessee
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_spring_hill_tennessee.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [430/502] Springfield, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_springfield_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [431/502] St Charles, Missouri
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_charles_missouri.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [432/502] St Cloud, Minnesota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_cloud_minnesota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [433/502] ST CROIX FALLS, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_croix_falls_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [434/502] St Louis Park, Minnesota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_louis_park_minnesota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [435/502] St Paul, Minnesota
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_paul_minnesota.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [436/502] St Peters, Missouri
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st_peters_missouri.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [437/502] St. Augustine, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st__augustine_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [438/502] St. Louis, Missouri
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st__louis_missouri.json (0 new venues)
+
+   📊 Progress: 210 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [439/502] St. Pete Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st__pete_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [440/502] St. Petersburg, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_st__petersburg_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [441/502] Sterling, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sterling_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [442/502] Sterling Heights, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sterling_heights_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [443/502] Stevens Point, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_stevens_point_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [444/502] Stonecrest, Georgia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_stonecrest_georgia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [445/502] Stuart, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_stuart_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [446/502] Suffolk, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_suffolk_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [447/502] Sugar Land, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_sugar_land_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [448/502] Tacoma, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tacoma_washington.json (0 new venues)
+
+   📊 Progress: 220 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [449/502] Tallahassee, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tallahassee_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [450/502] Tampa, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tampa_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [451/502] Taunton, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_taunton_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [452/502] Taylor, Michigan
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_taylor_michigan.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [453/502] Tempe, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tempe_arizona.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [455/502] Tequesta, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tequesta_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [456/502] The Woodlands, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_the_woodlands_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [457/502] Trenton, New Jersey
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_trenton_new_jersey.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [458/502] Trucksville, Pennsylvania
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_trucksville_pennsylvania.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [459/502] Tucson, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tucson_arizona.json (0 new venues)
+
+   📊 Progress: 230 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [460/502] TURTLE LAKE, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_turtle_lake_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [461/502] Tuscaloosa, Alabama
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_tuscaloosa_alabama.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [462/502] Twin Falls, Idaho
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_twin_falls_idaho.json (0 new venues)
+   ⚠️  Skipping entry with null city/state
+
+════════════════════════════════════════════════════════════
+🔍 [464/502] Valrico, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_valrico_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [465/502] Vancouver, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_vancouver_washington.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [466/502] Venice, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_venice_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [467/502] Vero Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_vero_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [468/502] Virginia Beach, Virginia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_virginia_beach_virginia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [469/502] Virginia Gardens, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_virginia_gardens_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [470/502] Waialua, Hawaii
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waialua_hawaii.json (0 new venues)
+
+   📊 Progress: 240 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [471/502] Waldorf, Maryland
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waldorf_maryland.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [472/502] Waltham, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waltham_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [473/502] Washington, District of Columbia
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_washington_district_of_columbia.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [474/502] Washington, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_washington_washington.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [475/502] Washington, Utah
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_washington_utah.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [476/502] Waterford, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waterford_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [477/502] Waterloo, Iowa
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waterloo_iowa.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [478/502] Waukesha, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waukesha_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [479/502] Waynesville, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_waynesville_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [480/502] Weaverville, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_weaverville_north_carolina.json (0 new venues)
+
+   📊 Progress: 250 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [481/502] Wellington, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wellington_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [482/502] West Allis, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_west_allis_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [483/502] West Bend, Wisconsin
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_west_bend_wisconsin.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [484/502] West Haven, Connecticut
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_west_haven_connecticut.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [485/502] West Melbourne, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_west_melbourne_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [486/502] West Palm Beach, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_west_palm_beach_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [487/502] Westminster, Colorado
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_westminster_colorado.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [488/502] Wichita, Kansas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wichita_kansas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [489/502] Wichita, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wichita_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [490/502] Wilmington, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wilmington_north_carolina.json (0 new venues)
+
+   📊 Progress: 260 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [491/502] Wilmington, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wilmington_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [492/502] Wilmington, Delaware
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wilmington_delaware.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [493/502] Wilton Manors, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wilton_manors_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [494/502] Wimberley, Texas
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_wimberley_texas.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [495/502] Winston-Salem, North Carolina
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_winston_salem_north_carolina.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [496/502] Winter Park, Colorado
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_winter_park_colorado.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [497/502] Winter Park, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_winter_park_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [498/502] Winter Springs, Florida
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_winter_springs_florida.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [499/502] Worcester, Massachusetts
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_worcester_massachusetts.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [500/502] Yakima, Washington
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_yakima_washington.json (0 new venues)
+
+   📊 Progress: 270 cities | 113 new venues | $5.69
+
+════════════════════════════════════════════════════════════
+🔍 [501/502] Youngstown, Ohio
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_youngstown_ohio.json (0 new venues)
+
+════════════════════════════════════════════════════════════
+🔍 [502/502] Yuma, Arizona
+════════════════════════════════════════════════════════════
+   📄 0 search results
+   🏷️  0 potential venues extracted
+   ✨ 0 new candidates
+   💾 Saved: discovery_yuma_arizona.json (0 new venues)
+
+══════════════════════════════════════════════════════════════════════
+✅ DISCOVERY COMPLETE
+══════════════════════════════════════════════════════════════════════
+
+📊 Results:
+   • Cities Processed: 272
+   • Cities Skipped: 230
+   • 🆕 NEW VENUES FOUND: 113
+
+💰 Cost: $5.69
+
+💾 Summary: discovery_summary.json
+   Results: data/discovery_results/*.json
+
