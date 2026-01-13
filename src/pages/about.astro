@@ -1,8 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { createClient } from '@supabase/supabase-js';
 
 const url = new URL(Astro.request.url);
 const subscribed = url.searchParams.get('subscribed') === 'true';
+
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Get live stats from database for soft launch states
+const { data: activeStates } = await supabase
+  .from('states')
+  .select('state_name')
+  .eq('is_active', true);
+
+const activeStateNames = activeStates?.map(s => s.state_name) || [];
+
+// Fetch venue statistics
+let allVenues: any[] = [];
+let from = 0;
+const batchSize = 1000;
+
+while (true) {
+  const { data: batch } = await supabase
+    .from('venues')
+    .select('city, state, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, is_sober_friendly')
+    .eq('data_complete', true)  // Only active venues
+    .in('state', activeStateNames)
+    .range(from, from + batchSize - 1);
+  
+  if (!batch || batch.length === 0) break;
+  allVenues.push(...batch);
+  if (batch.length < batchSize) break;
+  from += batchSize;
+}
+
+// Calculate live statistics
+const totalVenues = allVenues.length;
+const totalCities = new Set(allVenues.map(v => `${v.city}, ${v.state}`)).size;
+const alcoholFreeVenues = allVenues.filter(v => v.is_alcohol_free).length;
+const soberFriendlyVenues = allVenues.filter(v => v.is_sober_friendly).length;
+const kavaVenues = allVenues.filter(v => v.serves_kava).length;
+const thcVenues = allVenues.filter(v => v.serves_thc).length;
 ---
 
 {subscribed && (
@@ -73,7 +113,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         "itemOffered": {
           "@type": "Service",
           "name": "Venue Directory",
-          "description": "Searchable database of 1,800+ alcohol-free venues across 600+ US cities"
+          "description": `Searchable database of ${totalVenues.toLocaleString()}+ alcohol-free venues across ${totalCities.toLocaleString()}+ US cities`
         }
       },
       {
@@ -101,7 +141,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
 }
 </script>
 
-<Layout title="About Downtown Dry - America's Leading Alcohol-Free Venue Directory & Lifestyle Platform" description="Learn about Downtown Dry's mission to revolutionize nightlife through our directory of 1,800+ alcohol-free venues, expert guides on kava culture and delta THC, and premium NA drink curation. Founded to support mindful living, recovery, and inclusive social experiences across America.">
+<Layout title="About Downtown Dry - America's Leading Alcohol-Free Venue Directory & Lifestyle Platform" description={`Learn about Downtown Dry's mission to revolutionize nightlife through our directory of ${totalVenues.toLocaleString()}+ alcohol-free venues, expert guides on kava culture and delta THC, and premium NA drink curation. Founded to support mindful living, recovery, and inclusive social experiences across America.`}>
   <!-- Hero Section -->
   <section class="relative py-24 overflow-hidden" role="banner" aria-label="About Downtown Dry hero section">
     <!-- Background Image -->
@@ -138,11 +178,11 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
       <!-- Key Stats -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
         <div class="text-center backdrop-blur-sm bg-black/30 rounded-2xl p-6 border border-white/30">
-          <div class="text-3xl font-bold mb-2 text-white">1,800+</div>
+          <div class="text-3xl font-bold mb-2 text-white">{totalVenues.toLocaleString()}+</div>
           <p class="text-sm text-neutral-100">Venues Listed</p>
         </div>
         <div class="text-center backdrop-blur-sm bg-black/30 rounded-2xl p-6 border border-white/30">
-          <div class="text-3xl font-bold mb-2 text-white">600+</div>
+          <div class="text-3xl font-bold mb-2 text-white">{totalCities.toLocaleString()}+</div>
           <p class="text-sm text-neutral-100">Cities Covered</p>
         </div>
         <div class="text-center backdrop-blur-sm bg-black/30 rounded-2xl p-6 border border-white/30">
@@ -170,7 +210,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
               <strong>Downtown Dry was born from personal experience.</strong> As the founder, my journey through alcohol use disorder and achieving over a year of sobriety opened my eyes to a critical gap: millions of Americans are choosing recovery, mindful living, or simply want to socialize without alcohol - yet finding quality venues that cater to this lifestyle remained incredibly difficult.
             </p>
             <p>
-              This personal journey inspired me to build America's most comprehensive platform for alcohol-free social experiences. Our directory features <strong>1,800+ carefully curated venues</strong> across <strong>600+ cities</strong>, from fully alcohol-free bars and mocktail lounges to traditional kava bars and legal delta THC venues.
+              This personal journey inspired me to build America's most comprehensive platform for alcohol-free social experiences. Our directory features <strong>{totalVenues.toLocaleString()}+ carefully curated venues</strong> across <strong>{totalCities.toLocaleString()}+ cities</strong>, from fully alcohol-free bars and mocktail lounges to traditional kava bars and legal delta THC venues.
             </p>
             <p>
               But we're more than just a directory. Through our expert guides, city recommendations, and curated shopping platform, we're creating a complete ecosystem that supports and celebrates the alcohol-free lifestyle. Whether you're in recovery, pregnant, driving, exploring mindful living, or simply prefer amazing drinks without the hangover, Downtown Dry is your trusted guide.
@@ -184,9 +224,9 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
           <div class="absolute -top-4 -left-4 w-72 h-72 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
           <div class="absolute -bottom-8 -right-4 w-72 h-72 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70"></div>
           <img 
-            src="https://images.unsplash.com/photo-1543269664-7eef42226a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            alt="Diverse group of people socializing at an alcohol-free venue with mocktails and NA beers" 
-            class="relative rounded-3xl shadow-2xl w-full h-96 object-cover"
+            src="/meandkat.jpg" 
+            alt="Adam Speer, founder of Downtown Dry, and his partner Kat" 
+            class="relative rounded-3xl shadow-2xl w-full h-96 object-cover object-top"
             loading="lazy"
           >
         </div>
@@ -289,7 +329,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
               <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
             </svg>
           </div>
-          <div class="text-4xl font-bold text-green-400 mb-2">600+</div>
+          <div class="text-4xl font-bold text-green-400 mb-2">{totalCities.toLocaleString()}+</div>
           <h3 class="text-lg font-bold mb-2">Cities Served</h3>
           <p class="text-gray-300 text-sm leading-relaxed">
             Coast-to-coast coverage helping people find alcohol-free venues everywhere
@@ -317,10 +357,10 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
             <div class="flex items-center mb-4">
               <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full flex items-center justify-center mr-4">
-                <span class="text-white font-bold">S</span>
+                <span class="text-white font-bold">H</span>
               </div>
               <div>
-                <h4 class="font-bold">Sarah M.</h4>
+                <h4 class="font-bold">Heidi N.</h4>
                 <p class="text-gray-300 text-sm">2 Years Sober</p>
               </div>
             </div>
@@ -332,10 +372,10 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
             <div class="flex items-center mb-4">
               <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-500 rounded-full flex items-center justify-center mr-4">
-                <span class="text-white font-bold">M</span>
+                <span class="text-white font-bold">A</span>
               </div>
               <div>
-                <h4 class="font-bold">Mike T.</h4>
+                <h4 class="font-bold">Allen S.</h4>
                 <p class="text-gray-300 text-sm">Mindful Living</p>
               </div>
             </div>
@@ -372,7 +412,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             </div>
             <div>
               <h3 class="text-2xl font-bold text-neutral-900 mb-3 font-heading">FULLY ALCOHOL-FREE VENUES</h3>
-              <div class="text-3xl font-bold text-blue-600 mb-2">460+ Venues</div>
+              <div class="text-3xl font-bold text-blue-600 mb-2">{alcoholFreeVenues.toLocaleString()}+ Venues</div>
             </div>
           </div>
           <p class="text-neutral-700 leading-relaxed mb-4">
@@ -410,7 +450,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             </div>
             <div>
               <h3 class="text-2xl font-bold text-neutral-900 mb-3 font-heading">SOBER-FRIENDLY ESTABLISHMENTS</h3>
-              <div class="text-3xl font-bold text-green-600 mb-2">1,300+ Venues</div>
+              <div class="text-3xl font-bold text-green-600 mb-2">{soberFriendlyVenues.toLocaleString()}+ Venues</div>
             </div>
           </div>
           <p class="text-neutral-700 leading-relaxed mb-4">
@@ -449,7 +489,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             </div>
             <div>
               <h3 class="text-2xl font-bold text-neutral-900 mb-3 font-heading">TRADITIONAL KAVA BARS</h3>
-              <div class="text-3xl font-bold text-purple-600 mb-2">319 Venues</div>
+              <div class="text-3xl font-bold text-purple-600 mb-2">{kavaVenues.toLocaleString()} Venues</div>
             </div>
           </div>
           <p class="text-neutral-700 leading-relaxed mb-4">
@@ -487,7 +527,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             </div>
             <div>
               <h3 class="text-2xl font-bold text-neutral-900 mb-3 font-heading">LEGAL DELTA THC VENUES</h3>
-              <div class="text-3xl font-bold text-amber-600 mb-2">120+ Venues</div>
+              <div class="text-3xl font-bold text-amber-600 mb-2">{thcVenues.toLocaleString()}+ Venues</div>
             </div>
           </div>
           <p class="text-neutral-700 leading-relaxed mb-4">

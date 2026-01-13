@@ -44,6 +44,7 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
 <div 
   id={mapId} 
+  data-map-id={mapId}
   style={`height: ${height}; width: 100%;`} 
   class="rounded-lg shadow-lg bg-gray-100 flex items-center justify-center"
   role="application"
@@ -56,8 +57,18 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 <script define:vars={{ venues, mapCenter, zoom, mapId, apiKey }}>
   console.log('GoogleMap loaded:', venues.length, 'venues');
   
+  // Store map instance and markers globally for updates
+  const mapStoreKey = `mapStore_${mapId.replace(/-/g, '_')}`;
+  window[mapStoreKey] = {
+    map: null,
+    markers: [],
+    infoWindow: null,
+    geocoder: null,
+    initialized: false
+  };
+  
   // Make initMap globally accessible
-  window[`initMap_${mapId.replace('-', '_')}`] = function() {
+  window[`initMap_${mapId.replace(/-/g, '_')}`] = function() {
     console.log('Initializing map', mapId);
     
     const mapElement = document.getElementById(mapId);
@@ -88,6 +99,12 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
 
     const infoWindow = new google.maps.InfoWindow();
     const geocoder = new google.maps.Geocoder();
+    
+    // Store references
+    window[mapStoreKey].map = map;
+    window[mapStoreKey].infoWindow = infoWindow;
+    window[mapStoreKey].geocoder = geocoder;
+    window[mapStoreKey].initialized = true;
     
     // Geocoding service is ready
 
@@ -220,6 +237,148 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     if (pendingGeocodes === 0) {
       fitMapBounds();
     }
+    
+    // Store initial markers
+    window[mapStoreKey].markers = markersToFit;
+  };
+  
+  // Function to update map with new venues
+  window[`updateMap_${mapId.replace(/-/g, '_')}`] = function(newVenues) {
+    const store = window[mapStoreKey];
+    if (!store || !store.initialized || !store.map) {
+      console.warn('Map not initialized yet, cannot update');
+      return;
+    }
+    
+    // Clear existing markers
+    store.markers.forEach(marker => marker.setMap(null));
+    store.markers = [];
+    
+    // Recalculate center from new venues
+    const venuesWithCoords = newVenues.filter(venue => venue.latitude && venue.longitude);
+    const newCenter = venuesWithCoords.length > 0 ? {
+      lat: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.latitude), 0) / venuesWithCoords.length,
+      lng: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.longitude), 0) / venuesWithCoords.length
+    } : mapCenter;
+    
+    // Function to create a marker (same as in initMap)
+    function createMarker(venue, lat, lng) {
+      let pinColor = '#059669'; // Default green
+      if (venue.serves_kava) {
+        pinColor = '#7C3AED'; // Purple for kava
+      } else if (venue.serves_mocktails) {
+        pinColor = '#2563EB'; // Blue for mocktails
+      } else if (venue.is_alcohol_free) {
+        pinColor = '#EA580C'; // Orange for fully alcohol-free
+      }
+
+      const marker = new google.maps.Marker({
+        position: { lat: lat, lng: lng },
+        map: store.map,
+        title: venue.name,
+        icon: {
+          path: 'M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13C19,5.13 15.87,2 12,2zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5s2.5,1.12 2.5,2.5S13.38,11.5 12,11.5z',
+          scale: 2.5,
+          fillColor: pinColor,
+          fillOpacity: 0.9,
+          strokeColor: '#FFFFFF',
+          strokeWeight: 2,
+          anchor: { x: 12, y: 24 }
+        }
+      });
+
+      const contentString = `
+        <div class="p-3 max-w-xs">
+          <h3 class="font-bold text-lg mb-2">${venue.name}</h3>
+          ${venue.address ? `<p class="text-sm text-gray-600 mb-2">${venue.address}</p>` : ''}
+          <div class="flex flex-wrap gap-1 mb-2">
+            ${venue.venue_type ? `<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">${venue.venue_type}</span>` : ''}
+            ${venue.is_alcohol_free ? `<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Alcohol-Free</span>` : ''}
+            ${venue.serves_mocktails ? `<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Mocktails</span>` : ''}
+            ${venue.serves_kava ? `<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Kava</span>` : ''}
+          </div>
+        </div>
+      `;
+
+      marker.addListener('click', () => {
+        store.infoWindow.setContent(contentString);
+        store.infoWindow.open(store.map, marker);
+      });
+
+      return marker;
+    }
+    
+    // Function to build address string
+    function buildAddress(venue) {
+      const parts = [];
+      if (venue.address) parts.push(venue.address);
+      if (venue.city) parts.push(venue.city);
+      if (venue.state) parts.push(venue.state);
+      if (venue.zip_code) parts.push(venue.zip_code);
+      return parts.join(', ');
+    }
+    
+    // Process new venues and create markers
+    const markersToFit = [];
+    let pendingGeocodes = 0;
+    
+    newVenues.forEach(venue => {
+      if (venue.latitude && venue.longitude) {
+        const lat = Number(venue.latitude);
+        const lng = Number(venue.longitude);
+        const marker = createMarker(venue, lat, lng);
+        markersToFit.push(marker);
+      } else {
+        const address = buildAddress(venue);
+        if (address.trim()) {
+          pendingGeocodes++;
+          setTimeout(() => {
+            store.geocoder.geocode({ address: address }, (results, status) => {
+              pendingGeocodes--;
+              
+              if (status === 'OK' && results && results[0]) {
+                const location = results[0].geometry.location;
+                const lat = location.lat();
+                const lng = location.lng();
+                
+                const marker = createMarker(venue, lat, lng);
+                markersToFit.push(marker);
+              }
+              
+              if (pendingGeocodes === 0) {
+                fitMapBounds();
+              }
+            });
+          }, pendingGeocodes * 100);
+        }
+      }
+    });
+    
+    // Function to fit map bounds
+    function fitMapBounds() {
+      if (markersToFit.length > 1) {
+        const bounds = new google.maps.LatLngBounds();
+        markersToFit.forEach((marker) => {
+          bounds.extend(marker.getPosition());
+        });
+        store.map.fitBounds(bounds);
+      } else if (markersToFit.length === 1) {
+        store.map.setCenter(markersToFit[0].getPosition());
+        store.map.setZoom(15);
+      } else if (markersToFit.length === 0) {
+        // If no markers, reset to original center
+        store.map.setCenter(newCenter);
+        store.map.setZoom(zoom);
+      }
+    }
+    
+    // Store new markers
+    store.markers = markersToFit;
+    
+    // Fit bounds if no geocoding needed
+    if (pendingGeocodes === 0) {
+      fitMapBounds();
+    }
   };
 
   // Load Google Maps API if not already loaded
@@ -231,7 +390,7 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
   if (typeof google === 'undefined') {
     console.log('Loading Google Maps API');
     const script = document.createElement('script');
-    const callbackName = `initMap_${mapId.replace('-', '_')}`;
+    const callbackName = `initMap_${mapId.replace(/-/g, '_')}`;
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&loading=async&callback=${callbackName}`;
     script.async = true;
     script.defer = true;
@@ -241,6 +400,6 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     document.head.appendChild(script);
   } else {
     console.log('Google Maps API already loaded, initializing map');
-    window[`initMap_${mapId.replace('-', '_')}`]();
+    window[`initMap_${mapId.replace(/-/g, '_')}`]();
   }
 </script> 

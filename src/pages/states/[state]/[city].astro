@@ -317,8 +317,30 @@ const venueTypeNames: { [key: string]: string } = {
   'Restaurant': 'Restaurants',
   'Cafe': 'Cafes',
   'Brewery': 'Breweries',
-  'Dispensary': 'Dispensaries'
+  'Dispensary': 'Dispensaries',
+  'mocktail_bar': 'Mocktails',
+  'kava_bar': 'Kava Bar',
+  'hemp_bar': 'Cannabis',
+  'cannabis_bar': 'Cannabis',
+  'alcohol_free': 'Alcohol-free',
+  'alcohol_free_bar': 'Alcohol-free'
 };
+
+// Helper function to format venue type for display
+function formatVenueType(venueType: string | null | undefined): string {
+  if (!venueType) return 'Bar';
+  // Try exact match first
+  if (venueTypeNames[venueType]) {
+    return venueTypeNames[venueType];
+  }
+  // Try lowercase match
+  const lowerKey = venueType.toLowerCase();
+  if (venueTypeNames[lowerKey]) {
+    return venueTypeNames[lowerKey];
+  }
+  // Fall back to original value
+  return venueType;
+}
 
 // Get city description from database or use default
 const cityDescription = cityData?.description || DEFAULT_DESCRIPTION;
@@ -627,26 +649,22 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                 <!-- Service Filters -->
                 <div class="mb-4">
                   <label class="block text-sm font-medium text-gray-700 mb-3">Services & Features</label>
-                  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+                  <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     <label class="flex items-center space-x-2 cursor-pointer">
                       <input type="checkbox" id="filterMocktails" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <span class="text-sm text-gray-700">🍹 Mocktails</span>
+                      <span class="text-sm text-gray-700">Mocktails</span>
                     </label>
                     <label class="flex items-center space-x-2 cursor-pointer">
                       <input type="checkbox" id="filterKava" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <span class="text-sm text-gray-700">🌿 Kava</span>
+                      <span class="text-sm text-gray-700">Kava</span>
                     </label>
                     <label class="flex items-center space-x-2 cursor-pointer">
-                      <input type="checkbox" id="filterTHC" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <span class="text-sm text-gray-700">🌱 THC</span>
-                    </label>
-                    <label class="flex items-center space-x-2 cursor-pointer">
-                      <input type="checkbox" id="filterHempDrinks" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <span class="text-sm text-gray-700">🌾 Hemp</span>
+                      <input type="checkbox" id="filterCannabis" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+                      <span class="text-sm text-gray-700">Cannabis</span>
                     </label>
                     <label class="flex items-center space-x-2 cursor-pointer">
                       <input type="checkbox" id="filterAlcoholFree" class="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                      <span class="text-sm text-gray-700">🚫 Alcohol-Free</span>
+                      <span class="text-sm text-gray-700">Alcohol-Free</span>
                     </label>
                   </div>
                 </div>
@@ -698,7 +716,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                   <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-3">
                       <h3 class="text-lg font-semibold text-gray-900">
-                        {venueTypeNames[venueType] || venueType}
+                        {formatVenueType(venueType)}
                       </h3>
                       <span class="bg-gray-100 text-gray-600 text-xs font-medium px-2 py-1 rounded-full type-count">
                         {typeVenues.length}
@@ -914,11 +932,6 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 
                           <!-- Venue Tags -->
                           <div class="flex flex-wrap gap-2">
-                            {venue.venue_type && (
-                              <span class="bg-gray-100 text-gray-800 text-xs font-medium px-3 py-1 rounded-full">
-                                {venue.venue_type}
-                              </span>
-                            )}
                             {venue.serves_thc && (
                               <span class="bg-green-100 text-green-800 text-xs font-medium px-3 py-1 rounded-full border-l-4 border-green-500">
                                 🌱 Serves THC
@@ -966,7 +979,6 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
             </p>
           </div>
         </div>
-        </div>
       ) : (
         <div class="text-center py-12 bg-gray-50 rounded-lg">
           <p class="text-gray-500 mb-4">No venues found in {cityName} yet.</p>
@@ -1001,7 +1013,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 
     function setupFilters() {
       // Service filter checkboxes
-      ['filterMocktails', 'filterKava', 'filterTHC', 'filterHempDrinks', 'filterAlcoholFree'].forEach(id => {
+      ['filterMocktails', 'filterKava', 'filterCannabis', 'filterAlcoholFree'].forEach(id => {
         const checkbox = document.getElementById(id);
         if (checkbox) {
           checkbox.addEventListener('change', applyFiltersAndSort);
@@ -1046,7 +1058,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           document.getElementById('sortBy').value = 'rating-desc';
           
           // Uncheck all service filters
-          ['filterMocktails', 'filterKava', 'filterTHC', 'filterHempDrinks', 'filterAlcoholFree'].forEach(id => {
+          ['filterMocktails', 'filterKava', 'filterCannabis', 'filterAlcoholFree'].forEach(id => {
             const checkbox = document.getElementById(id);
             if (checkbox) checkbox.checked = false;
           });
@@ -1194,8 +1206,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
       const services = [];
       if (document.getElementById('filterMocktails')?.checked) services.push('mocktails');
       if (document.getElementById('filterKava')?.checked) services.push('kava');
-      if (document.getElementById('filterTHC')?.checked) services.push('thc');
-      if (document.getElementById('filterHempDrinks')?.checked) services.push('hemp');
+      if (document.getElementById('filterCannabis')?.checked) services.push('cannabis');
       if (document.getElementById('filterAlcoholFree')?.checked) services.push('alcohol-free');
       
       if (services.length > 0) params.set('services', services.join(','));
@@ -1222,8 +1233,9 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
       const services = params.get('services')?.split(',') || [];
       document.getElementById('filterMocktails').checked = services.includes('mocktails');
       document.getElementById('filterKava').checked = services.includes('kava');
-      document.getElementById('filterTHC').checked = services.includes('thc');
-      document.getElementById('filterHempDrinks').checked = services.includes('hemp');
+      // Support legacy 'thc' and 'hemp' params, or new 'cannabis' param
+      const hasCannabis = services.includes('cannabis') || services.includes('thc') || services.includes('hemp');
+      document.getElementById('filterCannabis').checked = hasCannabis;
       document.getElementById('filterAlcoholFree').checked = services.includes('alcohol-free');
     }
 
@@ -1238,8 +1250,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
       // Get service filters
       const filterMocktails = document.getElementById('filterMocktails')?.checked || false;
       const filterKava = document.getElementById('filterKava')?.checked || false;
-      const filterTHC = document.getElementById('filterTHC')?.checked || false;
-      const filterHempDrinks = document.getElementById('filterHempDrinks')?.checked || false;
+      const filterCannabis = document.getElementById('filterCannabis')?.checked || false;
       const filterAlcoholFree = document.getElementById('filterAlcoholFree')?.checked || false;
       
       // Get sort option
@@ -1263,14 +1274,19 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
         const serviceFilters = [
           { checked: filterMocktails, field: 'serves_mocktails' },
           { checked: filterKava, field: 'serves_kava' },
-          { checked: filterTHC, field: 'serves_thc' },
-          { checked: filterHempDrinks, field: 'serves_hemp_drinks' },
+          { checked: filterCannabis, field: 'cannabis', isCannabis: true }, // Special handling for cannabis
           { checked: filterAlcoholFree, field: 'is_alcohol_free' }
         ];
         
         const activeServiceFilters = serviceFilters.filter(f => f.checked);
         if (activeServiceFilters.length > 0) {
-          const matchesService = activeServiceFilters.some(filter => venue[filter.field]);
+          const matchesService = activeServiceFilters.some(filter => {
+            // Special handling for cannabis: check both serves_thc OR serves_hemp_drinks
+            if (filter.isCannabis) {
+              return venue.serves_thc || venue.serves_hemp_drinks;
+            }
+            return venue[filter.field];
+          });
           if (!matchesService) return false;
         }
         
@@ -1299,6 +1315,38 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
       updateVenueDisplay();
       updateVenueCount();
       updateURLWithFilters();
+      updateMap();
+    }
+    
+    // Function to update map with filtered venues
+    function updateMap() {
+      // Find the map element by data attribute or ID starting with "map-"
+      const mapElement = document.querySelector('[data-map-id]') || document.querySelector('[id^="map-"]');
+      if (!mapElement) {
+        console.warn('Map element not found');
+        return;
+      }
+      
+      const mapId = mapElement.id || mapElement.getAttribute('data-map-id');
+      if (!mapId) {
+        console.warn('Map ID not found');
+        return;
+      }
+      
+      const updateFunctionName = `updateMap_${mapId.replace(/-/g, '_')}`;
+      
+      // Check if the update function exists (map must be initialized)
+      if (typeof window[updateFunctionName] === 'function') {
+        // Call the update function with filtered venues
+        window[updateFunctionName](filteredVenues);
+      } else {
+        // Map might not be initialized yet, try again after a short delay
+        setTimeout(() => {
+          if (typeof window[updateFunctionName] === 'function') {
+            window[updateFunctionName](filteredVenues);
+          }
+        }, 500);
+      }
     }
   </script>
 </Layout> 

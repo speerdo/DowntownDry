@@ -45,6 +45,22 @@ const soberFriendlyVenues = allVenues.filter(v => v.is_sober_friendly).length;
 const kavaVenues = allVenues.filter(v => v.serves_kava).length;
 const thcVenues = allVenues.filter(v => v.serves_thc).length;
 const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
+
+// Get city-specific venue counts
+const nycVenues = allVenues.filter(v => 
+  (v.city?.toLowerCase() === 'new york' || v.city?.toLowerCase() === 'new york city') && 
+  v.state?.toLowerCase() === 'new york'
+).length;
+
+const laVenues = allVenues.filter(v => 
+  (v.city?.toLowerCase() === 'los angeles' || v.city?.toLowerCase() === 'la') && 
+  v.state?.toLowerCase() === 'california'
+).length;
+
+const austinVenues = allVenues.filter(v => 
+  v.city?.toLowerCase() === 'austin' && 
+  v.state?.toLowerCase() === 'texas'
+).length;
 ---
 
 <!-- Structured Data for SEO -->
@@ -949,11 +965,11 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New York City skyline showcasing 127+ alcohol-free venues including mocktail bars and NA beer spots" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`New York City skyline showcasing ${nycVenues}+ alcohol-free venues including mocktail bars and NA beer spots`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">NEW YORK</h3>
-            <p class="text-neutral-200 mb-4 text-lg">127 venues and growing</p>
+            <p class="text-neutral-200 mb-4 text-lg">{nycVenues} venues and growing</p>
             <div class="flex space-x-2">
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">NA Beer</span>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Mocktails</span>
@@ -962,11 +978,11 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
         </div>
         
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Los Angeles sunset over city with 94+ delta THC venues and kava bars for cannabis wellness" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`Los Angeles sunset over city with ${laVenues}+ delta THC venues and kava bars for cannabis wellness`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">LOS ANGELES</h3>
-            <p class="text-neutral-200 mb-4 text-lg">94 venues and growing</p>
+            <p class="text-neutral-200 mb-4 text-lg">{laVenues} venues and growing</p>
             <div class="flex space-x-2">
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Delta THC</span>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Kava</span>
@@ -975,11 +991,11 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
         </div>
         
         <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Austin Texas downtown featuring 73+ alcohol-free venues including craft mocktail lounges and NA beer bars" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`Austin Texas downtown featuring ${austinVenues}+ alcohol-free venues including craft mocktail lounges and NA beer bars`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 via-accent-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">AUSTIN</h3>
-            <p class="text-neutral-200 mb-4 text-lg">73 venues and growing</p>
+            <p class="text-neutral-200 mb-4 text-lg">{austinVenues} venues and growing</p>
             <div class="flex space-x-2">
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Mocktails</span>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">NA Beer</span>
@@ -989,7 +1005,7 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
       </div>
       
       <div class="text-center mt-12">
-        <a href="/states" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl" title="Browse all 50 states and 600+ cities with alcohol-free venues" aria-label="View complete directory of alcohol-free venues by state and city">
+        <a href="/states" class="group bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-lg hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-2xl" title={`Browse all ${totalStates} states and ${totalCities}+ cities with alcohol-free venues`} aria-label="View complete directory of alcohol-free venues by state and city">
           VIEW ALL CITIES
           <svg class="inline-block ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
             <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
@@ -1020,7 +1036,7 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
             </svg>
           </summary>
           <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
-            <p>We feature over 1,800 venues across four main categories: <strong>fully alcohol-free bars and restaurants</strong> (460+ venues), <strong>sober-friendly establishments</strong> with excellent NA options (1,300+ venues), <strong>traditional kava bars</strong> serving Pacific Island relaxation beverages (319 venues), and <strong>legal delta THC venues</strong> offering hemp-derived cannabis drinks (120+ venues). Each venue is verified and categorized to help you find exactly what you're looking for.</p>
+            <p>We feature over {totalVenues.toLocaleString()} venues across four main categories: <strong>fully alcohol-free bars and restaurants</strong> ({alcoholFreeVenues}+ venues), <strong>sober-friendly establishments</strong> with excellent NA options ({soberFriendlyVenues}+ venues), <strong>traditional kava bars</strong> serving Pacific Island relaxation beverages ({kavaVenues} venues), and <strong>legal delta THC venues</strong> offering hemp-derived cannabis drinks ({thcVenues}+ venues). Each venue is verified and categorized to help you find exactly what you're looking for.</p>
           </div>
         </details>
 
@@ -1044,7 +1060,7 @@ const mocktailVenues = allVenues.filter(v => v.serves_mocktails).length;
             </svg>
           </summary>
           <div class="p-6 pt-0 text-neutral-700 leading-relaxed">
-            <p>Use our <a href="/states" class="text-primary-700 hover:text-primary-800 font-semibold">venue directory</a> to browse by state and city. We cover all 50 states with detailed listings including venue types, specialties (NA beer, mocktails, kava, THC), ratings, and contact information. Each venue page includes photos, hours, and what makes them special for alcohol-free socializing.</p>
+            <p>Use our <a href="/states" class="text-primary-700 hover:text-primary-800 font-semibold">venue directory</a> to browse by state and city. We cover {totalStates} states with detailed listings including venue types, specialties (NA beer, mocktails, kava, THC), ratings, and contact information. Each venue page includes photos, hours, and what makes them special for alcohol-free socializing.</p>
           </div>
         </details>
 

@@ -21,12 +21,12 @@ const recentPosts = sortedPosts
 
 // Get categories for the browse section
 const categories = [
-  { name: 'Recipes', slug: 'recipes', color: 'secondary-500', description: 'Delicious alcohol-free drink recipes' },
-  { name: 'Tips', slug: 'tips', color: 'accent-500', description: 'Practical advice for alcohol-free living' },
-  { name: 'City Guides', slug: 'city-guide', color: 'orange-500', description: 'Local venue recommendations' },
-  { name: 'Wellness', slug: 'wellness', color: 'green-600', description: 'Health and mindfulness content' },
-  { name: 'Community', slug: 'community', color: 'blue-600', description: 'Building connections and relationships' },
-  { name: 'Delta THC', slug: 'delta-thc', color: 'purple-600', description: 'Cannabis culture and venues' },
+  { name: 'Recipes', slug: 'recipes', color: 'secondary-500', borderClass: 'border-t-secondary-500', description: 'Delicious alcohol-free drink recipes' },
+  { name: 'Tips', slug: 'tips', color: 'accent-500', borderClass: 'border-t-accent-500', description: 'Practical advice for alcohol-free living' },
+  { name: 'City Guides', slug: 'city-guide', color: 'orange-500', borderClass: 'border-t-orange-500', description: 'Local venue recommendations' },
+  { name: 'Wellness', slug: 'wellness', color: 'green-600', borderClass: 'border-t-green-600', description: 'Health and mindfulness content' },
+  { name: 'Community', slug: 'community', color: 'blue-600', borderClass: 'border-t-blue-600', description: 'Building connections and relationships' },
+  { name: 'Delta THC', slug: 'delta-thc', color: 'purple-600', borderClass: 'border-t-purple-600', description: 'Cannabis culture and venues' },
 ];
 ---
 
@@ -65,10 +65,11 @@ const categories = [
   )}
 
   <!-- Hero Section -->
-  <section class="py-24 bg-gradient-to-br from-primary-700 via-secondary-500 to-accent-500 text-white relative overflow-hidden">
+  <section class="py-24 bg-gradient-to-br from-neutral-900 via-primary-800 to-primary-700 text-white relative overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-secondary-500/10 rounded-full blur-3xl animate-pulse"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary-500/10 rounded-full blur-3xl animate-pulse" style="animation-delay: 2s;"></div>
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl"></div>
     </div>
     
     <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -158,9 +159,9 @@ const categories = [
           }
           
           return (
-            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <img src={post.data.image} alt={post.data.title} class="w-full h-56 object-cover">
-              <div class="p-8">
+            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+              <img src={post.data.image} alt={post.data.title} class="w-full h-56 object-cover block">
+              <div class="p-8 flex-1">
                 <div class={`text-sm ${categoryClass} font-semibold mb-3 uppercase tracking-wide`}>
                   {categoryText}
                 </div>
@@ -195,7 +196,7 @@ const categories = [
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category) => (
-          <a href={`/blog/category/${category.slug}`} class={`group block p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 border-${category.color}`}>
+          <a href={`/blog/category/${category.slug}`} class={`group block p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-t-4 ${category.borderClass}`}>
             <h3 class="text-2xl font-bold text-neutral-900 mb-4 group-hover:text-primary-700 transition-colors">
               {category.name}
             </h3>

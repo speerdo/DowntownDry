@@ -93,13 +93,12 @@ h6 {
   @apply bg-neutral-50 px-2 py-1 rounded text-base font-mono text-primary-600;
 }
 
-/* Article Layout */
-article {
-  @apply py-20;
-}
+/* Article Layout - Blog post content articles already have explicit padding */
+/* Removed global article padding to prevent affecting card articles */
 
-article > div {
-  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+/* Reset padding for card articles (blog cards) */
+article.rounded-2xl.shadow-lg {
+  @apply py-0;
 }
 
 /* Lists within content */

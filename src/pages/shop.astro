@@ -168,11 +168,8 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         </div>
 
         <!-- Kava Products -->
-        <div class="bg-white rounded-3xl shadow-lg overflow-hidden relative">
-          <div class="absolute top-4 right-4 z-10">
-            <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">COMING SOON</span>
-          </div>
-          <div class="relative overflow-hidden h-80 opacity-75">
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          <div class="relative overflow-hidden h-80">
             <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kava products" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/50 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
@@ -184,7 +181,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
                   </svg>
                 </div>
                 <h2 class="text-3xl font-bold mb-4">KAVA<br/>PRODUCTS</h2>
-                <p class="text-lg text-neutral-200 mb-2">Coming Soon</p>
+                <p class="text-lg text-neutral-200 mb-2">Available Now</p>
               </div>
             </div>
           </div>
@@ -193,28 +190,31 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
               Traditional Pacific Island kava root products, social tonics, and ready-to-drink kava beverages for natural relaxation and stress relief.
             </p>
             <div class="mb-6">
-              <div class="flex items-center text-sm text-neutral-500 mb-2">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+              <div class="flex items-center text-sm text-neutral-600 mb-2">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 Traditional preparation methods
               </div>
-              <div class="flex items-center text-sm text-neutral-500 mb-2">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+              <div class="flex items-center text-sm text-neutral-600 mb-2">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 Ready-to-drink tonics
               </div>
-              <div class="flex items-center text-sm text-neutral-500">
-                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"/>
+              <div class="flex items-center text-sm text-neutral-600">
+                <svg class="w-4 h-4 mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 Natural stress relief
               </div>
             </div>
-            <button disabled class="block w-full bg-neutral-300 text-neutral-500 text-center px-8 py-4 rounded-2xl font-bold text-lg cursor-not-allowed">
-              NOTIFY ME WHEN AVAILABLE
-            </button>
+            <a href="https://amzn.to/45ci813" target="_blank" rel="noopener" class="block w-full bg-secondary-500 text-white text-center px-8 py-4 rounded-2xl font-bold text-lg hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              SHOP NOW
+              <svg class="inline-block ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
@@ -310,6 +310,101 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             </div>
             <a href="https://www.betterrhodes.com/products/beer-cider-box/downtowndry" target="_blank" rel="noopener" class="block w-full bg-primary-700 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 transform hover:scale-105">
               SUBSCRIBE NOW
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kava Products Section -->
+  <section class="py-20 bg-neutral-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight">
+          KAVA<br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-accent-500">PRODUCTS</span>
+        </h2>
+        <p class="text-xl text-neutral-700 max-w-3xl mx-auto leading-relaxed">
+          Natural relaxation and calm support with traditional Pacific Island kava root products.
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- MuseBeam Kava Calming Drink Mix -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src="https://m.media-amazon.com/images/I/71uYHcwQ1CL._AC_SL1500_.jpg" alt="MuseBeam Kava Calming Drink Mix" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Non-Alcoholic</span>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">MuseBeam Kava Calming Drink Mix</h3>
+            <p class="text-neutral-600 text-sm mb-4">Orange Flavored | 20 Packets</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Non-alcoholic instant powder drink with kava & lemon balm extract for calm & relaxation. Vegan, sugar-free orange flavored mix.
+            </p>
+            <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">$25.99</span>
+                <p class="text-sm text-neutral-500">+ taxes and shipping</p>
+              </div>
+            </div>
+            <a href="https://amzn.to/45ci813" target="_blank" rel="noopener" class="block w-full bg-secondary-500 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Coral Sea Kava Instant Kava Tea Powder -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src="https://m.media-amazon.com/images/I/61rHSUdeyML._AC_SL1500_.jpg" alt="Coral Sea Kava Instant Kava Tea Powder Vanuatu Noble Kava Root" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Instant Powder</span>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">Coral Sea Kava Instant Tea Powder</h3>
+            <p class="text-neutral-600 text-sm mb-4">Vanuatu Noble Kava Root | 12+ Servings</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Ultra-concentrated 30:1 instant kava powder from Epi Island, Vanuatu. Mixes effortlessly for natural stress relief and mood enhancement. Ethically sourced with 5% of profits supporting coral reef restoration.
+            </p>
+            <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">$29.99</span>
+                <p class="text-sm text-neutral-500">+ taxes and shipping</p>
+              </div>
+            </div>
+            <a href="https://amzn.to/3LbEnh2" target="_blank" rel="noopener" class="block w-full bg-secondary-500 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105">
+              SHOP NOW
+            </a>
+          </div>
+        </div>
+
+        <!-- Bashi Kava Drink Experience -->
+        <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
+          <div class="relative overflow-hidden h-80">
+            <img src="https://m.media-amazon.com/images/I/71deIUkGWAL._AC_SL1500_.jpg" alt="Bashi Kava Drink Experience Peach Mango 6 Pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <div class="absolute top-4 left-4">
+              <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Ready to Drink</span>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-neutral-900 mb-3">Bashi Kava Drink Experience</h3>
+            <p class="text-neutral-600 text-sm mb-4">Peach Mango | 8oz Cans | 6 Pack</p>
+            <p class="text-neutral-700 leading-relaxed mb-6 line-clamp-3">
+              Ready-to-drink kava beverage with premium kava root extract. Promotes relaxation and calm mood without alcohol or caffeine. Delicious peach mango flavor, vegan, gluten-free, and made with clean ingredients.
+            </p>
+            <div class="mb-6">
+              <div>
+                <span class="text-3xl font-bold text-neutral-900">$39.99</span>
+                <p class="text-sm text-neutral-500">+ taxes and shipping</p>
+              </div>
+            </div>
+            <a href="https://amzn.to/4jIgPwX" target="_blank" rel="noopener" class="block w-full bg-secondary-500 text-white text-center px-6 py-4 rounded-2xl font-bold hover:bg-secondary-600 transition-all duration-300 transform hover:scale-105">
+              SHOP NOW
             </a>
           </div>
         </div>
