@@ -2,6 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
 
+// Disable admin page in production - only available in development
+if (import.meta.env.MODE === 'production') {
+  return Astro.redirect('/404');
+}
+
 interface Venue {
   id: string;
   name: string;
