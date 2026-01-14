@@ -22,7 +22,10 @@
     "apply:live": "node scripts/apply-verification-results.js --apply",
     "enrich:dry-run": "node scripts/enrich-venue-data.js --dry-run",
     "enrich:auto": "node scripts/enrich-venue-data.js --auto",
-    "enrich:review": "node scripts/enrich-venue-data.js --review"
+    "enrich:review": "node scripts/enrich-venue-data.js --review",
+    "city-images:find": "node scripts/find-city-images.js --dry-run",
+    "city-images:apply": "node scripts/find-city-images.js --apply",
+    "city-images:featured": "node scripts/find-city-images.js --featured-only --dry-run"
   },
   "keywords": [
     "venue",

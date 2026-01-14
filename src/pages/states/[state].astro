@@ -180,6 +180,36 @@ function getStateSlug(stateName: string) {
   return stateName.toLowerCase().replace(/\s+/g, '-');
 }
 
+// Select featured cities: prioritize cities with images, then by venue count
+// Try to get 3 cities, but lower threshold if needed
+const sortedCities = [...citiesWithVenues].sort((a, b) => {
+  // First priority: cities with images
+  const aHasImage = a.image_url ? 1 : 0;
+  const bHasImage = b.image_url ? 1 : 0;
+  if (aHasImage !== bHasImage) return bHasImage - aHasImage;
+  // Second priority: number of venues
+  return b.venues.length - a.venues.length;
+});
+
+// Try to get 3 cities, starting with cities that have 3+ venues
+let featuredCities = sortedCities.filter(city => city.venues.length >= 3).slice(0, 3);
+
+// If we don't have 3 cities with 3+ venues, fill with cities that have 2+ venues
+if (featuredCities.length < 3) {
+  const additionalCities = sortedCities
+    .filter(city => city.venues.length >= 2 && !featuredCities.some(fc => fc.city_name === city.city_name))
+    .slice(0, 3 - featuredCities.length);
+  featuredCities = [...featuredCities, ...additionalCities];
+}
+
+// If we still don't have 3, fill with any remaining cities (up to 3 total)
+if (featuredCities.length < 3) {
+  const remainingCities = sortedCities
+    .filter(city => !featuredCities.some(fc => fc.city_name === city.city_name))
+    .slice(0, 3 - featuredCities.length);
+  featuredCities = [...featuredCities, ...remainingCities];
+}
+
 ---
 
 <!-- Structured Data for State Page -->
@@ -293,19 +323,19 @@ function getStateSlug(stateName: string) {
       {citiesWithVenues.length > 0 ? (
         <div>
           <!-- Top Cities Section -->
-          {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).length > 0 && (
+          {featuredCities.length > 0 && (
             <div class="mb-12">
               <h2 class="text-2xl font-semibold text-gray-900 mb-6">Featured Cities</h2>
               <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                {citiesWithVenues.filter(city => city.venues.length >= 3).slice(0, 3).map((city) => (
+                {featuredCities.map((city) => (
                   <a 
                     href={`/states/${getStateSlug(stateName)}/${getCitySlug(city.city_name)}/`}
                     class="block bg-white rounded-xl overflow-hidden border border-gray-200 hover:border-indigo-300 hover:shadow-xl transition-all duration-300"
                   >
-                    {getFeaturedCityImage(city.city_name) ? (
+                    {city.image_url ? (
                       <div class="relative h-36 overflow-hidden">
                         <img 
-                          src={getFeaturedCityImage(city.city_name)} 
+                          src={city.image_url} 
                           alt={`${city.city_name}, ${stateName} - cityscape showing the urban landscape`}
                           class="w-full h-full object-cover"
                           loading="lazy"

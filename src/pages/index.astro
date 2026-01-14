@@ -212,20 +212,16 @@ const austinVenues = allVenues.filter(v =>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center justify-center overflow-hidden" role="banner" aria-label="Downtown Dry homepage hero section">
-    <!-- Split Background Design -->
-    <div class="absolute inset-0 flex">
-      <!-- Left side - Brand colors -->
-      <div class="w-1/2 bg-gradient-to-br from-primary-700 via-primary-600 to-secondary-500"></div>
-      <!-- Right side - City night image -->
-      <div class="w-1/2 relative">
-        <img 
-          src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-          alt="Downtown city nightlife scene with modern buildings and lights representing alcohol-free venues and nightlife" 
-          class="w-full h-full object-cover"
-          loading="eager"
-        >
-        <div class="absolute inset-0 bg-gradient-to-l from-transparent via-primary-700/30 to-primary-700/80"></div>
-      </div>
+    <!-- Full Width Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+        alt="Downtown city nightlife scene with modern buildings and lights representing alcohol-free venues and nightlife" 
+        class="w-full h-full object-cover"
+        loading="eager"
+      >
+      <!-- Gradient overlay to maintain text readability and brand colors -->
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-700/80 via-primary-600/70 to-secondary-500/75"></div>
     </div>
     
     <!-- Geometric Background Elements -->
@@ -246,8 +242,8 @@ const austinVenues = allVenues.filter(v =>
         </div>
         <h1 class="text-6xl md:text-8xl font-semibold mb-6 leading-tight tracking-tight font-heading">
           <span class="sr-only">Downtown Dry - Find Alcohol-Free Bars & Sober Venues Nationwide</span>
-          <span aria-hidden="true">DOWNTOWN<br />
-          <span style="color: #D9AA55;">DRY</span></span>
+          <span aria-hidden="true">DOWNTOWN<br /></span>
+          <span style="color: #D9AA55;">DRY</span>
         </h1>
       </div>
       

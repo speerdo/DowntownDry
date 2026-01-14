@@ -53,4 +53,31 @@ WHERE city_name = 'Fishers' AND state = 'Indiana';
 UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1497450204135-267e19b67e07?auto=format&fit=crop&w=800&h=400&q=80'
 WHERE city_name = 'Omaha' AND state = 'Nebraska';
 
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Lincoln' AND state = 'Nebraska';
+
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Bellevue' AND state = 'Nebraska';
+
+-- Additional New York cities (to ensure 3+ featured cities)
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Rochester' AND state = 'New York';
+
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Albany' AND state = 'New York';
+
+-- Additional Indiana cities (if needed beyond the 3 already set)
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Fort Wayne' AND state = 'Indiana';
+
+UPDATE cities SET image_url = 'https://images.unsplash.com/photo-1514565131-fce0801e5785?auto=format&fit=crop&w=800&h=400&q=80'
+WHERE city_name = 'Evansville' AND state = 'Indiana';
+
+-- Note: To add images for featured cities in other states, use this pattern:
+-- UPDATE cities SET image_url = 'https://images.unsplash.com/photo-[ID]?auto=format&fit=crop&w=800&h=400&q=80'
+-- WHERE city_name = 'CityName' AND state = 'StateName';
+-- 
+-- Ensure each state has at least 3 featured cities with accurate city images.
+-- Use Unsplash to find city-specific images that accurately represent each city's skyline or landmarks.
+
 
