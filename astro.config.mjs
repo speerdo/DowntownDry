@@ -8,17 +8,15 @@ export default defineConfig({
   integrations: [
     tailwind(),
     sitemap({
-      // Filter to only include soft launch states
+      // Filter to exclude admin and API routes
       filter: (page) => {
-        // Include all non-state pages
-        if (!page.includes('/states/')) return true;
+        // Exclude admin page
+        if (page.includes('/admin/')) return false;
         
-        // For state pages, only include soft launch states
-        const softLaunchStates = ['california', 'new-york', 'indiana', 'nebraska'];
-        const stateMatch = page.match(/\/states\/([^/]+)/);
-        if (stateMatch) {
-          return softLaunchStates.includes(stateMatch[1]);
-        }
+        // Exclude API routes
+        if (page.includes('/api/')) return false;
+        
+        // Include all other pages (state pages are already filtered by is_active in getStaticPaths)
         return true;
       },
       changefreq: 'weekly',
