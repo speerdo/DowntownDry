@@ -28,7 +28,7 @@ const categoryColors = {
 const colorClass = categoryColors[post.data.category] || 'primary-700';
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description} ogImage={post.data.image}>
   <!-- Hero Section -->
   <section class="py-24 bg-gradient-to-br from-neutral-900 to-neutral-700 text-white relative overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">

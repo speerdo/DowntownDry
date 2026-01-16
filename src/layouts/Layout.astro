@@ -28,10 +28,24 @@ export interface Props {
   title: string;
   description?: string;
   canonical?: string;
+  ogImage?: string;
 }
 
-const { title, description = "Discover alcohol-free nightlife, kava bars, CBD lounges, and alternative social venues across US cities. Your guide to downtown dry entertainment and mindful socializing.", canonical } = Astro.props;
+const { title, description = "Discover alcohol-free nightlife, kava bars, CBD lounges, and alternative social venues across US cities. Your guide to downtown dry entertainment and mindful socializing.", canonical, ogImage } = Astro.props;
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+
+// Normalize OG image URL - handle both absolute and relative URLs
+const defaultOgImage = "https://downtowndry.bar/downtown_dry_og.png";
+let ogImageURL = defaultOgImage;
+if (ogImage) {
+  // If it's already an absolute URL (starts with http:// or https://), use it as-is
+  if (ogImage.startsWith('http://') || ogImage.startsWith('https://')) {
+    ogImageURL = ogImage;
+  } else {
+    // If it's a relative URL, make it absolute using the site URL
+    ogImageURL = new URL(ogImage, Astro.site).href;
+  }
+}
 ---
 
 <!doctype html>
@@ -54,14 +68,14 @@ const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:site_name" content="Downtown Dry" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content="https://downtowndry.bar/downtown_dry_og.png" />
+    <meta property="og:image" content={ogImageURL} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Downtown Dry - Your guide to alcohol-free bars, kava lounges, and NA venues" />
+    <meta property="og:image:alt" content={ogImage ? `${title} - Downtown Dry` : "Downtown Dry - Your guide to alcohol-free bars, kava lounges, and NA venues"} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="https://downtowndry.bar/downtown_dry_og.png" />
+    <meta name="twitter:image" content={ogImageURL} />
     <meta name="twitter:site" content="@downtowndry" />
     <meta name="twitter:creator" content="@downtowndry" />
     
