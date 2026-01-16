@@ -1,0 +1,104 @@
+
+══════════════════════════════════════════════════════════════════════
+🚀 ENHANCED REDISCOVERY: TOP 30 CITIES FROM RECENT RESULTS
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-15T22:39:21.549Z
+Mode: APPLY
+
+📋 Cities to process: 29
+
+📂 Loading existing venues from database...
+   Found 1835 existing venues
+
+══════════════════════════════════════════════════════════════════════
+🔍 [1/29] Phoenix, Arizona
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 0/10000
+   💰 Current cost: $0.00
+   🔎 Searching: "Phoenix Arizona non-alcoholic bar"
+   🔎 Searching: "Phoenix Arizona mocktail bar"
+   🔎 Searching: "Phoenix Arizona kava bar"
+   🔎 Searching: "Phoenix Arizona alcohol-free restaurant"
+   🔎 Searching: "Phoenix Arizona sober bar"
+   🔎 Searching: "Phoenix Arizona zero proof cocktails"
+   🔎 Searching: "Phoenix Arizona THC lounge"
+   🔎 Searching: "Phoenix Arizona hemp drink bar"
+   🔎 Searching: "Phoenix Arizona Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 19 venues extracted
+   ✅ 7 candidates found
+   🤖 Verifying 7 candidates...
+      ⚠️ Batch verification error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent: fetch failed
+
+   📊 Progress: 1/29 | Total venues found: 0
+
+══════════════════════════════════════════════════════════════════════
+🔍 [2/29] Philadelphia, Pennsylvania
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 9/10000
+   💰 Current cost: $0.55
+   🔎 Searching: "Philadelphia Pennsylvania non-alcoholic bar"
+   🔎 Searching: "Philadelphia Pennsylvania mocktail bar"
+   🔎 Searching: "Philadelphia Pennsylvania kava bar"
+   🔎 Searching: "Philadelphia Pennsylvania alcohol-free restaurant"
+   🔎 Searching: "Philadelphia Pennsylvania sober bar"
+   🔎 Searching: "Philadelphia Pennsylvania zero proof cocktails"
+   🔎 Searching: "Philadelphia Pennsylvania THC lounge"
+   🔎 Searching: "Philadelphia Pennsylvania hemp drink bar"
+   🔎 Searching: "Philadelphia Pennsylvania Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 23 venues extracted
+   ✅ 13 candidates found
+   🤖 Verifying 13 candidates...
+   ✨ Enriching: The Top Shelf at Unity Java
+   ✨ Enriching: Jaya Kava
+   ✨ Enriching: The Random Tea Room & Curiosity Shop
+   ✨ Enriching: Charlie Was a Sinner
+   ✨ Enriching: Bar Hygge
+   ✨ Enriching: Lark
+   ✨ Enriching: Harper's Garden
+   ✨ Enriching: Juno
+   ✨ Enriching: Laser Wolf
+   ✨ Enriching: Rosy's Taco Bar
+   ✨ Enriching: Spice Finch
+
+   📊 Progress: 2/29 | Total venues found: 11
+
+══════════════════════════════════════════════════════════════════════
+🔍 [3/29] Seattle, Washington
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 18/10000
+   💰 Current cost: $1.20
+   🔎 Searching: "Seattle Washington non-alcoholic bar"
+   🔎 Searching: "Seattle Washington mocktail bar"
+   🔎 Searching: "Seattle Washington kava bar"
+   🔎 Searching: "Seattle Washington alcohol-free restaurant"
+   🔎 Searching: "Seattle Washington sober bar"
+   🔎 Searching: "Seattle Washington zero proof cocktails"
+   🔎 Searching: "Seattle Washington THC lounge"
+   🔎 Searching: "Seattle Washington hemp drink bar"
+   🔎 Searching: "Seattle Washington Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 26 venues extracted
+   ✅ 22 candidates found
+   🤖 Verifying 22 candidates...
+      ⚠️ Batch verification error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent: fetch failed
+
+   📊 Progress: 3/29 | Total venues found: 11
+
+══════════════════════════════════════════════════════════════════════
+🔍 [4/29] Portland, Oregon
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 27/10000
+   💰 Current cost: $2.08
+   🔎 Searching: "Portland Oregon non-alcoholic bar"
+   🔎 Searching: "Portland Oregon mocktail bar"
+   🔎 Searching: "Portland Oregon kava bar"
+   🔎 Searching: "Portland Oregon alcohol-free restaurant"
+   🔎 Searching: "Portland Oregon sober bar"
+   🔎 Searching: "Portland Oregon zero proof cocktails"
+   🔎 Searching: "Portland Oregon THC lounge"
+   🔎 Searching: "Portland Oregon hemp drink bar"
+   🔎 Searching: "Portland Oregon Athletic Brewing taproom"
+   📄 90 total search results

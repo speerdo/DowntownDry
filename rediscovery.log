@@ -1,0 +1,94 @@
+nohup: ignoring input
+
+══════════════════════════════════════════════════════════════════════
+🔄 RE-DISCOVERY: Failed Cities (#262-502)
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-14T15:07:57.817Z
+💰 Budget limit: $40
+📊 Daily search quota: 95/day
+
+🎯 Processing specific cities: Seattle, Miami, Nashville
+
+📊 Total cities to process: 6
+   Existing venues in DB: 1526
+══════════════════════════════════════════════════════════════════════
+
+════════════════════════════════════════════════════════════
+🔍 [1/6] Miami, Florida
+════════════════════════════════════════════════════════════
+   📊 Daily quota: 0/95
+   📄 90 search results
+   🏷️  38 potential venues extracted
+   ✨ 37 new candidates
+   [1/37] Syndicate Kava Bar
+      ✅ QUALIFIED
+   [2/37] Grails Miami
+      ✅ QUALIFIED
+   [3/37] Rienne
+      ❌ Wrong city: Coral Gables (expected Miami)
+   [4/37] LPM Restaurant & Bar
+      ✅ QUALIFIED
+   [5/37] Osaka Nikkei
+      ✅ QUALIFIED
+   [6/37] Kaori
+      ✅ QUALIFIED
+   [7/37] Le Chick
+      ❌ Excluded type: night_club
+   [8/37] Jaguar Sun
+      ❌ Closed
+   [9/37] Il Giardino
+      ❌ Not qualified
+   [10/37] Chotto Matte
+      ✅ QUALIFIED
+   [11/37] Rocco's Tacos
+      ❌ Wrong city: Fort Lauderdale (expected Miami)
+   [12/37] Amara At Paraiso
+      ✅ QUALIFIED
+   [13/37] Rosa Sky
+      ❌ Excluded type: night_club
+   [14/37] Thorn
+      ✅ QUALIFIED
+   [15/37] Bartaco
+      ✅ QUALIFIED
+   [16/37] Bamboo Room by Trader Vic's
+      ✅ QUALIFIED
+   [17/37] Serena
+      ✅ QUALIFIED
+   [18/37] Swizzle Rum Bar
+      ✅ QUALIFIED
+   [19/37] DOM's
+      ❌ Not qualified
+   [20/37] MAYAMI Mexicantina
+      ❌ Excluded type: night_club
+   [21/37] Puttshack
+
+⏸️  DAILY QUOTA REACHED (95/95)
+
+💾 Progress saved. Resume tomorrow by running:
+   node scripts/rediscover-failed-cities.js --start=263
+
+📊 Summary:
+   Cities processed today: 0
+   New venues found: 12
+   Estimated cost: $0.00
+
+⏸️  Stopped due to daily quota limit.
+
+══════════════════════════════════════════════════════════════════════
+✅ RE-DISCOVERY COMPLETE
+══════════════════════════════════════════════════════════════════════
+
+📊 Results:
+   • Cities Processed: 0
+   • 🆕 NEW VENUES FOUND: 12
+   • Daily quota used: 95/95
+
+💰 Cost: $0.00
+
+💾 Summary: rediscovery_summary.json
+   Results: data/rediscovery_results/*.json
+
+🔄 To continue, run:
+   node scripts/rediscover-failed-cities.js --start=262
+

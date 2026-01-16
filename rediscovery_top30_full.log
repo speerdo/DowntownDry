@@ -1,0 +1,1590 @@
+
+══════════════════════════════════════════════════════════════════════
+🚀 ENHANCED REDISCOVERY: TOP 30 CITIES FROM RECENT RESULTS
+══════════════════════════════════════════════════════════════════════
+
+📅 Started: 2026-01-16T00:19:21.899Z
+Mode: APPLY
+
+📋 Cities to process: 29
+
+📂 Loading existing venues from database...
+   Found 1835 existing venues
+
+══════════════════════════════════════════════════════════════════════
+🔍 [1/29] Phoenix, Arizona
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 0/10000
+   💰 Current cost: $0.00
+   🔎 Searching: "Phoenix Arizona non-alcoholic bar"
+   🔎 Searching: "Phoenix Arizona mocktail bar"
+   🔎 Searching: "Phoenix Arizona kava bar"
+   🔎 Searching: "Phoenix Arizona alcohol-free restaurant"
+   🔎 Searching: "Phoenix Arizona sober bar"
+   🔎 Searching: "Phoenix Arizona zero proof cocktails"
+   🔎 Searching: "Phoenix Arizona THC lounge"
+   🔎 Searching: "Phoenix Arizona hemp drink bar"
+   🔎 Searching: "Phoenix Arizona Athletic Brewing taproom"
+   📄 90 total search results
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+   🏢 20 venues extracted
+   ✅ 6 candidates found
+   🤖 Verifying 6 candidates individually (like original discovery)...
+   [1/6] Killer Whale Sex Club
+      ❌ Killer Whale Sex Club is a high-volume cocktail bar in Phoenix known for its provocative name, loud music, and 'smutty' aesthetic (including polaroids on the walls). While it is currently operational (with Yelp updates and reviews extending into 2026), it does not meet the criteria for a sober-friendly directory. There is no evidence of a dedicated mocktail menu with three or more options, nor is it an alcohol-free or kava-based establishment. Search results regarding non-alcoholic options in Phoenix consistently recommend other nearby venues (like Lacuna Kava Bar) over this location, which is primarily focused on craft cocktails and a high-energy bar atmosphere.
+   [2/6] The Starving Artist
+      ✅ QUALIFIED
+   ✨ Enriching: The Starving Artist
+   [3/6] Bar Bianco
+      ✅ QUALIFIED
+   ✨ Enriching: Bar Bianco
+   [4/6] Drink Me! Tea Room
+      ✅ QUALIFIED
+   ✨ Enriching: Drink Me! Tea Room
+   [5/6] The Canal Club
+      ✅ QUALIFIED
+   ✨ Enriching: The Canal Club
+   [6/6] The Social Ally
+      ❌ The provided Google Places data and search results identify 'The Social Ally' (Social Ally Media) as a digital marketing and social media agency located in a Scottsdale office complex, rather than a hospitality venue. While the name appears in a Yelp SEO list for non-alcoholic drinks, there is no evidence of a physical storefront, a beverage menu, or any public-facing bar operations. It does not meet any of the eligibility criteria for a sober-friendly directory.
+
+   📊 Progress: 1/29 | Total venues found: 4
+
+══════════════════════════════════════════════════════════════════════
+🔍 [2/29] Philadelphia, Pennsylvania
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 45/10000
+   💰 Current cost: $0.56
+   🔎 Searching: "Philadelphia Pennsylvania non-alcoholic bar"
+   🔎 Searching: "Philadelphia Pennsylvania mocktail bar"
+   🔎 Searching: "Philadelphia Pennsylvania kava bar"
+   🔎 Searching: "Philadelphia Pennsylvania alcohol-free restaurant"
+   🔎 Searching: "Philadelphia Pennsylvania sober bar"
+   🔎 Searching: "Philadelphia Pennsylvania zero proof cocktails"
+   🔎 Searching: "Philadelphia Pennsylvania THC lounge"
+   🔎 Searching: "Philadelphia Pennsylvania hemp drink bar"
+   🔎 Searching: "Philadelphia Pennsylvania Athletic Brewing taproom"
+   📄 90 total search results
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+   🏢 21 venues extracted
+   ✅ 13 candidates found
+   🤖 Verifying 13 candidates individually (like original discovery)...
+   [1/13] The Top Shelf at Unity Java
+      ✅ QUALIFIED
+   ✨ Enriching: The Top Shelf at Unity Java
+   [2/13] Jaya Kava
+      ✅ QUALIFIED
+   ✨ Enriching: Jaya Kava
+   [3/13] The Random Tea Room & Curiosity Shop
+      ✅ QUALIFIED
+   ✨ Enriching: The Random Tea Room & Curiosity Shop
+   [4/13] Charlie Was a Sinner
+      ✅ QUALIFIED
+   ✨ Enriching: Charlie Was a Sinner
+   [5/13] R&D
+      ✅ QUALIFIED
+   ✨ Enriching: R&D
+   [6/13] Harper's Garden
+      ✅ QUALIFIED
+   ✨ Enriching: Harper's Garden
+   [7/13] Juno
+      ❌ The venue is currently listed as 'CLOSED_TEMPORARILY' in the Google Places data. Fresh search results from Yelp (updated January 2026) confirm this status, stating the venue is scheduled to reopen on April 24, 2026. While the venue would otherwise qualify as a sober-friendly establishment due to its documented mocktail menu and participation in 'Dry January' events (as cited by Main Line Parent and Aversa PR), the instructions require a 'false' qualification for any venue that is currently closed.
+   [8/13] Laser Wolf
+      ✅ QUALIFIED
+   ✨ Enriching: Laser Wolf
+   [9/13] Rosy's Taco Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Rosy's Taco Bar
+   [10/13] Spice Finch
+      ✅ QUALIFIED
+   ✨ Enriching: Spice Finch
+   [11/13] Craft Hall
+      ❌ Craft Hall is primarily a micro-brewery (home to Mainstay Independent Brewing) and a sports bar. While the search results highlight it as a 'family-friendly' venue with an indoor playground and arcade, there is no evidence of a dedicated mocktail menu (3+ options) or a specialized non-alcoholic beverage program. Search results for Philadelphia's zero-proof and mocktail scenes prominently feature other venues (like Bar Hygge and Bar Palmina) but do not list Craft Hall as a destination for non-drinkers. It does not meet the criteria for a dedicated NA bar, kava bar, or sober-friendly venue with prominent NA beverage options.
+   [12/13] Bar Hygge
+      ✅ QUALIFIED
+   ✨ Enriching: Bar Hygge
+   [13/13] Lark
+      ✅ QUALIFIED
+   ✨ Enriching: Lark
+
+   📊 Progress: 2/29 | Total venues found: 15
+
+══════════════════════════════════════════════════════════════════════
+🔍 [3/29] Seattle, Washington
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 132/10000
+   💰 Current cost: $1.36
+   🔎 Searching: "Seattle Washington non-alcoholic bar"
+   🔎 Searching: "Seattle Washington mocktail bar"
+   🔎 Searching: "Seattle Washington kava bar"
+   🔎 Searching: "Seattle Washington alcohol-free restaurant"
+   🔎 Searching: "Seattle Washington sober bar"
+   🔎 Searching: "Seattle Washington zero proof cocktails"
+   🔎 Searching: "Seattle Washington THC lounge"
+   🔎 Searching: "Seattle Washington hemp drink bar"
+   🔎 Searching: "Seattle Washington Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 26 venues extracted
+   ✅ 22 candidates found
+   🤖 Verifying 22 candidates individually (like original discovery)...
+   [1/22] Rosette
+      ✅ QUALIFIED
+   ✨ Enriching: Rosette
+   [2/22] Cheeky & Dry Alcohol Free Bottle Shop
+      ✅ QUALIFIED
+   ✨ Enriching: Cheeky & Dry Alcohol Free Bottle Shop
+   [3/22] Rachel's Ginger Beer
+      ✅ QUALIFIED
+   ✨ Enriching: Rachel's Ginger Beer
+   [4/22] Needle and Thread
+      ✅ QUALIFIED
+   ✨ Enriching: Needle and Thread
+   [5/22] Montana
+      ✅ QUALIFIED
+   ✨ Enriching: Montana
+   [6/22] Life on Mars
+      ✅ QUALIFIED
+   ✨ Enriching: Life on Mars
+   [7/22] Cafe Juanita
+      ✅ QUALIFIED
+   ✨ Enriching: Cafe Juanita
+   [8/22] Watershed Pub & Kitchen
+      ✅ QUALIFIED
+   ✨ Enriching: Watershed Pub & Kitchen
+   [9/22] Stampede Cocktail Club
+      ✅ QUALIFIED
+   ✨ Enriching: Stampede Cocktail Club
+   [10/22] Ghost Note Coffee
+      ✅ QUALIFIED
+   ✨ Enriching: Ghost Note Coffee
+   [11/22] Jude's Old Town
+      ❌ Jude's Old Town is a currently operational Cajun-influenced restaurant and craft cocktail bar. While the employee-owned team is highly active in the Seattle non-alcoholic scene—specifically opening a dedicated NA sister bar called 'Rosette' nearby in 2025—Jude's itself remains a traditional bar and restaurant. Search results and menu snippets only identify basic non-alcoholic options such as house-made ginger soda and do not provide evidence of a dedicated mocktail menu with 3+ distinct options. Per the instructions, venues that are primarily regular bars with minimal NA options are rejected.
+   [12/22] Paper Fan Cocktail Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Paper Fan Cocktail Bar
+   [13/22] House Of Eve
+      ✅ QUALIFIED
+   ✨ Enriching: House Of Eve
+   [14/22] Deep Dive
+      ✅ QUALIFIED
+   ✨ Enriching: Deep Dive
+   [15/22] Jupiter Bar
+      ❌ Jupiter Bar is a traditional 21+ 'art bar' and arcade (barcade) located in Seattle's Belltown neighborhood. While it offers activities like pinball and arcade games which can be appealing to non-drinkers, the search results provide no evidence of a dedicated mocktail menu or a specialized non-alcoholic beverage program. It is described as a 'dive bar' with a 'low-frills cocktail menu' and does not meet the criteria for a dedicated sober-friendly directory listing. Note: Search results mentioning a 'Jupiter' with a strong NA menu refer to a different venue in Portland, Oregon.
+   [16/22] Unicorn
+      ✅ QUALIFIED
+   ✨ Enriching: Unicorn
+   [17/22] The Hideout
+      ✅ QUALIFIED
+   ✨ Enriching: The Hideout
+   [18/22] Swamp Cow Kava Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Swamp Cow Kava Lounge
+   [19/22] Kava Kaffe
+      ✅ QUALIFIED
+   ✨ Enriching: Kava Kaffe
+   [20/22] Seattle Organics Kratom Shop
+      ✅ QUALIFIED
+   ✨ Enriching: Seattle Organics Kratom Shop
+   [21/22] Good Vibrations Apothecary
+      ✅ QUALIFIED
+   ✨ Enriching: Good Vibrations Apothecary
+   [22/22] Mountain Rose Herbs
+      ✅ QUALIFIED
+   ✨ Enriching: Mountain Rose Herbs
+
+   📊 Progress: 3/29 | Total venues found: 35
+
+══════════════════════════════════════════════════════════════════════
+🔍 [4/29] Portland, Oregon
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 273/10000
+   💰 Current cost: $2.99
+   🔎 Searching: "Portland Oregon non-alcoholic bar"
+   🔎 Searching: "Portland Oregon mocktail bar"
+   🔎 Searching: "Portland Oregon kava bar"
+   🔎 Searching: "Portland Oregon alcohol-free restaurant"
+   🔎 Searching: "Portland Oregon sober bar"
+   🔎 Searching: "Portland Oregon zero proof cocktails"
+   🔎 Searching: "Portland Oregon THC lounge"
+   🔎 Searching: "Portland Oregon hemp drink bar"
+   🔎 Searching: "Portland Oregon Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 27 venues extracted
+   ✅ 20 candidates found
+   🤖 Verifying 20 candidates individually (like original discovery)...
+   [1/20] Clean Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Clean Bar
+   [2/20] Kava Saia
+      ✅ QUALIFIED
+   ✨ Enriching: Kava Saia
+   [3/20] Ondus on the Waterfront
+      ❌ Ondus on the Waterfront is a standard upscale restaurant and lounge located within the AC Hotel Vancouver Waterfront. While search results and social media mentions confirm the availability of 'zero proof' beverages, the venue is primarily a traditional dining establishment with a full bar and a heavy emphasis on cocktails and happy hour. It does not possess a dedicated mocktail menu (3+ options prominently featured) or a specialized non-alcoholic identity that distinguishes it from a typical high-end hotel restaurant.
+   [4/20] Holy Ghost
+      ✅ QUALIFIED
+   ✨ Enriching: Holy Ghost
+   [5/20] Pretty Ugly
+      ✅ QUALIFIED
+   ✨ Enriching: Pretty Ugly
+   [6/20] Blank Slate
+      ✅ QUALIFIED
+   ✨ Enriching: Blank Slate
+   [7/20] The Bye and Bye Bar
+      ✅ QUALIFIED
+   ✨ Enriching: The Bye and Bye Bar
+   [8/20] Hale Pele
+      ✅ QUALIFIED
+   ✨ Enriching: Hale Pele
+   [9/20] Hey Love
+      ✅ QUALIFIED
+   ✨ Enriching: Hey Love
+   [10/20] Paydirt
+      ✅ QUALIFIED
+   ✨ Enriching: Paydirt
+   [11/20] Sousòl
+      ✅ QUALIFIED
+   ✨ Enriching: Sousòl
+   [12/20] Abigail Hall
+      ✅ QUALIFIED
+   ✨ Enriching: Abigail Hall
+   [13/20] The Old Gold
+      ✅ QUALIFIED
+   ✨ Enriching: The Old Gold
+   [14/20] Cliffs
+      ❌ According to multiple fresh search results from late 2025 and early 2026 (Willamette Week, OregonLive, and Yelp), Cliffs PDX officially closed on December 31, 2025. The closure was due to the landlord (The Wonder Ballroom) declining to renew the lease. While the venue was previously highly regarded for its 'Zero Proof' menu and mocktails, it is no longer an active establishment.
+   [15/20] Kann
+      ✅ QUALIFIED
+   ✨ Enriching: Kann
+   [16/20] Victoria
+      ✅ QUALIFIED
+   ✨ Enriching: Victoria
+   [17/20] Eem
+      ✅ QUALIFIED
+   ✨ Enriching: Eem
+   [18/20] Epif
+      ✅ QUALIFIED
+   ✨ Enriching: Epif
+   [19/20] Takibi
+      ✅ QUALIFIED
+   ✨ Enriching: Takibi
+   [20/20] Oven and Shaker
+      ✅ QUALIFIED
+   ✨ Enriching: Oven and Shaker
+
+   📊 Progress: 4/29 | Total venues found: 53
+
+══════════════════════════════════════════════════════════════════════
+🔍 [5/29] Milwaukee, Wisconsin
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 402/10000
+   💰 Current cost: $4.60
+   🔎 Searching: "Milwaukee Wisconsin non-alcoholic bar"
+   🔎 Searching: "Milwaukee Wisconsin mocktail bar"
+   🔎 Searching: "Milwaukee Wisconsin kava bar"
+   🔎 Searching: "Milwaukee Wisconsin alcohol-free restaurant"
+   🔎 Searching: "Milwaukee Wisconsin sober bar"
+   🔎 Searching: "Milwaukee Wisconsin zero proof cocktails"
+   🔎 Searching: "Milwaukee Wisconsin THC lounge"
+   🔎 Searching: "Milwaukee Wisconsin hemp drink bar"
+   🔎 Searching: "Milwaukee Wisconsin Athletic Brewing taproom"
+   📄 90 total search results
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+   🏢 12 venues extracted
+   ✅ 10 candidates found
+   🤖 Verifying 10 candidates individually (like original discovery)...
+   [1/10] Honeybee Sage Wellness and Apothecary
+      ✅ QUALIFIED
+   ✨ Enriching: Honeybee Sage Wellness and Apothecary
+   [2/10] Moai Kava Bar & Herb Shop
+      ✅ QUALIFIED
+   ✨ Enriching: Moai Kava Bar & Herb Shop
+   [3/10] Agency Cocktail Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Agency Cocktail Lounge
+   [4/10] Canni Infusion Cafe & Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Canni Infusion Cafe & Bar
+   [5/10] Bittercube
+      ❌ While Bittercube Apothecary is currently operational as a production facility and retail storefront, it no longer functions as a social venue or bar. Search results confirm that the 'Bittercube Bar' and its sister speakeasy 'Mosler's Vault' closed permanently in September 2024 following the closure of the North Avenue Market. The remaining Apothecary location on Lisbon Ave is a retail shop selling bitters, syrups, and NA ingredients with limited daytime hours (Tuesday-Friday, 12 PM - 6 PM), rather than a bar or lounge serving prepared mocktails for on-site consumption.
+   [6/10] Boone and Crockett
+      ✅ QUALIFIED
+   ✨ Enriching: Boone and Crockett
+   [7/10] The Pharmacy
+      ❌ The provided Google Places data refers to 'Infinity Pharmacy,' which is a medical pharmacy and ineligible for the directory. Search results for 'The Pharmacy' in Milwaukee identify a cocktail bar located within the Crossroads Collective food hall. While Yelp mentions 'Non Alcoholic Drinks' as a category tag, there is no evidence in the search results of a dedicated mocktail menu (3+ options) or a specific focus on being a sober-friendly establishment. As it is primarily a standard cocktail bar, it does not meet the eligibility criteria.
+   [8/10] Hill Valley Dairy - Milwaukee Cheese Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Hill Valley Dairy - Milwaukee Cheese Bar
+   [9/10] Tied House Milwaukee
+      ✅ QUALIFIED
+   ✨ Enriching: Tied House Milwaukee
+   [10/10] Camp Bar Tosa
+      ✅ QUALIFIED
+   ✨ Enriching: Camp Bar Tosa
+
+   📊 Progress: 5/29 | Total venues found: 61
+
+══════════════════════════════════════════════════════════════════════
+🔍 [6/29] Tucson, Arizona
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 471/10000
+   💰 Current cost: $5.37
+   🔎 Searching: "Tucson Arizona non-alcoholic bar"
+   🔎 Searching: "Tucson Arizona mocktail bar"
+   🔎 Searching: "Tucson Arizona kava bar"
+   🔎 Searching: "Tucson Arizona alcohol-free restaurant"
+   🔎 Searching: "Tucson Arizona sober bar"
+   🔎 Searching: "Tucson Arizona zero proof cocktails"
+   🔎 Searching: "Tucson Arizona THC lounge"
+   🔎 Searching: "Tucson Arizona hemp drink bar"
+   🔎 Searching: "Tucson Arizona Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 19 venues extracted
+   ✅ 12 candidates found
+   🤖 Verifying 12 candidates individually (like original discovery)...
+   [1/12] Sidecar
+      ✅ QUALIFIED
+   ✨ Enriching: Sidecar
+   [2/12] Casa Video and Film Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Casa Video and Film Bar
+   [3/12] The Coronet
+      ✅ QUALIFIED
+   ✨ Enriching: The Coronet
+   [4/12] La Chingada Cocina Mexicana
+      ✅ QUALIFIED
+   ✨ Enriching: La Chingada Cocina Mexicana
+   [5/12] The Parish
+      ✅ QUALIFIED
+   ✨ Enriching: The Parish
+   [6/12] Tito & Pep
+      ✅ QUALIFIED
+   ✨ Enriching: Tito & Pep
+   [7/12] The Still Speakeasy
+      ✅ QUALIFIED
+   ✨ Enriching: The Still Speakeasy
+   [8/12] Feast
+      ❌ Feast is a highly-rated restaurant that is currently operational, with active events and reviews through early 2026. However, it does not meet the criteria for DowntownDry. Its beverage program is heavily focused on alcohol, specifically featuring a substantial wine list, monthly wine dinners, and wine tasting events. Search results for non-alcoholic options in Tucson (such as Tucson Foodie's Dry January guide) list several other venues but do not mention Feast as having a dedicated mocktail menu or a specialized non-alcoholic program. Without evidence of at least three prominently featured mocktails or a dedicated sober-friendly focus, it remains a standard restaurant with a primary emphasis on wine culture.
+   [9/12] Redbird Scratch Kitchen + Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Redbird Scratch Kitchen + Bar
+   [10/12] R Bar
+      ❌ R Bar is the official bar of the Rialto Theatre in Tucson. While it is currently operational (with active events and reviews through early 2026), it does not meet the criteria for a sober-friendly directory. The venue's own website and descriptions focus exclusively on 'creative cocktails, an expansive beer selection, and an adventurous wine selection.' There is no evidence in the search results of a dedicated mocktail menu (3+ options), kava service, or a specific focus on non-alcoholic offerings. It is categorized primarily as a standard bar and nightlife establishment.
+   [11/12] BATA
+      ✅ QUALIFIED
+   ✨ Enriching: BATA
+   [12/12] Cruda Mariscos
+      ❌ CRUDA Mariscos & Oyster Bar is a standard seafood restaurant and bar that serves alcohol, including wine and beer-based micheladas. While search results mention the availability of non-alcoholic beverages in a general sense, there is no evidence of a dedicated mocktail menu with three or more options, nor is there any indication of kava or specialized zero-proof offerings. The venue primarily functions as a traditional oyster bar and does not feature the prominent non-alcoholic programming required for inclusion in the directory.
+
+   📊 Progress: 6/29 | Total venues found: 70
+
+══════════════════════════════════════════════════════════════════════
+🔍 [7/29] Raleigh, North Carolina
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 552/10000
+   💰 Current cost: $6.38
+   🔎 Searching: "Raleigh North Carolina non-alcoholic bar"
+   🔎 Searching: "Raleigh North Carolina mocktail bar"
+   🔎 Searching: "Raleigh North Carolina kava bar"
+   🔎 Searching: "Raleigh North Carolina alcohol-free restaurant"
+   🔎 Searching: "Raleigh North Carolina sober bar"
+   🔎 Searching: "Raleigh North Carolina zero proof cocktails"
+   🔎 Searching: "Raleigh North Carolina THC lounge"
+   🔎 Searching: "Raleigh North Carolina hemp drink bar"
+   🔎 Searching: "Raleigh North Carolina Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 8 venues extracted
+   ✅ 5 candidates found
+   🤖 Verifying 5 candidates individually (like original discovery)...
+   [1/5] Da Kine's Kava
+      ✅ QUALIFIED
+   ✨ Enriching: Da Kine's Kava
+   [2/5] Killjoy
+      ✅ QUALIFIED
+   ✨ Enriching: Killjoy
+   [3/5] Junction West
+      ❌ Junction West has transitioned from a public-facing bar to a private event and wedding venue. While the establishment maintains a dedicated non-alcoholic menu featuring multiple mocktails (such as 'Forbin's Ascent' and 'Famous Mockingbird'), the official website now explicitly states it is 'Open By Appointment Only' for weddings and corporate events. Local community discussions on Reddit from late 2024 confirm this change, with residents expressing that they 'miss' the space as a public venue. Since it is no longer accessible to the general public for walk-in service, it does not meet the criteria for a public directory.
+   [4/5] The Velvet Hippo Rooftop Bar & Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: The Velvet Hippo Rooftop Bar & Lounge
+   [5/5] Raleigh Raw
+      ✅ QUALIFIED
+   ✨ Enriching: Raleigh Raw
+
+   📊 Progress: 7/29 | Total venues found: 74
+
+══════════════════════════════════════════════════════════════════════
+🔍 [8/29] Virginia Beach, Virginia
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 591/10000
+   💰 Current cost: $6.86
+   🔎 Searching: "Virginia Beach Virginia non-alcoholic bar"
+   🔎 Searching: "Virginia Beach Virginia mocktail bar"
+   🔎 Searching: "Virginia Beach Virginia kava bar"
+   🔎 Searching: "Virginia Beach Virginia alcohol-free restaurant"
+   🔎 Searching: "Virginia Beach Virginia sober bar"
+   🔎 Searching: "Virginia Beach Virginia zero proof cocktails"
+   🔎 Searching: "Virginia Beach Virginia THC lounge"
+   🔎 Searching: "Virginia Beach Virginia hemp drink bar"
+   🔎 Searching: "Virginia Beach Virginia Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 21 venues extracted
+   ✅ 18 candidates found
+   🤖 Verifying 18 candidates individually (like original discovery)...
+   [1/18] Legally Different
+      ❌ The provided search results do not contain evidence of a physical venue currently operating under the name 'Legally Different.' The only mentions of this name are found in a Facebook comment from 2023. The Google Places data provided is for a business called 'OMG Everything' at 1818 Atlantic Ave, which is categorized as a general store/souvenir shop with no mention of non-alcoholic bar features, mocktail menus, or kava. Furthermore, search results for the venue are dominated by 'Legal Sea Foods,' a separate entity that is permanently closed. Without evidence of a dedicated non-alcoholic menu or active operations in 2025-2026, the venue does not qualify.
+   [2/18] Space Coast Kava Community
+      ❌ The venue 'Space Coast Kava Community' does not exist in Virginia Beach, Virginia. The 'Space Coast' is a geographic region in Florida (Brevard County), and search results confirm this entity is a Facebook community group and former physical location (Outpost Kava) based in Melbourne, Florida. Furthermore, the provided Google Places data is for 'CAVA,' a Mediterranean restaurant chain, which is a common search mismatch for the word 'Kava.' There is no evidence of a physical kava bar by this name operating in the Virginia Beach area.
+   [3/18] Ceremony
+      ✅ QUALIFIED
+   ✨ Enriching: Ceremony
+   [4/18] Honey and Hooch
+      ✅ QUALIFIED
+   ✨ Enriching: Honey and Hooch
+   [5/18] Apothecary Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Apothecary Bar
+   [6/18] 411 York
+      ✅ QUALIFIED
+   ✨ Enriching: 411 York
+   [7/18] Beachside Social
+      ✅ QUALIFIED
+   ✨ Enriching: Beachside Social
+   [8/18] The Hunt Room
+      ❌ The Hunt Room is a traditional 'hunting tavern' and bourbon bar located within the Historic Cavalier Hotel. While it is a highly-rated restaurant, its primary focus is on 'proper cocktails' and bourbon flights. Search results for mocktails at this location are discouraging; a specific Yelp snippet from a user looking for zero-proof options noted that the bartender did not have or make them. There is no evidence of a dedicated mocktail menu with 3+ options, and the venue's identity is centered around a historic distillery and spirit-heavy atmosphere, making it a poor fit for a sober-specific directory.
+   [9/18] Heirloom
+      ✅ QUALIFIED
+   ✨ Enriching: Heirloom
+   [10/18] Love Song
+      ✅ QUALIFIED
+   ✨ Enriching: Love Song
+   [11/18] Waterman's Surfside Grille
+      ❌ Waterman's Surfside Grille is a well-established seafood restaurant and bar that is open and operational, with reviews and website data extending into early 2026. However, it does not qualify for a sober-friendly directory because it is primarily a traditional bar environment famous for being the 'Original Crush House'—the birthplace of the vodka-based Orange Crush cocktail. While the venue is family-friendly and uses fresh-squeezed juices, there is no evidence in the search results of a dedicated mocktail menu with three or more options, nor is it marketed as a sober-friendly or non-alcoholic destination. It falls under the red flag category of being primarily a regular bar/restaurant with standard NA options (soda/juice) rather than a specialized mocktail or alcohol-free program.
+   [12/18] Hot Tuna
+      ✅ QUALIFIED
+   ✨ Enriching: Hot Tuna
+   [13/18] Esoteric
+      ✅ QUALIFIED
+   ✨ Enriching: Esoteric
+   [14/18] Aslin Beer Co.
+      ✅ QUALIFIED
+   ✨ Enriching: Aslin Beer Co.
+   [15/18] Voodoo Brewing Co.
+      ✅ QUALIFIED
+   ✨ Enriching: Voodoo Brewing Co.
+   [16/18] Yorgo's
+      ✅ QUALIFIED
+   ✨ Enriching: Yorgo's
+   [17/18] Glass Light Hotel Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Glass Light Hotel Bar
+   [18/18] Breakfast Bar
+      ❌ Breakfast Bar is a Hispanic-fusion restaurant that is currently operational, with reviews as recent as January 2026. While local social media mentions a 'selection of nonalcoholic drinks' and 'virgin' options (such as non-alcoholic coquito), the venue's own website and marketing prominently feature 'tropical mimosas' as a primary attraction. There is no evidence of a dedicated mocktail menu with three or more options, nor does it function as a specialized alcohol-free or kava establishment. It is a standard restaurant that serves alcohol, and its non-alcoholic offerings do not appear prominent enough to meet the directory's specific eligibility criteria.
+
+   📊 Progress: 8/29 | Total venues found: 87
+
+══════════════════════════════════════════════════════════════════════
+🔍 [9/29] Miami, Florida
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 708/10000
+   💰 Current cost: $8.20
+   🔎 Searching: "Miami Florida non-alcoholic bar"
+   🔎 Searching: "Miami Florida mocktail bar"
+   🔎 Searching: "Miami Florida kava bar"
+   🔎 Searching: "Miami Florida alcohol-free restaurant"
+   🔎 Searching: "Miami Florida sober bar"
+   🔎 Searching: "Miami Florida zero proof cocktails"
+   🔎 Searching: "Miami Florida THC lounge"
+   🔎 Searching: "Miami Florida hemp drink bar"
+   🔎 Searching: "Miami Florida Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 33 venues extracted
+   ✅ 22 candidates found
+   🤖 Verifying 22 candidates individually (like original discovery)...
+   [1/22] Syndicate Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Syndicate Kava Bar
+   [2/22] Purple Lotus Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Purple Lotus Kava Bar
+   [3/22] Twisted Roots Kava Brewery
+      ✅ QUALIFIED
+   ✨ Enriching: Twisted Roots Kava Brewery
+   [4/22] Nexgen Kava Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Nexgen Kava Lounge
+   [5/22] Grails Miami
+      ❌ Grails Miami is primarily a high-energy sports bar and restaurant centered around its 'sneaker cocktails,' beer buckets, and 70+ TVs for sports viewing. While it is a popular dining spot, the search results and menu snippets do not provide evidence of a dedicated mocktail menu (3+ options) or a specialized non-alcoholic program. It appears in some Yelp search results for kava or hookah, but these are generic SEO lists of Miami venues rather than an indication of its primary offerings. As a standard sports bar with a heavy emphasis on alcohol-based 'vessel drinks,' it does not meet the criteria for a sober-friendly directory.
+   [6/22] Basement
+      ✅ QUALIFIED
+   ✨ Enriching: Basement
+   [7/22] LPM Restaurant & Bar
+      ✅ QUALIFIED
+   ✨ Enriching: LPM Restaurant & Bar
+   [8/22] Osaka Nikkei
+      ✅ QUALIFIED
+   ✨ Enriching: Osaka Nikkei
+   [9/22] Kaori
+      ✅ QUALIFIED
+   ✨ Enriching: Kaori
+   [10/22] Il Giardino
+      ❌ The venue at 1236 Ocean Dr (Miami Beach) is an operational restaurant and bar. While it is currently open (with reviews extending into 2026), it does not meet the eligibility criteria for DowntownDry. Search results describe it as a typical Ocean Drive establishment featuring '2-for-1' alcoholic drink specials and nightlife entertainment such as dancers. There is no evidence of a dedicated mocktail menu (3+ options), kava service, or a specific non-alcoholic focus. Note: A different 'Il Giardino' location in Coconut Grove offers high tea and matcha, but the specific venue provided in the Google Places data is the Ocean Drive location.
+   [11/22] Chotto Matte
+      ❌ Chotto Matte Miami closed its doors on August 10, 2024. While the official website and some news reports initially cited 'renovations' or 'refurbishment,' multiple search results and social media reports from late 2024 and throughout 2025 indicate the venue has not reopened, with some sources reporting the closure as permanent. Because the venue is not currently operational, it does not qualify for the directory.
+   [12/22] Amara At Paraiso
+      ✅ QUALIFIED
+   ✨ Enriching: Amara At Paraiso
+   [13/22] Thorn
+      ✅ QUALIFIED
+   ✨ Enriching: Thorn
+   [14/22] Bartaco
+      ❌ Bartaco is a standard restaurant and bar primarily marketed for its 'specialty cocktails and beer.' While search results mention a 'juice menu' that can be ordered without alcohol, there is no evidence of a dedicated mocktail or zero-proof menu featuring 3+ prominently listed options. As it is a regular establishment with a full bar and no specialized non-alcoholic focus, it does not meet the criteria for the directory.
+   [15/22] Bamboo Room by Trader Vic's
+      ✅ QUALIFIED
+   ✨ Enriching: Bamboo Room by Trader Vic's
+   [16/22] Serena
+      ✅ QUALIFIED
+   ✨ Enriching: Serena
+   [17/22] Swizzle Rum Bar & Drinkery
+      ✅ QUALIFIED
+   ✨ Enriching: Swizzle Rum Bar & Drinkery
+   [18/22] DOM's
+      ❌ DOM's is a cocktail bar located in the Brickell neighborhood of Miami, created by the team behind Lucali and DC Pie Co. While the venue is currently operational (with active social media posts as of early 2026), it does not meet the criteria for DowntownDry. Search results specifically targeting non-alcoholic and mocktail menus for this venue failed to produce any evidence of a dedicated NA program or a mocktail menu with 3+ options. Instead, the venue is consistently described as a 'cocktail bar' focused on Miami's 'nightlife scene.' Although it appears in Yelp lists alongside kava bars, it is categorized as a standard bar and does not serve kava or focus on sober-friendly offerings.
+   [19/22] Puttshack
+      ✅ QUALIFIED
+   ✨ Enriching: Puttshack
+   [20/22] Loews Miami Beach Hotel
+      ✅ QUALIFIED
+   ✨ Enriching: Loews Miami Beach Hotel
+   [21/22] Macchialina
+      ❌ Macchialina is a highly acclaimed Italian restaurant that is currently operational, with search results and reviews extending into 2026. However, it does not qualify for the directory because its beverage program is heavily centered on alcohol. It recently received a Michelin Guide Sommelier Award (2025) for its extensive Italian wine list, and its new internal concept, Fluke, is specifically branded as a 'Martini & Crudo Bar.' There is no evidence in the search results of a dedicated mocktail menu with three or more options, nor is the venue marketed as a sober-friendly or non-alcoholic destination.
+   [22/22] Rocco's Tacos
+      ✅ QUALIFIED
+   ✨ Enriching: Rocco's Tacos
+
+   📊 Progress: 9/29 | Total venues found: 103
+
+══════════════════════════════════════════════════════════════════════
+🔍 [10/29] Minneapolis, Minnesota
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 849/10000
+   💰 Current cost: $10.11
+   🔎 Searching: "Minneapolis Minnesota non-alcoholic bar"
+   🔎 Searching: "Minneapolis Minnesota mocktail bar"
+   🔎 Searching: "Minneapolis Minnesota kava bar"
+   🔎 Searching: "Minneapolis Minnesota alcohol-free restaurant"
+   🔎 Searching: "Minneapolis Minnesota sober bar"
+   🔎 Searching: "Minneapolis Minnesota zero proof cocktails"
+   🔎 Searching: "Minneapolis Minnesota THC lounge"
+   🔎 Searching: "Minneapolis Minnesota hemp drink bar"
+   🔎 Searching: "Minneapolis Minnesota Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 26 venues extracted
+   ✅ 23 candidates found
+   🤖 Verifying 23 candidates individually (like original discovery)...
+   [1/23] Zerø Proof Beverage House
+      ✅ QUALIFIED
+   ✨ Enriching: Zerø Proof Beverage House
+   [2/23] Marigold
+      ✅ QUALIFIED
+   ✨ Enriching: Marigold
+   [3/23] Zen Room Kava Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Zen Room Kava Lounge
+   [4/23] CrowBar
+      ✅ QUALIFIED
+   ✨ Enriching: CrowBar
+   [5/23] Parlour
+      ✅ QUALIFIED
+   ✨ Enriching: Parlour
+   [6/23] Aster Cafe
+      ✅ QUALIFIED
+   ✨ Enriching: Aster Cafe
+   [7/23] Khâluna
+      ✅ QUALIFIED
+   ✨ Enriching: Khâluna
+   [8/23] Owamni
+      ✅ QUALIFIED
+   ✨ Enriching: Owamni
+   [9/23] Stanley's Northeast Bar Room
+      ✅ QUALIFIED
+   ✨ Enriching: Stanley's Northeast Bar Room
+   [10/23] Cardamom
+      ✅ QUALIFIED
+   ✨ Enriching: Cardamom
+   [11/23] Umbra
+      ✅ QUALIFIED
+   ✨ Enriching: Umbra
+   [12/23] Spoon & Stable
+      ✅ QUALIFIED
+   ✨ Enriching: Spoon & Stable
+   [13/23] Martina
+      ✅ QUALIFIED
+   ✨ Enriching: Martina
+   [14/23] Hai Hai
+      ✅ QUALIFIED
+   ✨ Enriching: Hai Hai
+   [15/23] Flora Room
+      ✅ QUALIFIED
+   ✨ Enriching: Flora Room
+   [16/23] Cobble Social House
+      ✅ QUALIFIED
+   ✨ Enriching: Cobble Social House
+   [17/23] Meteor
+      ✅ QUALIFIED
+   ✨ Enriching: Meteor
+   [18/23] Luna & The Bear
+      ✅ QUALIFIED
+   ✨ Enriching: Luna & The Bear
+   [19/23] Bauhaus Brew Labs
+      ✅ QUALIFIED
+   ✨ Enriching: Bauhaus Brew Labs
+   [20/23] W.A. Frost and Company
+      ✅ QUALIFIED
+   ✨ Enriching: W.A. Frost and Company
+   [21/23] Colita
+      ✅ QUALIFIED
+   ✨ Enriching: Colita
+   [22/23] Layline
+      ✅ QUALIFIED
+   ✨ Enriching: Layline
+   [23/23] The Howe
+      ✅ QUALIFIED
+   ✨ Enriching: The Howe
+
+   📊 Progress: 10/29 | Total venues found: 126
+
+══════════════════════════════════════════════════════════════════════
+🔍 [11/29] Tampa, Florida
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 996/10000
+   💰 Current cost: $11.77
+   🔎 Searching: "Tampa Florida non-alcoholic bar"
+   🔎 Searching: "Tampa Florida mocktail bar"
+   🔎 Searching: "Tampa Florida kava bar"
+   🔎 Searching: "Tampa Florida alcohol-free restaurant"
+   🔎 Searching: "Tampa Florida sober bar"
+   🔎 Searching: "Tampa Florida zero proof cocktails"
+   🔎 Searching: "Tampa Florida THC lounge"
+   🔎 Searching: "Tampa Florida hemp drink bar"
+   🔎 Searching: "Tampa Florida Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 19 venues extracted
+   ✅ 16 candidates found
+   🤖 Verifying 16 candidates individually (like original discovery)...
+   [1/16] Greenhouse
+      ✅ QUALIFIED
+   ✨ Enriching: Greenhouse
+   [2/16] Lucid Zero Proof Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Lucid Zero Proof Lounge
+   [3/16] Herban Flow
+      ✅ QUALIFIED
+   ✨ Enriching: Herban Flow
+   [4/16] Velvet Gypsy
+      ✅ QUALIFIED
+   ✨ Enriching: Velvet Gypsy
+   [5/16] Dunedin Hemp Company
+      ✅ QUALIFIED
+   ✨ Enriching: Dunedin Hemp Company
+   [6/16] Willa's
+      ✅ QUALIFIED
+   ✨ Enriching: Willa's
+   [7/16] Rooster & The Till
+      ✅ QUALIFIED
+   ✨ Enriching: Rooster & The Till
+   [8/16] Ology Brewing
+      ❌ Ology Brewing [Tampa] is a traditional craft brewery and distillery. While search results indicate it is currently operational (with reviews and social media activity extending into 2025 and 2026), it does not meet the criteria for a sober-friendly directory. The venue primarily focuses on alcoholic beers, spirits, and cocktails. There is no evidence of a dedicated mocktail menu with three or more options, kava service, or a specialized non-alcoholic program at the Tampa location. It functions as a standard bar and production facility.
+   [9/16] American Social
+      ✅ QUALIFIED
+   ✨ Enriching: American Social
+   [10/16] The Dan
+      ❌ The Dan is a 1920s-themed restaurant and speakeasy located within the Hotel Flor Tampa. While search results confirm the venue is currently operational with active reviews and social media posts through January 2026, it does not meet the eligibility criteria for the directory. The establishment's primary focus is on its 'old school speakeasy' atmosphere and cocktail program. There is no evidence in the provided search results of a dedicated mocktail menu (3+ options), kava service, or a specialized non-alcoholic program that distinguishes it as a specifically sober-friendly destination.
+   [11/16] Reboot
+      ❌ The venue at the provided address (2202 N Westshore Blvd Suite 200) is located in a corporate office building and is categorized in Google Places data as a 'health' establishment, which does not meet the criteria for a hospitality or social venue. While there is a 'Reboot Arcade & Bar' in the nearby Dunedin area, search results (BeerMenus) indicate its non-alcoholic offerings are limited to standard sodas and Red Bull, which does not satisfy the requirement for a dedicated mocktail menu or a specialized sober-friendly environment.
+   [12/16] Bulla Gastrobar / Luna Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Bulla Gastrobar / Luna Lounge
+   [13/16] Hotel Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Hotel Bar
+   [14/16] Alter Ego
+      ✅ QUALIFIED
+   ✨ Enriching: Alter Ego
+   [15/16] Elevation Coffee
+      ✅ QUALIFIED
+   ✨ Enriching: Elevation Coffee
+   [16/16] Spaddy's
+      ✅ QUALIFIED
+   ✨ Enriching: Spaddy's
+
+   📊 Progress: 11/29 | Total venues found: 139
+
+══════════════════════════════════════════════════════════════════════
+🔍 [12/29] New Orleans, Louisiana
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1101/10000
+   💰 Current cost: $12.98
+   🔎 Searching: "New Orleans Louisiana non-alcoholic bar"
+   🔎 Searching: "New Orleans Louisiana mocktail bar"
+   🔎 Searching: "New Orleans Louisiana kava bar"
+   🔎 Searching: "New Orleans Louisiana alcohol-free restaurant"
+   🔎 Searching: "New Orleans Louisiana sober bar"
+   🔎 Searching: "New Orleans Louisiana zero proof cocktails"
+   🔎 Searching: "New Orleans Louisiana THC lounge"
+   🔎 Searching: "New Orleans Louisiana hemp drink bar"
+   🔎 Searching: "New Orleans Louisiana Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 23 venues extracted
+   ✅ 15 candidates found
+   🤖 Verifying 15 candidates individually (like original discovery)...
+   [1/15] Cane & Table
+      ✅ QUALIFIED
+   ✨ Enriching: Cane & Table
+   [2/15] Oak Street Brewery
+      ✅ QUALIFIED
+   ✨ Enriching: Oak Street Brewery
+   [3/15] Bar Marilou
+      ❌ Bar Marilou has permanently closed and rebranded as 'Salon Salon' (and briefly 'Bar Métier') following a Hyatt hotel acquisition and rebranding of the former Ace Hotel/Maison de la Luz properties in mid-2024. Multiple search results, including Apple Maps and local news reports, confirm the venue is shuttered under its original name. Furthermore, historical menu data indicates the venue only featured two non-alcoholic options, which falls below the minimum requirement of three dedicated mocktails for eligibility.
+   [4/15] Espíritu Mezcaleria
+      ✅ QUALIFIED
+   ✨ Enriching: Espíritu Mezcaleria
+   [5/15] Latitude 29
+      ✅ QUALIFIED
+   ✨ Enriching: Latitude 29
+   [6/15] The Sober Bar Babe
+      ✅ QUALIFIED
+   ✨ Enriching: The Sober Bar Babe
+   [7/15] Birdy's
+      ✅ QUALIFIED
+   ✨ Enriching: Birdy's
+   [8/15] Sneaky Pickle & Bar Brine
+      ✅ QUALIFIED
+   ✨ Enriching: Sneaky Pickle & Bar Brine
+   [9/15] Anna's
+      ✅ QUALIFIED
+   ✨ Enriching: Anna's
+   [10/15] Chandelier Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Chandelier Bar
+   [11/15] Ayu Bakehouse
+      ✅ QUALIFIED
+   ✨ Enriching: Ayu Bakehouse
+   [12/15] Sea Cave Arcade
+      ✅ QUALIFIED
+   ✨ Enriching: Sea Cave Arcade
+   [13/15] The Carousel Bar & Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: The Carousel Bar & Lounge
+   [14/15] The Apothecary
+      ✅ QUALIFIED
+   ✨ Enriching: The Apothecary
+   [15/15] Observatory Eleven
+      ❌ Observatory Eleven is a high-end hotel bar located in the Westin New Orleans. While it is currently operational (with active social media and reviews through early 2026), it does not meet the eligibility criteria for DowntownDry. It is primarily marketed as a 'premier circular cocktail bar' with a focus on spirits, tequilas, and 'crafted cocktails.' While one search result mentions a single 'zero-proof cocktail' offered during a specific 2024 event, there is no evidence of a dedicated mocktail menu (3+ options) or prominent non-alcoholic features. It remains a standard, alcohol-focused cocktail lounge.
+
+   📊 Progress: 12/29 | Total venues found: 152
+
+══════════════════════════════════════════════════════════════════════
+🔍 [13/29] Newark, New Jersey
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1200/10000
+   💰 Current cost: $14.12
+   🔎 Searching: "Newark New Jersey non-alcoholic bar"
+   🔎 Searching: "Newark New Jersey mocktail bar"
+   🔎 Searching: "Newark New Jersey kava bar"
+   🔎 Searching: "Newark New Jersey alcohol-free restaurant"
+   🔎 Searching: "Newark New Jersey sober bar"
+   🔎 Searching: "Newark New Jersey zero proof cocktails"
+   🔎 Searching: "Newark New Jersey THC lounge"
+   🔎 Searching: "Newark New Jersey hemp drink bar"
+   🔎 Searching: "Newark New Jersey Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 2 venues extracted
+   ✅ 1 candidates found
+   🤖 Verifying 1 candidates individually (like original discovery)...
+   [1/1] Mocktail Bar NJ
+      ❌ Based on the search results, 'Mocktail Bar NJ' (associated with mocktailsmagic.com) is a mobile alcohol-free catering service for events and offices rather than a physical brick-and-mortar venue. The Google Places data provided for the Newark location points to 'Consigliere,' which is a standard cocktail bar. There is no evidence in the search results that Consigliere features a dedicated mocktail menu (3+ options), a kava offering, or a THC lounge setup. As a mobile service and a standard bar respectively, neither entity meets the criteria for a physical sober-friendly venue listing.
+
+   📊 Progress: 13/29 | Total venues found: 152
+
+══════════════════════════════════════════════════════════════════════
+🔍 [14/29] Orlando, Florida
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1215/10000
+   💰 Current cost: $14.26
+   🔎 Searching: "Orlando Florida non-alcoholic bar"
+   🔎 Searching: "Orlando Florida mocktail bar"
+   🔎 Searching: "Orlando Florida kava bar"
+   🔎 Searching: "Orlando Florida alcohol-free restaurant"
+   🔎 Searching: "Orlando Florida sober bar"
+   🔎 Searching: "Orlando Florida zero proof cocktails"
+   🔎 Searching: "Orlando Florida THC lounge"
+   🔎 Searching: "Orlando Florida hemp drink bar"
+   🔎 Searching: "Orlando Florida Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 13 venues extracted
+   ✅ 10 candidates found
+   🤖 Verifying 10 candidates individually (like original discovery)...
+   [1/10] Salt and the Cellar
+      ✅ QUALIFIED
+   ✨ Enriching: Salt and the Cellar
+   [2/10] Kava Culture
+      ✅ QUALIFIED
+   ✨ Enriching: Kava Culture
+   [3/10] Permanent Vacation
+      ✅ QUALIFIED
+   ✨ Enriching: Permanent Vacation
+   [4/10] Chayote Barrio Kitchen
+      ✅ QUALIFIED
+   ✨ Enriching: Chayote Barrio Kitchen
+   [5/10] Grand Bohemian Hotel Orlando
+      ✅ QUALIFIED
+   ✨ Enriching: Grand Bohemian Hotel Orlando
+   [6/10] West End
+      ❌ The provided Google Places data identifies the venue as 'Theater West End' (115 W 1st St, Sanford), which is a professional live performance theater. While search results mention a 'West End Trading Co.' (202 S Sanford Ave) in the same city that features a 'Cali Sober' mocktail menu and a dedicated non-alcoholic beverage program, there is no evidence in the provided results that the Theater establishment itself offers a dedicated mocktail menu or prominent NA options. As a theater, it is a general entertainment venue and does not meet the specific criteria for a dedicated sober-friendly directory listing based on the evidence for this specific location.
+   [7/10] Tori Tori
+      ✅ QUALIFIED
+   ✨ Enriching: Tori Tori
+   [8/10] Proper Orlando
+      ❌ Proper Orlando is identified in search results and its own website as a 'Premier Craft Cocktail & Vinyl Hi-Fi Bar.' While it is currently operational (with reviews as recent as January 2026), there is no evidence in the provided data of a dedicated mocktail menu, kava offerings, or a specific focus on non-alcoholic beverages. It functions primarily as a traditional high-end cocktail lounge and does not meet the criteria for a sober-specific directory.
+   [9/10] Siren Spirits
+      ❌ Siren Spirits (Orlando) is a mobile bartending and event service rather than a physical venue. Search results from The Knot and the business's official website (orlandopartybartender.com) confirm it is a 'mobile wedding bartending company' that provides services for private parties. While they offer dedicated mocktail packages and are highly rated for their non-alcoholic options at events, they do not operate a permanent, public-facing storefront or lounge for the general public to visit. The address listed on Yelp (10530 Larson Ct) is located in a residential area, further confirming its status as a home-based mobile operation.
+   [10/10] Coca-Cola Store Rooftop Beverage Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Coca-Cola Store Rooftop Beverage Bar
+
+   📊 Progress: 14/29 | Total venues found: 159
+
+══════════════════════════════════════════════════════════════════════
+🔍 [15/29] Pittsburgh, Pennsylvania
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1284/10000
+   💰 Current cost: $15.04
+   🔎 Searching: "Pittsburgh Pennsylvania non-alcoholic bar"
+   🔎 Searching: "Pittsburgh Pennsylvania mocktail bar"
+   🔎 Searching: "Pittsburgh Pennsylvania kava bar"
+   🔎 Searching: "Pittsburgh Pennsylvania alcohol-free restaurant"
+   🔎 Searching: "Pittsburgh Pennsylvania sober bar"
+   🔎 Searching: "Pittsburgh Pennsylvania zero proof cocktails"
+   🔎 Searching: "Pittsburgh Pennsylvania THC lounge"
+   🔎 Searching: "Pittsburgh Pennsylvania hemp drink bar"
+   🔎 Searching: "Pittsburgh Pennsylvania Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 15 venues extracted
+   ✅ 13 candidates found
+   🤖 Verifying 13 candidates individually (like original discovery)...
+   [1/13] Space Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Space Bar
+   [2/13] Bantha Tea Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Bantha Tea Bar
+   [3/13] Harold's Haunt
+      ✅ QUALIFIED
+   ✨ Enriching: Harold's Haunt
+   [4/13] Bigham Tavern
+      ❌ Bigham Tavern is a traditional neighborhood tavern and sports bar primarily known for its award-winning chicken wings and pub atmosphere. Search results consistently describe it as a 'local watering hole' and 'neighborhood bar' with a focus on beer (Untappd listings) and spirits (Fireball events). There is no evidence of a dedicated mocktail menu (3+ options), kava service, or specific sober-friendly features that would distinguish it from a standard bar. While one Reddit snippet mentions NA options in a list, the context is ambiguous and refers to a different location ('Washington Heights'), whereas this venue is in Mount Washington, Pittsburgh.
+   [5/13] Bottlerocket Social Hall
+      ✅ QUALIFIED
+   ✨ Enriching: Bottlerocket Social Hall
+   [6/13] Coughlin's Law Kitchen & Ale House
+      ✅ QUALIFIED
+   ✨ Enriching: Coughlin's Law Kitchen & Ale House
+   [7/13] Bar Botanico
+      ✅ QUALIFIED
+   ✨ Enriching: Bar Botanico
+   [8/13] City Works
+      ✅ QUALIFIED
+   ✨ Enriching: City Works
+   [9/13] Tina's
+      ✅ QUALIFIED
+   ✨ Enriching: Tina's
+   [10/13] Sly Fox Beer
+      ✅ QUALIFIED
+   ✨ Enriching: Sly Fox Beer
+   [11/13] Mixed Moments
+      ❌ Mixed Moments is a mobile bartending service rather than a physical venue. While they offer a dedicated mocktail menu and a specialized 'Mixed Moments Mocktails' service for events, they do not operate a permanent brick-and-mortar location that the public can visit. Additionally, their primary business model involves mobile bars for weddings and corporate events where the client often provides the alcohol, making it a service provider rather than a sober-friendly destination.
+   [12/13] Acacia
+      ✅ QUALIFIED
+   ✨ Enriching: Acacia
+   [13/13] Hidden Harbor
+      ✅ QUALIFIED
+   ✨ Enriching: Hidden Harbor
+
+   📊 Progress: 15/29 | Total venues found: 170
+
+══════════════════════════════════════════════════════════════════════
+🔍 [16/29] St. Louis, Missouri
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1371/10000
+   💰 Current cost: $16.01
+   🔎 Searching: "St. Louis Missouri non-alcoholic bar"
+   🔎 Searching: "St. Louis Missouri mocktail bar"
+   🔎 Searching: "St. Louis Missouri kava bar"
+   🔎 Searching: "St. Louis Missouri alcohol-free restaurant"
+   🔎 Searching: "St. Louis Missouri sober bar"
+   🔎 Searching: "St. Louis Missouri zero proof cocktails"
+   🔎 Searching: "St. Louis Missouri THC lounge"
+   🔎 Searching: "St. Louis Missouri hemp drink bar"
+   🔎 Searching: "St. Louis Missouri Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 26 venues extracted
+   ✅ 17 candidates found
+   🤖 Verifying 17 candidates individually (like original discovery)...
+   [1/17] Sans Bar St. Louis (STL)
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+      ✅ QUALIFIED
+   ✨ Enriching: Sans Bar St. Louis (STL)
+   [2/17] Good Company
+      ✅ QUALIFIED
+   ✨ Enriching: Good Company
+   [3/17] Lazy Tiger
+      ✅ QUALIFIED
+   ✨ Enriching: Lazy Tiger
+   [4/17] Miracle STL
+      ✅ QUALIFIED
+   ✨ Enriching: Miracle STL
+   [5/17] Café la Vie
+      ✅ QUALIFIED
+   ✨ Enriching: Café la Vie
+   [6/17] Chao Baan
+      ✅ QUALIFIED
+   ✨ Enriching: Chao Baan
+   [7/17] Hello Juice
+      ✅ QUALIFIED
+   ✨ Enriching: Hello Juice
+   [8/17] Mission Taco Joint
+      ✅ QUALIFIED
+   ✨ Enriching: Mission Taco Joint
+   [9/17] Retreat Gastropub
+      ✅ QUALIFIED
+   ✨ Enriching: Retreat Gastropub
+   [10/17] Bormio
+      ✅ QUALIFIED
+   ✨ Enriching: Bormio
+   [11/17] Bowood by Niche
+      ✅ QUALIFIED
+   ✨ Enriching: Bowood by Niche
+   [12/17] Brasserie
+      ❌ While Brasserie by Niche is a highly-rated and operational restaurant in St. Louis (with reviews extending into 2026), it does not meet the criteria for a sober-specific directory. According to the provided 2025 menu, its non-alcoholic offerings are limited to standard sodas (Excel Soda), sparkling water, and a single alcohol-free wine option. While the brunch menu features a 'Nomosa,' there is no evidence of a dedicated mocktail program with three or more crafted zero-proof cocktails, which is required for the 'mocktail_bar' or 'sober_friendly' designation.
+   [13/17] indo
+      ✅ QUALIFIED
+   ✨ Enriching: indo
+   [14/17] Kitchen Bar at City Foundry
+      ✅ QUALIFIED
+   ✨ Enriching: Kitchen Bar at City Foundry
+   [15/17] Pastaria
+      ✅ QUALIFIED
+   ✨ Enriching: Pastaria
+   [16/17] CBD Kratom
+      ✅ QUALIFIED
+   ✨ Enriching: CBD Kratom
+   [17/17] STL Herbs And Aromatics
+      ❌ STL Herbs and Aromatics is a retail apothecary and herbalist shop rather than a social venue or beverage establishment. While it is a 100% alcohol-free environment and sells bulk herbs such as kava root and loose-leaf tea, it functions strictly as a retail store for wellness products and ingredients. There is no evidence of a bar, cafe, or lounge setup where prepared drinks are served for on-site consumption, which is a primary requirement for the directory.
+
+   📊 Progress: 16/29 | Total venues found: 185
+
+══════════════════════════════════════════════════════════════════════
+🔍 [17/29] Madison, Wisconsin
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1482/10000
+   💰 Current cost: $17.32
+   🔎 Searching: "Madison Wisconsin non-alcoholic bar"
+   🔎 Searching: "Madison Wisconsin mocktail bar"
+   🔎 Searching: "Madison Wisconsin kava bar"
+   🔎 Searching: "Madison Wisconsin alcohol-free restaurant"
+   🔎 Searching: "Madison Wisconsin sober bar"
+   🔎 Searching: "Madison Wisconsin zero proof cocktails"
+   🔎 Searching: "Madison Wisconsin THC lounge"
+   🔎 Searching: "Madison Wisconsin hemp drink bar"
+   🔎 Searching: "Madison Wisconsin Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 8 venues extracted
+   ✅ 2 candidates found
+   🤖 Verifying 2 candidates individually (like original discovery)...
+   [1/2] Cordial
+      ✅ QUALIFIED
+   ✨ Enriching: Cordial
+   [2/2] Leopold's Books Bar Caffe
+      ✅ QUALIFIED
+   ✨ Enriching: Leopold's Books Bar Caffe
+
+   📊 Progress: 17/29 | Total venues found: 187
+
+══════════════════════════════════════════════════════════════════════
+🔍 [18/29] Reno, Nevada
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1503/10000
+   💰 Current cost: $17.60
+   🔎 Searching: "Reno Nevada non-alcoholic bar"
+   🔎 Searching: "Reno Nevada mocktail bar"
+   🔎 Searching: "Reno Nevada kava bar"
+   🔎 Searching: "Reno Nevada alcohol-free restaurant"
+   🔎 Searching: "Reno Nevada sober bar"
+   🔎 Searching: "Reno Nevada zero proof cocktails"
+   🔎 Searching: "Reno Nevada THC lounge"
+   🔎 Searching: "Reno Nevada hemp drink bar"
+   🔎 Searching: "Reno Nevada Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 2 venues extracted
+   ✅ 2 candidates found
+   🤖 Verifying 2 candidates individually (like original discovery)...
+   [1/2] 4th Street Brewery Coffee Bar
+      ✅ QUALIFIED
+   ✨ Enriching: 4th Street Brewery Coffee Bar
+   [2/2] Reno Roots Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Reno Roots Kava Bar
+
+   📊 Progress: 18/29 | Total venues found: 189
+
+══════════════════════════════════════════════════════════════════════
+🔍 [19/29] St. Petersburg, Florida
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1524/10000
+   💰 Current cost: $17.78
+   🔎 Searching: "St. Petersburg Florida non-alcoholic bar"
+   🔎 Searching: "St. Petersburg Florida mocktail bar"
+   🔎 Searching: "St. Petersburg Florida kava bar"
+   🔎 Searching: "St. Petersburg Florida alcohol-free restaurant"
+   🔎 Searching: "St. Petersburg Florida sober bar"
+   🔎 Searching: "St. Petersburg Florida zero proof cocktails"
+   🔎 Searching: "St. Petersburg Florida THC lounge"
+   🔎 Searching: "St. Petersburg Florida hemp drink bar"
+   🔎 Searching: "St. Petersburg Florida Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 18 venues extracted
+   ✅ 15 candidates found
+   🤖 Verifying 15 candidates individually (like original discovery)...
+   [1/15] Herban Flow
+      ✅ QUALIFIED
+   ✨ Enriching: Herban Flow
+   [2/15] Mad Hatter's Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Mad Hatter's Kava Bar
+   [3/15] Bula Kafe
+      ✅ QUALIFIED
+   ✨ Enriching: Bula Kafe
+   [4/15] Cassis
+      ✅ QUALIFIED
+   ✨ Enriching: Cassis
+   [5/15] The Dog Bar
+      ✅ QUALIFIED
+   ✨ Enriching: The Dog Bar
+   [6/15] Flute & Dram
+      ✅ QUALIFIED
+   ✨ Enriching: Flute & Dram
+   [7/15] Golden Isles Brewing
+      ✅ QUALIFIED
+   ✨ Enriching: Golden Isles Brewing
+   [8/15] Christmas Bar
+      ❌ Xmas Bar is a seasonal pop-up venue that only operates during the holiday season (typically late November through early January). Search results and Google data indicate it is currently 'closed for the season' or 'temporarily closed.' Furthermore, it is primarily an alcohol-focused establishment described as a 'party scene' after dark. While it mentions serving non-alcoholic drinks, there is no evidence of a dedicated mocktail menu with 3+ options or a specific focus on sober-friendly programming that would distinguish it from a standard bar.
+   [9/15] 3 Daughters Brewing
+      ✅ QUALIFIED
+   ✨ Enriching: 3 Daughters Brewing
+   [10/15] Lost & Found
+      ✅ QUALIFIED
+   ✨ Enriching: Lost & Found
+   [11/15] Wild Child Restaurant & Cocktail Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Wild Child Restaurant & Cocktail Bar
+   [12/15] Driftwood Cafe
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+      ❌ There are two 'Driftwood' establishments in St. Petersburg. The venue at the provided address (800 2nd Ave NE) is the Driftwood Cafe located at the St. Pete Pier. Search results and menu descriptions indicate this is a standard cafe serving coffee, ice cream, and snacks, but it also serves 'boozy' (alcoholic) beverages, meaning it is not alcohol-free. While its sister venues in the same building (Teak and Pier Teaki) offer mocktails, the cafe itself focuses on standard cafe fare. It is not a kava bar; the kava-focused business (Driftwood Kava & Coffee Roastery) is a separate entity located on Central Avenue. Because it serves alcohol and lacks a dedicated, prominent mocktail or kava program, it does not meet the directory's specific eligibility criteria.
+   [13/15] Teak
+      ✅ QUALIFIED
+   ✨ Enriching: Teak
+   [14/15] Pier Teaki
+      ❌ Pier Teaki is a high-volume, rum-focused rooftop tiki bar. While search results and the venue's website mention that mocktails are available and they offer non-alcoholic beer, they do not meet the eligibility criteria for a dedicated mocktail menu (3+ prominently featured options). Local search results from 2024 and 2025 indicate that patrons must 'ask the bartender directly' for mocktails rather than choosing from a curated zero-proof menu. As the venue's primary identity is a traditional bar and nightlife destination, it does not qualify for the directory.
+   [15/15] Florida Cannabis Supply
+      ✅ QUALIFIED
+   ✨ Enriching: Florida Cannabis Supply
+
+   📊 Progress: 19/29 | Total venues found: 201
+
+══════════════════════════════════════════════════════════════════════
+🔍 [20/29] Lubbock, Texas
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1623/10000
+   💰 Current cost: $18.91
+   🔎 Searching: "Lubbock Texas non-alcoholic bar"
+   🔎 Searching: "Lubbock Texas mocktail bar"
+   🔎 Searching: "Lubbock Texas kava bar"
+   🔎 Searching: "Lubbock Texas alcohol-free restaurant"
+   🔎 Searching: "Lubbock Texas sober bar"
+   🔎 Searching: "Lubbock Texas zero proof cocktails"
+   🔎 Searching: "Lubbock Texas THC lounge"
+   🔎 Searching: "Lubbock Texas hemp drink bar"
+   🔎 Searching: "Lubbock Texas Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 12 venues extracted
+   ✅ 12 candidates found
+   🤖 Verifying 12 candidates individually (like original discovery)...
+   [1/12] Narrow Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Narrow Bar
+   [2/12] The Nicolett
+      ✅ QUALIFIED
+   ✨ Enriching: The Nicolett
+   [3/12] The West Table
+      ✅ QUALIFIED
+   ✨ Enriching: The West Table
+   [4/12] Mano Negra
+      ✅ QUALIFIED
+   ✨ Enriching: Mano Negra
+   [5/12] Shotgun Sue's Saloon
+      ✅ QUALIFIED
+   ✨ Enriching: Shotgun Sue's Saloon
+   [6/12] Texas Cafe & Bar
+      ❌ Texas Cafe & Bar (locally known as 'The Spoon') is a traditional Lubbock establishment focused on barbecue, pizza, live music, and standard bar service. While it is an operational restaurant, search results and the venue's own website provide no evidence of a dedicated mocktail menu, kava, or specialized non-alcoholic beverage program. It is notably absent from local 'Mocktail Trail' and 'Zero-Proof' guides for Lubbock, which highlight other area venues with prominent sober-friendly options.
+   [7/12] Cujo's Sports Bar & Grill
+      ❌ Cujo's Sports Bar & Grill is a traditional sports tavern and dive bar. While it is currently operational (with search results and reviews updated as recently as January 2026), it does not meet the criteria for a sober-friendly directory. The venue's own marketing and third-party descriptions focus heavily on 'daily drink specials,' 'happy hour,' and its status as a dive bar. There is no evidence of a dedicated mocktail menu, kava service, or specialized non-alcoholic beverage program beyond standard soft drinks.
+   [8/12] Alamo Drafthouse Cinema – Lubbock
+      ✅ QUALIFIED
+   ✨ Enriching: Alamo Drafthouse Cinema – Lubbock
+   [9/12] Caprock Cafe
+      ❌ Caprock Cafe is a traditional bar and grill that explicitly markets itself with the slogan 'Cold Beer, Big Burgers, Hot Music!' and has been voted 'Best Place to Have a Beer.' Search results and official menus show no evidence of a dedicated mocktail menu, kava, or specialized non-alcoholic beverage program. It is primarily a regular bar/restaurant and does not meet the criteria for a sober-friendly directory.
+   [10/12] Shotzy's Bar & Grill
+      ❌ Shotzy's Bar & Grill is a traditional bar and restaurant that does not meet the criteria for a sober-friendly directory. While it is a smoke-free environment and appears in some local lists of places that offer non-alcoholic options, its primary identity and marketing revolve around alcohol culture. The venue features a 'Shot Wheel' and promotes happy hour specials for beers and wells. There is no evidence of a dedicated mocktail menu with three or more options; search results only mention general 'non-alcoholic options' or inclusion in broad lists of bars that can accommodate non-drinkers. The 'Shotzy's' branding and focus on shots represent a significant red flag for a sober-specific directory.
+   [11/12] Nekter Juice Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Nekter Juice Bar
+   [12/12] Keva Juice
+      ✅ QUALIFIED
+   ✨ Enriching: Keva Juice
+
+   📊 Progress: 20/29 | Total venues found: 209
+
+══════════════════════════════════════════════════════════════════════
+🔍 [21/29] Louisville, Kentucky
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1704/10000
+   💰 Current cost: $19.75
+   🔎 Searching: "Louisville Kentucky non-alcoholic bar"
+   🔎 Searching: "Louisville Kentucky mocktail bar"
+   🔎 Searching: "Louisville Kentucky kava bar"
+   🔎 Searching: "Louisville Kentucky alcohol-free restaurant"
+   🔎 Searching: "Louisville Kentucky sober bar"
+   🔎 Searching: "Louisville Kentucky zero proof cocktails"
+   🔎 Searching: "Louisville Kentucky THC lounge"
+   🔎 Searching: "Louisville Kentucky hemp drink bar"
+   🔎 Searching: "Louisville Kentucky Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 20 venues extracted
+   ✅ 14 candidates found
+   🤖 Verifying 14 candidates individually (like original discovery)...
+   [1/14] Plant Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Plant Bar
+   [2/14] Pretty Decent
+      ✅ QUALIFIED
+   ✨ Enriching: Pretty Decent
+   [3/14] Hell or High Water
+      ❌ Hell or High Water is a traditional high-end speakeasy and cocktail bar primarily focused on bourbon and craft spirits. While search results from 2025 and 2026 confirm it is currently operational (including a live jazz schedule through March 2026), there is no evidence of a dedicated mocktail menu with three or more options. Mentions of non-alcoholic options are limited to a single 'ginger drink' in a 2022 Reddit thread and a seasonal 'House Hot Cocoa' during a holiday pop-up. As it lacks prominent, dedicated non-alcoholic features, it does not meet the criteria for the directory.
+   [4/14] Chateau Bourbon
+      ❌ Chateau Bourbon is a luxury Bed and Breakfast that is explicitly themed around bourbon culture and the Kentucky Bourbon Trail. While it is a highly-rated operational venue with recent 2025 reviews, its core identity is the opposite of a sober-friendly destination; the venue advertises 'welcome cocktails' and 'bourbon-themed breakfasts' where they incorporate alcohol into house specialty dishes like granola. There is no evidence of a dedicated mocktail menu or specialized non-alcoholic program that would meet the directory's eligibility criteria.
+   [5/14] Canary Club
+      ✅ QUALIFIED
+   ✨ Enriching: Canary Club
+   [6/14] Copper & Kings Rooftop Bar & Restaurant
+      ✅ QUALIFIED
+   ✨ Enriching: Copper & Kings Rooftop Bar & Restaurant
+   [7/14] Cultured
+      ❌ Cultured is a cheese and charcuterie bar that serves alcohol and cocktails. While it is a highly-rated establishment and currently operational (with Yelp updates as recent as January 2026), it does not meet the criteria for the directory. There is no evidence in the search results of a dedicated mocktail menu (3+ options), kava service, or a specific focus on non-alcoholic hospitality. It should not be confused with 'Kava Culture,' a separate kava bar franchise mentioned in other search results.
+   [8/14] Hop Atomica
+      ✅ QUALIFIED
+   ✨ Enriching: Hop Atomica
+   [9/14] Meta
+      ✅ QUALIFIED
+   ✨ Enriching: Meta
+   [10/14] Bar Vetti
+      ✅ QUALIFIED
+   ✨ Enriching: Bar Vetti
+   [11/14] Darling's
+      ✅ QUALIFIED
+   ✨ Enriching: Darling's
+   [12/14] The Merryweather
+      ❌ The Merryweather is a traditional neighborhood dive bar that does not meet the criteria for a sober-friendly directory. While it is mentioned in some local mocktail guides for offering a 'Sober Ghia Spritz' and a few German non-alcoholic beers, search results indicate it only officially features one mocktail. Furthermore, its own social media marketing as recently as January 2026 uses slogans like 'Drink MORE. Drink EARLIER,' which is inconsistent with a sober-friendly or non-alcoholic focused establishment. It is primarily a regular bar with minimal NA options.
+   [13/14] Trial+Error
+      ✅ QUALIFIED
+   ✨ Enriching: Trial+Error
+   [14/14] EllIment Restaurant and Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: EllIment Restaurant and Lounge
+
+   📊 Progress: 21/29 | Total venues found: 219
+
+══════════════════════════════════════════════════════════════════════
+🔍 [22/29] Norfolk, Virginia
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1797/10000
+   💰 Current cost: $20.89
+   🔎 Searching: "Norfolk Virginia non-alcoholic bar"
+   🔎 Searching: "Norfolk Virginia mocktail bar"
+   🔎 Searching: "Norfolk Virginia kava bar"
+   🔎 Searching: "Norfolk Virginia alcohol-free restaurant"
+   🔎 Searching: "Norfolk Virginia sober bar"
+   🔎 Searching: "Norfolk Virginia zero proof cocktails"
+   🔎 Searching: "Norfolk Virginia THC lounge"
+   🔎 Searching: "Norfolk Virginia hemp drink bar"
+   🔎 Searching: "Norfolk Virginia Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 9 venues extracted
+   ✅ 7 candidates found
+   🤖 Verifying 7 candidates individually (like original discovery)...
+   [1/7] Bellarissa
+      ✅ QUALIFIED
+   ✨ Enriching: Bellarissa
+   [2/7] Enjoy Ceremony
+      ✅ QUALIFIED
+   ✨ Enriching: Enjoy Ceremony
+   [3/7] Yorgo's
+      ✅ QUALIFIED
+   ✨ Enriching: Yorgo's
+   [4/7] Freemason Abbey
+      ✅ QUALIFIED
+   ✨ Enriching: Freemason Abbey
+   [5/7] Apothecary Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Apothecary Bar
+   [6/7] Glass Light
+      ✅ QUALIFIED
+   ✨ Enriching: Glass Light
+   [7/7] Serenity Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Serenity Kava Bar
+
+   📊 Progress: 22/29 | Total venues found: 226
+
+══════════════════════════════════════════════════════════════════════
+🔍 [23/29] Spokane, Washington
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1848/10000
+   💰 Current cost: $21.44
+   🔎 Searching: "Spokane Washington non-alcoholic bar"
+   🔎 Searching: "Spokane Washington mocktail bar"
+   🔎 Searching: "Spokane Washington kava bar"
+   🔎 Searching: "Spokane Washington alcohol-free restaurant"
+   🔎 Searching: "Spokane Washington sober bar"
+   🔎 Searching: "Spokane Washington zero proof cocktails"
+   🔎 Searching: "Spokane Washington THC lounge"
+   🔎 Searching: "Spokane Washington hemp drink bar"
+   🔎 Searching: "Spokane Washington Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 21 venues extracted
+   ✅ 18 candidates found
+   🤖 Verifying 18 candidates individually (like original discovery)...
+   [1/18] Patera Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Patera Lounge
+   [2/18] Patera Temperance Lounge
+      ✅ QUALIFIED
+   ✨ Enriching: Patera Temperance Lounge
+   [3/18] Garden Party
+      ✅ QUALIFIED
+   ✨ Enriching: Garden Party
+   [4/18] Cease & Desist Book Club
+      ✅ QUALIFIED
+   ✨ Enriching: Cease & Desist Book Club
+   [5/18] The Boneyard
+      ✅ QUALIFIED
+   ✨ Enriching: The Boneyard
+   [6/18] Radio Bar Spokane
+      ✅ QUALIFIED
+   ✨ Enriching: Radio Bar Spokane
+   [7/18] Emma Rue's
+      ✅ QUALIFIED
+   ✨ Enriching: Emma Rue's
+   [8/18] Torra Tea
+      ✅ QUALIFIED
+   ✨ Enriching: Torra Tea
+   [9/18] Ruins
+      ✅ QUALIFIED
+   ✨ Enriching: Ruins
+   [10/18] Wooden City - Spokane
+      ✅ QUALIFIED
+   ✨ Enriching: Wooden City - Spokane
+   [11/18] Volstead
+      ❌ Volstead Act is a traditional 21+ cocktail bar that is currently operational, with reviews and website updates extending into early 2026. While the venue is highly regarded for its seasonal 'Miracle' holiday pop-up which features a dedicated zero-proof cocktail menu, it does not meet the criteria for a permanent listing. Search results, including a TripAdvisor review from 2026, explicitly state that there are no non-alcoholic options listed on the standard year-round menu. Although bartenders are noted as being helpful and willing to 'whip up' custom drinks upon request, the lack of a prominent, dedicated NA menu (3+ options) during regular operations falls under the red flag of being a regular bar with minimal NA visibility.
+   [12/18] Purgatory Craft Beer And Whiskey Bar
+      ❌ Purgatory Craft Beer and Whiskey Bar is primarily a traditional alcohol-focused establishment, explicitly marketing its collection of over 1,000 bottles of whiskey and extensive craft beer selection. While it offers a full food menu and is highly rated as a restaurant, there is no evidence in the search results of a dedicated mocktail menu (3+ options) or a specific focus on non-alcoholic offerings. It falls under the red flag of being primarily a regular bar where the identity is centered around spirits and beer.
+   [13/18] Mootsy's
+      ❌ Mootsy's is a traditional dive bar in Spokane with a 'punk rock Americana' atmosphere. While search results indicate they stock a few non-alcoholic canned options (such as Athletic IPA and Lagunitas Hoppy Refresher), there is no evidence of a dedicated mocktail menu or specialized zero-proof program. The venue is primarily known for 'stiff drinks,' live music, and a late-night bar scene, which falls under the red flag of being a regular bar with minimal NA options rather than a dedicated sober-friendly destination.
+   [14/18] Lions Lair
+      ❌ Lions Lair is a traditional high-energy nightclub and bar in Spokane known for EDM music, dancing, and drag shows. While some search results from local Facebook groups mention it in lists of bars that can provide mocktails, there is no evidence of a dedicated non-alcoholic menu with three or more options. One search result mentioning kava and botanical beverages appears to be a misattributed snippet from a different venue (likely Celestial Beans) appearing in the same list. As a primary nightlife and alcohol-focused establishment, it does not meet the criteria for a sober-friendly directory.
+   [15/18] Luckys Irish Pub
+      ✅ QUALIFIED
+   ✨ Enriching: Luckys Irish Pub
+   [16/18] Market Street Pizza
+      ✅ QUALIFIED
+   ✨ Enriching: Market Street Pizza
+   [17/18] Kismet
+      ✅ QUALIFIED
+   ✨ Enriching: Kismet
+   [18/18] Elliotts an urban kitchen
+      ✅ QUALIFIED
+   ✨ Enriching: Elliotts an urban kitchen
+
+   📊 Progress: 23/29 | Total venues found: 240
+
+══════════════════════════════════════════════════════════════════════
+🔍 [24/29] Richmond, Virginia
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 1965/10000
+   💰 Current cost: $22.78
+   🔎 Searching: "Richmond Virginia non-alcoholic bar"
+   🔎 Searching: "Richmond Virginia mocktail bar"
+   🔎 Searching: "Richmond Virginia kava bar"
+   🔎 Searching: "Richmond Virginia alcohol-free restaurant"
+   🔎 Searching: "Richmond Virginia sober bar"
+   🔎 Searching: "Richmond Virginia zero proof cocktails"
+   🔎 Searching: "Richmond Virginia THC lounge"
+   🔎 Searching: "Richmond Virginia hemp drink bar"
+   🔎 Searching: "Richmond Virginia Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 22 venues extracted
+   ✅ 14 candidates found
+   🤖 Verifying 14 candidates individually (like original discovery)...
+   [1/14] Point 5 RVA
+      ✅ QUALIFIED
+   ✨ Enriching: Point 5 RVA
+   [2/14] The Sobar
+      ❌ The venue provided in the Google Places data is 'So Bar Richmond' located in the United Kingdom, which is a standard cocktail bar and restaurant, not a sober-specific establishment. There is no evidence in the search results of a venue named 'The Sobar' or 'So Bar' in Richmond, Virginia. Furthermore, search results for Richmond, Virginia, indicate that the city's only dedicated non-alcoholic bar, KavaClub, closed permanently on June 30, 2025. Because the provided location data refers to a regular bar in another country and the only relevant sober venue in the target city is shuttered, this venue does not qualify.
+   [3/14] Lolita's
+      ✅ QUALIFIED
+   ✨ Enriching: Lolita's
+   [4/14] Pinky's
+      ✅ QUALIFIED
+   ✨ Enriching: Pinky's
+   [5/14] Glass Light Hotel Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Glass Light Hotel Bar
+   [6/14] Sophisticated Sips RVA
+      ⚠️ Gemini network error, retrying in 2s... (attempt 1/5)
+      ✅ QUALIFIED
+   ✨ Enriching: Sophisticated Sips RVA
+   [7/14] Laura Lee's
+      ✅ QUALIFIED
+   ✨ Enriching: Laura Lee's
+   [8/14] West End Bar
+      ❌ Based on the search results and Google Places data, 'Bar West' (also referred to as West End Bar) is a traditional neighborhood bar and restaurant. While the venue is currently operational (with active mentions in late 2025 and early 2026), it does not meet the criteria for a sober-friendly directory. There is no evidence of a dedicated mocktail menu (3+ options), kava service, or an alcohol-free mission. It is primarily marketed as a 'Wine Lounge & Craft Cocktail Bar' and a venue for sports-related events, which falls under the 'primarily a regular bar' red flag.
+   [9/14] Wonderland
+      ❌ Wonderland is a well-established horror-themed bar in Richmond's Shockoe Bottom. While Google and Yelp data from early 2026 confirm it is operational, it does not meet the criteria for DowntownDry. It is primarily a regular bar and nightclub; search results indicate the lead bartender does not use a set cocktail menu, and there is no evidence of a dedicated mocktail menu (3+ options) or specialized non-alcoholic focus. It is frequently mentioned alongside KavaClub in search results, but they are distinct entities, with the latter being the dedicated non-alcoholic kava bar in the area.
+   [10/14] Virago Spirits
+      ✅ QUALIFIED
+   ✨ Enriching: Virago Spirits
+   [11/14] Pho Luca's
+      ✅ QUALIFIED
+   ✨ Enriching: Pho Luca's
+   [12/14] Fighting Fish
+      ✅ QUALIFIED
+   ✨ Enriching: Fighting Fish
+   [13/14] Tazza Kitchen
+      ✅ QUALIFIED
+   ✨ Enriching: Tazza Kitchen
+   [14/14] TBT El Gallo
+      ✅ QUALIFIED
+   ✨ Enriching: TBT El Gallo
+
+   📊 Progress: 24/29 | Total venues found: 251
+
+══════════════════════════════════════════════════════════════════════
+🔍 [25/29] Tacoma, Washington
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 2058/10000
+   💰 Current cost: $23.88
+   🔎 Searching: "Tacoma Washington non-alcoholic bar"
+   🔎 Searching: "Tacoma Washington mocktail bar"
+   🔎 Searching: "Tacoma Washington kava bar"
+   🔎 Searching: "Tacoma Washington alcohol-free restaurant"
+   🔎 Searching: "Tacoma Washington sober bar"
+   🔎 Searching: "Tacoma Washington zero proof cocktails"
+   🔎 Searching: "Tacoma Washington THC lounge"
+   🔎 Searching: "Tacoma Washington hemp drink bar"
+   🔎 Searching: "Tacoma Washington Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 14 venues extracted
+   ✅ 12 candidates found
+   🤖 Verifying 12 candidates individually (like original discovery)...
+   [1/12] Sober AF Zero Proof
+      ✅ QUALIFIED
+   ✨ Enriching: Sober AF Zero Proof
+   [2/12] Aafiya Lounge
+      ❌ Aafiya Lounge does not currently qualify as a physical venue. Search results and the founder's LinkedIn profile indicate that it is currently operating as an event mocktail catering service rather than a brick-and-mortar lounge. While there are documented plans to open a physical non-alcoholic venue in Tacoma in the future, there is no evidence of a current operational address for public walk-ins. Furthermore, the Google Places data provided in the request actually refers to a different business, 'Side Pony Lounge,' which is a standard bar.
+   [3/12] Mad Hat Tea Company
+      ✅ QUALIFIED
+   ✨ Enriching: Mad Hat Tea Company
+   [4/12] Good Vibrations Apothecary
+      ✅ QUALIFIED
+   ✨ Enriching: Good Vibrations Apothecary
+   [5/12] Golden Hour Exotic Tea
+      ✅ QUALIFIED
+   ✨ Enriching: Golden Hour Exotic Tea
+   [6/12] Wooden City
+      ✅ QUALIFIED
+   ✨ Enriching: Wooden City
+   [7/12] Church Cantina
+      ✅ QUALIFIED
+   ✨ Enriching: Church Cantina
+   [8/12] Top of Tacoma
+      ❌ Top of Tacoma is a well-known neighborhood bar and cafe that remains operational as of early 2026. While it is highly rated for its food and atmosphere, search results indicate its non-alcoholic offerings are limited to standard items like Bedford's ginger beer. It does not have a dedicated mocktail menu (3+ options) or a specialized non-alcoholic program. It is primarily a traditional bar environment and does not meet the 'prominent NA options' threshold required for inclusion in a sober-specific directory.
+   [9/12] The Old Hang Out
+      ❌ The Old Hang Out is a tiki bar and restaurant located within the McMenamins Elks Temple in Tacoma. While search results confirm the venue is operational with data extending into early 2026, it does not meet the eligibility criteria for the directory. The provided search results specifically targeting 'non-alcoholic menu' and 'mocktails' for this venue failed to return any evidence of a dedicated mocktail menu or prominent non-alcoholic beverage program. Instead, the results characterize it as a traditional cocktail-focused tiki bar. Without evidence of at least three featured mocktails or a specialized sober-friendly focus, it remains classified as a regular bar.
+   [10/12] Devil's Reef
+      ✅ QUALIFIED
+   ✨ Enriching: Devil's Reef
+   [11/12] Boom Boom Room
+      ✅ QUALIFIED
+   ✨ Enriching: Boom Boom Room
+   [12/12] West 122
+      ✅ QUALIFIED
+   ✨ Enriching: West 122
+
+   📊 Progress: 25/29 | Total venues found: 260
+
+══════════════════════════════════════════════════════════════════════
+🔍 [26/29] Rochester, New York
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 2139/10000
+   💰 Current cost: $24.79
+   🔎 Searching: "Rochester New York non-alcoholic bar"
+   🔎 Searching: "Rochester New York mocktail bar"
+   🔎 Searching: "Rochester New York kava bar"
+   🔎 Searching: "Rochester New York alcohol-free restaurant"
+   🔎 Searching: "Rochester New York sober bar"
+   🔎 Searching: "Rochester New York zero proof cocktails"
+   🔎 Searching: "Rochester New York THC lounge"
+   🔎 Searching: "Rochester New York hemp drink bar"
+   🔎 Searching: "Rochester New York Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 7 venues extracted
+   ✅ 4 candidates found
+   🤖 Verifying 4 candidates individually (like original discovery)...
+   [1/4] Crisp Rochester
+      ✅ QUALIFIED
+   ✨ Enriching: Crisp Rochester
+   [2/4] Martine Kocktails
+      ❌ Martine is a cocktail bar in Rochester's South Wedge neighborhood that specializes in 'kocktails,' a term the owners use to refer to cocktails served on draft (kegs). While the venue is operational and highly rated as of early 2026, it does not meet the criteria for a sober-friendly directory. Local search results and community discussions (Reddit 2024-2025) specifically note that the bar's focus on pre-mixed draft cocktails makes it a less ideal choice for non-drinkers compared to other local venues. There is no evidence of a dedicated mocktail menu featuring three or more options; rather, the venue is consistently described as a 'potent' and 'great cocktail bar' for traditional drinkers.
+   [3/4] Grace and Disgrace
+      ✅ QUALIFIED
+   ✨ Enriching: Grace and Disgrace
+   [4/4] Java's Cafe
+      ✅ QUALIFIED
+   ✨ Enriching: Java's Cafe
+
+   📊 Progress: 26/29 | Total venues found: 263
+
+══════════════════════════════════════════════════════════════════════
+🔍 [27/29] Port St. Lucie, Florida
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 2172/10000
+   💰 Current cost: $25.17
+   🔎 Searching: "Port St. Lucie Florida non-alcoholic bar"
+   🔎 Searching: "Port St. Lucie Florida mocktail bar"
+   🔎 Searching: "Port St. Lucie Florida kava bar"
+   🔎 Searching: "Port St. Lucie Florida alcohol-free restaurant"
+   🔎 Searching: "Port St. Lucie Florida sober bar"
+   🔎 Searching: "Port St. Lucie Florida zero proof cocktails"
+   🔎 Searching: "Port St. Lucie Florida THC lounge"
+   🔎 Searching: "Port St. Lucie Florida hemp drink bar"
+   🔎 Searching: "Port St. Lucie Florida Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 3 venues extracted
+   ✅ 1 candidates found
+   🤖 Verifying 1 candidates individually (like original discovery)...
+   [1/1] Island Root Kava Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Island Root Kava Bar
+
+   📊 Progress: 27/29 | Total venues found: 264
+
+══════════════════════════════════════════════════════════════════════
+🔍 [28/29] Montgomery, Alabama
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 2187/10000
+   💰 Current cost: $25.35
+   🔎 Searching: "Montgomery Alabama non-alcoholic bar"
+   🔎 Searching: "Montgomery Alabama mocktail bar"
+   🔎 Searching: "Montgomery Alabama kava bar"
+   🔎 Searching: "Montgomery Alabama alcohol-free restaurant"
+   🔎 Searching: "Montgomery Alabama sober bar"
+   🔎 Searching: "Montgomery Alabama zero proof cocktails"
+   🔎 Searching: "Montgomery Alabama THC lounge"
+   🔎 Searching: "Montgomery Alabama hemp drink bar"
+   🔎 Searching: "Montgomery Alabama Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 6 venues extracted
+   ✅ 6 candidates found
+   🤖 Verifying 6 candidates individually (like original discovery)...
+   [1/6] Red Bluff Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Red Bluff Bar
+   [2/6] Leroy
+      ❌ Leroy is a well-established cocktail lounge and craft beer bar. While it is highly rated for its mixology and atmosphere, the search results focus exclusively on its alcoholic offerings, including an 'unmatched beer selection,' tiki cocktails, and 'beermosas.' There is no evidence of a dedicated mocktail menu (3+ options), kava, or other non-alcoholic specialties that would distinguish it as a sober-friendly destination beyond being a standard high-end bar.
+   [3/6] Taste
+      ❌ Taste is a wine bar and tapas restaurant located in the Hampstead area of Montgomery. While the venue is currently operational (with reviews and updates extending into 2026), it does not meet the criteria for DowntownDry. The search results and the business's own descriptions emphasize wine flights, craft beer, and traditional happy hours. There is no evidence of a dedicated mocktail menu (3+ options), kava service, or a specific focus on non-alcoholic offerings. As a venue primarily identified as a wine bar, it does not qualify as a specialized sober-friendly destination.
+   [4/6] Bad Daddy's Burger Bar
+      ✅ QUALIFIED
+   ✨ Enriching: Bad Daddy's Burger Bar
+   [5/6] Bar Attico
+      ❌ Bar Attico is a traditional rooftop cocktail bar and lounge focused primarily on 'funk wines' and handcrafted alcoholic cocktails. While it is currently operational (with active social media and reviews through early 2026), it does not meet the eligibility criteria for a sober-friendly directory. Specifically, search results from Yelp indicate that the venue does not have a dedicated menu for non-alcoholic drinks, and its primary identity is that of a standard high-end bar/nightlife spot.
+   [6/6] Mingles Lounge
+      ❌ Mingles Lounge is consistently categorized as a standard bar, nightclub, and nightlife venue in Montgomery. Search results and Google Places data identify it as a 'bar' with a focus on sports and nightlife. There is no evidence of a dedicated mocktail menu, kava service, or any specific non-alcoholic programming that would distinguish it as a sober-friendly destination beyond a typical bar setting.
+
+   📊 Progress: 28/29 | Total venues found: 266
+
+══════════════════════════════════════════════════════════════════════
+🔍 [29/29] Salt Lake City, Utah
+══════════════════════════════════════════════════════════════════════
+   📊 Daily quota: 2232/10000
+   💰 Current cost: $25.79
+   🔎 Searching: "Salt Lake City Utah non-alcoholic bar"
+   🔎 Searching: "Salt Lake City Utah mocktail bar"
+   🔎 Searching: "Salt Lake City Utah kava bar"
+   🔎 Searching: "Salt Lake City Utah alcohol-free restaurant"
+   🔎 Searching: "Salt Lake City Utah sober bar"
+   🔎 Searching: "Salt Lake City Utah zero proof cocktails"
+   🔎 Searching: "Salt Lake City Utah THC lounge"
+   🔎 Searching: "Salt Lake City Utah hemp drink bar"
+   🔎 Searching: "Salt Lake City Utah Athletic Brewing taproom"
+   📄 90 total search results
+   🏢 14 venues extracted
+   ✅ 6 candidates found
+   🤖 Verifying 6 candidates individually (like original discovery)...
+   [1/6] Botanika
+      ✅ QUALIFIED
+   ✨ Enriching: Botanika
+   [2/6] Natural Law Apothecary
+      ✅ QUALIFIED
+   ✨ Enriching: Natural Law Apothecary
+   [3/6] Melancholy
+      ✅ QUALIFIED
+   ✨ Enriching: Melancholy
+   [4/6] Grow Kratom
+      ✅ QUALIFIED
+   ✨ Enriching: Grow Kratom
+   [5/6] The Pearl
+      ✅ QUALIFIED
+   ✨ Enriching: The Pearl
+   [6/6] Varley
+      ✅ QUALIFIED
+   ✨ Enriching: Varley
+
+   📊 Progress: 29/29 | Total venues found: 272
+
+══════════════════════════════════════════════════════════════════════
+✅ COMPLETE
+══════════════════════════════════════════════════════════════════════
+
+📊 Results:
+   • Cities processed: 29
+   • Candidates found: 336
+   • Qualified venues: 272
+   • Venues enriched: 272
+
+💰 Cost: $26.41
+   • Search API calls: 2277
+   • Places API calls: 870
+   • CID optimizations: 0
+   • Gemini calls: 365
+
+✅ Results saved to: /home/adam/Projects/DowntownDry/data/rediscovery_results
+   Ready for database upsert!
