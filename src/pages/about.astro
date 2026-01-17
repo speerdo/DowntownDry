@@ -78,14 +78,13 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
 )}
 
 <!-- Structured Data for SEO -->
-<script type="application/ld+json">
-{
+<script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Downtown Dry",
   "description": "America's largest directory of alcohol-free venues including bars, kava lounges, mocktail venues, and delta THC establishments",
-  "url": "https://downtowndry.com",
-  "foundingDate": "2025-06-01",
+  "url": "https://downtowndry.bar",
+  "foundingDate": "2026-01-01",
   "founder": {
     "@type": "Person",
     "name": "Adam Speer",
@@ -98,7 +97,7 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
   "knowsAbout": [
     "Alcohol-free venues",
     "Kava bars",
-    "Mocktail lounges", 
+    "Mocktail lounges",
     "Non-alcoholic beer",
     "Delta THC venues",
     "Sober nightlife",
@@ -117,7 +116,7 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
         }
       },
       {
-        "@type": "Offer", 
+        "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
           "name": "Expert Guides",
@@ -127,7 +126,7 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
       {
         "@type": "Offer",
         "itemOffered": {
-          "@type": "Service", 
+          "@type": "Service",
           "name": "Premium Drink Shop",
           "description": "Curated selection of craft NA beers, mocktails, and alcohol-free beverages"
         }
@@ -138,8 +137,7 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
     "https://instagram.com/downtowndry",
     "https://twitter.com/downtowndry"
   ]
-}
-</script>
+})} />
 
 <Layout title="About Downtown Dry - America's Leading Alcohol-Free Venue Directory & Lifestyle Platform" description={`Learn about Downtown Dry's mission to revolutionize nightlife through our directory of ${totalVenues.toLocaleString()}+ alcohol-free venues, expert guides on kava culture and delta THC, and premium NA drink curation. Founded to support mindful living, recovery, and inclusive social experiences across America.`}>
   <!-- Hero Section -->
