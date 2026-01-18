@@ -2,7 +2,7 @@
 title: 'Building Meaningful Connections in Alcohol-Free Social Spaces'
 description: 'Expert advice on fostering genuine relationships and community connections in venues that prioritize mindful socializing over drinking.'
 author: 'DowntownDry Team'
-publishDate: 2025-02-20
+publishDate: 2025-11-18
 category: 'advice'
 tags:
   ['community', 'relationships', 'social connections', 'mindful socializing']

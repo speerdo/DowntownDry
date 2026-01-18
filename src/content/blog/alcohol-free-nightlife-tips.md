@@ -2,7 +2,7 @@
 title: "Navigating Nightlife Alcohol-Free: A First-Timer's Guide"
 description: "Practical tips and strategies for enjoying nightlife without alcohol, from someone who's successfully made the transition."
 author: 'DowntownDry Team'
-publishDate: 2025-03-01
+publishDate: 2025-12-02
 category: 'tips'
 tags: ['nightlife', 'alcohol-free', 'social tips', 'lifestyle']
 image: 'https://images.pexels.com/photos/1058277/pexels-photo-1058277.jpeg?_gl=1*4sx78*_ga*NjgwMDg5NzUwLjE3NDcwNjcwNzg.*_ga_8JE65Q40S6*czE3NTYzMDIwMjMkbzE5JGcxJHQxNzU2MzAyMTM2JGozMCRsMCRoMA..'

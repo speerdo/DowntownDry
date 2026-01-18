@@ -2,7 +2,7 @@
 title: 'Delta THC Venues: The New Social Cannabis Experience'
 description: 'Exploring how legal delta THC consumption lounges are creating safe, regulated environments for therapeutic and recreational use in social settings.'
 author: 'DowntownDry Team'
-publishDate: 2025-02-25
+publishDate: 2025-11-25
 category: 'delta-thc'
 tags: ['delta-thc', 'cannabis', 'social venues', 'legal consumption']
 image: 'https://images.pexels.com/photos/5331319/pexels-photo-5331319.jpeg?_gl=1*fc43ry*_ga*NjgwMDg5NzUwLjE3NDcwNjcwNzg.*_ga_8JE65Q40S6*czE3NTYzMDIwMjMkbzE5JGcxJHQxNzU2MzAyMTkwJGozNyRsMCRoMA..'

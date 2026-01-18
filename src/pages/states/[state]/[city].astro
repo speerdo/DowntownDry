@@ -439,11 +439,12 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           <!-- Hero with City Image -->
           <div class="relative overflow-hidden rounded-2xl bg-primary-700">
             <div class="absolute inset-0">
-              <img 
-                src={normalizeImageUrl(cityData?.image_url) || getCityImage(cityName, stateName)} 
+              <img
+                src={normalizeImageUrl(cityData?.image_url) || getCityImage(cityName, stateName)}
                 alt={`Cityscape of ${cityName}, ${stateName} - home to ${safeVenues.length} alcohol-free venues`}
                 class="w-full h-full object-cover"
                 loading="eager"
+                fetchpriority="high"
               />
               <div class="absolute inset-0 bg-primary-700/60"></div>
             </div>

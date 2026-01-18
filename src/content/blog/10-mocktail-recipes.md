@@ -2,7 +2,7 @@
 title: '10 Mocktails That Will Change Your Mind About Non-Alcoholic Drinks'
 description: 'Sophisticated recipes from top bartenders proving that alcohol-free cocktails can be just as complex and delicious as their alcoholic counterparts.'
 author: 'DowntownDry Team'
-publishDate: 2025-03-10
+publishDate: 2025-12-10
 category: 'recipes'
 tags: ['mocktails', 'recipes', 'bartending', 'non-alcoholic']
 image: 'https://images.pexels.com/photos/1441122/pexels-photo-1441122.jpeg?_gl=1*1k32k7q*_ga*NjgwMDg5NzUwLjE3NDcwNjcwNzg.*_ga_8JE65Q40S6*czE3NTYzMDIwMjMkbzE5JGcxJHQxNzU2MzAyMDM1JGo0OCRsMCRoMA..'

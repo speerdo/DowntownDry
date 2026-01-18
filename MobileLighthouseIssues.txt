@@ -1,0 +1,152 @@
+
+Improve image delivery Est savings of 127 KiB
+Reducing the download time of images can improve the perceived load time of the page and LCP. Learn more about optimizing image sizeFCPLCPUnscored
+URL
+Resource Size
+Est Savings
+unsplash.com
+215.5 KiB	127.4 KiB
+img.w-full.h-full.object-cover
+/photo-151…-65ba15a82390?ixlib=…(images.unsplash.com)
+215.5 KiB
+127.4 KiB
+Increasing the image compression factor could improve this image's download size.
+31.9 KiB
+This image file is larger than it needs to be (751x1501) for its displayed dimensions (658x823). Use responsive images to reduce the image download size.
+112.0 KiB
+
+
+Render blocking requests Est savings of 1,750 ms
+Requests are blocking the page's initial render, which may delay LCP. Deferring or inlining can move these network requests out of the critical path.FCPLCPUnscored
+URL
+Transfer Size
+Duration
+Google Fonts cdn 
+1.2 KiB	780 ms
+/css2?family=…(fonts.googleapis.com)
+1.2 KiB
+780 ms
+Adobe TypeKit cdn 
+1.3 KiB	1,540 ms
+/p.css?s=…(p.typekit.net)
+0.2 KiB
+770 ms
+/tif0guk.css(use.typekit.net)
+1.1 KiB
+760 ms
+downtowndry.bar 1st party
+10.7 KiB	0 ms
+/_astro/about.nkdPcZga.css(www.downtowndry.bar)
+8.7 KiB
+/_astro/_slug_.DNJvOBnO.css(www.downtowndry.bar)
+2.0 KiB
+
+
+LCP request discovery
+Optimize LCP by making the LCP image discoverable from the HTML immediately, and avoiding lazy-loadingLCPUnscored
+fetchpriority=high should be applied
+Request is discoverable in initial document
+lazy load not applied
+img.w-full.h-full.object-cover
+
+
+Network dependency tree
+Avoid chaining critical requests by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.LCPUnscored
+Maximum critical path latency: 175 ms
+Initial Navigation
+https://www.downtowndry.bar - 54 ms, 16.58 KiB
+/css2?family=…(fonts.googleapis.com) - 114 ms, 1.22 KiB
+…v20/UcC73FwrK….woff2(fonts.gstatic.com) - 175 ms, 47.33 KiB
+/tif0guk.css(use.typekit.net) - 73 ms, 1.14 KiB
+…31/l?primer=7cdcb44…&fvd=n7&v=3(use.typekit.net) - 174 ms, 31.16 KiB
+/p.css?s=…(p.typekit.net) - 115 ms, 0.17 KiB
+/_astro/about.nkdPcZga.css(www.downtowndry.bar) - 79 ms, 8.74 KiB
+/_astro/_slug_.DNJvOBnO.css(www.downtowndry.bar) - 78 ms, 2.00 KiB
+
+Preconnected origins
+preconnect hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.
+Origin
+Source
+https://fonts.googleapis.com/
+link
+https://fonts.gstatic.com/
+link
+Preconnect candidates
+Add preconnect hints to your most important origins, but try to use no more than 4.
+No additional origins are good candidates for preconnecting
+
+
+Use efficient cache lifetimes Est savings of 0 KiB
+A long cache lifetime can speed up repeat visits to your page. Learn more about caching.FCPLCPUnscored
+Request
+Cache TTL
+Transfer Size
+Adobe TypeKit cdn 
+0 KiB
+/p.css?s=…(p.typekit.net)
+7d
+0 KiB
+
+
+Font display Est savings of 20 ms
+Consider setting font-display to swap or optional to ensure text is consistently visible. swap can be further optimized to mitigate layout shifts with font metric overrides.FCPUnscored
+URL
+Est Savings
+Adobe TypeKit cdn 
+…31/l?primer=7cdcb44…&fvd=n7&v=3(use.typekit.net)
+20 ms
+
+Layout shifts occur when elements move absent any user interaction. Investigate the causes of layout shifts, such as elements being added, removed, or their fonts changing as the page loads.CLSUnscored
+Element
+Layout shift score
+Total
+0.051
+div.relative.max-w-7xl.mx-auto.px-4.sm:px-6.lg:px-8.text-center.text-white.z-10
+0.051
+…v20/UcC73FwrK….woff2(fonts.gstatic.com)
+Web font
+
+Each subpart has specific improvement strategies. Ideally, most of the LCP time should be spent on loading the resources, not within delays.LCPUnscored
+Subpart
+Duration
+Time to first byte
+20 ms
+Resource load delay
+30 ms
+Resource load duration
+60 ms
+Element render delay
+120 ms
+img.w-full.h-full.object-cover
+
+3rd party code can significantly impact load performance. Reduce and defer loading of 3rd party code to prioritize your page's content.Unscored
+3rd party
+Transfer size
+Main thread time
+Adobe TypeKit cdn 
+32 KiB	0 ms
+…31/l?primer=7cdcb44…&fvd=n7&v=3(use.typekit.net)
+31 KiB
+0 ms
+/tif0guk.css(use.typekit.net)
+1 KiB
+0 ms
+/p.css?s=…(p.typekit.net)
+0 KiB
+0 ms
+unsplash.com
+216 KiB	0 ms
+/photo-151…-65ba15a82390?ixlib=…(images.unsplash.com)
+216 KiB
+0 ms
+Google Fonts cdn 
+49 KiB	0 ms
+…v20/UcC73FwrK….woff2(fonts.gstatic.com)
+47 KiB
+0 ms
+/css2?family=…(fonts.googleapis.com)
+1 KiB
+0 ms
+
+
+

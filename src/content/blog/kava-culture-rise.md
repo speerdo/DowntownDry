@@ -2,7 +2,7 @@
 title: 'The Rise of Kava Culture in American Cities'
 description: 'Explore how traditional Pacific Island kava is finding new life in urban America, providing a relaxing alternative to alcohol in social settings.'
 author: 'DowntownDry Team'
-publishDate: 2025-03-15
+publishDate: 2025-12-15
 category: 'wellness'
 tags: ['kava', 'culture', 'wellness', 'alternative nightlife']
 image: 'https://images.ctfassets.net/4f3rgqwzdznj/3dNpESSMGmzT8sFBuM744g/4adf75805cbd7aacbd56dda67b4dd86f/bowl_of_kava_plant_mixture-1254767420.jpg'

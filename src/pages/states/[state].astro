@@ -275,11 +275,12 @@ if (featuredCities.length < 3) {
   <!-- State Hero Section -->
   <section class="relative h-72 md:h-80 overflow-hidden" role="banner" aria-label={`${stateName} alcohol-free venues`}>
     <div class="absolute inset-0">
-      <img 
-        src={stateImage} 
+      <img
+        src={stateImage}
         alt={`Scenic view of ${stateName} representing the state's alcohol-free venue scene`}
         class="w-full h-full object-cover"
         loading="eager"
+        fetchpriority="high"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20"></div>
     </div>

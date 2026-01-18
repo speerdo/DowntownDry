@@ -2,7 +2,7 @@
 title: "Austin's Best Late-Night Coffee Spots for Alternative Socializing"
 description: "A comprehensive guide to Austin's thriving late-night coffee scene and the community spaces they create for alcohol-free socializing."
 author: 'DowntownDry Team'
-publishDate: 2025-03-08
+publishDate: 2025-12-08
 category: 'city-guide'
 tags: ['austin', 'coffee', 'late-night', 'texas', 'city guide']
 image: 'https://images.pexels.com/photos/2467287/pexels-photo-2467287.jpeg?auto=compress&cs=tinysrgb&w=800'
