@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://downtowndry.bar/sitemap-index.xml
+Sitemap: https://www.downtowndry.bar/sitemap-index.xml
 
 # Disallow admin/private paths (if any)
 Disallow: /api/

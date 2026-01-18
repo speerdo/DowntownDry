@@ -24,6 +24,6 @@ export default defineConfig({
       lastmod: new Date(),
     })
   ],
-  site: 'https://downtowndry.bar',
+  site: 'https://www.downtowndry.bar',
   output: 'static',
 });

@@ -7,14 +7,37 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, description, author, publishDate, readTime, image, category } = post.data;
+const { title, description, author, publishDate, readTime, image, category, tags } = post.data;
 
-// Format the date
+// Format the date for display
 const formattedDate = new Date(publishDate).toLocaleDateString('en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric'
 });
+
+// ISO date for structured data
+const isoDate = new Date(publishDate).toISOString();
+
+// Article metadata for Open Graph
+const articleMeta = {
+  publishedTime: isoDate,
+  author: author,
+  section: category.replace('-', ' '),
+  tags: tags || []
+};
+
+// Category display names for schema
+const categoryNames: Record<string, string> = {
+  'recipes': 'Recipes',
+  'wellness': 'Wellness',
+  'city-guide': 'City Guides',
+  'community': 'Community',
+  'lifestyle': 'Lifestyle',
+  'delta-thc': 'Delta THC',
+  'tips': 'Tips',
+  'advice': 'Advice'
+};
 
 // Define category styling
 let categoryClass = 'text-accent-500';
@@ -46,9 +69,44 @@ switch(category) {
     categoryClass = 'text-pink-600';
     break;
 }
+
+// Build the canonical URL
+const canonicalURL = new URL(`/blog/${post.slug}`, 'https://www.downtowndry.bar').href;
 ---
 
-<Layout title={`${title} - Downtown Dry`} description={description} ogImage={image}>
+<Layout title={`${title} | Downtown Dry`} description={description} ogImage={image} canonical={canonicalURL} article={articleMeta}>
+  <!-- BlogPosting Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": title,
+    "description": description,
+    "image": image,
+    "datePublished": isoDate,
+    "dateModified": isoDate,
+    "author": {
+      "@type": "Organization",
+      "name": author,
+      "url": "https://www.downtowndry.bar"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Downtown Dry",
+      "url": "https://www.downtowndry.bar",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.downtowndry.bar/downtown_dry_og.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": canonicalURL
+    },
+    "articleSection": categoryNames[category] || category,
+    "keywords": tags ? tags.join(', ') : category
+  })} />
+  </script>
+
   <!-- Hero Section -->
   <div class="relative w-full h-96">
     <img 

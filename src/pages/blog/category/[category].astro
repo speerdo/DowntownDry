@@ -21,16 +21,16 @@ const sortedPosts = posts.sort((a, b) =>
   new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
 );
 
-// Category metadata
+// Category metadata with SEO-optimized descriptions (120-160 chars)
 const categoryInfo = {
-  'recipes': { name: 'Recipes', color: 'secondary-500', description: 'Delicious alcohol-free drink recipes' },
-  'tips': { name: 'Tips', color: 'accent-500', description: 'Practical advice for alcohol-free living' },
-  'city-guide': { name: 'City Guides', color: 'orange-500', description: 'Local venue recommendations' },
-  'wellness': { name: 'Wellness', color: 'green-600', description: 'Health and mindfulness content' },
-  'community': { name: 'Community', color: 'blue-600', description: 'Building connections and relationships' },
-  'delta-thc': { name: 'Delta THC', color: 'purple-600', description: 'Cannabis culture and venues' },
-  'lifestyle': { name: 'Lifestyle', color: 'indigo-600', description: 'Alcohol-free lifestyle content' },
-  'advice': { name: 'Advice', color: 'pink-600', description: 'Expert advice and guidance' },
+  'recipes': { name: 'Recipes', color: 'secondary-500', description: 'Craft delicious mocktails and alcohol-free drinks at home. Expert recipes from bartenders featuring fresh ingredients, unique flavors, and pro techniques.' },
+  'tips': { name: 'Tips', color: 'accent-500', description: 'Practical tips for thriving in alcohol-free social settings. Navigate nightlife, handle social pressure, and discover the best sober-friendly venues near you.' },
+  'city-guide': { name: 'City Guides', color: 'orange-500', description: 'Explore the best alcohol-free bars, kava lounges, and mocktail spots in cities across America. Local recommendations from people who know.' },
+  'wellness': { name: 'Wellness', color: 'green-600', description: 'Discover the health benefits of alcohol-free living. Mindfulness practices, mental clarity, better sleep, and holistic wellness without the hangover.' },
+  'community': { name: 'Community', color: 'blue-600', description: 'Stories of connection and belonging in alcohol-free spaces. How sober venues are building real community and fostering meaningful relationships.' },
+  'delta-thc': { name: 'Delta THC', color: 'purple-600', description: 'Your guide to legal delta THC beverages and social cannabis lounges. Safety tips, venue reviews, and responsible consumption in social settings.' },
+  'lifestyle': { name: 'Lifestyle', color: 'indigo-600', description: 'Embrace the alcohol-free lifestyle with confidence. From dating sober to hosting parties, discover how to live your best life without alcohol.' },
+  'advice': { name: 'Advice', color: 'pink-600', description: 'Expert guidance on alcohol-free living from recovery coaches, therapists, and wellness professionals. Answers to your questions about sober life.' },
 };
 
 const info = categoryInfo[category] || { name: category, color: 'primary-700', description: 'Blog posts in this category' };

@@ -10,8 +10,6 @@ readTime: '12 min read'
 featured: false
 ---
 
-# 10 Mocktails That Will Change Your Mind About Non-Alcoholic Drinks
-
 The world of non-alcoholic cocktails has evolved far beyond simple juice mixtures. Today's mocktails are sophisticated, complex, and crafted with the same care and attention as their alcoholic counterparts. Here are ten recipes that will change your perspective on alcohol-free drinks.
 
 ## The Art of Alcohol-Free Mixology

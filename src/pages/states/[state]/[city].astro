@@ -252,8 +252,28 @@ function getVenueAtmosphere(venue: any) {
   if (venue.serves_kava) atmospheres.push('Cultural & Mindful');
   if (venue.serves_thc) atmospheres.push('Alternative & Progressive');
   if (venue.is_alcohol_free) atmospheres.push('Health-Conscious');
-  
+
   return atmospheres.length > 0 ? atmospheres.join(' • ') : 'Welcoming & Inclusive';
+}
+
+function normalizeWebsiteUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  // If URL already has a protocol, return as-is
+  if (url.startsWith('http://') || url.startsWith('https://')) {
+    return url;
+  }
+  // Add https:// to bare domain names
+  return `https://${url}`;
+}
+
+// Normalize image URLs to HTTPS (fixes mixed content warnings from Wikipedia images)
+function normalizeImageUrl(url: string | null | undefined): string | null {
+  if (!url) return null;
+  // Convert http:// to https:// for better security
+  if (url.startsWith('http://')) {
+    return url.replace('http://', 'https://');
+  }
+  return url;
 }
 
 function getCityImage(cityName: string, stateName: string) {
@@ -359,19 +379,19 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
   "@type": "CollectionPage",
   "name": `Alcohol-Free Bars in ${cityName}, ${stateName}`,
   "description": cityMetaDesc,
-  "url": `https://downtowndry.bar/states/${state}/${city}/`,
+  "url": `https://www.downtowndry.bar/states/${state}/${city}/`,
   "isPartOf": {
     "@type": "WebSite",
     "name": "Downtown Dry",
-    "url": "https://downtowndry.bar"
+    "url": "https://www.downtowndry.bar"
   },
   "breadcrumb": {
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://downtowndry.bar/" },
-      { "@type": "ListItem", "position": 2, "name": "States", "item": "https://downtowndry.bar/states/" },
-      { "@type": "ListItem", "position": 3, "name": stateName, "item": `https://downtowndry.bar/states/${state}/` },
-      { "@type": "ListItem", "position": 4, "name": cityName, "item": `https://downtowndry.bar/states/${state}/${city}/` }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.downtowndry.bar/" },
+      { "@type": "ListItem", "position": 2, "name": "States", "item": "https://www.downtowndry.bar/states/" },
+      { "@type": "ListItem", "position": 3, "name": stateName, "item": `https://www.downtowndry.bar/states/${state}/` },
+      { "@type": "ListItem", "position": 4, "name": cityName, "item": `https://www.downtowndry.bar/states/${state}/${city}/` }
     ]
   },
   "mainEntity": {
@@ -391,9 +411,8 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           "addressRegion": stateName,
           "postalCode": venue.zip_code
         },
-        ...(venue.rating && { "aggregateRating": { "@type": "AggregateRating", "ratingValue": venue.rating, "bestRating": 5 } }),
         ...(venue.phone && { "telephone": venue.phone }),
-        ...(venue.website && { "url": venue.website })
+        ...(venue.website && { "url": normalizeWebsiteUrl(venue.website) })
       }
     }))
   }
@@ -421,7 +440,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           <div class="relative overflow-hidden rounded-2xl bg-primary-700">
             <div class="absolute inset-0">
               <img 
-                src={cityData?.image_url || getCityImage(cityName, stateName)} 
+                src={normalizeImageUrl(cityData?.image_url) || getCityImage(cityName, stateName)} 
                 alt={`Cityscape of ${cityName}, ${stateName} - home to ${safeVenues.length} alcohol-free venues`}
                 class="w-full h-full object-cover"
                 loading="eager"
@@ -899,10 +918,10 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                                 Call Now
                               </a>
                             )}
-                            {venue.website && (
-                              <a 
-                                href={venue.website} 
-                                target="_blank" 
+                            {normalizeWebsiteUrl(venue.website) && (
+                              <a
+                                href={normalizeWebsiteUrl(venue.website)}
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors"
                               >

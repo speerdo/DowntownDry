@@ -10,8 +10,6 @@ readTime: '8 min read'
 featured: true
 ---
 
-# The Rise of Kava Culture in American Cities
-
 In the heart of bustling American cities, a centuries-old tradition from the Pacific Islands is taking root and transforming the way people gather, socialize, and unwind. Kava, a traditional beverage known for its calming effects and cultural significance, is emerging as a compelling alternative to alcohol-centered socializing. This rise of kava culture represents more than just a new trend – it's a return to ancient wisdom about community, connection, and conscious relaxation.
 
 ## Important Safety Information
