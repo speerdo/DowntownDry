@@ -43,7 +43,7 @@ const { title, description = "Discover alcohol-free nightlife, kava bars, CBD lo
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
 
 // Normalize OG image URL - handle both absolute and relative URLs
-const defaultOgImage = "https://downtowndry.bar/downtown_dry_og.png";
+const defaultOgImage = "https://www.downtowndry.bar/downtown_dry_og.png";
 let ogImageURL = defaultOgImage;
 if (ogImage) {
   // If it's already an absolute URL (starts with http:// or https://), use it as-is

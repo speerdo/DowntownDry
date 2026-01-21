@@ -26,4 +26,5 @@ export default defineConfig({
   ],
   site: 'https://www.downtowndry.bar',
   output: 'static',
+  trailingSlash: 'always',
 });
