@@ -63,7 +63,6 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     map: null,
     markers: [],
     infoWindow: null,
-    geocoder: null,
     initialized: false
   };
   
@@ -78,12 +77,10 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     }
     
     // Test if Google Maps API is fully loaded
-    if (typeof google === 'undefined' || !google.maps || !google.maps.Geocoder) {
+    if (typeof google === 'undefined' || !google.maps) {
       console.error('Google Maps API not fully loaded');
       return;
     }
-    
-    console.log('Google Maps API confirmed loaded with Geocoder');
 
     const map = new google.maps.Map(mapElement, {
       zoom: zoom,
@@ -98,15 +95,11 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     });
 
     const infoWindow = new google.maps.InfoWindow();
-    const geocoder = new google.maps.Geocoder();
-    
+
     // Store references
     window[mapStoreKey].map = map;
     window[mapStoreKey].infoWindow = infoWindow;
-    window[mapStoreKey].geocoder = geocoder;
     window[mapStoreKey].initialized = true;
-    
-    // Geocoding service is ready
 
     // Function to create a marker
     function createMarker(venue, lat, lng) {
@@ -157,66 +150,18 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
       return marker;
     }
 
-    // Function to build address string from venue data
-    function buildAddress(venue) {
-      const parts = [];
-      if (venue.address) parts.push(venue.address);
-      if (venue.city) parts.push(venue.city);
-      if (venue.state) parts.push(venue.state);
-      if (venue.zip_code) parts.push(venue.zip_code);
-      return parts.join(', ');
-    }
-
-    // Process venues and create markers
+    // Process venues and create markers (only venues with coordinates)
     const markersToFit = [];
-    let pendingGeocodes = 0;
 
     venues.forEach(venue => {
       if (venue.latitude && venue.longitude) {
         // Use existing coordinates - ensure they're numbers
         const lat = Number(venue.latitude);
         const lng = Number(venue.longitude);
-        // Using existing coordinates
         const marker = createMarker(venue, lat, lng);
         markersToFit.push(marker);
-      } else {
-        // Geocode the address
-        const address = buildAddress(venue);
-        if (address.trim()) {
-          pendingGeocodes++;
-          // Add a small delay to avoid rate limiting
-          setTimeout(() => {
-            geocoder.geocode({ address: address }, (results, status) => {
-              pendingGeocodes--;
-              
-              if (status === 'OK' && results && results[0]) {
-                const location = results[0].geometry.location;
-                const lat = location.lat();
-                const lng = location.lng();
-                
-                const marker = createMarker(venue, lat, lng);
-                markersToFit.push(marker);
-              } else {
-                // Only log errors for debugging
-                if (status === 'OVER_QUERY_LIMIT') {
-                  console.error('Google Maps API quota exceeded');
-                } else if (status === 'REQUEST_DENIED') {
-                  console.error('Geocoding API access denied');
-                } else if (status === 'ZERO_RESULTS') {
-                  console.warn(`No results found for: ${venue.name}`);
-                }
-              }
-              
-              // Check if this was the last pending geocode
-              if (pendingGeocodes === 0) {
-                fitMapBounds();
-              }
-            });
-          }, pendingGeocodes * 100); // Stagger requests by 100ms each
-        } else {
-          console.warn(`No address available for venue: ${venue.name}`);
-        }
       }
+      // Skip venues without coordinates - no geocoding to reduce API costs
     });
 
     // Function to fit map bounds to show all markers
@@ -233,10 +178,8 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
       }
     }
 
-    // If no geocoding is needed, fit bounds immediately
-    if (pendingGeocodes === 0) {
-      fitMapBounds();
-    }
+    // Fit bounds immediately (no geocoding delay)
+    fitMapBounds();
     
     // Store initial markers
     window[mapStoreKey].markers = markersToFit;
@@ -308,50 +251,17 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
       return marker;
     }
     
-    // Function to build address string
-    function buildAddress(venue) {
-      const parts = [];
-      if (venue.address) parts.push(venue.address);
-      if (venue.city) parts.push(venue.city);
-      if (venue.state) parts.push(venue.state);
-      if (venue.zip_code) parts.push(venue.zip_code);
-      return parts.join(', ');
-    }
-    
-    // Process new venues and create markers
+    // Process new venues and create markers (only venues with coordinates)
     const markersToFit = [];
-    let pendingGeocodes = 0;
-    
+
     newVenues.forEach(venue => {
       if (venue.latitude && venue.longitude) {
         const lat = Number(venue.latitude);
         const lng = Number(venue.longitude);
         const marker = createMarker(venue, lat, lng);
         markersToFit.push(marker);
-      } else {
-        const address = buildAddress(venue);
-        if (address.trim()) {
-          pendingGeocodes++;
-          setTimeout(() => {
-            store.geocoder.geocode({ address: address }, (results, status) => {
-              pendingGeocodes--;
-              
-              if (status === 'OK' && results && results[0]) {
-                const location = results[0].geometry.location;
-                const lat = location.lat();
-                const lng = location.lng();
-                
-                const marker = createMarker(venue, lat, lng);
-                markersToFit.push(marker);
-              }
-              
-              if (pendingGeocodes === 0) {
-                fitMapBounds();
-              }
-            });
-          }, pendingGeocodes * 100);
-        }
       }
+      // Skip venues without coordinates - no geocoding to reduce API costs
     });
     
     // Function to fit map bounds
@@ -374,11 +284,9 @@ const apiKey = import.meta.env.PUBLIC_GOOGLE_MAPS_API_KEY;
     
     // Store new markers
     store.markers = markersToFit;
-    
-    // Fit bounds if no geocoding needed
-    if (pendingGeocodes === 0) {
-      fitMapBounds();
-    }
+
+    // Fit bounds immediately (no geocoding delay)
+    fitMapBounds();
   };
 
   // Load Google Maps API if not already loaded
