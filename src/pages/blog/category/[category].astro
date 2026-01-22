@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -120,7 +121,7 @@ const allCategories = Object.entries(categoryInfo)
                     {categoryText}
                   </div>
                   <h3 class="text-xl font-semibold mb-4 leading-tight">
-                    <a href={`/blog/${post.slug}`} class="hover:text-primary-700 transition-colors">
+                    <a href={`/blog/${post.slug}/`} class="hover:text-primary-700 transition-colors">
                       {post.data.title}
                     </a>
                   </h3>

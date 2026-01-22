@@ -27,4 +27,7 @@ export default defineConfig({
   site: 'https://www.downtowndry.bar',
   output: 'static',
   trailingSlash: 'always',
+  image: {
+    domains: ['images.unsplash.com', 'media.istockphoto.com', 'images.pexels.com'],
+  },
 });

@@ -71,7 +71,7 @@ switch(category) {
 }
 
 // Build the canonical URL
-const canonicalURL = new URL(`/blog/${post.slug}`, 'https://www.downtowndry.bar').href;
+const canonicalURL = new URL(`/blog/${post.slug}/`, 'https://www.downtowndry.bar').href;
 ---
 
 <Layout title={`${title} | Downtown Dry`} description={description} ogImage={image} canonical={canonicalURL} article={articleMeta}>
@@ -104,6 +104,32 @@ const canonicalURL = new URL(`/blog/${post.slug}`, 'https://www.downtowndry.bar'
     },
     "articleSection": categoryNames[category] || category,
     "keywords": tags ? tags.join(', ') : category
+  })} />
+  </script>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.downtowndry.bar/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://www.downtowndry.bar/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": title,
+        "item": canonicalURL
+      }
+    ]
   })} />
   </script>
 

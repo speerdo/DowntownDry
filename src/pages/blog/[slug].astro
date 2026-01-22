@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -32,6 +33,18 @@ const categoryColors = {
   'advice': 'pink-600'
 };
 
+// Category display names
+const categoryNames = {
+  'recipes': 'Recipes',
+  'wellness': 'Wellness',
+  'city-guide': 'City Guides',
+  'community': 'Community',
+  'lifestyle': 'Lifestyle',
+  'delta-thc': 'Delta THC',
+  'tips': 'Tips',
+  'advice': 'Advice'
+};
+
 const colorClass = categoryColors[post.data.category] || 'primary-700';
 ---
 
@@ -45,7 +58,7 @@ const colorClass = categoryColors[post.data.category] || 'primary-700';
     
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <a href={`/blog/category/${post.data.category}/`} class={`inline-block text-sm text-${colorClass} font-semibold mb-4 uppercase tracking-wide bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/20 transition-colors`}>
-        {post.data.category.replace('-', ' ')}
+        {categoryNames[post.data.category] || post.data.category}
       </a>
       <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
         {post.data.title}
@@ -79,7 +92,7 @@ const colorClass = categoryColors[post.data.category] || 'primary-700';
         <h2 class="text-2xl font-bold text-neutral-900 mb-8 text-center">Related Articles</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {relatedPosts.map((relatedPost) => (
-            <a href={`/blog/${relatedPost.slug}`} class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
+            <a href={`/blog/${relatedPost.slug}/`} class="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
               <div class="aspect-video overflow-hidden">
                 <img
                   src={relatedPost.data.image}
