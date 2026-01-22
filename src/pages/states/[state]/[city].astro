@@ -364,7 +364,19 @@ function formatVenueType(venueType: string | null | undefined): string {
 
 // Get city description from database or use default
 const cityDescription = cityData?.description || DEFAULT_DESCRIPTION;
-const cityMetaDesc = cityData?.meta_description || `Find ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Discover mocktail bars, kava lounges & sober venues.`;
+
+// Abbreviate long state names for shorter titles (SEO: keep titles under 60 chars)
+const shortStateName = stateName === 'District of Columbia' ? 'DC' : stateName;
+
+// Build a richer meta description (SEO: aim for 120-160 chars)
+const venueTypes = [];
+if (safeVenues.some(v => v.serves_mocktails)) venueTypes.push('mocktail bars');
+if (safeVenues.some(v => v.serves_kava)) venueTypes.push('kava lounges');
+if (safeVenues.some(v => v.serves_thc)) venueTypes.push('THC venues');
+if (safeVenues.some(v => v.is_alcohol_free)) venueTypes.push('alcohol-free bars');
+const venueTypeList = venueTypes.length > 0 ? venueTypes.slice(0, 3).join(', ') : 'mocktail bars, kava lounges';
+
+const cityMetaDesc = cityData?.meta_description || `Explore ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Find ${venueTypeList} & sober-friendly venues for mindful nightlife and socializing.`;
 
 // Calculate venue type counts for structured data
 const kavaCount = safeVenues.filter(v => v.serves_kava).length;
@@ -419,7 +431,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 })} />
 </script>
 
-<Layout title={`${safeVenues.length} Alcohol-Free Bars in ${cityName}, ${stateName} | Downtown Dry`} description={cityMetaDesc}>
+<Layout title={`${safeVenues.length} Alcohol-Free Bars in ${cityName}, ${shortStateName} | Downtown Dry`} description={cityMetaDesc}>
   <main id="main-content" class="container mx-auto px-4 py-8">
     <div class="max-w-6xl mx-auto">
       <!-- Breadcrumb -->

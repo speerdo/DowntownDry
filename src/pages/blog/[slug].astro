@@ -44,9 +44,9 @@ const colorClass = categoryColors[post.data.category] || 'primary-700';
     </div>
     
     <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class={`inline-block text-sm text-${colorClass} font-semibold mb-4 uppercase tracking-wide bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full`}>
+      <a href={`/blog/category/${post.data.category}/`} class={`inline-block text-sm text-${colorClass} font-semibold mb-4 uppercase tracking-wide bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full hover:bg-white/20 transition-colors`}>
         {post.data.category.replace('-', ' ')}
-      </div>
+      </a>
       <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight">
         {post.data.title}
       </h1>
