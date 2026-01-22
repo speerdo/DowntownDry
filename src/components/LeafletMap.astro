@@ -1,0 +1,265 @@
+---
+export interface Props {
+  venues: Array<{
+    id: string;
+    name: string;
+    address?: string;
+    city?: string;
+    state?: string;
+    zip_code?: string;
+    latitude?: number;
+    longitude?: number;
+    venue_type?: string;
+    category?: string;
+    serves_mocktails?: boolean;
+    serves_kava?: boolean;
+    is_alcohol_free?: boolean;
+  }>;
+  center?: {
+    lat: number;
+    lng: number;
+  };
+  zoom?: number;
+  height?: string;
+}
+
+const { venues, center, zoom = 12, height = "400px" } = Astro.props;
+
+// Calculate center from venues with coordinates if not provided
+const venuesWithCoords = venues.filter(venue => venue.latitude && venue.longitude);
+const mapCenter = center || (venuesWithCoords.length > 0 ? {
+  lat: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.latitude!), 0) / venuesWithCoords.length,
+  lng: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.longitude!), 0) / venuesWithCoords.length
+} : { lat: 39.8283, lng: -98.5795 }); // Center of US as fallback
+
+const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+<div
+  id={mapId}
+  data-map-id={mapId}
+  style={`height: ${height}; width: 100%;`}
+  class="rounded-lg shadow-lg bg-gray-100 flex items-center justify-center"
+  role="application"
+  aria-label={`Interactive map showing ${venues.length} alcohol-free venue${venues.length === 1 ? '' : 's'}`}
+  tabindex="0"
+>
+  <div class="text-gray-500" aria-live="polite">Loading map...</div>
+</div>
+
+<style>
+  /* Custom marker styles for Leaflet */
+  .leaflet-marker-icon {
+    background: transparent;
+    border: none;
+  }
+
+  /* Popup styling to match Google Maps info window */
+  .leaflet-popup-content-wrapper {
+    border-radius: 8px;
+    padding: 0;
+  }
+
+  .leaflet-popup-content {
+    margin: 0;
+  }
+</style>
+
+<script define:vars={{ venues, mapCenter, zoom, mapId }}>
+  console.log('LeafletMap loaded:', venues.length, 'venues');
+
+  // Store map instance and markers globally for updates
+  const mapStoreKey = `mapStore_${mapId.replace(/-/g, '_')}`;
+  window[mapStoreKey] = {
+    map: null,
+    markers: [],
+    initialized: false
+  };
+
+  // Function to create SVG marker icon
+  function createMarkerIcon(pinColor) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" viewBox="0 0 24 36">
+      <path d="M12,0C5.37,0 0,5.37 0,12c0,9 12,24 12,24s12,-15 12,-24C24,5.37 18.63,0 12,0z" fill="${pinColor}" stroke="#FFFFFF" stroke-width="2"/>
+      <circle cx="12" cy="12" r="5" fill="#FFFFFF"/>
+    </svg>`;
+
+    return L.divIcon({
+      html: svg,
+      className: 'leaflet-marker-icon',
+      iconSize: [30, 45],
+      iconAnchor: [15, 45],
+      popupAnchor: [0, -45]
+    });
+  }
+
+  // Function to get marker color based on venue type
+  function getMarkerColor(venue) {
+    if (venue.serves_kava) {
+      return '#7C3AED'; // Purple for kava (highest priority)
+    } else if (venue.serves_mocktails) {
+      return '#2563EB'; // Blue for mocktails
+    } else if (venue.is_alcohol_free) {
+      return '#EA580C'; // Orange for fully alcohol-free
+    }
+    return '#059669'; // Default green for THC cocktails (other venues)
+  }
+
+  // Function to create popup content
+  function createPopupContent(venue) {
+    return `
+      <div class="p-3 max-w-xs">
+        <h3 class="font-bold text-lg mb-2">${venue.name}</h3>
+        ${venue.address ? `<p class="text-sm text-gray-600 mb-2">${venue.address}</p>` : ''}
+        <div class="flex flex-wrap gap-1 mb-2">
+          ${venue.venue_type ? `<span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">${venue.venue_type}</span>` : ''}
+          ${venue.is_alcohol_free ? `<span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Alcohol-Free</span>` : ''}
+          ${venue.serves_mocktails ? `<span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Mocktails</span>` : ''}
+          ${venue.serves_kava ? `<span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Kava</span>` : ''}
+        </div>
+      </div>
+    `;
+  }
+
+  // Make initMap globally accessible
+  window[`initMap_${mapId.replace(/-/g, '_')}`] = function() {
+    console.log('Initializing Leaflet map', mapId);
+
+    const mapElement = document.getElementById(mapId);
+    if (!mapElement) {
+      console.error('Map element not found:', mapId);
+      return;
+    }
+
+    // Check if Leaflet is loaded
+    if (typeof L === 'undefined') {
+      console.error('Leaflet not loaded');
+      return;
+    }
+
+    // Clear loading message
+    mapElement.innerHTML = '';
+
+    // Initialize map
+    const map = L.map(mapId, {
+      center: [mapCenter.lat, mapCenter.lng],
+      zoom: zoom
+    });
+
+    // Add OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      maxZoom: 19
+    }).addTo(map);
+
+    // Store references
+    window[mapStoreKey].map = map;
+    window[mapStoreKey].initialized = true;
+
+    // Process venues and create markers (only venues with coordinates)
+    const markers = [];
+
+    venues.forEach(venue => {
+      if (venue.latitude && venue.longitude) {
+        const lat = Number(venue.latitude);
+        const lng = Number(venue.longitude);
+        const pinColor = getMarkerColor(venue);
+
+        const marker = L.marker([lat, lng], {
+          icon: createMarkerIcon(pinColor),
+          title: venue.name
+        }).addTo(map);
+
+        marker.bindPopup(createPopupContent(venue));
+        markers.push(marker);
+      }
+      // Skip venues without coordinates - no geocoding to reduce API costs
+    });
+
+    // Fit map bounds to show all markers
+    if (markers.length > 1) {
+      const group = L.featureGroup(markers);
+      map.fitBounds(group.getBounds(), { padding: [20, 20] });
+    } else if (markers.length === 1) {
+      map.setView(markers[0].getLatLng(), 15);
+    }
+
+    // Store initial markers
+    window[mapStoreKey].markers = markers;
+  };
+
+  // Function to update map with new venues
+  window[`updateMap_${mapId.replace(/-/g, '_')}`] = function(newVenues) {
+    const store = window[mapStoreKey];
+    if (!store || !store.initialized || !store.map) {
+      console.warn('Map not initialized yet, cannot update');
+      return;
+    }
+
+    // Clear existing markers
+    store.markers.forEach(marker => marker.remove());
+    store.markers = [];
+
+    // Recalculate center from new venues
+    const venuesWithCoords = newVenues.filter(venue => venue.latitude && venue.longitude);
+    const newCenter = venuesWithCoords.length > 0 ? {
+      lat: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.latitude), 0) / venuesWithCoords.length,
+      lng: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.longitude), 0) / venuesWithCoords.length
+    } : mapCenter;
+
+    // Process new venues and create markers (only venues with coordinates)
+    const markers = [];
+
+    newVenues.forEach(venue => {
+      if (venue.latitude && venue.longitude) {
+        const lat = Number(venue.latitude);
+        const lng = Number(venue.longitude);
+        const pinColor = getMarkerColor(venue);
+
+        const marker = L.marker([lat, lng], {
+          icon: createMarkerIcon(pinColor),
+          title: venue.name
+        }).addTo(store.map);
+
+        marker.bindPopup(createPopupContent(venue));
+        markers.push(marker);
+      }
+      // Skip venues without coordinates - no geocoding to reduce API costs
+    });
+
+    // Store new markers
+    store.markers = markers;
+
+    // Fit bounds
+    if (markers.length > 1) {
+      const group = L.featureGroup(markers);
+      store.map.fitBounds(group.getBounds(), { padding: [20, 20] });
+    } else if (markers.length === 1) {
+      store.map.setView(markers[0].getLatLng(), 15);
+    } else if (markers.length === 0) {
+      // If no markers, reset to original center
+      store.map.setView([newCenter.lat, newCenter.lng], zoom);
+    }
+  };
+
+  // Load Leaflet JS if not already loaded
+  if (typeof L === 'undefined') {
+    console.log('Loading Leaflet JS');
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.onload = function() {
+      console.log('Leaflet loaded, initializing map');
+      window[`initMap_${mapId.replace(/-/g, '_')}`]();
+    };
+    script.onerror = function() {
+      console.error('Failed to load Leaflet');
+    };
+    document.head.appendChild(script);
+  } else {
+    console.log('Leaflet already loaded, initializing map');
+    window[`initMap_${mapId.replace(/-/g, '_')}`]();
+  }
+</script>

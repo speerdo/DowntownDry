@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import GoogleMap from '../../../components/GoogleMap.astro';
+import LeafletMap from '../../../components/LeafletMap.astro';
 import { createClient } from '@supabase/supabase-js';
 
 // Default descriptions for cities without database content
@@ -569,8 +569,8 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
             <div class="xl:col-span-3">
               <div class="mb-6">
                 <h2 class="text-2xl font-semibold text-gray-900 mb-4">Map View</h2>
-                <GoogleMap 
-                  venues={safeVenues} 
+                <LeafletMap
+                  venues={safeVenues}
                   height="500px"
                   zoom={13}
                 />
@@ -1003,7 +1003,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
         <div class="text-center py-12 bg-gray-50 rounded-lg">
           <p class="text-gray-500 mb-4">No venues found in {cityName} yet.</p>
           <a 
-            href="/contact" 
+            href="/contact/" 
             class="text-indigo-600 hover:text-indigo-700 font-medium"
           >
             Know of a venue? Let us know →
