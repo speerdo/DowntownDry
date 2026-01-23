@@ -251,3 +251,5 @@ A complex fall mocktail that mimics the depth of an Old Fashioned.
 5. Add cinnamon stick
 
 Remember, the key to a great mocktail is treating it with the same respect and attention to detail as any other craft cocktail. These recipes prove that alcohol-free doesn't mean flavor-free.
+
+Ready to try these drinks out in the wild? Check out our [guide to navigating alcohol-free nightlife](/blog/alcohol-free-nightlife-tips/) or learn about [how alcohol-free venues are building community](/blog/alcohol-free-community/).

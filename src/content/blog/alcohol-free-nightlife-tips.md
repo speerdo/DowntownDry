@@ -48,10 +48,11 @@ Walking into a bar or restaurant today, you'll find an impressive array of optio
 
 **What to Try:**
 
-- Craft mocktails (see our mocktail recipes for inspiration!)
+- [Craft mocktails](/blog/10-mocktail-recipes/) (see our mocktail recipes for inspiration!)
 - Premium non-alcoholic beers from brands like Athletic Brewing or Heineken 0.0
 - Botanical-infused sodas and tonics
 - Kombucha and fermented beverages
+- [Kava drinks](/blog/kava-culture-rise/) for relaxation
 - Specialty coffee drinks
 - Fresh-pressed juices with artisanal mixers
 
@@ -99,7 +100,7 @@ Begin your alcohol-free social journey with manageable steps:
 
 ### Find Your People
 
-Building a supportive community is crucial, but it's about more than just finding other non-drinkers. It's about connecting with people who share your values, interests, and desire for authentic connections. The beautiful thing about seeking out alcohol-free communities is that they tend to attract people who are intentional about how they spend their time and energy – people who are often on their own journey of personal growth and discovery.
+[Building a supportive community](/blog/building-alcohol-free-community/) is crucial, but it's about more than just finding other non-drinkers. It's about connecting with people who share your values, interests, and desire for authentic connections. The beautiful thing about seeking out alcohol-free communities is that they tend to attract people who are intentional about how they spend their time and energy – people who are often on their own journey of personal growth and discovery.
 
 - Join local alcohol-free meetup groups
 - Attend dedicated sober events
@@ -137,7 +138,7 @@ What makes these modern alternatives so special is their focus on active partici
 
 1. **Silent Discos** - Dance the night away with headphones, choosing your own music while sharing the dance floor with others. It's a uniquely intimate yet communal experience that often leads to more laughs and connections than traditional clubs.
 
-2. **Late-Night Cafes** - These aren't your typical coffee shops. Modern late-night cafes often feature carefully crafted atmospheres, specialty drinks, and programming that rivals any bar's entertainment lineup. They're perfect for both deep conversations and light socializing.
+2. **Late-Night Cafes** - These aren't your typical coffee shops. Modern late-night cafes often feature carefully crafted atmospheres, specialty drinks, and programming that rivals any bar's entertainment lineup. They're perfect for both deep conversations and light socializing. Check out our [Austin coffee guide](/blog/austin-coffee-guide/) for inspiration.
 
 3. **Art Nights** - Whether it's painting, pottery, or other crafts, these sessions combine creativity with socializing. There's something about creating together that breaks down social barriers and leads to natural, easy conversation.
 

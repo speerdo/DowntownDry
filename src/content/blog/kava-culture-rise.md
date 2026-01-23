@@ -14,7 +14,7 @@ In the heart of bustling American cities, a centuries-old tradition from the Pac
 
 ## Important Safety Information
 
-**Before we explore the cultural aspects of kava, it's crucial to understand some important safety considerations. Never drive or operate machinery after consuming kava, as it can affect motor skills and reaction time. Avoid mixing kava with alcohol or other substances that affect the liver. If you have liver conditions, are pregnant or nursing, or take any medications, consult your healthcare provider before trying kava. These aren't just precautions – they're essential steps for ensuring a safe and positive experience.**
+**Before we explore the cultural aspects of kava, it's crucial to understand some important safety considerations. For an in-depth look at the [science behind kava](/blog/science-behind-kava/), see our comprehensive guide. Never drive or operate machinery after consuming kava, as it can affect motor skills and reaction time. Avoid mixing kava with alcohol or other substances that affect the liver. If you have liver conditions, are pregnant or nursing, or take any medications, consult your healthcare provider before trying kava. These aren't just precautions – they're essential steps for ensuring a safe and positive experience.**
 
 ## Traditional Roots, Modern Appeal
 
@@ -40,7 +40,7 @@ The world of kava is rich with variety, each type offering its own unique charac
 
 What makes kava culture particularly special in today's world is its emphasis on community building. Unlike alcohol, which can sometimes create artificial bonds that fade with sobriety, kava tends to facilitate genuine connections and meaningful conversations. The effects of kava – a clear-headed calm combined with gentle relaxation – create an ideal environment for authentic social interaction.
 
-In urban kava bars, you'll find people from all walks of life: professionals unwinding after work, students seeking a quiet place to socialize, individuals in recovery looking for supportive community spaces, and curious newcomers exploring alternatives to traditional nightlife. This diversity creates rich opportunities for cross-cultural understanding and community building.
+In urban kava bars, you'll find people from all walks of life: professionals unwinding after work, students seeking a quiet place to socialize, individuals in recovery looking for [supportive community spaces](/blog/building-alcohol-free-community/), and curious newcomers exploring [alternatives to traditional nightlife](/blog/alcohol-free-nightlife-tips/). This diversity creates rich opportunities for cross-cultural understanding and community building.
 
 Many kava bars host regular events that strengthen these community bonds:
 

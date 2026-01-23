@@ -115,7 +115,7 @@ Venue staff are there to help ensure your experience is both safe and enjoyable.
 
 ## Looking Forward
 
-The future of Delta THC social spaces is being shaped by the careful balance of accessibility and responsibility. As these venues continue to evolve, they're developing increasingly sophisticated approaches to ensuring both safety and enjoyment. This evolution isn't happening in isolation – it's a collaborative effort between venue operators, consumers, and regulatory authorities.
+The future of Delta THC social spaces is being shaped by the careful balance of accessibility and responsibility. These venues join other alcohol alternatives like [kava bars](/blog/kava-culture-rise/) and [mocktail lounges](/blog/alcohol-free-community/) in creating inclusive social spaces. As these venues continue to evolve, they're developing increasingly sophisticated approaches to ensuring both safety and enjoyment. This evolution isn't happening in isolation – it's a collaborative effort between venue operators, consumers, and regulatory authorities.
 
 The success of these spaces relies heavily on maintaining high standards in several key areas. Safety protocols must be regularly reviewed and updated to reflect new understanding and best practices. Staff training needs to evolve alongside the industry, incorporating new knowledge about products, effects, and safety measures. Perhaps most importantly, these venues must maintain strong connections with their communities, actively seeking feedback and adapting their practices to better serve their patrons.
 
