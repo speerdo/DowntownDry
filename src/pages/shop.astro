@@ -8,7 +8,7 @@ const url = new URL(Astro.request.url);
 const subscribed = url.searchParams.get('subscribed') === 'true';
 ---
 
-<Layout title="Shop NA Beer, Mocktails & Alcohol-Free Drinks | Downtown Dry" description="Shop craft non-alcoholic beer, premium mocktails & NA spirits from Better Rhodes (#1 rated retailer). Free shipping on orders $125+. Subscription boxes available.">
+<Layout title="Shop NA Beer, Mocktails & Alcohol-Free Drinks | Downtown Dry" description="Shop craft NA beer, mocktails & alcohol-free spirits from Better Rhodes. Free shipping on $125+ orders. Subscriptions available.">
   
   {subscribed && (
     <div id="success-toast" class="fixed top-4 right-4 z-50 animate-slide-in" role="status" aria-live="polite">

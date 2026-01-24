@@ -5,7 +5,7 @@ import { createClient } from '@supabase/supabase-js';
 
 // Default descriptions for cities without database content
 const DEFAULT_DESCRIPTION = `Discover the growing alcohol-free scene in this city. From craft mocktail bars to kava lounges, find the perfect spot for mindful drinking and sober socializing.`;
-const DEFAULT_META_DESC = 'Find alcohol-free bars and sober venues in this city. Your guide to mocktail bars, kava lounges & mindful nightlife.';
+const DEFAULT_META_DESC = 'Find alcohol-free bars, kava lounges & mocktail spots in this city. Your complete guide to sober nightlife and mindful socializing.';
 
 export async function getStaticPaths() {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
@@ -376,7 +376,7 @@ if (safeVenues.some(v => v.serves_thc)) venueTypes.push('THC venues');
 if (safeVenues.some(v => v.is_alcohol_free)) venueTypes.push('alcohol-free bars');
 const venueTypeList = venueTypes.length > 0 ? venueTypes.slice(0, 3).join(', ') : 'mocktail bars, kava lounges';
 
-const cityMetaDesc = cityData?.meta_description || `Explore ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Find ${venueTypeList} & sober-friendly venues for mindful nightlife and socializing.`;
+const cityMetaDesc = cityData?.meta_description || `Discover ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Find ${venueTypeList} & more sober-friendly venues for mindful nightlife.`;
 
 // Calculate venue type counts for structured data
 const kavaCount = safeVenues.filter(v => v.serves_kava).length;
