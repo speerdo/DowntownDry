@@ -28,6 +28,6 @@ export default defineConfig({
   output: 'static',
   trailingSlash: 'always',
   image: {
-    domains: ['images.unsplash.com', 'media.istockphoto.com', 'images.pexels.com'],
+    domains: ['images.unsplash.com', 'media.istockphoto.com', 'images.pexels.com', 'm.media-amazon.com'],
   },
 });

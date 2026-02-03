@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import LeafletMap from '../../../components/LeafletMap.astro';
 import { createClient } from '@supabase/supabase-js';
 
@@ -790,9 +791,11 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                       >
                         <!-- Venue Image -->
                         <div class="relative h-80 bg-gradient-to-br from-indigo-100 to-purple-100">
-                          <img 
+                          <Image 
                             src={getVenueImage(venue)} 
                             alt={`${venue.name} - ${venue.venue_type} in ${venue.city}`}
+                            width={400}
+                            height={320}
                             class="w-full h-full object-cover object-top"
                             loading="lazy"
                           />

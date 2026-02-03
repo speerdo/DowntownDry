@@ -20,7 +20,7 @@ featured: false
 
 ### 24-Hour Havens
 
-#### [Epoch Coffee](https://epochcoffee.com/){target="\_blank" rel="noopener noreferrer"}
+#### <a href="https://epochcoffee.com/" target="_blank" rel="noopener noreferrer">Epoch Coffee</a>
 
 **Hours:** 24/7
 **Vibe:** Laid-back, creative workspace meets social hub
@@ -28,7 +28,7 @@ featured: false
 
 A true Austin institution, Epoch has been serving the community around the clock since 2006. Whether you're pulling an all-nighter or seeking a calm evening spot, their North Loop location offers a welcoming atmosphere with plenty of indoor and outdoor seating.
 
-#### [Buzz Mill](https://buzzmillcoffee.com/){target="\_blank" rel="noopener noreferrer"}
+#### <a href="https://buzzmillcoffee.com/" target="_blank" rel="noopener noreferrer">Buzz Mill</a>
 
 **Hours:** 24/7
 **Vibe:** Rustic cabin meets urban oasis
@@ -38,7 +38,7 @@ With its log cabin aesthetic and spacious outdoor area, Buzz Mill creates a uniq
 
 ### East Austin Scene
 
-#### [Figure 8 Coffee Purveyors](https://www.figure8coffeepurveyors.com/){target="\_blank" rel="noopener noreferrer"}
+#### <a href="https://www.figure8coffeepurveyors.com/" target="_blank" rel="noopener noreferrer">Figure 8 Coffee Purveyors</a>
 
 **Hours:** 7am-8pm daily
 **Vibe:** Minimalist and focused on craft coffee
@@ -46,7 +46,7 @@ With its log cabin aesthetic and spacious outdoor area, Buzz Mill creates a uniq
 
 While not open super late, Figure 8 offers a perfect pre-evening spot to start your night out. Their attention to detail in coffee preparation has made them a favorite among serious coffee enthusiasts.
 
-#### [Radio Coffee & Beer](https://radiocoffeeandbeer.com/){target="\_blank" rel="noopener noreferrer"}
+#### <a href="https://radiocoffeeandbeer.com/" target="_blank" rel="noopener noreferrer">Radio Coffee & Beer</a>
 
 **Hours:** 7am-12am daily
 **Vibe:** Relaxed indoor/outdoor space with live music
@@ -56,7 +56,7 @@ Combining great coffee with a beer garden atmosphere, Radio is perfect for those
 
 ### South Austin Gems
 
-#### [Cosmic Coffee + Beer Garden](https://www.cosmiccoffee.beer/){target="\_blank" rel="noopener noreferrer"}
+#### <a href="https://www.cosmiccoffee.beer/" target="_blank" rel="noopener noreferrer">Cosmic Coffee + Beer Garden</a>
 
 **Hours:** 7am-12am daily
 **Vibe:** Lush garden oasis with multiple food trucks

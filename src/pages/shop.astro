@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import laguIpnaImage from '../assets/LagunitasIPNA.webp';
 import peroniNaImage from '../assets/Peroni0.0.webp';
 import beerBoxImage from '../assets/beer-box.webp';
@@ -70,7 +71,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- NA Beers & Mocktails -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="relative overflow-hidden h-80">
-            <img src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Non-alcoholic beers and cocktails" class="w-full h-full object-cover">
+            <Image src="https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Non-alcoholic beers and cocktails" width={800} height={320} class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/50 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center text-white">
@@ -123,7 +124,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
             <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">COMING SOON</span>
           </div>
           <div class="relative overflow-hidden h-80 opacity-75">
-            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delta THC cocktails" class="w-full h-full object-cover">
+            <Image src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Delta THC cocktails" width={800} height={320} class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-green-600/90 via-green-600/50 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center text-white">
@@ -170,7 +171,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Kava Products -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
           <div class="relative overflow-hidden h-80">
-            <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kava products" class="w-full h-full object-cover">
+            <Image src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kava products" width={800} height={320} class="w-full h-full object-cover" />
             <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/50 to-transparent"></div>
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="text-center text-white">
@@ -238,7 +239,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Lagunitas IPNA -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src={laguIpnaImage.src} alt="Lagunitas IPNA Non-Alcoholic IPA 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src={laguIpnaImage} alt="Lagunitas IPNA Non-Alcoholic IPA 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-primary-700 text-white px-3 py-1 rounded-full text-sm font-medium">&lt;0.5% ABV</span>
             </div>
@@ -264,7 +265,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Peroni Non-Alcoholic -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src={peroniNaImage.src} alt="Peroni Non-Alcoholic 0.0 Brew 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src={peroniNaImage} alt="Peroni Non-Alcoholic 0.0 Brew 6-pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">0.0% ABV</span>
             </div>
@@ -291,7 +292,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Better Rhodes Beer Box -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src={beerBoxImage.src} alt="Better Rhodes Insider Beer Box Monthly Subscription" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src={beerBoxImage} alt="Better Rhodes Insider Beer Box Monthly Subscription" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-accent-500 text-white px-3 py-1 rounded-full text-sm font-medium">Monthly Club</span>
             </div>
@@ -334,7 +335,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- MuseBeam Kava Calming Drink Mix -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src="https://m.media-amazon.com/images/I/71uYHcwQ1CL._AC_SL1500_.jpg" alt="MuseBeam Kava Calming Drink Mix" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src="https://m.media-amazon.com/images/I/71uYHcwQ1CL._AC_SL1500_.jpg" alt="MuseBeam Kava Calming Drink Mix" width={500} height={500} class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Non-Alcoholic</span>
             </div>
@@ -360,7 +361,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Coral Sea Kava Instant Kava Tea Powder -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src="https://m.media-amazon.com/images/I/61rHSUdeyML._AC_SL1500_.jpg" alt="Coral Sea Kava Instant Kava Tea Powder Vanuatu Noble Kava Root" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src="https://m.media-amazon.com/images/I/61rHSUdeyML._AC_SL1500_.jpg" alt="Coral Sea Kava Instant Kava Tea Powder Vanuatu Noble Kava Root" width={500} height={500} class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Instant Powder</span>
             </div>
@@ -386,7 +387,7 @@ const subscribed = url.searchParams.get('subscribed') === 'true';
         <!-- Bashi Kava Drink Experience -->
         <div class="bg-white rounded-3xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
           <div class="relative overflow-hidden h-80">
-            <img src="https://m.media-amazon.com/images/I/81e3sBxz+iL._SX679_PIbundle-6,TopRight,0,0_AA679SH20_.jpg" alt="Bashi Kava Drink Experience Peach Mango 6 Pack" class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300">
+            <Image src="https://m.media-amazon.com/images/I/81e3sBxz+iL._SX679_PIbundle-6,TopRight,0,0_AA679SH20_.jpg" alt="Bashi Kava Drink Experience Peach Mango 6 Pack" width={500} height={500} class="w-full h-full object-contain bg-neutral-50 group-hover:scale-105 transition-transform duration-300" />
             <div class="absolute top-4 left-4">
               <span class="bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">Ready to Drink</span>
             </div>

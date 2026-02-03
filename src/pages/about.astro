@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import { createClient } from '@supabase/supabase-js';
 
 const url = new URL(Astro.request.url);
@@ -144,17 +145,15 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
   <section class="relative py-24 overflow-hidden" role="banner" aria-label="About Downtown Dry hero section">
     <!-- Background Image -->
     <div class="absolute inset-0">
-      <img 
+      <Image
         src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-        srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=640&q=80 640w,
-                https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=960&q=80 960w,
-                https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80 1200w"
-        sizes="100vw"
         alt="Modern restaurant interior with people socializing"
+        width={1200}
+        height={800}
         class="w-full h-full object-cover"
         loading="eager"
         fetchpriority="high"
-      >
+      />
       <!-- Dark overlay for text readability -->
       <div class="absolute inset-0 bg-gradient-to-br from-neutral-900/85 via-neutral-900/75 to-neutral-800/85"></div>
     </div>
@@ -231,7 +230,7 @@ const thcVenues = allVenues.filter(v => v.serves_thc).length;
             alt="Adam Speer, founder of Downtown Dry, and his partner Kat" 
             class="relative rounded-3xl shadow-2xl w-full h-96 object-cover object-top"
             loading="lazy"
-          >
+          />
         </div>
       </div>
     </div>
