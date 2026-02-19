@@ -1,6 +1,5 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { Image } from 'astro:assets';
 import LeafletMap from '../../../components/LeafletMap.astro';
 import { createClient } from '@supabase/supabase-js';
 
@@ -11,23 +10,25 @@ const DEFAULT_META_DESC = 'Find alcohol-free bars, kava lounges & mocktail spots
 export async function getStaticPaths() {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
   const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+  const supabaseServiceKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY;
   const supabase = createClient(supabaseUrl, supabaseKey);
+  const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
   // Get active states from database (controlled via is_active flag)
   const { data: activeStatesData } = await supabase
     .from('states')
     .select('state_name')
     .eq('is_active', true);
-  
+
   const ACTIVE_STATES = activeStatesData?.map(s => s.state_name) || [];
 
   // Get all unique city-state combinations from active venues
   let allVenues = [];
   let from = 0;
   const batchSize = 1000;
-  
+
   while (true) {
-    const { data: batch } = await supabase
+    const { data: batch } = await supabaseAdmin
       .from('venues')
       .select('city, state')
       .eq('data_complete', true)  // Only active venues
@@ -69,10 +70,12 @@ const { stateName, cityName } = Astro.props;
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabaseServiceKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseAdmin = createClient(supabaseUrl, supabaseServiceKey);
 
 // Get city info from cities table - handle missing city data gracefully
-const { data: cityDataArray, error: cityError } = await supabase
+const { data: cityDataArray, error: cityError } = await supabaseAdmin
   .from('cities')
   .select('*')
   .eq('city_name', cityName)
@@ -82,7 +85,7 @@ const { data: cityDataArray, error: cityError } = await supabase
 const cityData = cityDataArray && cityDataArray.length > 0 ? cityDataArray[0] : null;
 
 // Get all active venues for this city
-const { data: venues, error: venuesError } = await supabase
+const { data: venues, error: venuesError } = await supabaseAdmin
   .from('venues')
   .select('*')
   .eq('data_complete', true)  // Only active venues
@@ -207,6 +210,11 @@ function getVenueImage(venue: any) {
   ];
   const imageId = defaultImages[imageIndex % defaultImages.length];
   return `https://images.unsplash.com/${imageId}?auto=format&fit=crop&w=400&h=300&q=80`;
+}
+
+// Returns the type-based fallback image (ignoring venue.image_url) for use in onerror handlers
+function getVenueFallbackImage(venue: any): string {
+  return getVenueImage({ ...venue, image_url: null });
 }
 
 function generateVenueDescription(venue: any) {
@@ -458,6 +466,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                 class="w-full h-full object-cover"
                 loading="eager"
                 fetchpriority="high"
+                onerror={`this.onerror=null;this.src='${getCityImage(cityName, stateName)}'`}
               />
               <div class="absolute inset-0 bg-primary-700/60"></div>
             </div>
@@ -791,13 +800,14 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                       >
                         <!-- Venue Image -->
                         <div class="relative h-80 bg-gradient-to-br from-indigo-100 to-purple-100">
-                          <Image 
-                            src={getVenueImage(venue)} 
+                          <img
+                            src={getVenueImage(venue)}
                             alt={`${venue.name} - ${venue.venue_type} in ${venue.city}`}
                             width={400}
                             height={320}
                             class="w-full h-full object-cover object-top"
                             loading="lazy"
+                            onerror={`this.onerror=null;this.src='${getVenueFallbackImage(venue)}'`}
                           />
                           <div class="absolute top-4 left-4">
                             {venue.rating && venue.rating >= 4.5 && (

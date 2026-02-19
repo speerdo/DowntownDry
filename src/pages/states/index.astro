@@ -4,7 +4,15 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
 const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabaseServiceKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY;
+
+// [states page] Debug: env at build/dev time (output: static = runs at build)
+console.log('[states page] PUBLIC_SUPABASE_URL present:', Boolean(supabaseUrl), typeof supabaseUrl);
+console.log('[states page] PUBLIC_SUPABASE_ANON_KEY present:', Boolean(supabaseKey), typeof supabaseKey);
+
+// Anon client for public tables (states), service role client for venues (RLS bypassed server-side)
+const supabase = createClient(supabaseUrl ?? '', supabaseKey ?? '');
+const supabaseAdmin = createClient(supabaseUrl ?? '', supabaseServiceKey ?? '');
 
 // Get active states from database (soft launch control via is_active flag)
 const { data: activeStatesData, error: statesError } = await supabase
@@ -12,48 +20,91 @@ const { data: activeStatesData, error: statesError } = await supabase
   .select('state_name, state_abbr, image_url')
   .eq('is_active', true);
 
+console.log('[states page] states fetch - error:', statesError?.message ?? null, '| data count:', activeStatesData?.length ?? 0);
+if (activeStatesData?.length) {
+  console.log('[states page] active state names:', activeStatesData.map(s => s.state_name));
+}
+
 if (statesError) {
-  console.error('Error fetching active states:', statesError);
+  console.error('[states page] Error fetching active states:', statesError);
 }
 
 const ACTIVE_STATE_NAMES = activeStatesData?.map(s => s.state_name) || [];
+const ACTIVE_STATE_ABBREVS = activeStatesData?.map(s => s.state_abbr) || [];
+// Match venues whether they store full name ("California") or abbreviation ("CA")
+const VENUE_STATE_FILTER = [...new Set([...ACTIVE_STATE_NAMES, ...ACTIVE_STATE_ABBREVS])];
+console.log('[states page] ACTIVE_STATE_NAMES length:', ACTIVE_STATE_NAMES.length, ACTIVE_STATE_NAMES.length ? '(will filter venues by state name or abbr)' : '(will fetch all venues with state)');
 
 // Get all venues grouped by state - handle pagination properly
+// When no active states are configured (e.g. states table empty), fetch all venues with a state
+// so the page still shows states that have venues instead of "No states found"
 let allVenues: any[] = [];
 let from = 0;
 const batchSize = 1000;
+let batchNumber = 0;
 
 while (true) {
-  const { data: batch, error: batchError } = await supabase
+  batchNumber++;
+  let query = supabaseAdmin
     .from('venues')
     .select('id, city, state, serves_mocktails, serves_kava, serves_thc, is_alcohol_free, rating')
     .eq('data_complete', true)  // Only show active venues
     .not('state', 'is', null)
-    .in('state', ACTIVE_STATE_NAMES)
     .range(from, from + batchSize - 1);
-  
+
+  if (VENUE_STATE_FILTER.length > 0) {
+    query = query.in('state', VENUE_STATE_FILTER);
+  }
+
+  const { data: batch, error: batchError } = await query;
+
+  if (batchNumber === 1) {
+    console.log('[states page] first venues batch - error:', batchError?.message ?? null, '| batch length:', batch?.length ?? 0);
+    if (batch?.length && batch[0]) {
+      console.log('[states page] sample venue state value:', batch[0].state, '| city:', batch[0].city);
+    }
+    // If still no venues, run a diagnostic: fetch a few venues without filters to see what's in the DB
+    if (!batch?.length) {
+      const { data: diag } = await supabaseAdmin.from('venues').select('state, data_complete').not('state', 'is', null).limit(3);
+      console.log('[states page] diagnostic (any venue with state):', diag?.length ?? 0, 'rows', diag ? '| sample state/data_complete: ' + diag.map((r: any) => `${r.state}/${r.data_complete}`).join(', ') : '');
+    }
+  }
+
   if (batchError) {
-    console.error('Error fetching batch:', batchError);
+    console.error('[states page] Error fetching batch:', batchError);
     break;
   }
-  
+
   if (!batch || batch.length === 0) break;
   allVenues.push(...batch);
-  
+
   if (batch.length < batchSize) break; // Last batch
   from += batchSize;
 }
 
+console.log('[states page] total venues fetched:', allVenues.length, '| unique states in data:', [...new Set(allVenues.map(v => v.state))]);
+
 const venues = allVenues;
 const error = null;
+
+// Map state abbreviation -> full name so we group "CA" and "California" under "California"
+const stateAbbrToName: Record<string, string> = {};
+if (activeStatesData?.length) {
+  for (const s of activeStatesData) {
+    stateAbbrToName[s.state_abbr] = s.state_name;
+  }
+}
+function toStateName(venueState: string): string {
+  return stateAbbrToName[venueState] ?? venueState;
+}
 
 if (error) {
   console.error('Error fetching venues:', error);
 }
 
-// Group by state and count venues with details
+// Group by state (normalized to full name) and count venues with details
 const stateData = venues?.reduce((acc, venue) => {
-  const state = venue.state;
+  const state = toStateName(venue.state);
   if (!acc[state]) {
     acc[state] = {
       name: state,
@@ -128,6 +179,8 @@ const processedStateData = Object.fromEntries(
 );
 
 const sortedStates = Object.values(processedStateData).sort((a, b) => a.name.localeCompare(b.name));
+console.log('[states page] sortedStates.length:', sortedStates.length, sortedStates.length ? '| names: ' + sortedStates.map(s => s.name).join(', ') : '(no states to show)');
+
 const topStatesByVenues = [...sortedStates].sort((a, b) => b.venueCount - a.venueCount);
 
 function getStateDescription(state: any) {
