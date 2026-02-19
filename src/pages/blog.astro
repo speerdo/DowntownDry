@@ -15,10 +15,10 @@ const sortedPosts = allPosts.sort((a, b) =>
 // Get featured post (first one marked as featured)
 const featuredPost = sortedPosts.find(post => post.data.featured);
 
-// Get recent posts (excluding featured if it exists)
-const recentPosts = sortedPosts
-  .filter(post => !post.data.featured)
-  .slice(0, 6);
+// Get all posts excluding featured, sorted by date
+const recentPosts = sortedPosts.filter(post => !post.data.featured);
+const INITIAL_VISIBLE = 6;
+const LOAD_MORE_COUNT = 6;
 
 // Get categories for the browse section
 const categories = [
@@ -127,12 +127,12 @@ const categories = [
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {recentPosts.map((post) => {
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+        {recentPosts.map((post, index) => {
           // Define category styling
           let categoryClass = 'text-accent-500';
           let categoryText = post.data.category.replace('-', ' ').toUpperCase();
-          
+
           switch(post.data.category) {
             case 'recipes':
               categoryClass = 'text-secondary-500';
@@ -159,9 +159,13 @@ const categories = [
               categoryClass = 'text-pink-600';
               break;
           }
-          
+
           return (
-            <article class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col">
+            <article
+              class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col"
+              data-blog-card
+              style={index >= INITIAL_VISIBLE ? "display:none" : ""}
+            >
               <Image src={post.data.image} alt={post.data.title} width={800} height={448} class="w-full h-56 object-cover block" />
               <div class="p-8 flex-1">
                 <div class={`text-sm ${categoryClass} font-semibold mb-3 uppercase tracking-wide`}>
@@ -185,8 +189,66 @@ const categories = [
           );
         })}
       </div>
+
+      {recentPosts.length > INITIAL_VISIBLE && (
+        <div class="text-center mt-12">
+          <button
+            id="show-more-btn"
+            class="inline-flex items-center gap-2 bg-primary-700 text-white px-8 py-4 rounded-xl font-semibold hover:bg-primary-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+          >
+            SHOW MORE ARTICLES
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <p id="articles-count" class="text-sm text-neutral-500 mt-4">
+            Showing {Math.min(INITIAL_VISIBLE, recentPosts.length)} of {recentPosts.length} articles
+          </p>
+        </div>
+      )}
     </div>
   </section>
+
+  <script define:vars={{ INITIAL_VISIBLE }}>
+    (function() {
+      var LOAD_MORE = 6;
+      var visibleCount = INITIAL_VISIBLE;
+
+      function run() {
+        var cards = Array.from(document.querySelectorAll('[data-blog-card]'));
+        var btn = document.getElementById('show-more-btn');
+        var countEl = document.getElementById('articles-count');
+
+        function updateUI() {
+          if (countEl) {
+            countEl.textContent = visibleCount >= cards.length
+              ? 'Showing all ' + cards.length + ' articles'
+              : 'Showing ' + visibleCount + ' of ' + cards.length + ' articles';
+          }
+          if (btn && visibleCount >= cards.length) {
+            btn.style.display = 'none';
+          }
+        }
+
+        if (btn) {
+          btn.addEventListener('click', function() {
+            var newVisible = Math.min(visibleCount + LOAD_MORE, cards.length);
+            for (var i = visibleCount; i < newVisible; i++) {
+              if (cards[i]) cards[i].style.display = '';
+            }
+            visibleCount = newVisible;
+            updateUI();
+          });
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', run);
+      } else {
+        run();
+      }
+    })();
+  </script>
   
   <!-- Categories -->
   <section class="py-20">
