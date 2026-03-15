@@ -1,12 +1,12 @@
 ---
-title: 'Zebra Striping: The Drinking Pattern That''s Redefining Social Nights Out'
-description: 'If you''re running a venue or just trying to keep your finger on the pulse of where nightlife is headed, this one''s worth paying attention to.'
-author: 'DowntownDry Team'
+title: "Zebra Striping: The Drinking Pattern That's Redefining Social Nights Out"
+description: "If you're running a venue or just trying to keep your finger on the pulse of where nightlife is headed, this one's worth paying attention to."
+author: "DowntownDry Team"
 publishDate: 2026-02-10
-category: 'community'
-tags: ['non-alcoholic', 'wellness', 'community']
-image: 'https://images.pexels.com/photos/7176736/pexels-photo-7176736.jpeg'
-readTime: '8 min read'
+category: "community"
+tags: ["non-alcoholic", "wellness", "community"]
+image: "https://images.pexels.com/photos/7176736/pexels-photo-7176736.jpeg"
+readTime: "8 min read"
 featured: false
 ---
 
@@ -36,7 +36,7 @@ Here's where it gets interesting for anyone in the hospitality game. Zebra strip
 
 **The "designated driver" is becoming obsolete.** When half your table is drinking non-alcoholic options by choice (not obligation) the social dynamic shifts. Nobody's stuck with soda water while everyone else celebrates. The non-drinker isn't an outlier; they're just another guest having a great night.
 
-**Check averages aren't dropping; they're diversifying.** Early fears that non-alcoholic options would cannibalize alcohol sales haven't played out. Venues report that zebra stripers often *extend* their stays. They're not rushing home after two cocktails to avoid overdoing it. They're settling in for the long haul, ordering food, trying multiple drinks, and coming back more often. According to KAM research, **44% of UK customers** say they're more likely to stay for "one for the road" if it can be a non-alcoholic version of their favorite drink.
+**Check averages aren't dropping; they're diversifying.** Early fears that non-alcoholic options would cannibalize alcohol sales haven't played out. Venues report that zebra stripers often _extend_ their stays. They're not rushing home after two cocktails to avoid overdoing it. They're settling in for the long haul, ordering food, trying multiple drinks, and coming back more often. According to KAM research, **44% of UK customers** say they're more likely to stay for "one for the road" if it can be a non-alcoholic version of their favorite drink.
 
 **Staff training matters more than ever.** If your bartenders can't speak confidently about your zero-proof menu, if they default to "we have Sprite" when someone asks for something interesting, you're losing a growing segment of engaged, spend-ready customers. KAM found that **37% of UK adults** have left a venue early or felt disappointed due to poor low and no-alcohol options. That's real money walking out the door. The best venues right now are treating their NA offerings with the same care as their wine list: seasonal rotations, house-made ingredients, proper glassware.
 
@@ -50,7 +50,7 @@ We see the venues that get this right, and they share some DNA:
 
 **Staff who don't make it weird.** No raised eyebrows, no "are you sure?" No defaulting to "it's basically juice." Just: "The smoked rosemary number is excellent tonight."
 
-**Flexible formats.** Some zebra stripers want a full mocktail experience. Others just want a [great NA beer](https://www.betterrhodes.com/products/peroni-non-alcoholic-0-0-brew-6-pack/downtowndry) or a complex sparkling tea. Options at multiple price points and complexity levels keep everyone in the game. If you're looking to explore what's out there, the [range of non-alcoholic options on Amazon](https://amzn.to/3LbEnh2) has expanded dramatically in the past few years.
+**Flexible formats.** Some zebra stripers want a full mocktail experience. Others just want a [great NA beer](https://www.betterrhodes.com/r?id=4lvu4o) or a complex sparkling tea. Options at multiple price points and complexity levels keep everyone in the game. If you're looking to explore what's out there, the [range of non-alcoholic options on Amazon](https://amzn.to/3LbEnh2) has expanded dramatically in the past few years.
 
 ## The Bigger Picture
 
@@ -70,4 +70,4 @@ If you're building a night out and want to zebra stripe it yourself, look for sp
 
 ---
 
-*Have you tried zebra striping on a night out? We'd love to hear about venues that get it right. Drop us a line or tag us in your next sober-curious adventure.*
+_Have you tried zebra striping on a night out? We'd love to hear about venues that get it right. Drop us a line or tag us in your next sober-curious adventure._

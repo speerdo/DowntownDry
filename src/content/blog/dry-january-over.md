@@ -1,12 +1,12 @@
 ---
 title: "Dry January Is Over. Now What?"
 description: "You made it. 31 days without a drink. So why does February feel harder than January ever did?"
-author: 'DowntownDry Team'
+author: "DowntownDry Team"
 publishDate: 2026-02-03
-category: 'tips'
-tags: ['nightlife', 'alcohol-free', 'social tips', 'lifestyle']
-image: 'https://images.pexels.com/photos/32566289/pexels-photo-32566289.jpeg'
-readTime: '6 min read'
+category: "tips"
+tags: ["nightlife", "alcohol-free", "social tips", "lifestyle"]
+image: "https://images.pexels.com/photos/32566289/pexels-photo-32566289.jpeg"
+readTime: "6 min read"
 featured: false
 ---
 
@@ -53,19 +53,19 @@ Let's talk about that last one.
 
 ## Holding Onto the Good Stuff
 
-The things you liked about Dry January (the better sleep, the clearer mornings, the money saved, the feeling of being more *present*) aren't locked behind a "zero alcohol forever" door. 
+The things you liked about Dry January (the better sleep, the clearer mornings, the money saved, the feeling of being more _present_) aren't locked behind a "zero alcohol forever" door.
 
 You can keep them. You just have to be a little more intentional than you were before.
 
-**Find your "instead of" spots.** If your old routine was happy hour on Fridays, you need somewhere else to go. Not because you can't be around alcohol, but because habits need replacement, not just removal. This is where places like kava bars, late-night coffee shops, and alcohol-free venues come in. They give you somewhere to *be*, to socialize, to unwind, to have a thing you do without defaulting to the bar.
+**Find your "instead of" spots.** If your old routine was happy hour on Fridays, you need somewhere else to go. Not because you can't be around alcohol, but because habits need replacement, not just removal. This is where places like kava bars, late-night coffee shops, and alcohol-free venues come in. They give you somewhere to _be_, to socialize, to unwind, to have a thing you do without defaulting to the bar.
 
-**Stock your fridge with options.** One of the easiest ways to slip back into old patterns is having nothing else around. The NA beer and wine market has exploded in the last few years, and honestly, some of it is really good now. Keep a [six-pack of Peroni 0.0](https://www.betterrhodes.com/products/peroni-non-alcoholic-0-0-brew-6-pack/downtowndry) in the fridge for when you want something cold and crisp after work. Or explore the wider world of [non-alcoholic Kava options on Amazon](https://amzn.to/3LbEnh2) if you want variety. Having an easy grab-and-go option removes the friction of making a decision every single time.
+**Stock your fridge with options.** One of the easiest ways to slip back into old patterns is having nothing else around. The NA beer and wine market has exploded in the last few years, and honestly, some of it is really good now. Keep a [six-pack of Peroni 0.0](https://www.betterrhodes.com/r?id=4lvu4o) in the fridge for when you want something cold and crisp after work. Or explore the wider world of [non-alcoholic Kava options on Amazon](https://amzn.to/3LbEnh2) if you want variety. Having an easy grab-and-go option removes the friction of making a decision every single time.
 
 **Get comfortable ordering different.** "Club soda with lime" works in any setting. So does "I'm good with water" or "just a coffee." You don't owe anyone an explanation. And if they push, that says more about them than you.
 
 **Notice your triggers.** Not in a dramatic, clinical way. Just... pay attention. What makes you want a drink? Stress? Celebration? Boredom? Social anxiety? Once you see the pattern, you can decide whether alcohol is actually solving the problem or just delaying it.
 
-**Give yourself permission to experiment.** Maybe you drink on weekends but not weekdays. Maybe you skip it entirely for another month and see how you feel. Maybe you go fully alcohol-free and never look back. There's no wrong answer here, as long as it's actually *your* answer.
+**Give yourself permission to experiment.** Maybe you drink on weekends but not weekdays. Maybe you skip it entirely for another month and see how you feel. Maybe you go fully alcohol-free and never look back. There's no wrong answer here, as long as it's actually _your_ answer.
 
 ## The Identity Thing
 
@@ -93,4 +93,4 @@ Now you can see. What you do with that is up to you.
 
 ---
 
-*Looking for places to continue your alcohol-free social life? Check out our [venue directory](/states/) to find kava bars, late-night coffee spots, and alcohol-free venues in your city. The scene is bigger than you think.*
+_Looking for places to continue your alcohol-free social life? Check out our [venue directory](/states/) to find kava bars, late-night coffee spots, and alcohol-free venues in your city. The scene is bigger than you think._
