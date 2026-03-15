@@ -42,7 +42,7 @@ The easiest entry point for any home bar, and genuinely hard to dislike. This is
 
 **What you need:**
 
-- 2 oz Ghia (or Lyre's Aperitif Rosso)
+- 2 oz Root's (or Lyre's Aperitif Rosso)
 - 3 oz club soda or sparkling water
 - 1 oz fresh orange juice
 - Ice
@@ -116,7 +116,7 @@ The Paloma is arguably the most underrated Mexican cocktail, and it translates t
 
 **What you need:**
 
-- 2 oz Ritual Agave Spirit Alternative
+- 2 oz Ritual Tequila Spirit Alternative
 - 2 oz fresh grapefruit juice
 - 0.5 oz fresh lime juice
 - 0.5 oz agave syrup
@@ -136,7 +136,7 @@ A riff on a Negroni Sbagliato that works beautifully as a lighter aperitivo-styl
 
 **What you need:**
 
-- 1.5 oz Lyre's Aperitif Rosso (or Ghia)
+- 1.5 oz Root's or Lyre's Aperitif Rosso (or Ghia)
 - 1 oz Seedlip Spice 94
 - 2 oz dry sparkling water or dry NA sparkling wine
 - Ice
