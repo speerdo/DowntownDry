@@ -1000,7 +1000,7 @@ const austinVenues = allVenues.filter(v =>
   </section>
 
   <!-- Popular Cities Preview -->
-  <section class="py-20 bg-neutral-50">
+  <section class="py-20 bg-neutral-50" id="trending-cities">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-5xl md:text-6xl font-bold text-neutral-900 mb-8 tracking-tight font-heading">
@@ -1010,14 +1010,8 @@ const austinVenues = allVenues.filter(v =>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <Image 
-            src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            width={800}
-            height={600}
-            alt={`New York City skyline showcasing ${nycVenues}+ alcohol-free venues including mocktail bars and NA beer spots`} 
-            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" 
-          />
+        <a href="/states/new-york/new-york/" class="relative group block overflow-hidden rounded-3xl shadow-2xl hover:shadow-2xl transition-shadow duration-300" aria-label={`View ${nycVenues} alcohol-free venues in New York City`}>
+          <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`New York City skyline showcasing ${nycVenues}+ alcohol-free venues including mocktail bars and NA beer spots`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-primary-700/90 via-primary-700/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">NEW YORK</h3>
@@ -1027,16 +1021,10 @@ const austinVenues = allVenues.filter(v =>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Mocktails</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <Image 
-            src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            width={800}
-            height={600}
-            alt={`Los Angeles sunset over city with ${laVenues}+ delta THC venues and kava bars for cannabis wellness`} 
-            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" 
-          />
+        <a href="/states/california/los-angeles/" class="relative group block overflow-hidden rounded-3xl shadow-2xl hover:shadow-2xl transition-shadow duration-300" aria-label={`View ${laVenues} alcohol-free venues in Los Angeles`}>
+          <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`Los Angeles sunset over city with ${laVenues}+ delta THC venues and kava bars for cannabis wellness`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-secondary-500/90 via-secondary-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">LOS ANGELES</h3>
@@ -1046,16 +1034,10 @@ const austinVenues = allVenues.filter(v =>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">Kava</span>
             </div>
           </div>
-        </div>
+        </a>
         
-        <div class="relative group cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-          <Image 
-            src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            width={800}
-            height={600}
-            alt={`Austin Texas downtown featuring ${austinVenues}+ alcohol-free venues including craft mocktail lounges and NA beer bars`} 
-            class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" 
-          />
+        <a href="/states/texas/austin/" class="relative group block overflow-hidden rounded-3xl shadow-2xl hover:shadow-2xl transition-shadow duration-300" aria-label={`View ${austinVenues} alcohol-free venues in Austin`}>
+          <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt={`Austin Texas downtown featuring ${austinVenues}+ alcohol-free venues including craft mocktail lounges and NA beer bars`} class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
           <div class="absolute inset-0 bg-gradient-to-t from-accent-500/90 via-accent-500/40 to-transparent"></div>
           <div class="absolute bottom-8 left-8 text-white">
             <h3 class="text-4xl font-bold mb-2 font-heading">AUSTIN</h3>
@@ -1065,7 +1047,7 @@ const austinVenues = allVenues.filter(v =>
               <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">NA Beer</span>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       
       <div class="text-center mt-12">
