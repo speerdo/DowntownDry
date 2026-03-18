@@ -7,7 +7,7 @@ category: "recipes"
 tags: ["mocktails", "recipes", "bartending", "non-alcoholic"]
 image: "https://images.pexels.com/photos/10331389/pexels-photo-10331389.jpeg"
 readTime: "9 min read"
-featured: false
+featured: true
 ---
 
 Most people approach the alcohol-free drink space the same way: they buy a single bottle of something interesting, make one or two cocktails, and then let it collect dust next to the olive oil.
