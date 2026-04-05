@@ -4,8 +4,8 @@ import LeafletMap from '../../../components/LeafletMap.astro';
 import { createClient } from '@supabase/supabase-js';
 
 // Default descriptions for cities without database content
-const DEFAULT_DESCRIPTION = `Discover the growing alcohol-free scene in this city. From craft mocktail bars to kava lounges, find the perfect spot for mindful drinking and sober socializing.`;
-const DEFAULT_META_DESC = 'Find alcohol-free bars, kava lounges & mocktail spots in this city. Your complete guide to sober nightlife and mindful socializing.';
+const DEFAULT_DESCRIPTION = `Discover the growing sober-friendly scene in this city. Most venues serve alcohol and also offer dedicated non-alcoholic menus, craft mocktails, kava, or other NA options.`;
+const DEFAULT_META_DESC = 'Find sober-friendly bars, restaurants, kava lounges, and mocktail spots in this city. Your guide to non-alcoholic options and mindful socializing.';
 
 export async function getStaticPaths() {
   const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
@@ -382,10 +382,10 @@ const venueTypes = [];
 if (safeVenues.some(v => v.serves_mocktails)) venueTypes.push('mocktail bars');
 if (safeVenues.some(v => v.serves_kava)) venueTypes.push('kava lounges');
 if (safeVenues.some(v => v.serves_thc)) venueTypes.push('THC venues');
-if (safeVenues.some(v => v.is_alcohol_free)) venueTypes.push('alcohol-free bars');
+if (safeVenues.some(v => v.is_alcohol_free)) venueTypes.push('fully alcohol-free venues');
 const venueTypeList = venueTypes.length > 0 ? venueTypes.slice(0, 3).join(', ') : 'mocktail bars, kava lounges';
 
-const cityMetaDesc = cityData?.meta_description || `Discover ${safeVenues.length} alcohol-free bars in ${cityName}, ${stateName}. Find ${venueTypeList} & more sober-friendly venues for mindful nightlife.`;
+const cityMetaDesc = cityData?.meta_description || `Discover ${safeVenues.length} sober-friendly bars and restaurants in ${cityName}, ${stateName}. Find ${venueTypeList} and other spots with dedicated non-alcoholic options.`;
 
 // Calculate venue type counts for structured data
 const kavaCount = safeVenues.filter(v => v.serves_kava).length;
@@ -398,7 +398,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 <script type="application/ld+json" set:html={JSON.stringify({
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": `Alcohol-Free Bars in ${cityName}, ${stateName}`,
+  "name": `Sober-Friendly Bars and Restaurants in ${cityName}, ${stateName}`,
   "description": cityMetaDesc,
   "url": `https://www.downtowndry.bar/states/${state}/${city}/`,
   "isPartOf": {
@@ -417,7 +417,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
   },
   "mainEntity": {
     "@type": "ItemList",
-    "name": `Alcohol-Free Venues in ${cityName}`,
+    "name": `Sober-Friendly Venues in ${cityName}`,
     "numberOfItems": safeVenues.length,
     "itemListElement": safeVenues.slice(0, 10).map((venue, index) => ({
       "@type": "ListItem",
@@ -440,7 +440,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
 })} />
 </script>
 
-<Layout title={`${safeVenues.length} Alcohol-Free Bars in ${cityName}, ${shortStateName} | Downtown Dry`} description={cityMetaDesc}>
+<Layout title={`${safeVenues.length} Sober-Friendly Bars and Restaurants in ${cityName}, ${shortStateName} | Downtown Dry`} description={cityMetaDesc}>
   <main id="main-content" class="container mx-auto px-4 py-8">
     <div class="max-w-6xl mx-auto">
       <!-- Breadcrumb -->
@@ -462,7 +462,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
             <div class="absolute inset-0">
               <img
                 src={normalizeImageUrl(cityData?.image_url) || getCityImage(cityName, stateName)}
-                alt={`Cityscape of ${cityName}, ${stateName} - home to ${safeVenues.length} alcohol-free venues`}
+                alt={`Cityscape of ${cityName}, ${stateName} - home to ${safeVenues.length} sober-friendly venues`}
                 class="w-full h-full object-cover"
                 loading="eager"
                 fetchpriority="high"
@@ -473,13 +473,13 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
             <div class="relative px-8 py-16 lg:px-12 lg:py-20">
               <div class="max-w-4xl">
                 <h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 font-heading leading-tight">
-                  Alcohol-Free Bars in<br/>
+                  Sober-Friendly Bars and Restaurants in<br/>
                   <span class="text-secondary-500">
                     {cityName}, {stateName}
                   </span>
                 </h1>
                 <p class="text-xl text-neutral-50 mb-8 leading-relaxed max-w-2xl">
-                  Discover {safeVenues.length} alcohol-free venues, mocktail bars, kava lounges, and sober-friendly spaces in {cityName}.
+                  Discover {safeVenues.length} sober-friendly venues in {cityName}, including bars and restaurants with dedicated non-alcoholic options.
                 </p>
                 
                 <!-- Stats Cards -->
@@ -503,7 +503,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                       <div class="text-2xl font-bold text-accent-500">
                         {safeVenues.filter(v => v.is_alcohol_free).length}
                       </div>
-                      <div class="text-sm text-neutral-50">Alcohol-Free</div>
+                      <div class="text-sm text-neutral-50">100% Alcohol-Free</div>
                     </div>
                   )}
                   
@@ -524,13 +524,13 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           <div class="bg-primary-700 rounded-2xl px-8 py-16 lg:px-12 lg:py-20">
             <div class="max-w-4xl">
               <h1 class="text-4xl lg:text-5xl font-bold text-white mb-6 font-heading leading-tight">
-                Alcohol-Free Venues in<br/>
+                Sober-Friendly Venues in<br/>
                 <span class="text-secondary-500">
                   {cityName}, {stateName}
                 </span>
               </h1>
               <p class="text-xl text-neutral-50 mb-8 leading-relaxed max-w-2xl">
-                Discover mindful drinking experiences, craft mocktails, kava bars, and alcohol-free social spaces in your city.
+                Discover mindful drinking experiences, craft mocktails, kava bars, and venues with dedicated non-alcoholic options in your city.
               </p>
               
               <!-- Stats Cards -->
@@ -554,7 +554,7 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
                     <div class="text-2xl font-bold text-accent-500">
                       {safeVenues.filter(v => v.is_alcohol_free).length}
                     </div>
-                    <div class="text-sm text-neutral-50">Alcohol-Free</div>
+                    <div class="text-sm text-neutral-50">100% Alcohol-Free</div>
                   </div>
                 )}
                 
@@ -577,9 +577,9 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           <!-- City Description Section -->
           <div class="mb-12">
             <div class="bg-gradient-to-r from-indigo-50 to-purple-50 border border-indigo-200 rounded-xl p-8">
-              <h2 class="text-2xl font-semibold text-gray-900 mb-4">Discover Alcohol-Free {cityName}</h2>
-              <div class="prose prose-gray max-w-none">
-                <p class="text-gray-700 leading-relaxed">
+              <h2 class="text-2xl font-semibold text-gray-900 mb-4">Discover Sober-Friendly {cityName}</h2>
+              <div class="max-w-none text-gray-700 text-base leading-relaxed">
+                <p class="m-0">
                   {cityDescription}
                 </p>
               </div>
@@ -1018,9 +1018,9 @@ const alcoholFreeCount = safeVenues.filter(v => v.is_alcohol_free).length;
           <div class="bg-gradient-to-r from-green-50 to-teal-50 border border-green-200 rounded-xl p-8">
             <h2 class="text-2xl font-semibold text-gray-900 mb-4">Explore More in {cityName}</h2>
             <p class="text-gray-700 leading-relaxed">
-              {cityName}'s alcohol-free scene continues to grow, with new venues opening and established spots expanding their NA offerings. 
+              {cityName}'s sober-friendly scene continues to grow, with new venues opening and established spots expanding their NA offerings. 
               Whether you're a local or visiting, {cityName} provides welcoming spaces for mindful socializing and genuine connection.
-              Check back often as we update our listings with the latest alcohol-free bars and sober-friendly venues in the area.
+              Check back often as we update our listings with the latest sober-friendly bars, restaurants, and alcohol-free venues in the area.
             </p>
           </div>
         </div>

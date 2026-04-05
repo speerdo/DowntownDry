@@ -75,7 +75,9 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
   window[mapStoreKey] = {
     map: null,
     markers: [],
-    initialized: false
+    initialized: false,
+    geocodeCache: new Map(),
+    geocodeInFlight: new Map()
   };
 
   // Function to create SVG marker icon
@@ -122,8 +124,98 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
     `;
   }
 
+  function getFallbackCoords(venue) {
+    if (!venue.latitude || !venue.longitude) return null;
+    const lat = Number(venue.latitude);
+    const lng = Number(venue.longitude);
+    if (Number.isNaN(lat) || Number.isNaN(lng)) return null;
+    return { lat, lng };
+  }
+
+  function getAddressQuery(venue) {
+    const parts = [venue.address, venue.city, venue.state, venue.zip_code, 'USA']
+      .filter(Boolean)
+      .map((part) => String(part).trim())
+      .filter((part) => part.length > 0);
+
+    return parts.length > 0 ? parts.join(', ') : null;
+  }
+
+  async function geocodeAddress(query) {
+    const store = window[mapStoreKey];
+    if (!store) return null;
+
+    if (store.geocodeCache.has(query)) {
+      return store.geocodeCache.get(query);
+    }
+
+    if (store.geocodeInFlight.has(query)) {
+      return store.geocodeInFlight.get(query);
+    }
+
+    const geocodePromise = (async () => {
+      try {
+        const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q=${encodeURIComponent(query)}`;
+        const response = await fetch(url);
+        if (!response.ok) {
+          store.geocodeCache.set(query, null);
+          return null;
+        }
+
+        const results = await response.json();
+        if (!Array.isArray(results) || results.length === 0) {
+          store.geocodeCache.set(query, null);
+          return null;
+        }
+
+        const firstResult = results[0];
+        const lat = Number(firstResult.lat);
+        const lng = Number(firstResult.lon);
+        if (Number.isNaN(lat) || Number.isNaN(lng)) {
+          store.geocodeCache.set(query, null);
+          return null;
+        }
+
+        const location = { lat, lng };
+        store.geocodeCache.set(query, location);
+        return location;
+      } catch (error) {
+        console.warn('Address geocoding failed:', query, error);
+        store.geocodeCache.set(query, null);
+        return null;
+      } finally {
+        store.geocodeInFlight.delete(query);
+      }
+    })();
+
+    store.geocodeInFlight.set(query, geocodePromise);
+    return geocodePromise;
+  }
+
+  async function resolveVenueLocation(venue) {
+    const addressQuery = getAddressQuery(venue);
+    if (addressQuery) {
+      const geocodedLocation = await geocodeAddress(addressQuery);
+      if (geocodedLocation) return geocodedLocation;
+    }
+
+    // If geocoding fails, keep existing coordinate behavior as fallback.
+    return getFallbackCoords(venue);
+  }
+
+  async function resolveVenueLocations(venuesToResolve) {
+    const resolvedLocations = await Promise.all(
+      venuesToResolve.map(async (venue) => ({
+        venue,
+        location: await resolveVenueLocation(venue)
+      }))
+    );
+
+    return resolvedLocations.filter((item) => item.location);
+  }
+
   // Make initMap globally accessible
-  window[`initMap_${mapId.replace(/-/g, '_')}`] = function() {
+  window[`initMap_${mapId.replace(/-/g, '_')}`] = async function() {
     console.log('Initializing Leaflet map', mapId);
 
     const mapElement = document.getElementById(mapId);
@@ -157,24 +249,19 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
     window[mapStoreKey].map = map;
     window[mapStoreKey].initialized = true;
 
-    // Process venues and create markers (only venues with coordinates)
+    // Process venues and create markers (prefer address geocoding over saved coordinates)
     const markers = [];
+    const resolvedVenues = await resolveVenueLocations(venues);
 
-    venues.forEach(venue => {
-      if (venue.latitude && venue.longitude) {
-        const lat = Number(venue.latitude);
-        const lng = Number(venue.longitude);
-        const pinColor = getMarkerColor(venue);
+    resolvedVenues.forEach(({ venue, location }) => {
+      const pinColor = getMarkerColor(venue);
+      const marker = L.marker([location.lat, location.lng], {
+        icon: createMarkerIcon(pinColor),
+        title: venue.name
+      }).addTo(map);
 
-        const marker = L.marker([lat, lng], {
-          icon: createMarkerIcon(pinColor),
-          title: venue.name
-        }).addTo(map);
-
-        marker.bindPopup(createPopupContent(venue));
-        markers.push(marker);
-      }
-      // Skip venues without coordinates - no geocoding to reduce API costs
+      marker.bindPopup(createPopupContent(venue));
+      markers.push(marker);
     });
 
     // Fit map bounds to show all markers
@@ -190,7 +277,7 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
   };
 
   // Function to update map with new venues
-  window[`updateMap_${mapId.replace(/-/g, '_')}`] = function(newVenues) {
+  window[`updateMap_${mapId.replace(/-/g, '_')}`] = async function(newVenues) {
     const store = window[mapStoreKey];
     if (!store || !store.initialized || !store.map) {
       console.warn('Map not initialized yet, cannot update');
@@ -201,31 +288,19 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
     store.markers.forEach(marker => marker.remove());
     store.markers = [];
 
-    // Recalculate center from new venues
-    const venuesWithCoords = newVenues.filter(venue => venue.latitude && venue.longitude);
-    const newCenter = venuesWithCoords.length > 0 ? {
-      lat: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.latitude), 0) / venuesWithCoords.length,
-      lng: venuesWithCoords.reduce((sum, venue) => sum + Number(venue.longitude), 0) / venuesWithCoords.length
-    } : mapCenter;
-
-    // Process new venues and create markers (only venues with coordinates)
+    // Process new venues and create markers (prefer address geocoding over saved coordinates)
     const markers = [];
+    const resolvedVenues = await resolveVenueLocations(newVenues);
 
-    newVenues.forEach(venue => {
-      if (venue.latitude && venue.longitude) {
-        const lat = Number(venue.latitude);
-        const lng = Number(venue.longitude);
-        const pinColor = getMarkerColor(venue);
+    resolvedVenues.forEach(({ venue, location }) => {
+      const pinColor = getMarkerColor(venue);
+      const marker = L.marker([location.lat, location.lng], {
+        icon: createMarkerIcon(pinColor),
+        title: venue.name
+      }).addTo(store.map);
 
-        const marker = L.marker([lat, lng], {
-          icon: createMarkerIcon(pinColor),
-          title: venue.name
-        }).addTo(store.map);
-
-        marker.bindPopup(createPopupContent(venue));
-        markers.push(marker);
-      }
-      // Skip venues without coordinates - no geocoding to reduce API costs
+      marker.bindPopup(createPopupContent(venue));
+      markers.push(marker);
     });
 
     // Store new markers
@@ -239,7 +314,7 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
       store.map.setView(markers[0].getLatLng(), 15);
     } else if (markers.length === 0) {
       // If no markers, reset to original center
-      store.map.setView([newCenter.lat, newCenter.lng], zoom);
+      store.map.setView([mapCenter.lat, mapCenter.lng], zoom);
     }
   };
 
