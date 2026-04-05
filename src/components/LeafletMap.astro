@@ -141,6 +141,54 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
     return parts.length > 0 ? parts.join(', ') : null;
   }
 
+  function geocodeAddressJsonp(query) {
+    return new Promise((resolve) => {
+      const callbackId = `nominatim_cb_${Math.random().toString(36).slice(2, 11)}`;
+      const script = document.createElement('script');
+      const timeoutMs = 7000;
+
+      const cleanup = () => {
+        if (script.parentNode) {
+          script.parentNode.removeChild(script);
+        }
+        try {
+          delete window[callbackId];
+        } catch (_err) {
+          window[callbackId] = undefined;
+        }
+      };
+
+      const timeout = setTimeout(() => {
+        cleanup();
+        resolve(null);
+      }, timeoutMs);
+
+      window[callbackId] = (results) => {
+        clearTimeout(timeout);
+        cleanup();
+        resolve(results);
+      };
+
+      script.onerror = () => {
+        clearTimeout(timeout);
+        cleanup();
+        resolve(null);
+      };
+
+      const baseUrl = 'https://nominatim.openstreetmap.org/search';
+      const params = new URLSearchParams({
+        format: 'jsonv2',
+        limit: '1',
+        countrycodes: 'us',
+        q: query,
+        json_callback: callbackId
+      });
+
+      script.src = `${baseUrl}?${params.toString()}`;
+      document.head.appendChild(script);
+    });
+  }
+
   async function geocodeAddress(query) {
     const store = window[mapStoreKey];
     if (!store) return null;
@@ -155,14 +203,7 @@ const mapId = `map-${Math.random().toString(36).substr(2, 9)}`;
 
     const geocodePromise = (async () => {
       try {
-        const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&countrycodes=us&q=${encodeURIComponent(query)}`;
-        const response = await fetch(url);
-        if (!response.ok) {
-          store.geocodeCache.set(query, null);
-          return null;
-        }
-
-        const results = await response.json();
+        const results = await geocodeAddressJsonp(query);
         if (!Array.isArray(results) || results.length === 0) {
           store.geocodeCache.set(query, null);
           return null;
