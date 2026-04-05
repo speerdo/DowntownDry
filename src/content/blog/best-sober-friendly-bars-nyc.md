@@ -56,7 +56,7 @@ Not everyone in your crew is skipping alcohol, and these venues work for both dr
 
 **Clinton Hall FIDI** (90 Washington Street, Financial District) is a reliable option downtown with Athletic Brewing Company's Run Wild IPA explicitly on the can menu. It's a beer hall with good energy, and having a quality NA craft beer on a menu that extensive signals that someone made a real decision to include it.
 
-**NO BAR** (25 Cooper Sq, East Village) is a queer-centric space with drag shows and a culture of genuine inclusivity. The non-alcoholic beverage selection is part of a broader ethos that no one at this venue should feel like they don't belong, regardless of what they're drinking. If you want a fun night with real energy and no pressure, this belongs on your list.
+**NO BAR** (25 Cooper Sq, East Village and our featured image for this blog post) is a queer-centric space with drag shows and a culture of genuine inclusivity. The non-alcoholic beverage selection is part of a broader ethos that no one at this venue should feel like they don't belong, regardless of what they're drinking. If you want a fun night with real energy and no pressure, this belongs on your list.
 
 ---
 
