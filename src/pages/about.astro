@@ -7,7 +7,7 @@ const url = new URL(Astro.request.url);
 const subscribed = url.searchParams.get('subscribed') === 'true';
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
-const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Get live stats from database for soft launch states

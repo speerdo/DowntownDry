@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
-const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export const POST: APIRoute = async ({ request }) => {
@@ -17,11 +17,19 @@ export const POST: APIRoute = async ({ request }) => {
       .toString(36)
       .substr(2, 9)}`;
 
+    // Admin-curated venues are publishable by default; the state/city pages
+    // filter on data_complete=true, so without this they never render.
+    const dataComplete =
+      insertData.data_complete === undefined || insertData.data_complete === null
+        ? true
+        : insertData.data_complete;
+
     const { data, error } = await supabase
       .from('venues')
       .insert({
         id: venueId,
         ...insertData,
+        data_complete: dataComplete,
         created_at: new Date().toISOString(),
         updated_at: new Date().toISOString(),
       })

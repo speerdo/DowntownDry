@@ -3,12 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL;
-const supabaseKey = import.meta.env.PUBLIC_SUPABASE_ANON_KEY;
-const supabaseServiceKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY;
+const supabaseKey = import.meta.env.PUBLIC_SUPABASE_PUBLISHABLE_KEY;
+const supabaseServiceKey = import.meta.env.SUPABASE_SECRET_KEY;
 
 // [states page] Debug: env at build/dev time (output: static = runs at build)
 console.log('[states page] PUBLIC_SUPABASE_URL present:', Boolean(supabaseUrl), typeof supabaseUrl);
-console.log('[states page] PUBLIC_SUPABASE_ANON_KEY present:', Boolean(supabaseKey), typeof supabaseKey);
+console.log('[states page] PUBLIC_SUPABASE_PUBLISHABLE_KEY present:', Boolean(supabaseKey), typeof supabaseKey);
 
 // Anon client for public tables (states), service role client for venues (RLS bypassed server-side)
 const supabase = createClient(supabaseUrl ?? '', supabaseKey ?? '');

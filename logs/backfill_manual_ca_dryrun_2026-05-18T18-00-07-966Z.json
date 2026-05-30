@@ -1,0 +1,44 @@
+{
+  "apply": false,
+  "summary": {
+    "matched": 3,
+    "unmatched": 0,
+    "errored": 0,
+    "total": 3
+  },
+  "results": [
+    {
+      "id": "venue_1757166336539_0f0xhquzs",
+      "name": "The Cannabis Cafe",
+      "city": "Los Angeles",
+      "original_address": "1201 N La Brea Ave",
+      "matched": "1201, North La Brea Avenue, West Hollywood, Los Angeles County, California, 90038, United States",
+      "lat": 34.092692,
+      "lng": -118.344147,
+      "source": "structured",
+      "status": "matched"
+    },
+    {
+      "id": "venue_1757166587755_iw9pis4k7",
+      "name": "Bar Nuda",
+      "city": "Los Angeles",
+      "original_address": "3110 Main St",
+      "matched": "3110, Main Street, Ocean Park, Santa Monica, Los Angeles County, California, 90405, United States",
+      "lat": 33.9978325,
+      "lng": -118.4795301,
+      "source": "structured",
+      "status": "matched"
+    },
+    {
+      "id": "venue_1757166830888_omkqbtij5",
+      "name": "Big Bar",
+      "city": "Los Angeles",
+      "original_address": "1927 Hillhurst Ave",
+      "matched": "1927, Hillhurst Avenue, Los Feliz Neighborhood Council District, Los Feliz, Los Angeles, Los Angeles County, California, 90027, United States",
+      "lat": 34.1061908,
+      "lng": -118.2875162,
+      "source": "structured",
+      "status": "matched"
+    }
+  ]
+}
